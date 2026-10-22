@@ -4,7 +4,7 @@ A self-hostable web app for the Oujda bus network: every line and stop on an
 OpenStreetMap map, with search, line pages, nearby stops, favorites and a trip
 planner. Runs as a single small Docker container (nginx serving static files).
 
-The network data (24 lines, 698 stops) was exported on 2026-10-22 from the
+The network data (24 lines, 698 stops, 529 after corrections) was exported on 2026-10-22 from the
 server behind the 7afilati app (SOMAYAR SA). It lives in [`data/`](data/) as CSV.
 
 ## Features
@@ -82,29 +82,67 @@ traffic, and keep the attribution.
 | File | Contents |
 |---|---|
 | `data/lines.csv` | One row per line: id, name, colour, termini and stop count per direction |
-| `data/stops.csv` | One row per stop: id, name, label, coordinates, lines serving it |
+| `data/stops.csv` | One row per stop: id, name, label, coordinates, lines serving it, plus other names, merged stop ids, the corrections applied and any review note |
 | `data/line_stops.csv` | Each line's stops in order, per direction (`aller` / `retour`) |
+| `data/corrections.csv` | Every change made to the export, one row each, with the reason and evidence |
+| `data/source/` | The export exactly as it came from the operator's server |
 | `data/export-info.json` | When and where the CSVs were exported |
 
-At build time, `tools/build_data.py` turns these into `network.json` (what the app loads) and
-`network.geojson`. To update the data, replace the CSVs (same columns), update
-`export-info.json`, and rebuild the image.
+The CSVs in `data/` are generated: `tools/apply_corrections.py` applies `data/corrections.csv` to
+`data/source/` and writes them. At build time, `tools/build_data.py` turns them into `network.json`
+(what the app loads) and `network.geojson`.
 
-### Known problems in the source data
+### Corrections
 
-The app shows the data as exported, with these display fixes, each also listed on the About page:
+The export has misplaced stops, the same stop entered several times and inconsistent names. Every
+fix is a row in `data/corrections.csv`, so it can be reviewed, edited or undone:
 
-- **Stop 608** (L25, retour) is named `2026-07-09 00:00:00` in the source; it's shown as "Stop #608".
-- **Line colours** are placeholders in the source (`#000000`, `#000001`, … all near-black), so the
-  app generates distinct colours.
-- **Repeated stops**: L01 retour lists Clinique Ibn Sina twice in a row, and L17 aller and L18 aller
-  list one stop three times in a row. Each is shown once.
-- **Doubtful coordinates**: 13 stops sit kilometres off their line's path between their neighbours
-  (for example stop 8, Aboubeker Kadiri 1, is 18 km from both neighbours on L08). They're marked
-  with an orange "!" and excluded from walking transfers, and ride times around them are estimated
-  from the neighbouring stops. Their coordinates are not changed.
-- Stop names keep the source's spelling; ALL-CAPS and all-lowercase names are put in title case and
-  "Termunis/Terminis" is shown as "Terminus". The original name is shown in each stop's details.
+| action | what it does | columns used |
+|---|---|---|
+| `move` | puts a stop at new coordinates | `station_id`, `new_lat`, `new_lng` |
+| `rename` | gives a stop a new name (the old one stays searchable) | `station_id`, `new_name` |
+| `merge` | replaces a stop by another one everywhere; its name stays searchable and its id redirects in the app | `station_id`, `target_id` |
+| `split` | gives some lines their own copy of a stop, e.g. when two lines share a stop id but only one is in the right place | `station_id`, `lines` (`L02` or `L02:aller`), `target_id` (new id), `new_name`, `new_lat`, `new_lng` |
+| `flag` | changes nothing but marks the stop for review in the app, with `reason` as the note | `station_id`, `reason` |
+
+`old_name`, `old_lat` and `old_lng` record what the row expects to find; if they no longer match
+(for example after a new export), the row is still applied and a warning names it. `confidence`
+(`high`, `medium`, `low`) and `evidence` say how each new position was found. Rows are applied in
+order and ids only need to be unique, so to change a decision edit or delete its row, and to add
+one append a row. Then regenerate the CSVs:
+
+```sh
+python3 tools/apply_corrections.py          # data/source + data/corrections.csv -> data/*.csv
+npm test                                    # includes a check that data/*.csv is up to date
+```
+
+What the current corrections do (exported 2026-10-22, 698 stops before, 529 after):
+
+- **Misplaced stops (33 moved, 1 split)**: stops kilometres away from their neighbours on the line
+  were placed where the route says they must be, using, in order of preference, a matching
+  OpenStreetMap feature on the route (for example L02's *Maroc Telecom*, the agency on Boulevard
+  Abderrahim Bouabid, while L20 keeps its own *Maroc Telecom* in the north), the named street on the
+  road route between the stop's neighbours (*Route Aounia 2* on Route El Aounia), the same place on
+  another line (*Hay Lmharach 1* = L15's *Mharach I*), or a point part-way along the road route
+  between the neighbours (`low` confidence). Road routes come from the OSRM demo server and
+  OpenStreetMap features from Nominatim.
+- **Stops left for review (7 flagged)**: line ends with no evidence to place them (for example L17's
+  *Terminus Village Bekay* and L07's *Terminus Faculte des Lettres*, both with city-centre
+  coordinates). They keep their coordinates and show an orange "!" in the app.
+- **Merged stops (170)**: stops less than about 20 m apart became one stop, and so did stops with
+  the same name up to 60 m apart. Not merged: a line's aller and retour termini (each direction keeps
+  its own stop), two stops of the same line and direction, and stops whose new position is only an
+  estimate.
+- **Names (73 renamed)**: stops of the same terminus share one name (*Terminus Maghreb Arabi*,
+  *Terminus Enakhil* for Sahat Nakheel, ...); "Termunis/Terminis", "Mousquee" and "/R" or "retour"
+  suffixes are fixed; stops with the same name in different places get their neighbourhood added
+  (*OFPPT (Hay Hakkou)*); stop 608, named `2026-07-09 00:00:00` in the export, is "9 juillet" read
+  as a date and was merged into *Place 9 Juillet*.
+
+The app then makes these display fixes, each listed on its About page: ALL-CAPS and all-lowercase
+names in title case (keeping Roman numerals: *Hassan II*, not *Hassan Ii*), generated line colours
+instead of the export's near-black placeholders (`#000000`, `#000001`, ...), and an orange "!" on any
+stop still far off its line's path.
 
 ## Development
 
@@ -126,8 +164,8 @@ BASE_URL=http://localhost:3002 node tests/e2e/smoke.mjs
 Layout:
 
 ```
-data/              source CSVs
-tools/             build_data.py (CSV -> JSON/GeoJSON)
+data/              corrected CSVs, corrections.csv, and the raw export in source/
+tools/             apply_corrections.py (export + corrections -> CSVs), build_data.py (CSV -> JSON/GeoJSON)
 web/               the static app (index.html, css/, js/, vendor/leaflet/, sw.js)
 docker/            nginx config and the start-up script that writes config.js
 tests/             unit tests and the end-to-end smoke test

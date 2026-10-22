@@ -20,24 +20,29 @@ class BuildDataTest(unittest.TestCase):
 
     def test_counts_match_csvs(self):
         self.assertEqual(len(self.net["lines"]), 24)
-        self.assertEqual(len(self.net["stops"]), 698)
+        self.assertEqual(len(self.net["stops"]), len(build_data.read_csv(os.path.join(ROOT, "data", "stops.csv"))))
 
-    def test_every_csv_row_is_kept_except_consecutive_repeats(self):
+    def test_every_csv_row_is_kept(self):
+        # The corrected CSVs no longer list a stop twice in a row, so nothing is dropped.
         rows = build_data.read_csv(os.path.join(ROOT, "data", "line_stops.csv"))
-        repeats = sum(1 for i in self.net["issues"] if i["type"] == "repeated_stop")
         kept = sum(len(d["stops"]) for l in self.net["lines"] for d in l["directions"].values())
-        # L17 and L18 each list a stop three times in a row, L01 twice.
-        self.assertEqual(repeats, 3)
-        self.assertEqual(kept, len(rows) - 5)
+        self.assertFalse([i for i in self.net["issues"] if i["type"] == "repeated_stop"])
+        self.assertEqual(kept, len(rows))
 
     def test_export_date_comes_from_export_info(self):
         self.assertEqual(self.net["exported"], "2026-10-22")
 
-    def test_stop_608_has_no_real_name(self):
-        s = self.stops[608]
-        self.assertEqual(s["name"], "Stop #608")
-        self.assertIn("missing_name", s["flags"])
-        self.assertEqual(s["sourceName"], "2026-07-09 00:00:00")
+    def test_names_that_are_not_names(self):
+        self.assertTrue(build_data.is_missing_name("2026-07-09 00:00:00"))
+        self.assertTrue(build_data.is_missing_name("  "))
+        self.assertFalse(build_data.is_missing_name("Place 9 Juillet"))
+
+    def test_merged_stops_redirect_and_keep_their_names(self):
+        # Stop 608 ("2026-07-09 00:00:00", i.e. "9 juillet") is now part of Place 9 Juillet.
+        self.assertEqual(self.net["mergedStops"]["608"], 700)
+        self.assertNotIn(608, self.stops)
+        self.assertIn("2026-07-09 00:00:00", self.stops[700]["altNames"])
+        self.assertFalse(any(i["type"] == "missing_name" for i in self.net["issues"]))
 
     def test_directions_are_ordered_and_consistent(self):
         for l in self.net["lines"]:
@@ -58,17 +63,27 @@ class BuildDataTest(unittest.TestCase):
         self.assertEqual(len(set(colors)), len(colors))
         self.assertTrue(all(not build_data.is_placeholder_color(c) for c in colors))
 
-    def test_known_misplaced_stop_is_flagged(self):
-        # Stop 8 is 18 km from its neighbours on L08.
-        self.assertIn("suspect_location", self.stops[8]["flags"])
+    def test_misplaced_stop_was_moved(self):
+        # Stop 8 was 18 km north of its neighbours on L08; it now sits next to Aboubeker Kadiri 2.
+        s8, s11 = self.stops[8], self.stops[11]
+        self.assertLess(build_data.haversine_km((s8["lat"], s8["lng"]), (s11["lat"], s11["lng"])), 0.5)
+        self.assertNotIn("suspect_location", s8["flags"])
         # The L31 airport line is genuinely long-distance and not flagged.
         self.assertNotIn("suspect_location", self.stops[507]["flags"])
+
+    def test_stops_left_for_review_are_flagged(self):
+        # L17's terminus could not be placed: flagged with the corrections' note.
+        self.assertIn("suspect_location", self.stops[269]["flags"])
+        self.assertTrue(any(i["type"] == "suspect_location" and i["stop"] == 269 and "Village Bekay" in i["detail"]
+                            for i in self.net["issues"]))
 
     def test_display_label(self):
         self.assertEqual(build_data.display_label("TERMUNIS SAHAT NAKHEEL"), "Terminus Sahat Nakheel")
         self.assertEqual(build_data.display_label("auto hall"), "Auto Hall")
         self.assertEqual(build_data.display_label("Av yahya Belkhir"), "Av yahya Belkhir")
         self.assertEqual(build_data.display_label("CAFE DE LA PAIX"), "Cafe de la Paix")
+        self.assertEqual(build_data.display_label("PHARMACIE HASSAN II"), "Pharmacie Hassan II")
+        self.assertEqual(build_data.display_label("mharach i"), "Mharach I")
 
     def test_text_color_contrast(self):
         self.assertEqual(build_data.text_color("#000000"), "#ffffff")
@@ -80,7 +95,7 @@ class BuildDataTest(unittest.TestCase):
                            check=True, capture_output=True)
             with open(os.path.join(out, "network.geojson"), encoding="utf-8") as f:
                 gj = json.load(f)
-            self.assertEqual(sum(1 for x in gj["features"] if x["geometry"]["type"] == "Point"), 698)
+            self.assertEqual(sum(1 for x in gj["features"] if x["geometry"]["type"] == "Point"), len(self.net["stops"]))
             self.assertEqual(sum(1 for x in gj["features"] if x["geometry"]["type"] == "LineString"), 48)
 
 

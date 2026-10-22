@@ -1,0 +1,285 @@
+﻿id,action,station_id,lines,target_id,old_name,new_name,old_lat,old_lng,new_lat,new_lng,confidence,reason,evidence
+C001,split,142,L02,10142,MAROC TELECOM,Maroc Telecom (Hay Al Maksam),34.70316,-1.9149,34.6663195,-1.8969031,high,"Wrong position: L02 shares this stop with L20, where it is correct (Av Mansour Eddahbi, north). On L02 it sits between Eaux et Forets and Lycee Maghreb Arabi, 4 km south. 3 different stops were all called 'Maroc Telecom' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.","OSM feature: OSM: Maroc Telecom agency, Boulevard Abderrahim Bouabid; snapped to the road 31 m away on the route L02 aller: between 223 'EAUX ET FORETS' and 51 'Lycee Maghreb Arabi' | OSM: Maroc Telecom agency, Boulevard Abderrahim Bouabid; snapped to the road 21 m away on the route L02 retour: between 194 'Centre Technique' and 223 'EAUX ET FORETS'"
+C002,move,328,,,Pharmacie El Azaoui,,34.670227696189,-1.9063156843185,34.6570471,-1.8971767,low,Wrong position: on L02 between Lycee Qods and Univ Med 1 but placed 1.7 km north near Park Lalla Aicha.,interpolated on route: placed 0.50 of the way along the road route L02 aller: between 58 'Lycee Qods' and 278 'Univ Med 1' | placed 0.50 of the way along the road route L02 retour: between 278 'Univ Med 1' and 58 'Lycee Qods'
+C003,move,225,,,Ecole Annassiha,,34.668176058145,-1.9016380469557,34.6546451,-1.8934184,low,Wrong position: on L02 between Jardin Elqods and Oued Amam but placed 1.7 km north-west.,interpolated on route: placed 0.50 of the way along the road route L02 aller: between 380 'Jardin Elqods' and 294 'Oued Amam'
+C004,move,8,,,Aboubeker Kadiri 1,,34.816204,-1.9648314,34.6595308,-1.9320535,medium,"Wrong position: on L08 between Rue de Rif 2 and Aboubeker Kadiri 2 but placed 18 km north, outside the city.",street on route: on Boulevard Abou Bakr Al Kadiri along the road route L08 retour: between 439 'Rue de Rif 2' and 11 'Aboubeker Kadiri 2'
+C005,move,35,,,Al Irfane 2,,34.6756258,-1.8595172,34.6514821,-1.9135433,low,Wrong position: on L07 between Av Al Irfane Mosquee Assalam and Pharmacie Hay Rabie but placed 5 km east (same coordinates as Agdal).,interpolated on route: placed 0.50 of the way along the road route L07 aller: between 127 'Av Al Irfane Mosquee Assalam' and 351 'Pharmacie Hay Rabie' | placed 0.50 of the way along the road route L07 retour: between 351 'Pharmacie Hay Rabie' and 127 'Av Al Irfane Mosquee Assalam'
+C006,move,443,,,Rue Nibrass,,34.6860289,-1.9533733,34.7067638,-1.9109256,low,Wrong position: on L04 between Rue Elistiklal and Rue 20 but placed 4 km west.,interpolated on route: placed 0.50 of the way along the road route L04 aller: between 441 'Rue Elistiklal (Pharmacie Elmajd)' and 436 'Rue 20' | placed 0.50 of the way along the road route L04 retour: between 436 'Rue 20' and 441 'Rue Elistiklal (Pharmacie Elmajd)'
+C007,move,211,,,Mosque Hassan 2,,34.6736492,-1.9127779,34.6904522,-1.9071515,low,Wrong position: on L04 between Ecole Lalla Aicha and Av des FAR but placed 1.5 km south (same coordinates as Mosque Hamza).,interpolated on route: placed 0.50 of the way along the road route L04 aller: between 231 'Ecole Lalla Aicha' and 54 'Av des FAR'
+C008,move,180,,,Mohamed Eddarfoufi,,34.6837073,-1.9179389,34.6949110,-1.9112212,medium,Wrong position: on L04 between Av Mansour Eddahabi 1 and Ancien tribunal but placed 1 km south-west.,street on route: on Boulevard Mohammed Derfoufi along the road route L04 retour: between 279 'AV Mansour Eddahabi 1' and 44 'Ancien tribunal 1 instance'
+C009,move,419,,,Route Aounia 1,,34.6719555,-1.8593184,34.6851128,-1.8882058,low,Wrong position: on L11 between Av Kadour El Ouartassi College Riad and Av Yahya Belkhir but placed 3 km east (same coordinates as Route Aounia 2 and 5).,interpolated on route: street 'aounia' not on routed path; placed 0.33 of the way along the road route L11 aller: between 230 'Av Kadour El ouartassi College Riad' and 334 'Hay Moulay Miloud Mosquee Mustapha' | street 'aounia' not on routed path; placed 0.67 of the way along the road route L11 retour: between 334 'Hay Moulay Miloud Mosquee Mustapha' and 230 'Av Kadour El ouartassi College Riad'
+C010,move,73,,,Av yahya Belkhir,,34.660754752381,-1.9119482813039,34.6873312,-1.8869214,low,Wrong position: on L11 between Route Aounia 1 and Hay Moulay Miloud but placed 4 km south-west.,interpolated on route: placed 0.50 of the way along the road route L11 aller: between 419 'Route Aounia 1' and 334 'Hay Moulay Miloud Mosquee Mustapha' | placed 0.50 of the way along the road route L11 retour: between 334 'Hay Moulay Miloud Mosquee Mustapha' and 419 'Route Aounia 1'
+C011,move,422,,,Route Aounia 2,,34.6719555,-1.8593184,34.6940408,-1.8823038,medium,Wrong position: on L11 between route 14 Mosquee Erida and Route Aounia Ista Aounia but placed 3 km south-east (same coordinates as Route Aounia 1 and 5).,street on route: on Route El Aounia طريق العونية along the road route L11 aller: between 415 'route 14 Mosquee Erida' and 425 'Route Aounia Ista Aounia' | on Route El Aounia طريق العونية along the road route L11 retour: between 425 'Route Aounia Ista Aounia' and 415 'route 14 Mosquee Erida'
+C012,move,423,,,Route Aounia 5,,34.6719555,-1.8593184,34.7039584,-1.8702924,medium,Wrong position: on L11 between Route Aounia Residence Hadouch and Route Aounia Gendarmerie Royale but placed 3 km south (same coordinates as Route Aounia 1 and 2).,street on route: on Route El Aounia طريق العونية along the road route L11 aller: between 426 'Route Aounia Residence Hadouch' and 424 'Route Aounia Gendarmerie Rayal' | on Route El Aounia طريق العونية along the road route L11 retour: between 424 'Route Aounia Gendarmerie Rayal' and 426 'Route Aounia Residence Hadouch'
+C013,move,406,,,route 14,,34.655923066542,-1.9002860660246,34.6906095,-1.8816985,low,Wrong position: on L11 (retour) between route 14 Mosquee Erida and Hay Essalam 2 but placed 4 km south-west.,interpolated on route: placed 0.50 of the way along the road route L11 retour: between 415 'route 14 Mosquee Erida' and 307 'Hay essalam 2 Mosquee Essalam'
+C014,move,251,,,Terminus rond point hay jemli,,34.677970218135,-1.9120234375307,34.6961500,-1.8566200,low,"Wrong position: L11's terminus 'rond point Hay Jemli' is placed in the city centre, 5.8 km from the line's last stops in the east.",OSM feature: L13's 'Jemli' stop (385); L11 ends heading south from Cafe Noujoum towards Hay Jemli
+C015,move,48,,,Av Brahim Roudani Arrandissement,,34.670704156422,-1.9338136864786,34.6791569,-1.8891327,medium,Wrong position: on L13 between Av Allal Al Fassi Derb Berrahmoune and Av Abderrahim Bouabid but placed 4 km west.,street on route: on Boulevard Brahim Roudani along the road route L13 aller: between 153 'AV Allal Al fassi Derb berrahmoune' and 89 'Av Abderrahim Bouabid pharmacie olad chrif' | on Boulevard Brahim Roudani along the road route L13 retour: between 89 'Av Abderrahim Bouabid pharmacie olad chrif' and 153 'AV Allal Al fassi Derb berrahmoune'
+C016,move,85,,,Av Abderrahim Bouabid banque populaire,,34.69035653389,-1.9188469741574,34.6754000,-1.8920000,medium,Wrong position: on L13 between the two Av Abderrahim Bouabid stops' neighbours but placed 3 km north-west.,OSM feature: OSM: Boulevard Abderrahim Bouabid between Roudani and the Kaouachi junction
+C017,move,221,,,Av kaaouachi,,34.6735756,-1.9128211,34.6727400,-1.8899900,medium,Wrong position: on L13 between Av Abderrahim Bouabid and Ben Mimoune but placed 1.5 km west (same coordinates as Av Idriss Al Akbar Moulay Idriss).,"OSM feature: OSM: Boulevard Ahmed El Kaouachi, just east of the Bouabid junction"
+C018,move,146,,,ben mimoune hay zaytoune,,34.6718948,-1.9344124,34.6720000,-1.8882000,medium,Wrong position: on L13 between Av Kaaouachi and Av Abdellah Ganoun but placed 4 km west.,"OSM feature: OSM: Boulevard Ahmed El Kaouachi between Hay Zitoune (34.6738,-1.8867) and Jardin Ben Mimoun (34.6683,-1.8882)"
+C019,move,78,,,AV Abdellah ganoun,,34.691018560964,-1.9187181815181,34.6711700,-1.8856900,medium,Wrong position: on L13 between Ben Mimoune and Salle Mohammed 6 but placed 3 km north-west.,"OSM feature: OSM: Pharmacie Abdellah Guennoun, Boulevard Ahmed El Kaouachi"
+C020,move,450,,,salle Mohammed 6,,34.693281,-1.9059463,34.6750608,-1.8824883,low,Wrong position: on L13 between Av Abdellah Ganoun and Cafe Salazar but placed 3 km north-west.,interpolated on route: placed 0.50 of the way along the road route L13 aller: between 78 'AV Abdellah ganoun' and 177 'Cafe Salazar' | placed 0.50 of the way along the road route L13 retour: between 177 'Cafe Salazar' and 78 'AV Abdellah ganoun'
+C021,move,276,,,OFPPT Lazaret,,34.6635545,-1.8742651,34.6756174,-1.8688938,high,Wrong position: on L13 between Cafe Salazar and Agdal but placed 1.5 km south.,"OSM feature: OSM: ISTA Lazaret (OFPPT institute), Rue El Koronfol; snapped to the road 74 m away on the route L13 aller: between 177 'Cafe Salazar' and 32 'Agdal' | OSM: ISTA Lazaret (OFPPT institute), Rue El Koronfol; snapped to the road 74 m away on the route L13 retour: between 32 'Agdal' and 177 'Cafe Salazar'"
+C022,move,317,,,Hay Kada houssine,,34.688171,-1.8789099,34.6654200,-1.9436000,medium,"Wrong position: on L16 between Av Zayed Ben Soltane and Village Qtar (south-west) but placed 5 km north-east, at the same coordinates as Hay Lmharach.",OSM feature: OSM: Lotissement Kada Houcine on Boulevard Sidi Zayed Ben Soltane
+C023,move,299,,,Village Qtar ecole bensaid mahdaoui,,34.6713825,-1.9429711,34.6571300,-1.9499000,medium,Wrong position: L16 terminus 'Village Qtar ecole Bensaid Mahdaoui' had the coordinates of 'vilage Nylo 2'.,"OSM feature: OSM: Ecole Ibn Said Mehdaoui, Hay Gtar"
+C024,move,111,,,Av Zayed Ben Soltane 1,,34.6732899,-1.9151275,34.6680236,-1.9398281,low,Wrong position: on L16 between Rue 10 and Av Zayed Ben Soltane Osbat Achark but placed 2 km east in the city centre.,interpolated on route: placed 0.33 of the way along the road route L16 aller: between 435 'Rue 10' and 317 'Hay Kada houssine' | placed 0.50 of the way along the road route L16 retour: between 114 'Av Zayed Ben Soltane 2' and 435 'Rue 10'
+C025,move,131,,,Av Zayed Ben Soltane osbat achark,,34.67458653541,-1.9310992847413,34.6662129,-1.9423388,low,"Wrong position: L16 runs Rue 10 -> Zayed Ben Soltane 1 -> Osbat Achark -> Hay Kada Houssine -> Village Qtar (aller) and Qtar -> Kada Houssine -> Osbat Achark -> Zayed Ben Soltane 2 (retour), so it sits on Bd Zayed Ben Soltane before Kada Houssine, not 1.5 km north-east near the bus station.",interpolated on route: placed 0.50 of the way along the road route L16 aller: between 111 'Av Zayed Ben Soltane 1' and 317 'Hay Kada houssine' | placed 0.50 of the way along the road route L16 retour: between 317 'Hay Kada houssine' and 114 'Av Zayed Ben Soltane 2'
+C026,move,38,,,Av Brahim Lahssini force auxiliare,,34.6757249,-1.9407775,34.6746992,-1.9281863,low,Wrong position: on L16 between station Winxo and Av Brahim Lahssini salle couverte but placed 1.5 km west (same coordinates as Av Boualam Arahmoun ecole Imam Ali).,interpolated on route: placed 0.50 of the way along the road route L16 aller: between 464 'station winxo' and 45 'Av Brahim Lahssini sale coverte'
+C027,move,31,,,Av Boualam Arahmoun 1,,34.6759946,-1.9239066,34.6725724,-1.9401506,low,"Wrong position: on L23 between vilage Nylo 2 and Av Zayed Lycee Acharif Idrissi but placed 1.8 km east, at station Winxo.",interpolated on route: street 'boualam' not on routed path; placed 0.33 of the way along the road route L23 retour: between 286 'vilage Nylo 2' and 139 'Av Zayed Lecyée Acharif Idrissi'
+C028,move,34,,,Av Boualam Arahmoun 2,,34.6759946,-1.9239066,34.6731768,-1.9367811,low,"Wrong position: on L23 right after Av Boualam Arahmoun 1, same wrong coordinates.",interpolated on route: street 'boualam' not on routed path; placed 0.67 of the way along the road route L23 retour: between 286 'vilage Nylo 2' and 139 'Av Zayed Lecyée Acharif Idrissi'
+C029,move,325,,,Hay Lmharach 1,,34.688171,-1.8789099,34.6878518,-1.9423922,medium,Wrong position: L05's 'Hay Lmharach 1' had the same coordinates as 'Hay Kada houssine' 5 km east; L15's 'MHARACH I' is the same place on the same road.,same place on another line: coordinates of stop 961 'MHARACH I' (line L15)
+C030,move,319,,,Hay Lmharach,,34.688171,-1.8789099,34.6897138,-1.9439097,medium,Wrong position: L05's 'Hay Lmharach' (start of the retour) had the same coordinates as 'Hay Kada houssine' 5 km east; L15's 'MHARACH II' is the same place.,same place on another line: coordinates of stop 962 'MHARACH II' (line L15)
+C031,move,481,,,Terminus Lmharach,,34.648760866251,-1.8935000399317,34.6897138,-1.9439097,low,Wrong position: L05's terminus 'Terminus Lmharach' was placed 4 km south-east; the retour starts at 'Hay Lmharach'.,same place on another line: coordinates of stop 962 'MHARACH II' (line L15)
+C032,move,352,,,Hay Si Lakhdar,,34.7124208,-1.8956544,34.6816496,-1.9400248,low,Wrong position: on L05 between Mac Donalds and Hay Lmharach 1 (west) but placed 4 km north-east.,interpolated on route: placed 0.50 of the way along the road route L05 aller: between 77 'Mac donalds' and 325 'Hay Lmharach 1' | placed 0.67 of the way along the road route L05 retour: between 325 'Hay Lmharach 1' and 30 'LYCEE ASSALAM'
+C033,move,355,,,Hay Si Lakhdar Hay Ngadi,,34.7124208,-1.8956544,34.6836346,-1.9459669,low,"Wrong position: on L05 (retour) between Hay Lmharach 1 and Hay Si Lakhdar, same wrong coordinates as Hay Si Lakhdar.",interpolated on route: placed 0.50 of the way along the road route L05 retour: between 325 'Hay Lmharach 1' and 352 'Hay Si Lakhdar'
+C034,move,765,,,gendarmerie,,34.74395758027,-1.8655836799681,34.7635261,-1.8506472,low,Wrong position: on L99 (retour) between Sandiqa and el Hanout but placed 2.5 km south.,interpolated on route: placed 0.50 of the way along the road route L99 retour: between 751 'SANDIQA' and 766 'el hanout'
+C035,flag,263,,,Terminus Souk Qods,,34.68163837292,-1.9083823140081,,,,"On L02 this terminus is listed right after Mosque Elbourak, 4.5 km away in the south-east, while L04 uses it correctly at Souk El Qods. L02's real end stop may be elsewhere; position kept.",
+C036,flag,269,,,Terminus Village Bekay,,34.68228015893,-1.9091910123825,,,,"L17's terminus 'Village Bekay' has city-centre coordinates (next to Souk El Qods) but the line's other stops end 4 km south-east, past Residence Kanzi. No OSM match found; position kept.",
+C037,flag,451,,,Sidi Maafa,,34.693347292017,-1.9059669971466,,,,"L07's 'Sidi Maafa' sits 5 km north of its neighbours (Rue Al Hanaa ... Terminus Faculte des Lettres), and the terminus itself is also misplaced, so there is nothing to place it between. Position kept.",
+C038,flag,477,,,Terminus Faculte des Lettres,,34.6795854,-1.9090941,,,,"L07's terminus 'Faculte des Lettres' has the city-centre coordinates of Terminus Enakhil, but the line ends in the south (Hay Rabie, Sidi Maafa). No OSM match for the faculty; position kept.",
+C039,flag,382,,,residence al ghiate,,34.6752713,-1.867514,,,,"L13's 'residence al ghiate' is listed between Cafe Noujoum (north-east) and the terminus, but placed 3.4 km south. The terminus is also misplaced; position kept.",
+C040,flag,234,,,ecoles aboubaker asadik,,34.6882545,-1.9072488,,,,"L13's 'ecoles aboubaker asadik' has the coordinates of Ecole Lalla Aicha (L04) in the centre, 4 km from its neighbours. Position kept.",
+C041,flag,473,,,Terminus Bouchtat,,34.6795356,-1.9102106,,,,"L13's terminus 'Bouchtat' has the coordinates of Terminus Bab Sidi Abdelouahab in the centre. Route Bouchtat starts on Route El Aounia (north-east), so the real terminus is probably out there. Position kept.",
+C042,merge,12,,9,Av Armie de Libiration 1,,34.6710767,-1.9215348,,,,Under 20 m from 9 'Av armie de liberation bab aljazaer' (L08); 0 m apart. This one serves L08.,distance 0.0 m
+C043,merge,977,,30,LYCEE ASSALAM,,34.679072263515,-1.9315544151411,,,,Same stop entered twice: same name as 30 'LYCEE ASSALAM' (L05 L15); 31 m apart. This one serves L15.,distance 30.6 m
+C044,merge,887,,32,AGDAL TERMUNIS,,34.6755,-1.85936,,,,Same stop entered twice: same name as 32 'Agdal' (L13); 20 m apart. This one serves L18.,distance 20.1 m
+C045,merge,991,,40,LYCEE DERFOUFI,,34.707549349606,-1.9198125833848,,,,Same stop entered twice: same name as 40 'Lycée derfoufi' (L31); 37 m apart. This one serves L09.,distance 36.6 m
+C046,merge,45,,42,Av Brahim Lahssini sale coverte,,34.670673256726,-1.9337439335086,,,,Under 20 m from 42 'Av Brahim Lahssini pharmacie compelexe sportive' (L16); 6 m apart. This one serves L16.,distance 6.1 m
+C047,merge,490,,62,institut el gadi lafkhih,,34.657812,-1.91253,,,,Under 20 m from 62 'Av Tohami Jilali OFPPT' (L07); 18 m apart. This one serves L31.,distance 18.4 m
+C048,merge,540,,65,nassij al jam3aoui,,34.660860677766,-1.9119483139285,,,,Under 20 m from 65 'Av Tohami Jilali Palais de justice' (L07); 10 m apart. This one serves L31.,distance 10.0 m
+C049,merge,704,,69,CAFE VICTORIA,,34.700068893655,-1.911401158825,,,,Under 20 m from 69 'Av Elmansour Edahhabi1 (Cafe victoria)' (L04); 8 m apart. This one serves L20.,distance 8.1 m
+C050,merge,789,,69,JARDIN VILLAGE KOULOUCH,,34.70008,-1.91135,,,,Under 20 m from 69 'Av Elmansour Edahhabi1 (Cafe victoria)' (L04); 9 m apart. This one serves L24.,distance 9.0 m
+C051,merge,842,,69,ECOLE TAHA HUSSEIN,,34.70012,-1.91154,,,,Under 20 m from 69 'Av Elmansour Edahhabi1 (Cafe victoria)' (L04); 12 m apart. This one serves L24.,distance 11.7 m
+C052,merge,709,,77,Mcdonald,,34.67697,-1.92869,,,,Under 20 m from 77 'Mac donalds' (L05); 5 m apart. This one serves L14.,distance 5.2 m
+C053,merge,956,,77,MC DONALDS,,34.677013167623,-1.9288196183618,,,,Under 20 m from 77 'Mac donalds' (L05); 9 m apart. This one serves L15.,distance 9.4 m
+C054,merge,839,,101,MAJLIS AL JIHA,,34.69754,-1.919,,,,Same stop entered twice: same name as 101 'MAJLIS EL JIHA' (L31); 16 m apart. This one serves L24.,distance 15.6 m
+C055,merge,873,,171,MOSQUEE RIAD,,34.67906,-1.89608,,,,Under 20 m from 171 'AV Allal Al fassi mosque riad' (L11 L13); 14 m apart. This one serves L18 L19.,distance 13.5 m
+C056,merge,671,,189,MINISTERE DES DOUANES,,34.67491,-1.91905,,,,Under 20 m from 189 'Av Allal Ben Abdellah' (L08); 12 m apart. This one serves L20.,distance 11.8 m
+C057,merge,936,,197,PARC NAJD,,34.65692,-1.86928,,,,Under 20 m from 197 'Mosque Elbourak' (L02); 10 m apart. This one serves L01.,distance 9.7 m
+C058,merge,592,,201,laboratoire el hakim,,34.675894,-1.916112,,,,Under 20 m from 201 'Av Idriss Al Akbar hopital El Farabi 1' (L05 L16 L23); 6 m apart. This one serves L25.,distance 6.4 m
+C059,merge,607,,201,HOPITAL EL FARABI,,34.676077674788,-1.9160574783355,,,,Under 20 m from 201 'Av Idriss Al Akbar hopital El Farabi 1' (L05 L16 L23); 18 m apart. This one serves L25.,distance 18.2 m
+C060,merge,672,,209,UNITE ADMINISTRATIVE,,34.67208,-1.91886,,,,Under 20 m from 209 'Clinique Al Maghrib' (L08); 12 m apart. This one serves L20.,distance 12.2 m
+C061,merge,954,,216,CONSULAT D'ALGERIE,,34.67682734087,-1.9206101199423,,,,Same stop entered twice: same name as 216 'consulat d'algerie' (L05 L14 L16 L23); 47 m apart. This one serves L15.,distance 46.7 m
+C062,merge,684,,223,EL MAJLIS AL ILMI,,34.66824,-1.90031,,,,Under 20 m from 223 'EAUX ET FORETS' (L02 L20); 19 m apart. This one serves L20.,distance 19.2 m
+C063,merge,976,,229,LA MAISON REANAULT,,34.681375860425,-1.9382285978564,,,,Under 20 m from 229 'Mosquee Othmane Ibn Aafane' (L14); 5 m apart. This one serves L15.,distance 4.7 m
+C064,merge,845,,231,ECOLE AICHA OUM AL MOUAMNIN,,34.6882,-1.90728,,,,Under 20 m from 231 'Ecole Lalla Aicha' (L04); 7 m apart. This one serves L21.,distance 6.7 m
+C065,merge,547,,240,station maghreb el arabi,,34.678433,-1.911706,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 12 m apart. This one serves L32.,distance 11.7 m
+C066,merge,627,,240,AL MAGHREB EL ARABI,,34.678283,-1.911646,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 6 m apart. This one serves L03.,distance 5.9 m
+C067,merge,707,,240,termunis al maghreb el arabi,,34.678252212712,-1.9116800883664,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 9 m apart. This one serves L14.,distance 8.9 m
+C068,merge,983,,240,TERMUNIS MAGHREB ARABI,,34.678187513682,-1.9117017262506,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 16 m apart. This one serves L15.,distance 16.3 m
+C069,merge,210,,258,Mosque Hamza,,34.6736492,-1.9127779,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 15 m apart. This one serves L02.,distance 14.6 m
+C070,merge,218,,258,Av Idriss Al Akbar Moulay Idriss,,34.6735756,-1.9128211,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 15 m apart. This one serves L07 L17.,distance 14.7 m
+C071,merge,593,,258,association nibras,,34.673542,-1.912899,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 22 m apart. This one serves L25.,distance 21.8 m
+C072,merge,923,,258,MOLAY DRISS,,34.673695418304,-1.9127529579903,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 17 m apart. This one serves L01.,distance 17.3 m
+C073,merge,541,,270,RADEEO,,34.657216,-1.909143,,,,Under 20 m from 270 'FACULTE DE MEDECINE' (L20); 5 m apart. This one serves L31.,distance 5.0 m
+C074,merge,677,,270,RADEEO,,34.657193763459,-1.909109795746,,,,Under 20 m from 270 'FACULTE DE MEDECINE' (L20); 8 m apart. This one serves L20.,distance 7.7 m
+C075,merge,666,,279,BOULANGERIE EL MANSOUR EDDAHBI,,34.70132,-1.91244,,,,Under 20 m from 279 'AV Mansour Eddahabi 1' (L04); 6 m apart. This one serves L20.,distance 6.4 m
+C076,merge,493,,283,hamam benkachor,,34.667479030298,-1.9127261405608,,,,Under 20 m from 283 'Hama Benkachour' (L07); 9 m apart. This one serves L25 L31.,distance 9.0 m
+C077,merge,830,,283,HAMAM BENKHACHOUR/R,,34.66756,-1.91268,,,,Under 20 m from 283 'Hama Benkachour' (L07); 19 m apart. This one serves L24.,distance 19.0 m
+C078,merge,951,,283,HAMMAM BENKACHOR,,34.66754,-1.91272,,,,Under 20 m from 283 'Hama Benkachour' (L07); 16 m apart. This one serves L01.,distance 15.6 m
+C079,merge,595,,285,benkachour aller,,34.666919,-1.912963,,,,Under 20 m from 285 'HAMAM BENKACHOUR' (L24); 12 m apart. This one serves L25.,distance 12.1 m
+C080,merge,925,,285,HAMMAM BENKACHOUR,,34.66691428783,-1.9129997662727,,,,Under 20 m from 285 'HAMAM BENKACHOUR' (L24); 10 m apart. This one serves L01.,distance 10.5 m
+C081,merge,628,,320,MATHAF LALA MARYEM,,34.677118852331,-1.9154834747314,,,,Under 20 m from 320 'Park lala Meryem' (L05); 19 m apart. This one serves L03.,distance 18.6 m
+C082,merge,708,,320,musée lala maryem,,34.6771,-1.91547,,,,Under 20 m from 320 'Park lala Meryem' (L05); 19 m apart. This one serves L14.,distance 19.0 m
+C083,merge,571,,358,moin 1,,34.676576219706,-1.9110578267498,,,,Under 20 m from 358 'Yotno Belhoussine' (L02 L05 L07 L16 L17 L23); 17 m apart. This one serves L01 L03 L14 L32.,distance 17.1 m
+C084,merge,982,,358,AREET MOIN 1,,34.676533033011,-1.9111164671561,,,,Under 20 m from 358 'Yotno Belhoussine' (L02 L05 L07 L16 L17 L23); 10 m apart. This one serves L15.,distance 10.4 m
+C085,merge,1013,,358,MOIN 1,,34.676537370373,-1.911095040555,,,,Under 20 m from 358 'Yotno Belhoussine' (L02 L05 L07 L16 L17 L23); 12 m apart. This one serves L09.,distance 11.7 m
+C086,merge,661,,363,moulay driss,,34.673942551549,-1.9136058336543,,,,Under 20 m from 363 'Yotno belhoussine 1' (L08); 6 m apart. This one serves L03.,distance 5.9 m
+C087,merge,213,,368,CNSS,,34.67104,-1.91195,,,,Under 20 m from 368 'POLYCLINIQUE' (L07 L24); 6 m apart. This one serves L25.,distance 5.6 m
+C088,merge,597,,390,etablissement el ouazzani,,34.662212,-1.905666,,,,Under 20 m from 390 'Av Med 6 Carfour' (L17); 19 m apart. This one serves L25.,distance 19.1 m
+C089,merge,488,,394,inwi,,34.655446,-1.899433,,,,Under 20 m from 394 'Av Med 6 Faculte Des Science' (L17); 18 m apart. This one serves L31.,distance 18.4 m
+C090,merge,545,,407,ENCG,,34.652928,-1.897052,,,,Under 20 m from 407 'Av Med 6 LISTA' (L17); 14 m apart. This one serves L25 L31.,distance 13.8 m
+C091,merge,543,,409,Rond point faculte,,34.656025,-1.900257,,,,Under 20 m from 409 'Av Med 6 Rond point Universite Med 1' (L17); 15 m apart. This one serves L20 L31.,distance 15.1 m
+C092,merge,412,,415,route 14 (1),,34.6913774,-1.8824431,,,,Under 20 m from 415 'route 14 Mosquee Erida' (L11); 0 m apart. This one serves L11.,distance 0.0 m
+C093,merge,428,,427,Route de Frontiere (vers Agdal) Risidence Al GHITE,,34.7055323,-1.8581261,,,,Under 20 m from 427 'Route de Frontiere (vers Agdal) Café Noujoum' (L11); 0 m apart. This one serves L11.,distance 0.0 m
+C094,merge,871,,478,TERMUNIS IBN KHALDOUN,,34.6802,-1.9069,,,,Same stop entered twice: same name as 478 'Terminus Ibn Khaldoune' (L11 L13); 41 m apart. This one serves L18 L19.,distance 40.7 m
+C095,merge,542,,489,madariss al hakim,,34.656755,-1.904642,,,,Under 20 m from 489 'FLAM D'OR' (L31); 9 m apart. This one serves L31.,distance 9.4 m
+C096,merge,693,,489,RESTAURANT LE COIN,,34.65679,-1.90454,,,,Under 20 m from 489 'FLAM D'OR' (L31); 17 m apart. This one serves L20.,distance 17.2 m
+C097,merge,797,,496,CLUB DE CHEMINS DE FER,,34.67631,-1.9251,,,,Under 20 m from 496 'petromin station' (L31); 14 m apart. This one serves L24.,distance 14.1 m
+C098,merge,833,,496,CAFE PETROM,,34.67617,-1.92501,,,,Under 20 m from 496 'petromin station' (L31); 4 m apart. This one serves L24.,distance 3.9 m
+C099,merge,834,,497,PHARMACIE AL MAHATA,,34.68061,-1.92254,,,,Same stop entered twice: same name as 497 'pharmacie el mahata' (L31); 18 m apart. This one serves L24.,distance 17.6 m
+C100,merge,836,,498,VETERINAIRE,,34.68673,-1.9196,,,,Under 20 m from 498 'viterainaire' (L31); 2 m apart. This one serves L24.,distance 2.2 m
+C101,merge,530,,499,arrondissement 3,,34.690572,-1.918877,,,,Under 20 m from 499 'rewa9 el founon' (L31); 9 m apart. This one serves L31.,distance 9.0 m
+C102,merge,794,,499,TROISIEME DISTRICTSIDI IDRIS AL -QADI,,34.69058,-1.91888,,,,Under 20 m from 499 'rewa9 el founon' (L31); 10 m apart. This one serves L24.,distance 9.9 m
+C103,merge,837,,499,GALERIE D'ART,,34.69055,-1.91877,,,,Under 20 m from 499 'rewa9 el founon' (L31); 8 m apart. This one serves L24.,distance 8.0 m
+C104,merge,527,,501,station banana,,34.700792062175,-1.9192653894424,,,,Under 20 m from 501 'MARCHE GROS' (L24 L31); 18 m apart. This one serves L31.,distance 17.7 m
+C105,merge,791,,526,CIMETIERE SIDI MOHAMMED,,34.702776764238,-1.9194638542669,,,,Under 20 m from 526 'cimetier sidi mohamed' (L31); 11 m apart. This one serves L24.,distance 11.0 m
+C106,merge,793,,528,PONT VILLAGE TOBA,,34.69628,-1.91921,,,,Under 20 m from 528 'association zalija' (L31); 10 m apart. This one serves L24.,distance 9.7 m
+C107,merge,1006,,528,PONT VILLAGE TOBA,,34.696280643775,-1.9191795618611,,,,Under 20 m from 528 'association zalija' (L31); 10 m apart. This one serves L09.,distance 9.5 m
+C108,merge,1007,,529,BIM/R,,34.693484888595,-1.9188148948444,,,,Same stop entered twice: same name as 529 'bim' (L24 L31); 19 m apart. This one serves L09.,distance 19.3 m
+C109,merge,795,,531,CIMETIERE CHRETIEN,,34.68617,-1.9198,,,,Under 20 m from 531 'cimetier nassara' (L31); 11 m apart. This one serves L24.,distance 10.9 m
+C110,merge,725,,534,clynique echark,,34.67508,-1.9235,,,,Under 20 m from 534 'clinique chark' (L31); 9 m apart. This one serves L14.,distance 9.5 m
+C111,merge,799,,534,FACE CLINIQUE CHARK,,34.675093986821,-1.9235837677062,,,,Same stop entered twice: same name as 534 'clinique chark' (L31); 2 m apart. This one serves L24.,distance 1.8 m
+C112,merge,832,,534,CABINET MOUHOUB,,34.6752,-1.92368,,,,Under 20 m from 534 'clinique chark' (L31); 13 m apart. This one serves L24.,distance 13.1 m
+C113,merge,569,,535,le drapeau,,34.673823,-1.918328,,,,Under 20 m from 535 'la3lam' (L31); 11 m apart. This one serves L32.,distance 11.2 m
+C114,merge,726,,535,alealam,,34.673836571422,-1.9184553576593,,,,Under 20 m from 535 'la3lam' (L31); 6 m apart. This one serves L14.,distance 6.3 m
+C115,merge,800,,535,DRAPEAU,,34.67384532614,-1.9184017414429,,,,Under 20 m from 535 'la3lam' (L31); 5 m apart. This one serves L24.,distance 5.0 m
+C116,merge,831,,535,ECOLE EL KHAWARIZMI,,34.67396,-1.91853,,,,Under 20 m from 535 'la3lam' (L31); 13 m apart. This one serves L24.,distance 12.7 m
+C117,merge,801,,537,CAFE VINIZIA,,34.672791001314,-1.912538406126,,,,Under 20 m from 537 'residence mehdi' (L31); 8 m apart. This one serves L24.,distance 7.6 m
+C118,merge,606,,539,MOUSQE BADR,,34.665284,-1.912423,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 14 m apart. This one serves L25.,distance 14.0 m
+C119,merge,802,,539,COMMISSARIAT DE POLICE,,34.665202410611,-1.9122755543032,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 2 m apart. This one serves L24.,distance 2.5 m
+C120,merge,829,,539,MOSQUEE BADR,,34.665281785796,-1.9123131129972,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 8 m apart. This one serves L01 L24.,distance 8.4 m
+C121,merge,926,,539,COMMISARIAT DE POLICE,,34.66517,-1.91222,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 9 m apart. This one serves L01.,distance 8.6 m
+C122,merge,600,,544,faculte sience,,34.65435655857,-1.898413877918,,,,Under 20 m from 544 'faculté de science' (L31); 6 m apart. This one serves L25.,distance 5.8 m
+C123,merge,564,,551,usine de brique,,34.657255,-1.954153,,,,Under 20 m from 551 'cafe jardin d'oujda' (L32); 16 m apart. This one serves L32.,distance 15.8 m
+C124,merge,563,,552,etablissement bni wkil,,34.644114,-1.969108,,,,Under 20 m from 552 'rond-point bni wkil' (L32); 6 m apart. This one serves L32.,distance 5.8 m
+C125,merge,625,,574,taxiat nasser,,34.712149,-1.887541,,,,Under 20 m from 574 'souk ennaser' (L25); 18 m apart. This one serves L25.,distance 17.7 m
+C126,merge,735,,574,SWIKA NSSAR,,34.71199,-1.88756,,,,Under 20 m from 574 'souk ennaser' (L25); 6 m apart. This one serves L99.,distance 6.4 m
+C127,merge,780,,574,taxi de nasser,,34.71204,-1.8876,,,,Under 20 m from 574 'souk ennaser' (L25); 11 m apart. This one serves L99.,distance 11.2 m
+C128,merge,623,,576,depeau de marbre,,34.708292,-1.885485,,,,Under 20 m from 576 'central' (L25); 16 m apart. This one serves L25.,distance 15.7 m
+C129,merge,621,,577,now chark,,34.704325,-1.887549,,,,Under 20 m from 577 'visite dekra' (L25); 18 m apart. This one serves L25.,distance 18.3 m
+C130,merge,620,,578,rafaie metal,,34.701572,-1.885882,,,,Under 20 m from 578 'cafe dadi' (L25); 15 m apart. This one serves L25.,distance 14.9 m
+C131,merge,619,,579,cafe euro sport,,34.698662085586,-1.8841338468364,,,,Same stop entered twice: same name as 579 'face cafe euro sport' (L25); 10 m apart. This one serves L25.,distance 9.7 m
+C132,merge,615,,583,boulangerie ziani,,34.699852,-1.893823,,,,Under 20 m from 583 'tennis 1' (L25); 15 m apart. This one serves L25.,distance 14.6 m
+C133,merge,614,,585,taba loto,,34.697694,-1.898237,,,,Under 20 m from 585 'tennis2' (L25); 9 m apart. This one serves L25.,distance 9.2 m
+C134,merge,669,,590,PLACE JADA,,34.68456,-1.9151,,,,Under 20 m from 590 'sahat jada' (L25); 11 m apart. This one serves L20.,distance 11.4 m
+C135,merge,670,,591,AGENCE INWI,,34.67973,-1.91837,,,,Under 20 m from 591 'bank bmci' (L25); 9 m apart. This one serves L20.,distance 9.5 m
+C136,merge,924,,594,POLYCLINIQUE,,34.669177643821,-1.9121575262317,,,,Under 20 m from 594 'pharmacie polyclinique' (L24 L25); 6 m apart. This one serves L01.,distance 5.6 m
+C137,merge,603,,598,MICHWAT AL BAHJA,,34.660242,-1.903763,,,,Under 20 m from 598 'mafrochat donia' (L25); 19 m apart. This one serves L25.,distance 19.0 m
+C138,merge,701,,610,DAR EL MADRASE,,34.68701,-1.91197,,,,Under 20 m from 610 'etablissement des œuvres sociales' (L25); 11 m apart. This one serves L20.,distance 11.3 m
+C139,merge,702,,611,MARBRE OULED RGIGE,,34.68924,-1.90974,,,,Under 20 m from 611 'zalij wlad rkik' (L25); 13 m apart. This one serves L20.,distance 13.1 m
+C140,merge,675,,633,DOUCHE ES-SALAM,,34.66022,-1.92056,,,,Under 20 m from 633 'HAMAM A SALAM' (L03); 4 m apart. This one serves L20.,distance 3.7 m
+C141,merge,654,,636,la PHARMACIE CENTRAL,,34.657784,-1.926264,,,,Under 20 m from 636 'AUTO ECOLE EL  IKHLASSE' (L03); 15 m apart. This one serves L03.,distance 15.0 m
+C142,merge,653,,637,ECOLE KHAIR EDDINE,,34.658455,-1.927864,,,,Under 20 m from 637 'BOULANGERIE DE LA MAGIE' (L03); 10 m apart. This one serves L03.,distance 10.3 m
+C143,merge,652,,638,PONT,,34.658959506822,-1.9304018777728,,,,Under 20 m from 638 'CENTRE ESAFA' (L03); 8 m apart. This one serves L03.,distance 8.3 m
+C144,merge,650,,640,ECOLE EL JOUHARA,,34.655872,-1.934573,,,,Under 20 m from 640 'BANQLADECH' (L03); 4 m apart. This one serves L03.,distance 3.6 m
+C145,merge,647,,642,FACE PHARMACIE ES-SAMARA,,34.649691,-1.940923,,,,Same stop entered twice: same name as 642 'PHARMACIE ES-SAMARA' (L03); 57 m apart. This one serves L03.,distance 57.2 m
+C146,merge,646,,643,FACE ECOLE 11 JANVIER,,34.647817,-1.942182,,,,Same stop entered twice: same name as 643 'ECOLE 11 JANVIER' (L03); 14 m apart. This one serves L03.,distance 13.7 m
+C147,merge,696,,656,CAFE PAPILLION,,34.6598,-1.92064,,,,Under 20 m from 656 'cafe de papillons' (L03); 5 m apart. This one serves L20.,distance 4.8 m
+C148,merge,632,,657,Croissant-Rouge,,34.663230118737,-1.9192224880802,,,,Under 20 m from 657 'residence el ikhlas' (L03 L20); 9 m apart. This one serves L03.,distance 9.3 m
+C149,merge,703,,668,CAFE DE CAVALIER,,34.69794,-1.90994,,,,Under 20 m from 668 'LE PARC DE LOISIRS' (L20); 16 m apart. This one serves L20.,distance 16.0 m
+C150,merge,695,,676,TERRAIN DE FOOT,,34.65804,-1.91713,,,,Under 20 m from 676 'MASJID TAYBA' (L20); 11 m apart. This one serves L20.,distance 11.0 m
+C151,merge,608,,700,2026-07-09 00:00:00,,34.679134963651,-1.9188254792001,,,,The source name '2026-07-09 00:00:00' is '9 juillet' read as a date; stop 700 'PLACE 9 JUILLET' (L20) is 49 m away. Same stop as 700 'PLACE 9 JUILLET' (L20); 49 m apart. This one serves L25.,distance 49.2 m
+C152,merge,720,,714,omar de la police,,34.68367,-1.94988,,,,Under 20 m from 714 'station shell' (L14); 16 m apart. This one serves L14.,distance 16.2 m
+C153,merge,718,,716,drafif /R,,34.68929,-1.95416,,,,Under 20 m from 716 'aldrafif' (L14); 13 m apart. This one serves L14.,distance 12.8 m
+C154,merge,798,,724,GARE ROUTIERE,,34.675857138524,-1.9270598919468,,,,Under 20 m from 724 'Rond-point oued ennachef' (L14); 5 m apart. This one serves L24.,distance 4.5 m
+C155,merge,978,,724,POND MED 5,,34.675873581049,-1.9272093204288,,,,Under 20 m from 724 'Rond-point oued ennachef' (L14); 10 m apart. This one serves L15.,distance 9.7 m
+C156,merge,981,,727,MOULAY IDRISS,,34.673805675642,-1.9138473395331,,,,Under 20 m from 727 'gendarmerie' (L14); 4 m apart. This one serves L15.,distance 4.0 m
+C157,merge,844,,729,STATION SOUK EL QOUDS,,34.68223,-1.9092,,,,Same stop entered twice: same name as 729 'TERMUNIS EL QODS' (L99); 23 m apart. This one serves L21.,distance 22.8 m
+C158,merge,846,,731,REGEIONALE,,34.6962,-1.90227,,,,Under 20 m from 731 'REGIONALE' (L99); 3 m apart. This one serves L21.,distance 3.0 m
+C159,merge,847,,732,CAFE PALATINO,,34.70034,-1.89788,,,,Under 20 m from 732 'PLATINO' (L99); 12 m apart. This one serves L21.,distance 11.9 m
+C160,merge,848,,733,RJAFALLAH,,34.70487,-1.89497,,,,Under 20 m from 733 'RJA FLLAH' (L99); 3 m apart. This one serves L21.,distance 3.5 m
+C161,merge,773,,741,piscine tropicale,,34.740545714003,-1.8677455093631,,,,Under 20 m from 741 'CAFE DAR NASSIM' (L99); 10 m apart. This one serves L99.,distance 9.8 m
+C162,merge,771,,742,reseau/R,,34.7447069225,-1.8650311091793,,,,Same stop entered twice: same name as 742 'RESEAU' (L99); 22 m apart. This one serves L99.,distance 21.7 m
+C163,merge,770,,744,sawri /R,,34.750176904422,-1.8614852754682,,,,Same stop entered twice: same name as 744 'SAWRI' (L99); 10 m apart. This one serves L99.,distance 10.0 m
+C164,merge,762,,753,lbyout 2,,34.7776,-1.84417,,,,Under 20 m from 753 'LBUYUT' (L99); 8 m apart. This one serves L99.,distance 8.3 m
+C165,merge,758,,755,ouled aiyad,,34.78297,-1.84212,,,,Under 20 m from 755 'LAMRIRA' (L99); 16 m apart. This one serves L99.,distance 16.4 m
+C166,merge,857,,779,LOTISSEMENT,,34.71815,-1.88234,,,,Under 20 m from 779 'station ola' (L21 L99); 8 m apart. This one serves L21.,distance 8.1 m
+C167,merge,866,,781,SEKAYA,,34.70876,-1.89106,,,,Under 20 m from 781 'station energie total' (L99); 2 m apart. This one serves L21.,distance 2.4 m
+C168,merge,867,,782,WAFA CASH,,34.70547,-1.89454,,,,Under 20 m from 782 'maroc telecom' (L99); 8 m apart. This one serves L21.,distance 8.0 m
+C169,merge,868,,783,PONT RJAFALLAH,,34.70116,-1.89736,,,,Under 20 m from 783 'cafe samir' (L99); 1 m apart. This one serves L21.,distance 0.9 m
+C170,merge,168,,784,Café le Prince,,34.6916736,-1.9072719,,,,Same stop entered twice: same name as 784 'cafe prince' (L21 L99); 47 m apart. This one serves L04.,distance 46.9 m
+C171,merge,245,,785,en face ecole lala Aicha,,34.68803666429,-1.9074529409409,,,,Under 20 m from 785 'pharmacie ibn sina' (L21 L99); 7 m apart. This one serves L04.,distance 7.1 m
+C172,merge,870,,786,MAISON D'ELEGANCE,,34.68546,-1.90918,,,,Same stop entered twice: same name as 786 'maison de l'élégance' (L99); 4 m apart. This one serves L21.,distance 3.5 m
+C173,merge,841,,790,MARCHE AUX POISSONS,,34.70341,-1.91504,,,,Under 20 m from 790 'VETERINAIRE DKHISSI' (L24); 11 m apart. This one serves L24.,distance 11.0 m
+C174,merge,208,,803,CLINIQUE IBN SINA,,34.663847800349,-1.9050550507422,,,,Under 20 m from 803 'PHARMACIE HASSAN II' (L01 L24); 7 m apart. This one serves L01.,distance 7.3 m
+C175,merge,372,,803,POLYCLINIQUE IBN SINA,,34.663825739094,-1.9049423933029,,,,Under 20 m from 803 'PHARMACIE HASSAN II' (L01 L24); 13 m apart. This one serves L24.,distance 13.5 m
+C176,merge,950,,804,BOULANGERIE IBN SINA,,34.6638,-1.90021,,,,Under 20 m from 804 'SIEGE DU PARTI L'AUTHENTICITE ET DE LA MODERNITE' (L24); 14 m apart. This one serves L01.,distance 14.0 m
+C177,merge,827,,805,LYCEE AL MAGHREB EL ARABI/R,,34.664266976817,-1.8966275391425,,,,Same stop entered twice: same name as 805 'FACE LYCEE EL MAGHREB EL ARABI' (L24); 10 m apart. This one serves L24.,distance 10.1 m
+C178,merge,927,,805,LYCEE  MAGHREB L'ARABIE,,34.6642,-1.89641,,,,Under 20 m from 805 'FACE LYCEE EL MAGHREB EL ARABI' (L24); 16 m apart. This one serves L01.,distance 16.1 m
+C179,merge,949,,805,LYCCE MAGHREB L'ARABIE,,34.66428,-1.89666,,,,Under 20 m from 805 'FACE LYCEE EL MAGHREB EL ARABI' (L24); 13 m apart. This one serves L01.,distance 12.8 m
+C180,merge,825,,807,FACE ASSURANCE SALAM,,34.665506784371,-1.8892782864417,,,,Under 20 m from 807 'CAFE AL MANAR' (L01 L24); 22 m apart. This one serves L24.,distance 21.5 m
+C181,merge,948,,807,STATION APPOLLO,,34.66552,-1.88918,,,,Under 20 m from 807 'CAFE AL MANAR' (L01 L24); 15 m apart. This one serves L01.,distance 14.8 m
+C182,merge,930,,809,HAMMAM AL JAOUHARA,,34.66612,-1.8815,,,,Under 20 m from 809 'HAMAM EL JAOUHARA' (L24); 5 m apart. This one serves L01.,distance 5.4 m
+C183,merge,822,,810,QASR LA'LAJ,,34.667218699285,-1.8771922510671,,,,Under 20 m from 810 'MOSQUEE  RAYAN' (L24); 19 m apart. This one serves L24.,distance 19.4 m
+C184,merge,931,,810,TERMUNIS MOSQUEE BAB RAYAN,,34.667152556682,-1.8770474304229,,,,Under 20 m from 810 'MOSQUEE  RAYAN' (L24); 7 m apart. This one serves L01.,distance 7.4 m
+C185,merge,945,,810,QSAR LAALAJ,,34.66724,-1.87719,,,,Under 20 m from 810 'MOSQUEE  RAYAN' (L24); 20 m apart. This one serves L01.,distance 19.7 m
+C186,merge,818,,814,FACE OASIS SIDI YAHYA,,34.66711,-1.86375,,,,Same stop entered twice: same name as 814 'OASIS SIDI YAHYA' (L24); 11 m apart. This one serves L24.,distance 10.8 m
+C187,merge,946,,823,CAFE 4 ETOILES,,34.66634,-1.88102,,,,Under 20 m from 823 'STATION APOLLO' (L24); 12 m apart. This one serves L01.,distance 12.5 m
+C188,merge,806,,826,PHARMACIE  AL-SAFRIOUI,,34.66515828057,-1.8914401531219,,,,Under 20 m from 826 'FACE CAFE ACHRAF' (L01 L24); 18 m apart. This one serves L24.,distance 17.8 m
+C189,merge,864,,851,LES TAXIS BLANCS,,34.71248,-1.89566,,,,Under 20 m from 851 'EL YAJOUR' (L21); 13 m apart. This one serves L21.,distance 12.5 m
+C190,merge,861,,854,HAY SEDRA,,34.71982,-1.88905,,,,Under 20 m from 854 'HAY EL BERKANI' (L21); 11 m apart. This one serves L21.,distance 11.3 m
+C191,merge,860,,855,ECOLE AZIZ AMINE,,34.71903,-1.88693,,,,Same stop entered twice: same name as 855 'FACE ECOLE AZIZ AMINE' (L21); 13 m apart. This one serves L21.,distance 13.0 m
+C192,merge,859,,856,PHARMACIE GALA,,34.71777,-1.8847,,,,Under 20 m from 856 'BRIGO GALA' (L21); 8 m apart. This one serves L21.,distance 8.3 m
+C193,merge,736,,858,FACE GALA,,34.71962,-1.8814,,,,Same stop entered twice: same name as 858 'TERMUNIS GALA' (L21); 57 m apart. This one serves L99.,distance 57.3 m
+C194,merge,897,,877,FACE SOUKA LAZARET,,34.68024,-1.8837,,,,Under 20 m from 877 'SOUK EL HAD  LAZARET' (L18); 19 m apart. This one serves L18.,distance 19.1 m
+C195,merge,895,,879,CAFE AL MUHAJIRIN,,34.677771703227,-1.8818754113104,,,,Under 20 m from 879 'ROND-POINT MEXICO' (L18); 4 m apart. This one serves L18.,distance 3.5 m
+C196,merge,893,,881,FACE HAMMAM CHTIOUI,,34.68121,-1.87629,,,,Same stop entered twice: same name as 881 'HAMMAM CHTIOUI' (L18); 12 m apart. This one serves L18.,distance 12.1 m
+C197,merge,892,,882,CAFE ABDOU,,34.68339,-1.87452,,,,Under 20 m from 882 'BOULANGERIE L'HIRONDELLE' (L18); 18 m apart. This one serves L18.,distance 17.7 m
+C198,merge,921,,900,DERB BERAHMOUN,,34.67951,-1.89315,,,,Same stop entered twice: same name as 900 'FACE DERB BERAHMOUN' (L18); 17 m apart. This one serves L19.,distance 17.4 m
+C199,merge,918,,904,CAFE OYONNAX,,34.68506,-1.88151,,,,Under 20 m from 904 'MAHLABAT NIAMA' (L19); 17 m apart. This one serves L19.,distance 17.1 m
+C200,merge,917,,905,FASSI DECOR,,34.68631,-1.88093,,,,Under 20 m from 905 'SALLE COUVERT OUED EDDAHAB' (L19); 14 m apart. This one serves L19.,distance 14.1 m
+C201,merge,916,,906,MOSQUEE ARIDA,,34.68815,-1.87898,,,,Same stop entered twice: same name as 906 'TERMUNIS MOSQUEE ARIDA' (L19); 7 m apart. This one serves L19.,distance 6.7 m
+C202,merge,984,,953,MUSEE LALLA MERYEM,,34.676958107074,-1.9128400765741,,,,Same stop entered twice: same name as 953 'MUSEE LALLA MERYEM' (L15); 36 m apart. This one serves L09.,distance 36.5 m
+C203,merge,325,,961,Hay Lmharach 1,,34.6878518,-1.9423922,,,,Under 20 m from 961 'MHARACH I' (L15); 0 m apart. This one serves L05.,distance 0.0 m
+C204,merge,972,,961,BOULANGERIE AMIRA,,34.687776362166,-1.9424075028049,,,,Under 20 m from 961 'MHARACH I' (L15); 9 m apart. This one serves L15.,distance 8.5 m
+C205,merge,319,,962,Hay Lmharach,,34.6897138,-1.9439097,,,,Under 20 m from 962 'MHARACH II' (L15); 0 m apart. This one serves L05.,distance 0.0 m
+C206,merge,971,,962,MHARACH II,,34.689641939283,-1.9440221879712,,,,Same stop entered twice: same name as 962 'MHARACH II' (L15); 13 m apart. This one serves L15.,distance 13.0 m
+C207,merge,1010,,986,MARCHE COUVERT,,34.683637183198,-1.9180212825614,,,,Same stop entered twice: same name as 986 'MARCHE COUVERT' (L09); 13 m apart. This one serves L09.,distance 13.2 m
+C208,merge,1005,,990,MARCHE DE GROS /R,,34.701704251868,-1.9193833973178,,,,Same stop entered twice: same name as 990 'MARCHE DE GROS' (L09); 28 m apart. This one serves L09.,distance 28.1 m
+C209,merge,1001,,993,ROND POINT CGI /R,,34.716575,-1.92157805555556,,,,Same stop entered twice: same name as 993 'ROND POINT CGI' (L09); 51 m apart. This one serves L09.,distance 51.2 m
+C210,merge,1000,,994,MOUSQUEE AL HAJAR AL ASWAD,,34.71582889466,-1.9253479683534,,,,Same stop entered twice: same name as 994 'MOSQUEE AL HAJAR AL ASWAD' (L09); 14 m apart. This one serves L09.,distance 13.9 m
+C211,merge,999,,995,FACE HAY ANNAHAR,,34.719000717368,-1.9302784806226,,,,Same stop entered twice: same name as 995 'HAY ANNAHAR' (L09); 12 m apart. This one serves L09.,distance 12.3 m
+C212,rename,32,,,Agdal,Terminus Agdal,,,,,,Name of the merged stop.,
+C213,rename,141,,,Bab sidi abdlouhab,Terminus Bab Sidi Abdelouahab,,,,,,Terminus name: stops of the same terminus get one name.,
+C214,rename,240,,,Terminus Place Maghreb Arabi,Terminus Maghreb Arabi,,,,,,Terminus name: stops of the same terminus get one name.,
+C215,rename,263,,,Terminus Souk Qods,Terminus Souk El Qods,,,,,,Terminus name: stops of the same terminus get one name.,
+C216,rename,266,,,EST  Sidi Maafa,EST Sidi Maafa,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C217,rename,273,,,terrain  Didi,terrain Didi,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C218,rename,472,,,Terminus Bab sidi Abdelouhab,Terminus Bab Sidi Abdelouahab,,,,,,Terminus name: stops of the same terminus get one name.,
+C219,rename,478,,,Terminus Ibn Khaldoune,Terminus Ibn Khaldoun,,,,,,Terminus name: stops of the same terminus get one name.,
+C220,rename,486,,,pharmacie sidi maafa,Terminus Pharmacie Sidi Maafa,,,,,,Terminus name: stops of the same terminus get one name.,
+C221,rename,515,,,terminis dar naaim,terminus dar naaim,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C222,rename,546,,,OFPPT,Terminus Pharmacie Sidi Maafa,,,,,,Terminus name: stops of the same terminus get one name.,
+C223,rename,562,,,dowar wlad salam RETOUR,dowar wlad salam,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C224,rename,572,,,termunis rjafllah,terminus rjafllah,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C225,rename,579,,,face cafe euro sport,cafe euro sport,,,,,,Name of the merged stop.,
+C226,rename,599,,,termunis Mr SMITH,terminus Mr SMITH,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C227,rename,636,,,AUTO ECOLE EL  IKHLASSE,AUTO ECOLE EL IKHLASSE,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C228,rename,644,,,TERMUNIS SAMARA,Terminus Samara,,,,,,Terminus name: stops of the same terminus get one name.,
+C229,rename,645,,,TERMINUS SAMARA,Terminus Samara,,,,,,Terminus name: stops of the same terminus get one name.,
+C230,rename,658,,,cabinet de  rééducation,cabinet de rééducation,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C231,rename,662,,,TERMUNIS MAGHREB AL ARABI,Terminus Maghreb Arabi,,,,,,Terminus name: stops of the same terminus get one name.,
+C232,rename,663,,,PIECE HAMIRI,Terminus Veterinaire Dkhissi,,,,,,Terminus name: stops of the same terminus get one name.,
+C233,rename,685,,,TERMUNIS PARC LALA AICHA,Terminus Parc Lalla Aicha,,,,,,Terminus name: stops of the same terminus get one name.,
+C234,rename,686,,,TERMUNIS PARC AICHA,Terminus Parc Lalla Aicha,,,,,,Terminus name: stops of the same terminus get one name.,
+C235,rename,691,,,MOUSQUEE EL QOUDS,MOSQUEE EL QOUDS,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C236,rename,705,,,MOUSQUEE EL MANSOR EDDAHBI,MOSQUEE EL MANSOR EDDAHBI,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C237,rename,706,,,TERMUNIS VETERINAIRE DKHISSI,Terminus Veterinaire Dkhissi,,,,,,Terminus name: stops of the same terminus get one name.,
+C238,rename,717,,,termunis sabra,terminus sabra,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C239,rename,729,,,TERMUNIS EL QODS,Terminus Souk El Qods,,,,,,Terminus name: stops of the same terminus get one name.,
+C240,rename,756,,,TERMUNIS KARTING,Terminus Karting,,,,,,Terminus name: stops of the same terminus get one name.,
+C241,rename,757,,,al houdoda,Terminus Karting,,,,,,Terminus name: stops of the same terminus get one name.,
+C242,rename,760,,,ajamie retour,ajamie,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C243,rename,787,,,TERMUNIS DIOUNA,TERMINUS DIOUNA,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C244,rename,805,,,FACE LYCEE EL MAGHREB EL ARABI,LYCEE AL MAGHREB EL ARABI,,,,,,Name of the merged stop.,
+C245,rename,808,,,VILLAGE  JDID,VILLAGE JDID,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C246,rename,810,,,MOSQUEE  RAYAN,MOSQUEE RAYAN,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C247,rename,816,,,TERMUNIS AGDAL,Terminus Agdal,,,,,,Terminus name: stops of the same terminus get one name.,
+C248,rename,826,,,FACE CAFE ACHRAF,PHARMACIE AL-SAFRIOUI,,,,,,Name of the merged stop.,
+C249,rename,855,,,FACE ECOLE AZIZ AMINE,ECOLE AZIZ AMINE,,,,,,Name of the merged stop.,
+C250,rename,858,,,TERMUNIS GALA,TERMINUS GALA,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C251,rename,874,,,BERB  BERAHMOUN,BERB BERAHMOUN,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C252,rename,875,,,JARDIN  LAZARET,JARDIN LAZARET,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C253,rename,876,,,BOULANGERIE ALLAL  FASSI,BOULANGERIE ALLAL FASSI,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C254,rename,877,,,SOUK EL HAD  LAZARET,SOUK EL HAD LAZARET,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C255,rename,900,,,FACE DERB BERAHMOUN,DERB BERAHMOUN,,,,,,Name of the merged stop.,
+C256,rename,903,,,SOUK EL HAD  LAZARET,SOUK EL HAD LAZARET,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C257,rename,906,,,TERMUNIS MOSQUEE ARIDA,TERMINUS MOSQUEE ARIDA,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C258,rename,922,,,TERMUNIS SAHAT NAKHEEL,Terminus Enakhil,,,,,,Terminus name: stops of the same terminus get one name.,
+C259,rename,942,,,CIMETIERE  SIDI YAHYA,CIMETIERE SIDI YAHYA,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C260,rename,952,,,TERMUNIS MAGHREB ARABI,Terminus Maghreb Arabi,,,,,,Terminus name: stops of the same terminus get one name.,
+C261,rename,957,,,MOUSQUEE MOUSSA IBN NOUSSAIR,MOSQUEE MOUSSA IBN NOUSSAIR,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C262,rename,967,,,TERMUNIS JARF LAKHDAR,TERMINUS JARF LAKHDAR,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C263,rename,997,,,TERMUNIS MARJANE,Terminus Marjane,,,,,,Terminus name: stops of the same terminus get one name.,
+C264,rename,998,,,TERMUNIS MARJANE,Terminus Marjane,,,,,,Terminus name: stops of the same terminus get one name.,
+C265,rename,1003,,,LYCEE DERFOUFI/R,LYCEE DERFOUFI,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C266,rename,1004,,,CIMETIERE /R,CIMETIERE,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C267,rename,1008,,,RIWA9 ALFOUNOUN/R,RIWA9 ALFOUNOUN,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C268,rename,1011,,,CAFE RIHAB/R,CAFE RIHAB,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C269,rename,618,,,banque populaire,banque populaire (Lotissement Talhaoui),,,,,,3 different stops were all called 'banque populaire' (3.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C270,rename,824,,,BANQUE POPULAIRE,BANQUE POPULAIRE (Hay Hakkou),,,,,,3 different stops were all called 'BANQUE POPULAIRE' (3.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C271,rename,896,,,BANQUE POPULAIRE,BANQUE POPULAIRE (Lotissement Msirdi),,,,,,3 different stops were all called 'BANQUE POPULAIRE' (3.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C272,rename,727,,,gendarmerie,gendarmerie (Hay Al Massira),,,,,,2 different stops were all called 'gendarmerie' (11.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C273,rename,765,,,gendarmerie,gendarmerie (Oulad Malha),,,,,,2 different stops were all called 'gendarmerie' (11.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C274,rename,609,,,LA POSTE,LA POSTE (Hay Rabat),,,,,,2 different stops were all called 'LA POSTE' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C275,rename,641,,,LA POSTE,LA POSTE (Hay Bangladech),,,,,,2 different stops were all called 'LA POSTE' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C276,rename,142,,,MAROC TELECOM,MAROC TELECOM (Hay Takkadoum),,,,,,3 different stops were all called 'MAROC TELECOM' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C277,rename,782,,,maroc telecom,maroc telecom (Hay Mohammed Ben Lakhdar),,,,,,3 different stops were all called 'maroc telecom' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C278,rename,821,,,OFPPT,OFPPT (Hay Hakkou),,,,,,3 different stops were all called 'OFPPT' (5.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C279,rename,853,,,OFPPT,OFPPT (Hay Ennasr),,,,,,3 different stops were all called 'OFPPT' (5.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C280,rename,913,,,OFPPT,OFPPT (Hay Al Fath),,,,,,3 different stops were all called 'OFPPT' (5.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C281,rename,500,,,station shell,station shell (Village Toba Extérieur),,,,,,4 different stops were all called 'station shell' (7.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C282,rename,687,,,STATION SHELL,STATION SHELL (Hay Al Maksam),,,,,,4 different stops were all called 'STATION SHELL' (7.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C283,rename,714,,,station shell,station shell (Lotissement Mchiouer),,,,,,4 different stops were all called 'station shell' (7.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C284,rename,812,,,STATION SHELL,STATION SHELL (Lotissement Elhasaniya),,,,,,4 different stops were all called 'STATION SHELL' (7.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)

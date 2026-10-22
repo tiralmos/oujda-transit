@@ -21,14 +21,15 @@ test('editDistance', () => {
 test('stop search finds by name, accent-insensitive, prefix and typo', () => {
   assert.ok(searchStops(index, 'aeroport').some((s) => s.slug === 'aeroport'));
   assert.ok(searchStops(index, 'Aéroport').some((s) => s.slug === 'aeroport'));
-  assert.ok(searchStops(index, 'clinique ibn').some((s) => s.id === 208));
-  assert.ok(searchStops(index, 'cliniqe').some((s) => s.id === 208));
+  // Clinique Ibn Sina (208) was merged into stop 803; its name still finds it.
+  assert.ok(searchStops(index, 'clinique ibn').some((s) => s.id === 803));
+  assert.ok(searchStops(index, 'cliniqe').some((s) => s.id === 803));
   assert.ok(searchStops(index, 'terminus agdal').length > 0);
   assert.deepEqual(searchStops(index, '   '), []);
 });
 
 test('stop search by id', () => {
-  assert.equal(searchStops(index, '608')[0].id, 608);
+  assert.equal(searchStops(index, '700')[0].id, 700);
 });
 
 test('line search by name or number', () => {

@@ -6,13 +6,15 @@ Reads lines.csv, stops.csv, line_stops.csv and export-info.json (when the CSVs
 were exported, and from where) from <csv_dir> and writes
 network.json and network.geojson to <out_dir>. Standard library only.
 
-The source data is passed through unchanged except for display clean-ups,
-each of which is recorded in the "issues" list so the app can show it:
+The CSVs are the corrected ones written by tools/apply_corrections.py; they
+are passed through unchanged except for display clean-ups, each of which is
+recorded in the "issues" list so the app can show it:
   * stop names that are not names (e.g. a timestamp) are shown as "Stop #id";
   * the same stop listed several times in a row on a line is listed once;
   * placeholder line colours (#000000, #000001, ...) are replaced by
     generated, distinguishable colours;
-  * stops whose coordinates look wrong for a line are flagged (not moved).
+  * stops whose coordinates look wrong for a line, or that carry a review
+    note from the corrections, are flagged (not moved).
 """
 import colorsys
 import csv
@@ -39,6 +41,8 @@ SPIKE_SLACK_KM = 2.0
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(:\d{2})?$")
 TERMINUS_TYPO_RE = re.compile(r"\b(termunis|terminis|termenus)\b", re.IGNORECASE)
 LOWER_WORDS = {"de", "des", "du", "la", "le", "les", "et", "au", "aux", "d", "l"}
+# Roman numerals stay upper case in title case: "Hassan II", not "Hassan Ii".
+ROMAN_RE = re.compile(r"^(i{1,3}|iv|vi{0,3}|ix|x)$", re.IGNORECASE)
 DIRECTIONS = (("aller", "1"), ("retour", "0"))
 
 
@@ -70,7 +74,10 @@ def display_label(label):
     if letters and (all(c.isupper() for c in letters) or all(c.islower() for c in letters)):
         words = []
         for i, w in enumerate(text.lower().split(" ")):
-            words.append(w if i > 0 and w in LOWER_WORDS else w[:1].upper() + w[1:])
+            if ROMAN_RE.match(w) and (i > 0 or len(w) > 1):
+                words.append(w.upper())
+            else:
+                words.append(w if i > 0 and w in LOWER_WORDS else w[:1].upper() + w[1:])
         text = " ".join(words)
     elif text:
         text = text[0].upper() + text[1:]
@@ -116,15 +123,21 @@ def build(csv_dir):
     issues = []
 
     stops = {}
+    merged_stops = {}
     for r in stops_csv:
         sid = int(r["station_id"])
+        for old in (r.get("merged_ids") or "").split():
+            merged_stops[old] = sid
         raw = r["station_label"] or r["station_name"]
         missing = is_missing_name(raw)
+        alt_names = [n.strip() for n in (r.get("alt_names") or "").split("|") if n.strip()]
+        review = (r.get("review_note") or "").strip()
         stops[sid] = {
             "id": sid,
             "slug": r["station_name"],
             "name": f"Stop #{sid}" if missing else display_label(raw),
             "sourceName": raw,
+            "altNames": alt_names,
             "lat": float(r["lat"]),
             "lng": float(r["lng"]),
             "lines": [],
@@ -133,6 +146,9 @@ def build(csv_dir):
         if missing:
             issues.append({"type": "missing_name", "stop": sid,
                            "detail": f"The source gives this stop the name \"{raw}\"."})
+        if review:
+            stops[sid]["flags"].append("suspect_location")
+            issues.append({"type": "suspect_location", "stop": sid, "detail": review})
 
     seqs = {}
     for r in line_stops_csv:
@@ -226,6 +242,7 @@ def build(csv_dir):
         "bounds": [[min(lats), min(lngs)], [max(lats), max(lngs)]],
         "lines": lines,
         "stops": sorted(stops.values(), key=lambda s: s["id"]),
+        "mergedStops": merged_stops,
         "issues": issues,
     }
 

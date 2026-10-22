@@ -61,7 +61,7 @@ await step('line page shows ordered stops, both directions', async () => {
   await page.waitForSelector('.timeline li');
   const names = await page.locator('.timeline .stop-name').allTextContents();
   assert.equal(names.length, 31);
-  assert.equal(names[12].trim(), 'Stop #608');
+  assert.equal(names[12].trim(), 'Place 9 Juillet');
   assert.equal(await page.locator('.segmented .seg').count(), 2);
   await page.click('.segmented .seg:not(.active)');
   await page.waitForURL(/#\/line\/21\/aller$/);
@@ -70,10 +70,16 @@ await step('line page shows ordered stops, both directions', async () => {
   await shot('03-line');
 });
 
-await step('suspect stop shows a warning', async () => {
-  await page.goto(BASE + '/#/stop/8');
+await step('stop left for review shows a warning', async () => {
+  await page.goto(BASE + '/#/stop/269');
   await settled();
   await page.waitForSelector('#view .warning');
+});
+
+await step('a merged stop id redirects to the stop it was merged into', async () => {
+  await page.goto(BASE + '/#/stop/208');
+  await page.waitForURL(/#\/stop\/803$/);
+  await settled();
 });
 
 await step('favorites persist across reloads', async () => {
@@ -113,7 +119,7 @@ await step('planner autocomplete and swap', async () => {
   await page.fill('#plan-from', 'clinique ibn');
   await page.waitForSelector('#plan-from-list [role="option"]');
   await page.keyboard.press('Enter');
-  await page.waitForURL(/from=stop:208/);
+  await page.waitForURL(/from=stop:803/);
   await settled();
   await page.fill('#plan-to', 'aeroport');
   await page.waitForSelector('#plan-to-list [role="option"]');
@@ -122,7 +128,7 @@ await step('planner autocomplete and swap', async () => {
   await settled();
   await page.waitForSelector('.option');
   await page.click('[data-plan-swap]');
-  await page.waitForURL(/from=stop:507&to=stop:208/);
+  await page.waitForURL(/from=stop:507&to=stop:803/);
   await settled();
 });
 
