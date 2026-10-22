@@ -1,0 +1,10 @@
+{
+  "name": "oujda-transit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:data": "python3 tools/build_data.py data web/data && cp data/*.csv web/data/",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && node --test 'tests/*.test.mjs'",
+    "serve": "npm run build:data && python3 -m http.server 8000 --directory web"
+  }
+}
