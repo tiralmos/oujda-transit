@@ -21,6 +21,8 @@ const STOP_NEARBY_M = 400;
 
 let net = null;
 let stopsById = new Map();
+// Stops merged by the data corrections keep working in old links, favorites and recents.
+const currentStopId = (id) => net?.mergedStops?.[id] ?? id;
 let linesById = new Map();
 let index = null;
 let planner = null;
@@ -342,7 +344,7 @@ function notFound() {
 // ---------- views ----------
 
 function renderHome() {
-  const recent = recents.list().map((id) => stopsById.get(id)).filter(Boolean);
+  const recent = recents.list().map((id) => stopsById.get(currentStopId(id))).filter(Boolean);
   let html = '';
   if (recent.length) {
     html += `<section><div class="section-head"><h2>${th('recentStops')}</h2>
@@ -419,6 +421,7 @@ function renderLine(id, dir, params) {
 }
 
 function renderStop(id) {
+  if (currentStopId(id) !== id) { location.replace(`#/stop/${currentStopId(id)}`); return; }
   const stop = stopsById.get(id);
   if (!stop) return notFound();
   recents.add(id);
@@ -464,6 +467,7 @@ function renderStop(id) {
       <dl>
         <dt>${th('stopId')}</dt><dd>${id}</dd>
         <dt>${th('sourceName')}</dt><dd>${esc(stop.sourceName)}</dd>
+        ${stop.altNames?.length ? `<dt>${th('altNames')}</dt><dd>${stop.altNames.map(esc).join('<br>')}</dd>` : ''}
         <dt>${th('coordinates')}</dt><dd dir="ltr">${stop.lat.toFixed(6)}, ${stop.lng.toFixed(6)}</dd>
       </dl>
       <a href="${esc(osm)}" target="_blank" rel="noopener">${th('openOsm')}</a>
@@ -521,7 +525,7 @@ function renderNearby(params) {
 function parseEnd(v) {
   if (!v) return null;
   let m = /^stop:(\d+)$/.exec(v);
-  if (m && stopsById.has(Number(m[1]))) return { type: 'stop', id: Number(m[1]) };
+  if (m && stopsById.has(currentStopId(Number(m[1])))) return { type: 'stop', id: currentStopId(Number(m[1])) };
   m = /^pt:(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/.exec(v);
   if (m) {
     const lat = Number(m[1]), lng = Number(m[2]);
@@ -697,7 +701,7 @@ function drawOption(o, from, to) {
 }
 
 function renderFavorites() {
-  const stops = favorites.list('stops').map((id) => stopsById.get(id)).filter(Boolean);
+  const stops = favorites.list('stops').map((id) => stopsById.get(currentStopId(id))).filter(Boolean);
   const lines = favorites.list('lines').map((id) => linesById.get(id)).filter(Boolean);
   let html = `<h1>${th('tabFavorites')}</h1>`;
   if (!stops.length && !lines.length) html += `<p class="empty">${th('noFavorites')}</p>`;

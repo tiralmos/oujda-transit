@@ -62,7 +62,7 @@ export function matchScore(queryTokens, words, fullText) {
 
 export function buildIndex(network) {
   const stops = network.stops.map((s) => {
-    const words = [...new Set([...tokens(s.name), ...tokens(s.slug), String(s.id)])];
+    const words = [...new Set([...tokens(s.name), ...tokens(s.slug), ...(s.altNames || []).flatMap(tokens), String(s.id)])];
     return { item: s, words, full: normalize(s.name) };
   });
   return { stops };

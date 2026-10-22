@@ -1,0 +1,682 @@
+﻿id,action,station_id,lines,target_id,old_name,new_name,old_lat,old_lng,new_lat,new_lng,confidence,reason,evidence
+C001,split,142,L02,10142,MAROC TELECOM,Maroc Telecom (Hay Al Maksam),34.70316,-1.9149,34.6663195,-1.8969031,high,"Wrong position: L02 shares this stop with L20, where it is correct (Av Mansour Eddahbi, north). On L02 it sits between Eaux et Forets and Lycee Maghreb Arabi, 4 km south. 2 different stops were all called 'Maroc Telecom' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).","OSM feature: OSM: Maroc Telecom agency, Boulevard Abderrahim Bouabid; snapped to the road 31 m away on the route L02 aller: between 223 'EAUX ET FORETS' and 51 'Lycee Maghreb Arabi' | OSM: Maroc Telecom agency, Boulevard Abderrahim Bouabid; snapped to the road 21 m away on the route L02 retour: between 194 'Centre Technique' and 223 'EAUX ET FORETS'"
+C002,move,328,,,Pharmacie El Azaoui,,34.670227696189,-1.9063156843185,34.6570471,-1.8971767,low,Wrong position: on L02 between Lycee Qods and Univ Med 1 but placed 1.7 km north near Park Lalla Aicha.,interpolated on route: placed 0.50 of the way along the road route L02 aller: between 58 'Lycee Qods' and 278 'Univ Med 1' | placed 0.50 of the way along the road route L02 retour: between 278 'Univ Med 1' and 58 'Lycee Qods'
+C003,move,225,,,Ecole Annassiha,,34.668176058145,-1.9016380469557,34.6546451,-1.8934184,low,Wrong position: on L02 between Jardin Elqods and Oued Amam but placed 1.7 km north-west.,interpolated on route: placed 0.50 of the way along the road route L02 aller: between 380 'Jardin Elqods' and 294 'Oued Amam'
+C004,move,8,,,Aboubeker Kadiri 1,,34.816204,-1.9648314,34.6595308,-1.9320535,medium,"Wrong position: on L08 between Rue de Rif 2 and Aboubeker Kadiri 2 but placed 18 km north, outside the city.",street on route: on Boulevard Abou Bakr Al Kadiri along the road route L08 retour: between 439 'Rue de Rif 2' and 11 'Aboubeker Kadiri 2'
+C005,move,35,,,Al Irfane 2,,34.6756258,-1.8595172,34.6514821,-1.9135433,low,Wrong position: on L07 between Av Al Irfane Mosquee Assalam and Pharmacie Hay Rabie but placed 5 km east (same coordinates as Agdal).,interpolated on route: placed 0.50 of the way along the road route L07 aller: between 127 'Av Al Irfane Mosquee Assalam' and 351 'Pharmacie Hay Rabie' | placed 0.50 of the way along the road route L07 retour: between 351 'Pharmacie Hay Rabie' and 127 'Av Al Irfane Mosquee Assalam'
+C006,move,443,,,Rue Nibrass,,34.6860289,-1.9533733,34.7067638,-1.9109256,low,Wrong position: on L04 between Rue Elistiklal and Rue 20 but placed 4 km west.,interpolated on route: placed 0.50 of the way along the road route L04 aller: between 441 'Rue Elistiklal (Pharmacie Elmajd)' and 436 'Rue 20' | placed 0.50 of the way along the road route L04 retour: between 436 'Rue 20' and 441 'Rue Elistiklal (Pharmacie Elmajd)'
+C007,move,211,,,Mosque Hassan 2,,34.6736492,-1.9127779,34.6904522,-1.9071515,low,Wrong position: on L04 between Ecole Lalla Aicha and Av des FAR but placed 1.5 km south (same coordinates as Mosque Hamza).,interpolated on route: placed 0.50 of the way along the road route L04 aller: between 231 'Ecole Lalla Aicha' and 54 'Av des FAR'
+C008,move,180,,,Mohamed Eddarfoufi,,34.6837073,-1.9179389,34.6949110,-1.9112212,medium,Wrong position: on L04 between Av Mansour Eddahabi 1 and Ancien tribunal but placed 1 km south-west.,street on route: on Boulevard Mohammed Derfoufi along the road route L04 retour: between 279 'AV Mansour Eddahabi 1' and 44 'Ancien tribunal 1 instance'
+C009,move,419,,,Route Aounia 1,,34.6719555,-1.8593184,34.6851128,-1.8882058,low,Wrong position: on L11 between Av Kadour El Ouartassi College Riad and Av Yahya Belkhir but placed 3 km east (same coordinates as Route Aounia 2 and 5).,interpolated on route: street 'aounia' not on routed path; placed 0.33 of the way along the road route L11 aller: between 230 'Av Kadour El ouartassi College Riad' and 334 'Hay Moulay Miloud Mosquee Mustapha' | street 'aounia' not on routed path; placed 0.67 of the way along the road route L11 retour: between 334 'Hay Moulay Miloud Mosquee Mustapha' and 230 'Av Kadour El ouartassi College Riad'
+C010,move,73,,,Av yahya Belkhir,,34.660754752381,-1.9119482813039,34.6873312,-1.8869214,low,Wrong position: on L11 between Route Aounia 1 and Hay Moulay Miloud but placed 4 km south-west.,interpolated on route: placed 0.50 of the way along the road route L11 aller: between 419 'Route Aounia 1' and 334 'Hay Moulay Miloud Mosquee Mustapha' | placed 0.50 of the way along the road route L11 retour: between 334 'Hay Moulay Miloud Mosquee Mustapha' and 419 'Route Aounia 1'
+C011,move,422,,,Route Aounia 2,,34.6719555,-1.8593184,34.6940408,-1.8823038,medium,Wrong position: on L11 between route 14 Mosquee Erida and Route Aounia Ista Aounia but placed 3 km south-east (same coordinates as Route Aounia 1 and 5).,street on route: on Route El Aounia طريق العونية along the road route L11 aller: between 415 'route 14 Mosquee Erida' and 425 'Route Aounia Ista Aounia' | on Route El Aounia طريق العونية along the road route L11 retour: between 425 'Route Aounia Ista Aounia' and 415 'route 14 Mosquee Erida'
+C012,move,423,,,Route Aounia 5,,34.6719555,-1.8593184,34.7039584,-1.8702924,medium,Wrong position: on L11 between Route Aounia Residence Hadouch and Route Aounia Gendarmerie Royale but placed 3 km south (same coordinates as Route Aounia 1 and 2).,street on route: on Route El Aounia طريق العونية along the road route L11 aller: between 426 'Route Aounia Residence Hadouch' and 424 'Route Aounia Gendarmerie Rayal' | on Route El Aounia طريق العونية along the road route L11 retour: between 424 'Route Aounia Gendarmerie Rayal' and 426 'Route Aounia Residence Hadouch'
+C013,move,406,,,route 14,,34.655923066542,-1.9002860660246,34.6906095,-1.8816985,low,Wrong position: on L11 (retour) between route 14 Mosquee Erida and Hay Essalam 2 but placed 4 km south-west.,interpolated on route: placed 0.50 of the way along the road route L11 retour: between 415 'route 14 Mosquee Erida' and 307 'Hay essalam 2 Mosquee Essalam'
+C014,move,251,,,Terminus rond point hay jemli,,34.677970218135,-1.9120234375307,34.6961500,-1.8566200,low,"Wrong position: L11's terminus 'rond point Hay Jemli' is placed in the city centre, 5.8 km from the line's last stops in the east.",OSM feature: L13's 'Jemli' stop (385); L11 ends heading south from Cafe Noujoum towards Hay Jemli
+C015,move,48,,,Av Brahim Roudani Arrandissement,,34.670704156422,-1.9338136864786,34.6791569,-1.8891327,medium,Wrong position: on L13 between Av Allal Al Fassi Derb Berrahmoune and Av Abderrahim Bouabid but placed 4 km west.,street on route: on Boulevard Brahim Roudani along the road route L13 aller: between 153 'AV Allal Al fassi Derb berrahmoune' and 89 'Av Abderrahim Bouabid pharmacie olad chrif' | on Boulevard Brahim Roudani along the road route L13 retour: between 89 'Av Abderrahim Bouabid pharmacie olad chrif' and 153 'AV Allal Al fassi Derb berrahmoune'
+C016,move,85,,,Av Abderrahim Bouabid banque populaire,,34.69035653389,-1.9188469741574,34.6754000,-1.8920000,medium,Wrong position: on L13 between the two Av Abderrahim Bouabid stops' neighbours but placed 3 km north-west.,OSM feature: OSM: Boulevard Abderrahim Bouabid between Roudani and the Kaouachi junction
+C017,move,221,,,Av kaaouachi,,34.6735756,-1.9128211,34.6727400,-1.8899900,medium,Wrong position: on L13 between Av Abderrahim Bouabid and Ben Mimoune but placed 1.5 km west (same coordinates as Av Idriss Al Akbar Moulay Idriss).,"OSM feature: OSM: Boulevard Ahmed El Kaouachi, just east of the Bouabid junction"
+C018,move,146,,,ben mimoune hay zaytoune,,34.6718948,-1.9344124,34.6720000,-1.8882000,medium,Wrong position: on L13 between Av Kaaouachi and Av Abdellah Ganoun but placed 4 km west.,"OSM feature: OSM: Boulevard Ahmed El Kaouachi between Hay Zitoune (34.6738,-1.8867) and Jardin Ben Mimoun (34.6683,-1.8882)"
+C019,move,78,,,AV Abdellah ganoun,,34.691018560964,-1.9187181815181,34.6711700,-1.8856900,medium,Wrong position: on L13 between Ben Mimoune and Salle Mohammed 6 but placed 3 km north-west.,"OSM feature: OSM: Pharmacie Abdellah Guennoun, Boulevard Ahmed El Kaouachi"
+C020,move,450,,,salle Mohammed 6,,34.693281,-1.9059463,34.6750608,-1.8824883,low,Wrong position: on L13 between Av Abdellah Ganoun and Cafe Salazar but placed 3 km north-west.,interpolated on route: placed 0.50 of the way along the road route L13 aller: between 78 'AV Abdellah ganoun' and 177 'Cafe Salazar' | placed 0.50 of the way along the road route L13 retour: between 177 'Cafe Salazar' and 78 'AV Abdellah ganoun'
+C021,move,276,,,OFPPT Lazaret,,34.6635545,-1.8742651,34.6756174,-1.8688938,high,Wrong position: on L13 between Cafe Salazar and Agdal but placed 1.5 km south.,"OSM feature: OSM: ISTA Lazaret (OFPPT institute), Rue El Koronfol; snapped to the road 74 m away on the route L13 aller: between 177 'Cafe Salazar' and 32 'Agdal' | OSM: ISTA Lazaret (OFPPT institute), Rue El Koronfol; snapped to the road 74 m away on the route L13 retour: between 32 'Agdal' and 177 'Cafe Salazar'"
+C022,move,317,,,Hay Kada houssine,,34.688171,-1.8789099,34.6654200,-1.9436000,medium,"Wrong position: on L16 between Av Zayed Ben Soltane and Village Qtar (south-west) but placed 5 km north-east, at the same coordinates as Hay Lmharach.",OSM feature: OSM: Lotissement Kada Houcine on Boulevard Sidi Zayed Ben Soltane
+C023,move,299,,,Village Qtar ecole bensaid mahdaoui,,34.6713825,-1.9429711,34.6571300,-1.9499000,medium,Wrong position: L16 terminus 'Village Qtar ecole Bensaid Mahdaoui' had the coordinates of 'vilage Nylo 2'.,"OSM feature: OSM: Ecole Ibn Said Mehdaoui, Hay Gtar"
+C024,move,111,,,Av Zayed Ben Soltane 1,,34.6732899,-1.9151275,34.6680236,-1.9398281,low,Wrong position: on L16 between Rue 10 and Av Zayed Ben Soltane Osbat Achark but placed 2 km east in the city centre.,interpolated on route: placed 0.33 of the way along the road route L16 aller: between 435 'Rue 10' and 317 'Hay Kada houssine' | placed 0.50 of the way along the road route L16 retour: between 114 'Av Zayed Ben Soltane 2' and 435 'Rue 10'
+C025,move,131,,,Av Zayed Ben Soltane osbat achark,,34.67458653541,-1.9310992847413,34.6662129,-1.9423388,low,"Wrong position: L16 runs Rue 10 -> Zayed Ben Soltane 1 -> Osbat Achark -> Hay Kada Houssine -> Village Qtar (aller) and Qtar -> Kada Houssine -> Osbat Achark -> Zayed Ben Soltane 2 (retour), so it sits on Bd Zayed Ben Soltane before Kada Houssine, not 1.5 km north-east near the bus station.",interpolated on route: placed 0.50 of the way along the road route L16 aller: between 111 'Av Zayed Ben Soltane 1' and 317 'Hay Kada houssine' | placed 0.50 of the way along the road route L16 retour: between 317 'Hay Kada houssine' and 114 'Av Zayed Ben Soltane 2'
+C026,move,38,,,Av Brahim Lahssini force auxiliare,,34.6757249,-1.9407775,34.6746992,-1.9281863,low,Wrong position: on L16 between station Winxo and Av Brahim Lahssini salle couverte but placed 1.5 km west (same coordinates as Av Boualam Arahmoun ecole Imam Ali).,interpolated on route: placed 0.50 of the way along the road route L16 aller: between 464 'station winxo' and 45 'Av Brahim Lahssini sale coverte'
+C027,move,31,,,Av Boualam Arahmoun 1,,34.6759946,-1.9239066,34.6725724,-1.9401506,low,"Wrong position: on L23 between vilage Nylo 2 and Av Zayed Lycee Acharif Idrissi but placed 1.8 km east, at station Winxo.",interpolated on route: street 'boualam' not on routed path; placed 0.33 of the way along the road route L23 retour: between 286 'vilage Nylo 2' and 139 'Av Zayed Lecyée Acharif Idrissi'
+C028,move,34,,,Av Boualam Arahmoun 2,,34.6759946,-1.9239066,34.6731768,-1.9367811,low,"Wrong position: on L23 right after Av Boualam Arahmoun 1, same wrong coordinates.",interpolated on route: street 'boualam' not on routed path; placed 0.67 of the way along the road route L23 retour: between 286 'vilage Nylo 2' and 139 'Av Zayed Lecyée Acharif Idrissi'
+C029,move,325,,,Hay Lmharach 1,,34.688171,-1.8789099,34.6878518,-1.9423922,medium,Wrong position: L05's 'Hay Lmharach 1' had the same coordinates as 'Hay Kada houssine' 5 km east; L15's 'MHARACH I' is the same place on the same road.,same place on another line: coordinates of stop 961 'MHARACH I' (line L15)
+C030,move,319,,,Hay Lmharach,,34.688171,-1.8789099,34.6897138,-1.9439097,medium,Wrong position: L05's 'Hay Lmharach' (start of the retour) had the same coordinates as 'Hay Kada houssine' 5 km east; L15's 'MHARACH II' is the same place.,same place on another line: coordinates of stop 962 'MHARACH II' (line L15)
+C031,move,481,,,Terminus Lmharach,,34.648760866251,-1.8935000399317,34.6897138,-1.9439097,low,Wrong position: L05's terminus 'Terminus Lmharach' was placed 4 km south-east; the retour starts at 'Hay Lmharach'.,same place on another line: coordinates of stop 962 'MHARACH II' (line L15)
+C032,move,352,,,Hay Si Lakhdar,,34.7124208,-1.8956544,34.6816496,-1.9400248,low,Wrong position: on L05 between Mac Donalds and Hay Lmharach 1 (west) but placed 4 km north-east.,interpolated on route: placed 0.50 of the way along the road route L05 aller: between 77 'Mac donalds' and 325 'Hay Lmharach 1' | placed 0.67 of the way along the road route L05 retour: between 325 'Hay Lmharach 1' and 30 'LYCEE ASSALAM'
+C033,move,355,,,Hay Si Lakhdar Hay Ngadi,,34.7124208,-1.8956544,34.6836346,-1.9459669,low,"Wrong position: on L05 (retour) between Hay Lmharach 1 and Hay Si Lakhdar, same wrong coordinates as Hay Si Lakhdar.",interpolated on route: placed 0.50 of the way along the road route L05 retour: between 325 'Hay Lmharach 1' and 352 'Hay Si Lakhdar'
+C034,move,765,,,gendarmerie,,34.74395758027,-1.8655836799681,34.7635261,-1.8506472,low,Wrong position: on L99 (retour) between Sandiqa and el Hanout but placed 2.5 km south.,interpolated on route: placed 0.50 of the way along the road route L99 retour: between 751 'SANDIQA' and 766 'el hanout'
+C035,flag,263,,,Terminus Souk Qods,,34.68163837292,-1.9083823140081,,,,"On L02 this terminus is listed right after Mosque Elbourak, 4.5 km away in the south-east, while L04 uses it correctly at Souk El Qods. L02's real end stop may be elsewhere; position kept.",
+C036,flag,269,,,Terminus Village Bekay,,34.68228015893,-1.9091910123825,,,,"L17's terminus 'Village Bekay' has city-centre coordinates (next to Souk El Qods) but the line's other stops end 4 km south-east, past Residence Kanzi. No OSM match found; position kept.",
+C037,flag,451,,,Sidi Maafa,,34.693347292017,-1.9059669971466,,,,"L07's 'Sidi Maafa' sits 5 km north of its neighbours (Rue Al Hanaa ... Terminus Faculte des Lettres), and the terminus itself is also misplaced, so there is nothing to place it between. Position kept.",
+C038,flag,477,,,Terminus Faculte des Lettres,,34.6795854,-1.9090941,,,,"L07's terminus 'Faculte des Lettres' has the city-centre coordinates of Terminus Enakhil, but the line ends in the south (Hay Rabie, Sidi Maafa). No OSM match for the faculty; position kept.",
+C039,flag,382,,,residence al ghiate,,34.6752713,-1.867514,,,,"L13's 'residence al ghiate' is listed between Cafe Noujoum (north-east) and the terminus, but placed 3.4 km south. The terminus is also misplaced; position kept.",
+C040,flag,234,,,ecoles aboubaker asadik,,34.6882545,-1.9072488,,,,"L13's 'ecoles aboubaker asadik' has the coordinates of Ecole Lalla Aicha (L04) in the centre, 4 km from its neighbours. Position kept.",
+C041,flag,473,,,Terminus Bouchtat,,34.6795356,-1.9102106,,,,"L13's terminus 'Bouchtat' has the coordinates of Terminus Bab Sidi Abdelouahab in the centre. Route Bouchtat starts on Route El Aounia (north-east), so the real terminus is probably out there. Position kept.",
+C042,merge,12,,9,Av Armie de Libiration 1,,34.6710767,-1.9215348,,,,Under 20 m from 9 'Av armie de liberation bab aljazaer' (L08); 0 m apart. This one serves L08.,distance 0.0 m
+C043,merge,977,,30,LYCEE ASSALAM,,34.679072263515,-1.9315544151411,,,,Same stop entered twice: same name as 30 'LYCEE ASSALAM' (L05 L15); 31 m apart. This one serves L15.,distance 30.6 m
+C044,merge,887,,32,AGDAL TERMUNIS,,34.6755,-1.85936,,,,Same stop entered twice: same name as 32 'Agdal' (L13); 20 m apart. This one serves L18.,distance 20.1 m
+C045,merge,991,,40,LYCEE DERFOUFI,,34.707549349606,-1.9198125833848,,,,Same stop entered twice: same name as 40 'Lycée derfoufi' (L31); 37 m apart. This one serves L09.,distance 36.6 m
+C046,merge,45,,42,Av Brahim Lahssini sale coverte,,34.670673256726,-1.9337439335086,,,,Under 20 m from 42 'Av Brahim Lahssini pharmacie compelexe sportive' (L16); 6 m apart. This one serves L16.,distance 6.1 m
+C047,merge,490,,62,institut el gadi lafkhih,,34.657812,-1.91253,,,,Under 20 m from 62 'Av Tohami Jilali OFPPT' (L07); 18 m apart. This one serves L31.,distance 18.4 m
+C048,merge,540,,65,nassij al jam3aoui,,34.660860677766,-1.9119483139285,,,,Under 20 m from 65 'Av Tohami Jilali Palais de justice' (L07); 10 m apart. This one serves L31.,distance 10.0 m
+C049,merge,704,,69,CAFE VICTORIA,,34.700068893655,-1.911401158825,,,,Under 20 m from 69 'Av Elmansour Edahhabi1 (Cafe victoria)' (L04); 8 m apart. This one serves L20.,distance 8.1 m
+C050,merge,789,,69,JARDIN VILLAGE KOULOUCH,,34.70008,-1.91135,,,,Under 20 m from 69 'Av Elmansour Edahhabi1 (Cafe victoria)' (L04); 9 m apart. This one serves L24.,distance 9.0 m
+C051,merge,842,,69,ECOLE TAHA HUSSEIN,,34.70012,-1.91154,,,,Under 20 m from 69 'Av Elmansour Edahhabi1 (Cafe victoria)' (L04); 12 m apart. This one serves L24.,distance 11.7 m
+C052,merge,709,,77,Mcdonald,,34.67697,-1.92869,,,,Under 20 m from 77 'Mac donalds' (L05); 5 m apart. This one serves L14.,distance 5.2 m
+C053,merge,956,,77,MC DONALDS,,34.677013167623,-1.9288196183618,,,,Under 20 m from 77 'Mac donalds' (L05); 9 m apart. This one serves L15.,distance 9.4 m
+C054,merge,839,,101,MAJLIS AL JIHA,,34.69754,-1.919,,,,Same stop entered twice: same name as 101 'MAJLIS EL JIHA' (L31); 16 m apart. This one serves L24.,distance 15.6 m
+C055,merge,873,,171,MOSQUEE RIAD,,34.67906,-1.89608,,,,Under 20 m from 171 'AV Allal Al fassi mosque riad' (L11 L13); 14 m apart. This one serves L18 L19.,distance 13.5 m
+C056,merge,671,,189,MINISTERE DES DOUANES,,34.67491,-1.91905,,,,Under 20 m from 189 'Av Allal Ben Abdellah' (L08); 12 m apart. This one serves L20.,distance 11.8 m
+C057,merge,936,,197,PARC NAJD,,34.65692,-1.86928,,,,Under 20 m from 197 'Mosque Elbourak' (L02); 10 m apart. This one serves L01.,distance 9.7 m
+C058,merge,592,,201,laboratoire el hakim,,34.675894,-1.916112,,,,Under 20 m from 201 'Av Idriss Al Akbar hopital El Farabi 1' (L05 L16 L23); 6 m apart. This one serves L25.,distance 6.4 m
+C059,merge,607,,201,HOPITAL EL FARABI,,34.676077674788,-1.9160574783355,,,,Under 20 m from 201 'Av Idriss Al Akbar hopital El Farabi 1' (L05 L16 L23); 18 m apart. This one serves L25.,distance 18.2 m
+C060,merge,672,,209,UNITE ADMINISTRATIVE,,34.67208,-1.91886,,,,Under 20 m from 209 'Clinique Al Maghrib' (L08); 12 m apart. This one serves L20.,distance 12.2 m
+C061,merge,954,,216,CONSULAT D'ALGERIE,,34.67682734087,-1.9206101199423,,,,Same stop entered twice: same name as 216 'consulat d'algerie' (L05 L14 L16 L23); 47 m apart. This one serves L15.,distance 46.7 m
+C062,merge,684,,223,EL MAJLIS AL ILMI,,34.66824,-1.90031,,,,Under 20 m from 223 'EAUX ET FORETS' (L02 L20); 19 m apart. This one serves L20.,distance 19.2 m
+C063,merge,976,,229,LA MAISON REANAULT,,34.681375860425,-1.9382285978564,,,,Under 20 m from 229 'Mosquee Othmane Ibn Aafane' (L14); 5 m apart. This one serves L15.,distance 4.7 m
+C064,merge,845,,231,ECOLE AICHA OUM AL MOUAMNIN,,34.6882,-1.90728,,,,Under 20 m from 231 'Ecole Lalla Aicha' (L04); 7 m apart. This one serves L21.,distance 6.7 m
+C065,merge,547,,240,station maghreb el arabi,,34.678433,-1.911706,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 12 m apart. This one serves L32.,distance 11.7 m
+C066,merge,627,,240,AL MAGHREB EL ARABI,,34.678283,-1.911646,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 6 m apart. This one serves L03.,distance 5.9 m
+C067,merge,707,,240,termunis al maghreb el arabi,,34.678252212712,-1.9116800883664,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 9 m apart. This one serves L14.,distance 8.9 m
+C068,merge,983,,240,TERMUNIS MAGHREB ARABI,,34.678187513682,-1.9117017262506,,,,Same stop entered twice: same name as 240 'Terminus Place Maghreb Arabi' (L08 L23); 16 m apart. This one serves L15.,distance 16.3 m
+C069,merge,210,,258,Mosque Hamza,,34.6736492,-1.9127779,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 15 m apart. This one serves L02.,distance 14.6 m
+C070,merge,218,,258,Av Idriss Al Akbar Moulay Idriss,,34.6735756,-1.9128211,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 15 m apart. This one serves L07 L17.,distance 14.7 m
+C071,merge,593,,258,association nibras,,34.673542,-1.912899,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 22 m apart. This one serves L25.,distance 21.8 m
+C072,merge,923,,258,MOLAY DRISS,,34.673695418304,-1.9127529579903,,,,Under 20 m from 258 'moulay idriss' (L02 L24 L25 L31); 17 m apart. This one serves L01.,distance 17.3 m
+C073,merge,541,,270,RADEEO,,34.657216,-1.909143,,,,Under 20 m from 270 'FACULTE DE MEDECINE' (L20); 5 m apart. This one serves L31.,distance 5.0 m
+C074,merge,677,,270,RADEEO,,34.657193763459,-1.909109795746,,,,Under 20 m from 270 'FACULTE DE MEDECINE' (L20); 8 m apart. This one serves L20.,distance 7.7 m
+C075,merge,666,,279,BOULANGERIE EL MANSOUR EDDAHBI,,34.70132,-1.91244,,,,Under 20 m from 279 'AV Mansour Eddahabi 1' (L04); 6 m apart. This one serves L20.,distance 6.4 m
+C076,merge,493,,283,hamam benkachor,,34.667479030298,-1.9127261405608,,,,Under 20 m from 283 'Hama Benkachour' (L07); 9 m apart. This one serves L25 L31.,distance 9.0 m
+C077,merge,830,,283,HAMAM BENKHACHOUR/R,,34.66756,-1.91268,,,,Under 20 m from 283 'Hama Benkachour' (L07); 19 m apart. This one serves L24.,distance 19.0 m
+C078,merge,951,,283,HAMMAM BENKACHOR,,34.66754,-1.91272,,,,Under 20 m from 283 'Hama Benkachour' (L07); 16 m apart. This one serves L01.,distance 15.6 m
+C079,merge,595,,285,benkachour aller,,34.666919,-1.912963,,,,Under 20 m from 285 'HAMAM BENKACHOUR' (L24); 12 m apart. This one serves L25.,distance 12.1 m
+C080,merge,925,,285,HAMMAM BENKACHOUR,,34.66691428783,-1.9129997662727,,,,Under 20 m from 285 'HAMAM BENKACHOUR' (L24); 10 m apart. This one serves L01.,distance 10.5 m
+C081,merge,628,,320,MATHAF LALA MARYEM,,34.677118852331,-1.9154834747314,,,,Under 20 m from 320 'Park lala Meryem' (L05); 19 m apart. This one serves L03.,distance 18.6 m
+C082,merge,708,,320,musée lala maryem,,34.6771,-1.91547,,,,Under 20 m from 320 'Park lala Meryem' (L05); 19 m apart. This one serves L14.,distance 19.0 m
+C083,merge,571,,358,moin 1,,34.676576219706,-1.9110578267498,,,,Under 20 m from 358 'Yotno Belhoussine' (L02 L05 L07 L16 L17 L23); 17 m apart. This one serves L01 L03 L14 L32.,distance 17.1 m
+C084,merge,982,,358,AREET MOIN 1,,34.676533033011,-1.9111164671561,,,,Under 20 m from 358 'Yotno Belhoussine' (L02 L05 L07 L16 L17 L23); 10 m apart. This one serves L15.,distance 10.4 m
+C085,merge,1013,,358,MOIN 1,,34.676537370373,-1.911095040555,,,,Under 20 m from 358 'Yotno Belhoussine' (L02 L05 L07 L16 L17 L23); 12 m apart. This one serves L09.,distance 11.7 m
+C086,merge,661,,363,moulay driss,,34.673942551549,-1.9136058336543,,,,Under 20 m from 363 'Yotno belhoussine 1' (L08); 6 m apart. This one serves L03.,distance 5.9 m
+C087,merge,213,,368,CNSS,,34.67104,-1.91195,,,,Under 20 m from 368 'POLYCLINIQUE' (L07 L24); 6 m apart. This one serves L25.,distance 5.6 m
+C088,merge,597,,390,etablissement el ouazzani,,34.662212,-1.905666,,,,Under 20 m from 390 'Av Med 6 Carfour' (L17); 19 m apart. This one serves L25.,distance 19.1 m
+C089,merge,488,,394,inwi,,34.655446,-1.899433,,,,Under 20 m from 394 'Av Med 6 Faculte Des Science' (L17); 18 m apart. This one serves L31.,distance 18.4 m
+C090,merge,545,,407,ENCG,,34.652928,-1.897052,,,,Under 20 m from 407 'Av Med 6 LISTA' (L17); 14 m apart. This one serves L25 L31.,distance 13.8 m
+C091,merge,543,,409,Rond point faculte,,34.656025,-1.900257,,,,Under 20 m from 409 'Av Med 6 Rond point Universite Med 1' (L17); 15 m apart. This one serves L20 L31.,distance 15.1 m
+C092,merge,412,,415,route 14 (1),,34.6913774,-1.8824431,,,,Under 20 m from 415 'route 14 Mosquee Erida' (L11); 0 m apart. This one serves L11.,distance 0.0 m
+C093,merge,428,,427,Route de Frontiere (vers Agdal) Risidence Al GHITE,,34.7055323,-1.8581261,,,,Under 20 m from 427 'Route de Frontiere (vers Agdal) Café Noujoum' (L11); 0 m apart. This one serves L11.,distance 0.0 m
+C094,merge,871,,478,TERMUNIS IBN KHALDOUN,,34.6802,-1.9069,,,,Same stop entered twice: same name as 478 'Terminus Ibn Khaldoune' (L11 L13); 41 m apart. This one serves L18 L19.,distance 40.7 m
+C095,merge,542,,489,madariss al hakim,,34.656755,-1.904642,,,,Under 20 m from 489 'FLAM D'OR' (L31); 9 m apart. This one serves L31.,distance 9.4 m
+C096,merge,693,,489,RESTAURANT LE COIN,,34.65679,-1.90454,,,,Under 20 m from 489 'FLAM D'OR' (L31); 17 m apart. This one serves L20.,distance 17.2 m
+C097,merge,797,,496,CLUB DE CHEMINS DE FER,,34.67631,-1.9251,,,,Under 20 m from 496 'petromin station' (L31); 14 m apart. This one serves L24.,distance 14.1 m
+C098,merge,833,,496,CAFE PETROM,,34.67617,-1.92501,,,,Under 20 m from 496 'petromin station' (L31); 4 m apart. This one serves L24.,distance 3.9 m
+C099,merge,834,,497,PHARMACIE AL MAHATA,,34.68061,-1.92254,,,,Same stop entered twice: same name as 497 'pharmacie el mahata' (L31); 18 m apart. This one serves L24.,distance 17.6 m
+C100,merge,836,,498,VETERINAIRE,,34.68673,-1.9196,,,,Under 20 m from 498 'viterainaire' (L31); 2 m apart. This one serves L24.,distance 2.2 m
+C101,merge,530,,499,arrondissement 3,,34.690572,-1.918877,,,,Under 20 m from 499 'rewa9 el founon' (L31); 9 m apart. This one serves L31.,distance 9.0 m
+C102,merge,794,,499,TROISIEME DISTRICTSIDI IDRIS AL -QADI,,34.69058,-1.91888,,,,Under 20 m from 499 'rewa9 el founon' (L31); 10 m apart. This one serves L24.,distance 9.9 m
+C103,merge,837,,499,GALERIE D'ART,,34.69055,-1.91877,,,,Under 20 m from 499 'rewa9 el founon' (L31); 8 m apart. This one serves L24.,distance 8.0 m
+C104,merge,527,,501,station banana,,34.700792062175,-1.9192653894424,,,,Under 20 m from 501 'MARCHE GROS' (L24 L31); 18 m apart. This one serves L31.,distance 17.7 m
+C105,merge,791,,526,CIMETIERE SIDI MOHAMMED,,34.702776764238,-1.9194638542669,,,,Under 20 m from 526 'cimetier sidi mohamed' (L31); 11 m apart. This one serves L24.,distance 11.0 m
+C106,merge,793,,528,PONT VILLAGE TOBA,,34.69628,-1.91921,,,,Under 20 m from 528 'association zalija' (L31); 10 m apart. This one serves L24.,distance 9.7 m
+C107,merge,1006,,528,PONT VILLAGE TOBA,,34.696280643775,-1.9191795618611,,,,Under 20 m from 528 'association zalija' (L31); 10 m apart. This one serves L09.,distance 9.5 m
+C108,merge,1007,,529,BIM/R,,34.693484888595,-1.9188148948444,,,,Same stop entered twice: same name as 529 'bim' (L24 L31); 19 m apart. This one serves L09.,distance 19.3 m
+C109,merge,795,,531,CIMETIERE CHRETIEN,,34.68617,-1.9198,,,,Under 20 m from 531 'cimetier nassara' (L31); 11 m apart. This one serves L24.,distance 10.9 m
+C110,merge,725,,534,clynique echark,,34.67508,-1.9235,,,,Under 20 m from 534 'clinique chark' (L31); 9 m apart. This one serves L14.,distance 9.5 m
+C111,merge,799,,534,FACE CLINIQUE CHARK,,34.675093986821,-1.9235837677062,,,,Same stop entered twice: same name as 534 'clinique chark' (L31); 2 m apart. This one serves L24.,distance 1.8 m
+C112,merge,832,,534,CABINET MOUHOUB,,34.6752,-1.92368,,,,Under 20 m from 534 'clinique chark' (L31); 13 m apart. This one serves L24.,distance 13.1 m
+C113,merge,569,,535,le drapeau,,34.673823,-1.918328,,,,Under 20 m from 535 'la3lam' (L31); 11 m apart. This one serves L32.,distance 11.2 m
+C114,merge,726,,535,alealam,,34.673836571422,-1.9184553576593,,,,Under 20 m from 535 'la3lam' (L31); 6 m apart. This one serves L14.,distance 6.3 m
+C115,merge,800,,535,DRAPEAU,,34.67384532614,-1.9184017414429,,,,Under 20 m from 535 'la3lam' (L31); 5 m apart. This one serves L24.,distance 5.0 m
+C116,merge,831,,535,ECOLE EL KHAWARIZMI,,34.67396,-1.91853,,,,Under 20 m from 535 'la3lam' (L31); 13 m apart. This one serves L24.,distance 12.7 m
+C117,merge,801,,537,CAFE VINIZIA,,34.672791001314,-1.912538406126,,,,Under 20 m from 537 'residence mehdi' (L31); 8 m apart. This one serves L24.,distance 7.6 m
+C118,merge,606,,539,MOUSQE BADR,,34.665284,-1.912423,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 14 m apart. This one serves L25.,distance 14.0 m
+C119,merge,802,,539,COMMISSARIAT DE POLICE,,34.665202410611,-1.9122755543032,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 2 m apart. This one serves L24.,distance 2.5 m
+C120,merge,829,,539,MOSQUEE BADR,,34.665281785796,-1.9123131129972,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 8 m apart. This one serves L01 L24.,distance 8.4 m
+C121,merge,926,,539,COMMISARIAT DE POLICE,,34.66517,-1.91222,,,,Under 20 m from 539 'comissariat de police' (L25 L31); 9 m apart. This one serves L01.,distance 8.6 m
+C122,merge,600,,544,faculte sience,,34.65435655857,-1.898413877918,,,,Under 20 m from 544 'faculté de science' (L31); 6 m apart. This one serves L25.,distance 5.8 m
+C123,merge,564,,551,usine de brique,,34.657255,-1.954153,,,,Under 20 m from 551 'cafe jardin d'oujda' (L32); 16 m apart. This one serves L32.,distance 15.8 m
+C124,merge,563,,552,etablissement bni wkil,,34.644114,-1.969108,,,,Under 20 m from 552 'rond-point bni wkil' (L32); 6 m apart. This one serves L32.,distance 5.8 m
+C125,merge,625,,574,taxiat nasser,,34.712149,-1.887541,,,,Under 20 m from 574 'souk ennaser' (L25); 18 m apart. This one serves L25.,distance 17.7 m
+C126,merge,735,,574,SWIKA NSSAR,,34.71199,-1.88756,,,,Under 20 m from 574 'souk ennaser' (L25); 6 m apart. This one serves L99.,distance 6.4 m
+C127,merge,780,,574,taxi de nasser,,34.71204,-1.8876,,,,Under 20 m from 574 'souk ennaser' (L25); 11 m apart. This one serves L99.,distance 11.2 m
+C128,merge,623,,576,depeau de marbre,,34.708292,-1.885485,,,,Under 20 m from 576 'central' (L25); 16 m apart. This one serves L25.,distance 15.7 m
+C129,merge,621,,577,now chark,,34.704325,-1.887549,,,,Under 20 m from 577 'visite dekra' (L25); 18 m apart. This one serves L25.,distance 18.3 m
+C130,merge,620,,578,rafaie metal,,34.701572,-1.885882,,,,Under 20 m from 578 'cafe dadi' (L25); 15 m apart. This one serves L25.,distance 14.9 m
+C131,merge,619,,579,cafe euro sport,,34.698662085586,-1.8841338468364,,,,Same stop entered twice: same name as 579 'face cafe euro sport' (L25); 10 m apart. This one serves L25.,distance 9.7 m
+C132,merge,615,,583,boulangerie ziani,,34.699852,-1.893823,,,,Under 20 m from 583 'tennis 1' (L25); 15 m apart. This one serves L25.,distance 14.6 m
+C133,merge,614,,585,taba loto,,34.697694,-1.898237,,,,Under 20 m from 585 'tennis2' (L25); 9 m apart. This one serves L25.,distance 9.2 m
+C134,merge,669,,590,PLACE JADA,,34.68456,-1.9151,,,,Under 20 m from 590 'sahat jada' (L25); 11 m apart. This one serves L20.,distance 11.4 m
+C135,merge,670,,591,AGENCE INWI,,34.67973,-1.91837,,,,Under 20 m from 591 'bank bmci' (L25); 9 m apart. This one serves L20.,distance 9.5 m
+C136,merge,924,,594,POLYCLINIQUE,,34.669177643821,-1.9121575262317,,,,Under 20 m from 594 'pharmacie polyclinique' (L24 L25); 6 m apart. This one serves L01.,distance 5.6 m
+C137,merge,603,,598,MICHWAT AL BAHJA,,34.660242,-1.903763,,,,Under 20 m from 598 'mafrochat donia' (L25); 19 m apart. This one serves L25.,distance 19.0 m
+C138,merge,701,,610,DAR EL MADRASE,,34.68701,-1.91197,,,,Under 20 m from 610 'etablissement des œuvres sociales' (L25); 11 m apart. This one serves L20.,distance 11.3 m
+C139,merge,702,,611,MARBRE OULED RGIGE,,34.68924,-1.90974,,,,Under 20 m from 611 'zalij wlad rkik' (L25); 13 m apart. This one serves L20.,distance 13.1 m
+C140,merge,675,,633,DOUCHE ES-SALAM,,34.66022,-1.92056,,,,Under 20 m from 633 'HAMAM A SALAM' (L03); 4 m apart. This one serves L20.,distance 3.7 m
+C141,merge,654,,636,la PHARMACIE CENTRAL,,34.657784,-1.926264,,,,Under 20 m from 636 'AUTO ECOLE EL  IKHLASSE' (L03); 15 m apart. This one serves L03.,distance 15.0 m
+C142,merge,653,,637,ECOLE KHAIR EDDINE,,34.658455,-1.927864,,,,Under 20 m from 637 'BOULANGERIE DE LA MAGIE' (L03); 10 m apart. This one serves L03.,distance 10.3 m
+C143,merge,652,,638,PONT,,34.658959506822,-1.9304018777728,,,,Under 20 m from 638 'CENTRE ESAFA' (L03); 8 m apart. This one serves L03.,distance 8.3 m
+C144,merge,650,,640,ECOLE EL JOUHARA,,34.655872,-1.934573,,,,Under 20 m from 640 'BANQLADECH' (L03); 4 m apart. This one serves L03.,distance 3.6 m
+C145,merge,647,,642,FACE PHARMACIE ES-SAMARA,,34.649691,-1.940923,,,,Same stop entered twice: same name as 642 'PHARMACIE ES-SAMARA' (L03); 57 m apart. This one serves L03.,distance 57.2 m
+C146,merge,646,,643,FACE ECOLE 11 JANVIER,,34.647817,-1.942182,,,,Same stop entered twice: same name as 643 'ECOLE 11 JANVIER' (L03); 14 m apart. This one serves L03.,distance 13.7 m
+C147,merge,696,,656,CAFE PAPILLION,,34.6598,-1.92064,,,,Under 20 m from 656 'cafe de papillons' (L03); 5 m apart. This one serves L20.,distance 4.8 m
+C148,merge,632,,657,Croissant-Rouge,,34.663230118737,-1.9192224880802,,,,Under 20 m from 657 'residence el ikhlas' (L03 L20); 9 m apart. This one serves L03.,distance 9.3 m
+C149,merge,703,,668,CAFE DE CAVALIER,,34.69794,-1.90994,,,,Under 20 m from 668 'LE PARC DE LOISIRS' (L20); 16 m apart. This one serves L20.,distance 16.0 m
+C150,merge,695,,676,TERRAIN DE FOOT,,34.65804,-1.91713,,,,Under 20 m from 676 'MASJID TAYBA' (L20); 11 m apart. This one serves L20.,distance 11.0 m
+C151,merge,608,,700,2026-07-09 00:00:00,,34.679134963651,-1.9188254792001,,,,The source name '2026-07-09 00:00:00' is '9 juillet' read as a date; stop 700 'PLACE 9 JUILLET' (L20) is 49 m away. Same stop as 700 'PLACE 9 JUILLET' (L20); 49 m apart. This one serves L25.,distance 49.2 m
+C152,merge,720,,714,omar de la police,,34.68367,-1.94988,,,,Under 20 m from 714 'station shell' (L14); 16 m apart. This one serves L14.,distance 16.2 m
+C153,merge,718,,716,drafif /R,,34.68929,-1.95416,,,,Under 20 m from 716 'aldrafif' (L14); 13 m apart. This one serves L14.,distance 12.8 m
+C154,merge,798,,724,GARE ROUTIERE,,34.675857138524,-1.9270598919468,,,,Under 20 m from 724 'Rond-point oued ennachef' (L14); 5 m apart. This one serves L24.,distance 4.5 m
+C155,merge,978,,724,POND MED 5,,34.675873581049,-1.9272093204288,,,,Under 20 m from 724 'Rond-point oued ennachef' (L14); 10 m apart. This one serves L15.,distance 9.7 m
+C156,merge,981,,727,MOULAY IDRISS,,34.673805675642,-1.9138473395331,,,,Under 20 m from 727 'gendarmerie' (L14); 4 m apart. This one serves L15.,distance 4.0 m
+C157,merge,844,,729,STATION SOUK EL QOUDS,,34.68223,-1.9092,,,,Same stop entered twice: same name as 729 'TERMUNIS EL QODS' (L99); 23 m apart. This one serves L21.,distance 22.8 m
+C158,merge,846,,731,REGEIONALE,,34.6962,-1.90227,,,,Under 20 m from 731 'REGIONALE' (L99); 3 m apart. This one serves L21.,distance 3.0 m
+C159,merge,847,,732,CAFE PALATINO,,34.70034,-1.89788,,,,Under 20 m from 732 'PLATINO' (L99); 12 m apart. This one serves L21.,distance 11.9 m
+C160,merge,848,,733,RJAFALLAH,,34.70487,-1.89497,,,,Under 20 m from 733 'RJA FLLAH' (L99); 3 m apart. This one serves L21.,distance 3.5 m
+C161,merge,773,,741,piscine tropicale,,34.740545714003,-1.8677455093631,,,,Under 20 m from 741 'CAFE DAR NASSIM' (L99); 10 m apart. This one serves L99.,distance 9.8 m
+C162,merge,771,,742,reseau/R,,34.7447069225,-1.8650311091793,,,,Same stop entered twice: same name as 742 'RESEAU' (L99); 22 m apart. This one serves L99.,distance 21.7 m
+C163,merge,770,,744,sawri /R,,34.750176904422,-1.8614852754682,,,,Same stop entered twice: same name as 744 'SAWRI' (L99); 10 m apart. This one serves L99.,distance 10.0 m
+C164,merge,762,,753,lbyout 2,,34.7776,-1.84417,,,,Under 20 m from 753 'LBUYUT' (L99); 8 m apart. This one serves L99.,distance 8.3 m
+C165,merge,758,,755,ouled aiyad,,34.78297,-1.84212,,,,Under 20 m from 755 'LAMRIRA' (L99); 16 m apart. This one serves L99.,distance 16.4 m
+C166,merge,857,,779,LOTISSEMENT,,34.71815,-1.88234,,,,Under 20 m from 779 'station ola' (L21 L99); 8 m apart. This one serves L21.,distance 8.1 m
+C167,merge,866,,781,SEKAYA,,34.70876,-1.89106,,,,Under 20 m from 781 'station energie total' (L99); 2 m apart. This one serves L21.,distance 2.4 m
+C168,merge,867,,782,WAFA CASH,,34.70547,-1.89454,,,,Under 20 m from 782 'maroc telecom' (L99); 8 m apart. This one serves L21.,distance 8.0 m
+C169,merge,868,,783,PONT RJAFALLAH,,34.70116,-1.89736,,,,Under 20 m from 783 'cafe samir' (L99); 1 m apart. This one serves L21.,distance 0.9 m
+C170,merge,168,,784,Café le Prince,,34.6916736,-1.9072719,,,,Same stop entered twice: same name as 784 'cafe prince' (L21 L99); 47 m apart. This one serves L04.,distance 46.9 m
+C171,merge,245,,785,en face ecole lala Aicha,,34.68803666429,-1.9074529409409,,,,Under 20 m from 785 'pharmacie ibn sina' (L21 L99); 7 m apart. This one serves L04.,distance 7.1 m
+C172,merge,870,,786,MAISON D'ELEGANCE,,34.68546,-1.90918,,,,Same stop entered twice: same name as 786 'maison de l'élégance' (L99); 4 m apart. This one serves L21.,distance 3.5 m
+C173,merge,841,,790,MARCHE AUX POISSONS,,34.70341,-1.91504,,,,Under 20 m from 790 'VETERINAIRE DKHISSI' (L24); 11 m apart. This one serves L24.,distance 11.0 m
+C174,merge,208,,803,CLINIQUE IBN SINA,,34.663847800349,-1.9050550507422,,,,Under 20 m from 803 'PHARMACIE HASSAN II' (L01 L24); 7 m apart. This one serves L01.,distance 7.3 m
+C175,merge,372,,803,POLYCLINIQUE IBN SINA,,34.663825739094,-1.9049423933029,,,,Under 20 m from 803 'PHARMACIE HASSAN II' (L01 L24); 13 m apart. This one serves L24.,distance 13.5 m
+C176,merge,950,,804,BOULANGERIE IBN SINA,,34.6638,-1.90021,,,,Under 20 m from 804 'SIEGE DU PARTI L'AUTHENTICITE ET DE LA MODERNITE' (L24); 14 m apart. This one serves L01.,distance 14.0 m
+C177,merge,827,,805,LYCEE AL MAGHREB EL ARABI/R,,34.664266976817,-1.8966275391425,,,,Same stop entered twice: same name as 805 'FACE LYCEE EL MAGHREB EL ARABI' (L24); 10 m apart. This one serves L24.,distance 10.1 m
+C178,merge,927,,805,LYCEE  MAGHREB L'ARABIE,,34.6642,-1.89641,,,,Under 20 m from 805 'FACE LYCEE EL MAGHREB EL ARABI' (L24); 16 m apart. This one serves L01.,distance 16.1 m
+C179,merge,949,,805,LYCCE MAGHREB L'ARABIE,,34.66428,-1.89666,,,,Under 20 m from 805 'FACE LYCEE EL MAGHREB EL ARABI' (L24); 13 m apart. This one serves L01.,distance 12.8 m
+C180,merge,825,,807,FACE ASSURANCE SALAM,,34.665506784371,-1.8892782864417,,,,Under 20 m from 807 'CAFE AL MANAR' (L01 L24); 22 m apart. This one serves L24.,distance 21.5 m
+C181,merge,948,,807,STATION APPOLLO,,34.66552,-1.88918,,,,Under 20 m from 807 'CAFE AL MANAR' (L01 L24); 15 m apart. This one serves L01.,distance 14.8 m
+C182,merge,930,,809,HAMMAM AL JAOUHARA,,34.66612,-1.8815,,,,Under 20 m from 809 'HAMAM EL JAOUHARA' (L24); 5 m apart. This one serves L01.,distance 5.4 m
+C183,merge,822,,810,QASR LA'LAJ,,34.667218699285,-1.8771922510671,,,,Under 20 m from 810 'MOSQUEE  RAYAN' (L24); 19 m apart. This one serves L24.,distance 19.4 m
+C184,merge,931,,810,TERMUNIS MOSQUEE BAB RAYAN,,34.667152556682,-1.8770474304229,,,,Under 20 m from 810 'MOSQUEE  RAYAN' (L24); 7 m apart. This one serves L01.,distance 7.4 m
+C185,merge,945,,810,QSAR LAALAJ,,34.66724,-1.87719,,,,Under 20 m from 810 'MOSQUEE  RAYAN' (L24); 20 m apart. This one serves L01.,distance 19.7 m
+C186,merge,818,,814,FACE OASIS SIDI YAHYA,,34.66711,-1.86375,,,,Same stop entered twice: same name as 814 'OASIS SIDI YAHYA' (L24); 11 m apart. This one serves L24.,distance 10.8 m
+C187,merge,946,,823,CAFE 4 ETOILES,,34.66634,-1.88102,,,,Under 20 m from 823 'STATION APOLLO' (L24); 12 m apart. This one serves L01.,distance 12.5 m
+C188,merge,806,,826,PHARMACIE  AL-SAFRIOUI,,34.66515828057,-1.8914401531219,,,,Under 20 m from 826 'FACE CAFE ACHRAF' (L01 L24); 18 m apart. This one serves L24.,distance 17.8 m
+C189,merge,864,,851,LES TAXIS BLANCS,,34.71248,-1.89566,,,,Under 20 m from 851 'EL YAJOUR' (L21); 13 m apart. This one serves L21.,distance 12.5 m
+C190,merge,861,,854,HAY SEDRA,,34.71982,-1.88905,,,,Under 20 m from 854 'HAY EL BERKANI' (L21); 11 m apart. This one serves L21.,distance 11.3 m
+C191,merge,860,,855,ECOLE AZIZ AMINE,,34.71903,-1.88693,,,,Same stop entered twice: same name as 855 'FACE ECOLE AZIZ AMINE' (L21); 13 m apart. This one serves L21.,distance 13.0 m
+C192,merge,859,,856,PHARMACIE GALA,,34.71777,-1.8847,,,,Under 20 m from 856 'BRIGO GALA' (L21); 8 m apart. This one serves L21.,distance 8.3 m
+C193,merge,736,,858,FACE GALA,,34.71962,-1.8814,,,,Same stop entered twice: same name as 858 'TERMUNIS GALA' (L21); 57 m apart. This one serves L99.,distance 57.3 m
+C194,merge,897,,877,FACE SOUKA LAZARET,,34.68024,-1.8837,,,,Under 20 m from 877 'SOUK EL HAD  LAZARET' (L18); 19 m apart. This one serves L18.,distance 19.1 m
+C195,merge,895,,879,CAFE AL MUHAJIRIN,,34.677771703227,-1.8818754113104,,,,Under 20 m from 879 'ROND-POINT MEXICO' (L18); 4 m apart. This one serves L18.,distance 3.5 m
+C196,merge,893,,881,FACE HAMMAM CHTIOUI,,34.68121,-1.87629,,,,Same stop entered twice: same name as 881 'HAMMAM CHTIOUI' (L18); 12 m apart. This one serves L18.,distance 12.1 m
+C197,merge,892,,882,CAFE ABDOU,,34.68339,-1.87452,,,,Under 20 m from 882 'BOULANGERIE L'HIRONDELLE' (L18); 18 m apart. This one serves L18.,distance 17.7 m
+C198,merge,921,,900,DERB BERAHMOUN,,34.67951,-1.89315,,,,Same stop entered twice: same name as 900 'FACE DERB BERAHMOUN' (L18); 17 m apart. This one serves L19.,distance 17.4 m
+C199,merge,918,,904,CAFE OYONNAX,,34.68506,-1.88151,,,,Under 20 m from 904 'MAHLABAT NIAMA' (L19); 17 m apart. This one serves L19.,distance 17.1 m
+C200,merge,917,,905,FASSI DECOR,,34.68631,-1.88093,,,,Under 20 m from 905 'SALLE COUVERT OUED EDDAHAB' (L19); 14 m apart. This one serves L19.,distance 14.1 m
+C201,merge,916,,906,MOSQUEE ARIDA,,34.68815,-1.87898,,,,Same stop entered twice: same name as 906 'TERMUNIS MOSQUEE ARIDA' (L19); 7 m apart. This one serves L19.,distance 6.7 m
+C202,merge,984,,953,MUSEE LALLA MERYEM,,34.676958107074,-1.9128400765741,,,,Same stop entered twice: same name as 953 'MUSEE LALLA MERYEM' (L15); 36 m apart. This one serves L09.,distance 36.5 m
+C203,merge,325,,961,Hay Lmharach 1,,34.6878518,-1.9423922,,,,Under 20 m from 961 'MHARACH I' (L15); 0 m apart. This one serves L05.,distance 0.0 m
+C204,merge,972,,961,BOULANGERIE AMIRA,,34.687776362166,-1.9424075028049,,,,Under 20 m from 961 'MHARACH I' (L15); 9 m apart. This one serves L15.,distance 8.5 m
+C205,merge,319,,962,Hay Lmharach,,34.6897138,-1.9439097,,,,Under 20 m from 962 'MHARACH II' (L15); 0 m apart. This one serves L05.,distance 0.0 m
+C206,merge,971,,962,MHARACH II,,34.689641939283,-1.9440221879712,,,,Same stop entered twice: same name as 962 'MHARACH II' (L15); 13 m apart. This one serves L15.,distance 13.0 m
+C207,merge,1010,,986,MARCHE COUVERT,,34.683637183198,-1.9180212825614,,,,Same stop entered twice: same name as 986 'MARCHE COUVERT' (L09); 13 m apart. This one serves L09.,distance 13.2 m
+C208,merge,1005,,990,MARCHE DE GROS /R,,34.701704251868,-1.9193833973178,,,,Same stop entered twice: same name as 990 'MARCHE DE GROS' (L09); 28 m apart. This one serves L09.,distance 28.1 m
+C209,merge,1001,,993,ROND POINT CGI /R,,34.716575,-1.92157805555556,,,,Same stop entered twice: same name as 993 'ROND POINT CGI' (L09); 51 m apart. This one serves L09.,distance 51.2 m
+C210,merge,1000,,994,MOUSQUEE AL HAJAR AL ASWAD,,34.71582889466,-1.9253479683534,,,,Same stop entered twice: same name as 994 'MOSQUEE AL HAJAR AL ASWAD' (L09); 14 m apart. This one serves L09.,distance 13.9 m
+C211,merge,999,,995,FACE HAY ANNAHAR,,34.719000717368,-1.9302784806226,,,,Same stop entered twice: same name as 995 'HAY ANNAHAR' (L09); 12 m apart. This one serves L09.,distance 12.3 m
+C212,rename,32,,,Agdal,Terminus Agdal,,,,,,Name of the merged stop.,
+C213,rename,42,,,Av Brahim Lahssini pharmacie compelexe sportive,Av Brahim Lahssini Pharmacie Complexe Sportive / Av Brahim Lahssini Salle Couverte,,,,,,"Merged stop: named after both stops it combines (42 'Av Brahim Lahssini pharmacie compelexe sportive' / 45 'Av Brahim Lahssini sale coverte'), the one serving more lines first. Title case (French small words lower case) and French spelling (compelexe→complexe, coverte→couverte, sale→salle).",
+C214,rename,62,,,Av Tohami Jilali OFPPT,Av Tohami Jilali OFPPT / Institut El Gadi Lafkhih,,,,,,"Merged stop: named after both stops it combines (62 'Av Tohami Jilali OFPPT' / 490 'institut el gadi lafkhih'), the one serving more lines first. Title case (French small words lower case).",
+C215,rename,65,,,Av Tohami Jilali Palais de justice,Av Tohami Jilali Palais de Justice / Nassij Al Jam3aoui,,,,,,"Merged stop: named after both stops it combines (65 'Av Tohami Jilali Palais de justice' / 540 'nassij al jam3aoui'), the one serving more lines first. Title case (French small words lower case).",
+C216,rename,141,,,Bab sidi abdlouhab,Terminus Bab Sidi Abdelouahab,,,,,,Terminus name: stops of the same terminus get one name.,
+C217,rename,189,,,Av Allal Ben Abdellah,Av Allal Ben Abdellah / Ministère des Douanes,,,,,,"Merged stop: named after both stops it combines (189 'Av Allal Ben Abdellah' / 671 'MINISTERE DES DOUANES'), the one serving more lines first. Title case (French small words lower case) and French spelling (ministere→ministère).",
+C218,rename,197,,,Mosque Elbourak,Mosquée Elbourak / Parc Najd,,,,,,"Merged stop: named after both stops it combines (197 'Mosque Elbourak' / 936 'PARC NAJD'), the one serving more lines first. Title case (French small words lower case) and French spelling (mosque→mosquée).",
+C219,rename,201,,,Av Idriss Al Akbar hopital El Farabi 1,Av Idriss Al Akbar Hôpital El Farabi 1 / Laboratoire El Hakim,,,,,,"Merged stop: named after both stops it combines (201 'Av Idriss Al Akbar hopital El Farabi 1' / 592 'laboratoire el hakim'), the one serving more lines first. Title case (French small words lower case) and French spelling (hopital→hôpital).",
+C220,rename,209,,,Clinique Al Maghrib,Clinique Al Maghrib / Unité Administrative,,,,,,"Merged stop: named after both stops it combines (209 'Clinique Al Maghrib' / 672 'UNITE ADMINISTRATIVE'), the one serving more lines first. Title case (French small words lower case) and French spelling (unite→unité).",
+C221,rename,223,,,EAUX ET FORETS,Eaux et Forêts / El Majlis Al Ilmi,,,,,,"Merged stop: named after both stops it combines (223 'EAUX ET FORETS' / 684 'EL MAJLIS AL ILMI'), the one serving more lines first. Title case (French small words lower case) and French spelling (forets→forêts).",
+C222,rename,229,,,Mosquee Othmane Ibn Aafane,Mosquée Othmane Ibn Aafane / La Maison Renault,,,,,,"Merged stop: named after both stops it combines (229 'Mosquee Othmane Ibn Aafane' / 976 'LA MAISON REANAULT'), the one serving more lines first. Title case (French small words lower case) and French spelling (mosquee→mosquée, reanault→renault).",
+C223,rename,231,,,Ecole Lalla Aicha,École Lalla Aicha / École Aicha Oum Al Mouamnin,,,,,,"Merged stop: named after both stops it combines (231 'Ecole Lalla Aicha' / 845 'ECOLE AICHA OUM AL MOUAMNIN'), the one serving more lines first. Title case (French small words lower case) and French spelling (ecole→école).",
+C224,rename,240,,,Terminus Place Maghreb Arabi,Terminus Maghreb Arabi,,,,,,Terminus name: stops of the same terminus get one name.,
+C225,rename,263,,,Terminus Souk Qods,Terminus Souk El Qods,,,,,,Terminus name: stops of the same terminus get one name.,
+C226,rename,266,,,EST  Sidi Maafa,EST Sidi Maafa,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed.,
+C227,rename,270,,,FACULTE DE MEDECINE,Faculté de Médecine / RADEEO,,,,,,"Merged stop: named after both stops it combines (270 'FACULTE DE MEDECINE' / 541 'RADEEO'), the one serving more lines first. Title case (French small words lower case) and French spelling (faculte→faculté, medecine→médecine).",
+C228,rename,273,,,terrain  Didi,Terrain Didi,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C229,rename,285,,,HAMAM BENKACHOUR,Hamam Benkachour / Benkachour Aller,,,,,,"Merged stop: named after both stops it combines (285 'HAMAM BENKACHOUR' / 595 'benkachour aller'), the one serving more lines first. Title case (French small words lower case).",
+C230,rename,358,,,Yotno Belhoussine,Yotno Belhoussine / Moin 1,,,,,,"Merged stop: named after both stops it combines (358 'Yotno Belhoussine' / 571 'moin 1'), the one serving more lines first. Title case (French small words lower case).",
+C231,rename,363,,,Yotno belhoussine 1,Yotno Belhoussine 1 / Moulay Driss,,,,,,"Merged stop: named after both stops it combines (363 'Yotno belhoussine 1' / 661 'moulay driss'), the one serving more lines first. Title case (French small words lower case).",
+C232,rename,368,,,POLYCLINIQUE,Polyclinique / CNSS,,,,,,"Merged stop: named after both stops it combines (368 'POLYCLINIQUE' / 213 'CNSS'), the one serving more lines first. Title case (French small words lower case).",
+C233,rename,390,,,Av Med 6 Carfour,Av Med 6 Carrefour / Établissement El Ouazzani,,,,,,"Merged stop: named after both stops it combines (390 'Av Med 6 Carfour' / 597 'etablissement el ouazzani'), the one serving more lines first. Title case (French small words lower case) and French spelling (carfour→carrefour, etablissement→établissement).",
+C234,rename,394,,,Av Med 6 Faculte Des Science,Av Med 6 Faculté des Sciences / Inwi,,,,,,"Merged stop: named after both stops it combines (394 'Av Med 6 Faculte Des Science' / 488 'inwi'), the one serving more lines first. Title case (French small words lower case) and French spelling (faculte→faculté, science→sciences).",
+C235,rename,407,,,Av Med 6 LISTA,Av Med 6 Lista / ENCG,,,,,,"Merged stop: named after both stops it combines (407 'Av Med 6 LISTA' / 545 'ENCG'), the one serving more lines first. Title case (French small words lower case).",
+C236,rename,409,,,Av Med 6 Rond point Universite Med 1,Av Med 6 Rond Point Université Med 1 / Rond Point Faculté,,,,,,"Merged stop: named after both stops it combines (409 'Av Med 6 Rond point Universite Med 1' / 543 'Rond point faculte'), the one serving more lines first. Title case (French small words lower case) and French spelling (faculte→faculté, universite→université).",
+C237,rename,427,,,Route de Frontiere (vers Agdal) Café Noujoum,Route de Frontière (Vers Agdal) Café Noujoum / Route de Frontière (Vers Agdal) Résidence Al Ghite,,,,,,"Merged stop: named after both stops it combines (427 'Route de Frontiere (vers Agdal) Café Noujoum' / 428 'Route de Frontiere (vers Agdal) Risidence Al GHITE'), the one serving more lines first. Title case (French small words lower case) and French spelling (frontiere→frontière, risidence→résidence).",
+C238,rename,472,,,Terminus Bab sidi Abdelouhab,Terminus Bab Sidi Abdelouahab,,,,,,Terminus name: stops of the same terminus get one name.,
+C239,rename,478,,,Terminus Ibn Khaldoune,Terminus Ibn Khaldoun,,,,,,Terminus name: stops of the same terminus get one name.,
+C240,rename,486,,,pharmacie sidi maafa,Terminus Pharmacie Sidi Maafa,,,,,,Terminus name: stops of the same terminus get one name.,
+C241,rename,501,,,MARCHE GROS,Marché Gros / Station Banana,,,,,,"Merged stop: named after both stops it combines (501 'MARCHE GROS' / 527 'station banana'), the one serving more lines first. Title case (French small words lower case) and French spelling (marche→marché).",
+C242,rename,515,,,terminis dar naaim,Terminus Dar Naaim,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C243,rename,528,,,association zalija,Association Zalija / Pont Village Toba,,,,,,"Merged stop: named after both stops it combines (528 'association zalija' / 793 'PONT VILLAGE TOBA'), the one serving more lines first. Title case (French small words lower case).",
+C244,rename,531,,,cimetier nassara,Cimetière Nassara / Cimetière Chrétien,,,,,,"Merged stop: named after both stops it combines (531 'cimetier nassara' / 795 'CIMETIERE CHRETIEN'), the one serving more lines first. Title case (French small words lower case) and French spelling (chretien→chrétien, cimetiere→cimetière, cimetier→cimetière).",
+C245,rename,534,,,clinique chark,Clinique Chark / Cabinet Mouhoub,,,,,,"Merged stop: named after both stops it combines (534 'clinique chark' / 832 'CABINET MOUHOUB'), the one serving more lines first. Title case (French small words lower case).",
+C246,rename,537,,,residence mehdi,Résidence Mehdi / Café Vinizia,,,,,,"Merged stop: named after both stops it combines (537 'residence mehdi' / 801 'CAFE VINIZIA'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café, residence→résidence).",
+C247,rename,539,,,comissariat de police,Commissariat de Police / Mosquée Badr,,,,,,"Merged stop: named after both stops it combines (539 'comissariat de police' / 829 'MOSQUEE BADR'), the one serving more lines first. Title case (French small words lower case) and French spelling (comissariat→commissariat, mosquee→mosquée).",
+C248,rename,546,,,OFPPT,Terminus Pharmacie Sidi Maafa,,,,,,Terminus name: stops of the same terminus get one name.,
+C249,rename,551,,,cafe jardin d'oujda,Café Jardin d'Oujda / Usine de Brique,,,,,,"Merged stop: named after both stops it combines (551 'cafe jardin d'oujda' / 564 'usine de brique'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C250,rename,552,,,rond-point bni wkil,Rond-point Bni Wkil / Établissement Bni Wkil,,,,,,"Merged stop: named after both stops it combines (552 'rond-point bni wkil' / 563 'etablissement bni wkil'), the one serving more lines first. Title case (French small words lower case) and French spelling (etablissement→établissement).",
+C251,rename,562,,,dowar wlad salam RETOUR,Dowar Wlad Salam,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C252,rename,572,,,termunis rjafllah,Terminus Rjafllah,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C253,rename,576,,,central,Central / Dépôt de Marbre,,,,,,"Merged stop: named after both stops it combines (576 'central' / 623 'depeau de marbre'), the one serving more lines first. Title case (French small words lower case) and French spelling (depeau→dépôt).",
+C254,rename,577,,,visite dekra,Visite Dekra / Now Chark,,,,,,"Merged stop: named after both stops it combines (577 'visite dekra' / 621 'now chark'), the one serving more lines first. Title case (French small words lower case).",
+C255,rename,578,,,cafe dadi,Café Dadi / Rafaie Métal,,,,,,"Merged stop: named after both stops it combines (578 'cafe dadi' / 620 'rafaie metal'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café, metal→métal).",
+C256,rename,579,,,face cafe euro sport,Café Euro Sport,,,,,,Name of the merged stop. Title case (French small words lower case) and French spelling (cafe→café).,
+C257,rename,583,,,tennis 1,Tennis 1 / Boulangerie Ziani,,,,,,"Merged stop: named after both stops it combines (583 'tennis 1' / 615 'boulangerie ziani'), the one serving more lines first. Title case (French small words lower case).",
+C258,rename,585,,,tennis2,Tennis2 / Taba Loto,,,,,,"Merged stop: named after both stops it combines (585 'tennis2' / 614 'taba loto'), the one serving more lines first. Title case (French small words lower case).",
+C259,rename,590,,,sahat jada,Sahat Jada / Place Jada,,,,,,"Merged stop: named after both stops it combines (590 'sahat jada' / 669 'PLACE JADA'), the one serving more lines first. Title case (French small words lower case).",
+C260,rename,591,,,bank bmci,Bank BMCI / Agence Inwi,,,,,,"Merged stop: named after both stops it combines (591 'bank bmci' / 670 'AGENCE INWI'), the one serving more lines first. Title case (French small words lower case).",
+C261,rename,598,,,mafrochat donia,Mafrochat Donia / Michwat Al Bahja,,,,,,"Merged stop: named after both stops it combines (598 'mafrochat donia' / 603 'MICHWAT AL BAHJA'), the one serving more lines first. Title case (French small words lower case).",
+C262,rename,599,,,termunis Mr SMITH,Terminus Mr Smith,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C263,rename,610,,,etablissement des œuvres sociales,Établissement des Œuvres Sociales / Dar El Madrase,,,,,,"Merged stop: named after both stops it combines (610 'etablissement des œuvres sociales' / 701 'DAR EL MADRASE'), the one serving more lines first. Title case (French small words lower case) and French spelling (etablissement→établissement).",
+C264,rename,611,,,zalij wlad rkik,Zalij Wlad Rkik / Marbre Ouled Rgige,,,,,,"Merged stop: named after both stops it combines (611 'zalij wlad rkik' / 702 'MARBRE OULED RGIGE'), the one serving more lines first. Title case (French small words lower case).",
+C265,rename,633,,,HAMAM A SALAM,Hamam A Salam / Douche Es-salam,,,,,,"Merged stop: named after both stops it combines (633 'HAMAM A SALAM' / 675 'DOUCHE ES-SALAM'), the one serving more lines first. Title case (French small words lower case).",
+C266,rename,636,,,AUTO ECOLE EL  IKHLASSE,Auto École El Ikhlasse / La Pharmacie Central,,,,,,"Merged stop: named after both stops it combines (636 'AUTO ECOLE EL  IKHLASSE' / 654 'la PHARMACIE CENTRAL'), the one serving more lines first. Title case (French small words lower case) and French spelling (ecole→école).",
+C267,rename,637,,,BOULANGERIE DE LA MAGIE,Boulangerie de la Magie / École Khair Eddine,,,,,,"Merged stop: named after both stops it combines (637 'BOULANGERIE DE LA MAGIE' / 653 'ECOLE KHAIR EDDINE'), the one serving more lines first. Title case (French small words lower case) and French spelling (ecole→école).",
+C268,rename,638,,,CENTRE ESAFA,Centre Esafa / Pont,,,,,,"Merged stop: named after both stops it combines (638 'CENTRE ESAFA' / 652 'PONT'), the one serving more lines first. Title case (French small words lower case).",
+C269,rename,640,,,BANQLADECH,Banqladech / École El Jouhara,,,,,,"Merged stop: named after both stops it combines (640 'BANQLADECH' / 650 'ECOLE EL JOUHARA'), the one serving more lines first. Title case (French small words lower case) and French spelling (ecole→école).",
+C270,rename,644,,,TERMUNIS SAMARA,Terminus Samara,,,,,,Terminus name: stops of the same terminus get one name.,
+C271,rename,645,,,TERMINUS SAMARA,Terminus Samara,,,,,,Terminus name: stops of the same terminus get one name.,
+C272,rename,657,,,residence el ikhlas,Résidence El Ikhlas / Croissant-rouge,,,,,,"Merged stop: named after both stops it combines (657 'residence el ikhlas' / 632 'Croissant-Rouge'), the one serving more lines first. Title case (French small words lower case) and French spelling (residence→résidence).",
+C273,rename,658,,,cabinet de  rééducation,Cabinet de Rééducation,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C274,rename,662,,,TERMUNIS MAGHREB AL ARABI,Terminus Maghreb Arabi,,,,,,Terminus name: stops of the same terminus get one name.,
+C275,rename,663,,,PIECE HAMIRI,Terminus Vétérinaire Dkhissi,,,,,,Terminus name: stops of the same terminus get one name. Title case (French small words lower case) and French spelling (veterinaire→vétérinaire).,
+C276,rename,668,,,LE PARC DE LOISIRS,Le Parc de Loisirs / Café de Cavalier,,,,,,"Merged stop: named after both stops it combines (668 'LE PARC DE LOISIRS' / 703 'CAFE DE CAVALIER'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C277,rename,676,,,MASJID TAYBA,Masjid Tayba / Terrain de Foot,,,,,,"Merged stop: named after both stops it combines (676 'MASJID TAYBA' / 695 'TERRAIN DE FOOT'), the one serving more lines first. Title case (French small words lower case).",
+C278,rename,685,,,TERMUNIS PARC LALA AICHA,Terminus Parc Lalla Aicha,,,,,,Terminus name: stops of the same terminus get one name.,
+C279,rename,686,,,TERMUNIS PARC AICHA,Terminus Parc Lalla Aicha,,,,,,Terminus name: stops of the same terminus get one name.,
+C280,rename,691,,,MOUSQUEE EL QOUDS,Mosquée El Qouds,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C281,rename,705,,,MOUSQUEE EL MANSOR EDDAHBI,Mosquée El Mansor Eddahbi,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C282,rename,706,,,TERMUNIS VETERINAIRE DKHISSI,Terminus Vétérinaire Dkhissi,,,,,,Terminus name: stops of the same terminus get one name. Title case (French small words lower case) and French spelling (veterinaire→vétérinaire).,
+C283,rename,714,,,station shell,Station Shell / Omar de la Police,,,,,,"Merged stop: named after both stops it combines (714 'station shell' / 720 'omar de la police'), the one serving more lines first. Title case (French small words lower case).",
+C284,rename,717,,,termunis sabra,Terminus Sabra,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C285,rename,727,,,gendarmerie,Gendarmerie / Moulay Idriss,,,,,,"Merged stop: named after both stops it combines (727 'gendarmerie' / 981 'MOULAY IDRISS'), the one serving more lines first. Title case (French small words lower case).",
+C286,rename,729,,,TERMUNIS EL QODS,Terminus Souk El Qods,,,,,,Terminus name: stops of the same terminus get one name.,
+C287,rename,741,,,CAFE DAR NASSIM,Café Dar Nassim / Piscine Tropicale,,,,,,"Merged stop: named after both stops it combines (741 'CAFE DAR NASSIM' / 773 'piscine tropicale'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C288,rename,755,,,LAMRIRA,Lamrira / Ouled Aiyad,,,,,,"Merged stop: named after both stops it combines (755 'LAMRIRA' / 758 'ouled aiyad'), the one serving more lines first. Title case (French small words lower case).",
+C289,rename,756,,,TERMUNIS KARTING,Terminus Karting,,,,,,Terminus name: stops of the same terminus get one name.,
+C290,rename,757,,,al houdoda,Terminus Karting,,,,,,Terminus name: stops of the same terminus get one name.,
+C291,rename,760,,,ajamie retour,Ajamie,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C292,rename,779,,,station ola,Station Ola / Lotissement,,,,,,"Merged stop: named after both stops it combines (779 'station ola' / 857 'LOTISSEMENT'), the one serving more lines first. Title case (French small words lower case).",
+C293,rename,781,,,station energie total,Station Énergie Total / Sekaya,,,,,,"Merged stop: named after both stops it combines (781 'station energie total' / 866 'SEKAYA'), the one serving more lines first. Title case (French small words lower case) and French spelling (energie→énergie).",
+C294,rename,782,,,maroc telecom,Maroc Telecom / Wafa Cash,,,,,,"Merged stop: named after both stops it combines (782 'maroc telecom' / 867 'WAFA CASH'), the one serving more lines first. Title case (French small words lower case).",
+C295,rename,783,,,cafe samir,Café Samir / Pont Rjafallah,,,,,,"Merged stop: named after both stops it combines (783 'cafe samir' / 868 'PONT RJAFALLAH'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C296,rename,785,,,pharmacie ibn sina,Pharmacie Ibn Sina / En Face École Lala Aicha,,,,,,"Merged stop: named after both stops it combines (785 'pharmacie ibn sina' / 245 'en face ecole lala Aicha'), the one serving more lines first. Title case (French small words lower case) and French spelling (ecole→école).",
+C297,rename,787,,,TERMUNIS DIOUNA,Terminus Diouna,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C298,rename,790,,,VETERINAIRE DKHISSI,Vétérinaire Dkhissi / Marché aux Poissons,,,,,,"Merged stop: named after both stops it combines (790 'VETERINAIRE DKHISSI' / 841 'MARCHE AUX POISSONS'), the one serving more lines first. Title case (French small words lower case) and French spelling (marche→marché, veterinaire→vétérinaire).",
+C299,rename,803,,,PHARMACIE HASSAN II,Pharmacie Hassan II / Clinique Ibn Sina,,,,,,"Merged stop: named after both stops it combines (803 'PHARMACIE HASSAN II' / 208 'CLINIQUE IBN SINA'), the one serving more lines first. Title case (French small words lower case).",
+C300,rename,804,,,SIEGE DU PARTI L'AUTHENTICITE ET DE LA MODERNITE,Siège du Parti l'Authenticité et de la Modernité / Boulangerie Ibn Sina,,,,,,"Merged stop: named after both stops it combines (804 'SIEGE DU PARTI L'AUTHENTICITE ET DE LA MODERNITE' / 950 'BOULANGERIE IBN SINA'), the one serving more lines first. Title case (French small words lower case) and French spelling (l'authenticite→l'authenticité, modernite→modernité, siege→siège).",
+C301,rename,805,,,FACE LYCEE EL MAGHREB EL ARABI,Lycée Al Maghreb El Arabi,,,,,,Name of the merged stop. Title case (French small words lower case) and French spelling (lycee→lycée).,
+C302,rename,808,,,VILLAGE  JDID,Village Jdid,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C303,rename,810,,,MOSQUEE  RAYAN,Mosquée Rayan / Qsar Laalaj,,,,,,"Merged stop combining 3 differently named stops (810 'MOSQUEE  RAYAN' 1 line-directions, 822 'QASR LA'LAJ' 1 line-directions, 945 'QSAR LAALAJ' 1 line-directions); named after the most prominent one, the others stay searchable. Named after its two places at ISA's request. Title case (French small words lower case) and French spelling (mosquee→mosquée).",
+C304,rename,816,,,TERMUNIS AGDAL,Terminus Agdal,,,,,,Terminus name: stops of the same terminus get one name.,
+C305,rename,823,,,STATION APOLLO,Station Apollo / Café 4 Étoiles,,,,,,"Merged stop: named after both stops it combines (823 'STATION APOLLO' / 946 'CAFE 4 ETOILES'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café, etoiles→étoiles).",
+C306,rename,826,,,FACE CAFE ACHRAF,Face Café Achraf / Pharmacie Al-safrioui,,,,,,"Merged stop: named after both stops it combines (826 'FACE CAFE ACHRAF' / 806 'PHARMACIE  AL-SAFRIOUI'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C307,rename,851,,,EL YAJOUR,El Yajour / Les Taxis Blancs,,,,,,"Merged stop: named after both stops it combines (851 'EL YAJOUR' / 864 'LES TAXIS BLANCS'), the one serving more lines first. Title case (French small words lower case).",
+C308,rename,854,,,HAY EL BERKANI,Hay El Berkani / Hay Sedra,,,,,,"Merged stop: named after both stops it combines (854 'HAY EL BERKANI' / 861 'HAY SEDRA'), the one serving more lines first. Title case (French small words lower case).",
+C309,rename,855,,,FACE ECOLE AZIZ AMINE,École Aziz Amine,,,,,,Name of the merged stop. Title case (French small words lower case) and French spelling (ecole→école).,
+C310,rename,856,,,BRIGO GALA,Brigo Gala / Pharmacie Gala,,,,,,"Merged stop: named after both stops it combines (856 'BRIGO GALA' / 859 'PHARMACIE GALA'), the one serving more lines first. Title case (French small words lower case).",
+C311,rename,858,,,TERMUNIS GALA,Terminus Gala,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C312,rename,874,,,BERB  BERAHMOUN,Berb Berahmoun,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C313,rename,875,,,JARDIN  LAZARET,Jardin Lazaret,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C314,rename,876,,,BOULANGERIE ALLAL  FASSI,Boulangerie Allal Fassi,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C315,rename,877,,,SOUK EL HAD  LAZARET,Souk El Had Lazaret,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C316,rename,879,,,ROND-POINT MEXICO,Rond-point Mexico / Café Al Muhajirin,,,,,,"Merged stop: named after both stops it combines (879 'ROND-POINT MEXICO' / 895 'CAFE AL MUHAJIRIN'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C317,rename,882,,,BOULANGERIE L'HIRONDELLE,Boulangerie l'Hirondelle / Café Abdou,,,,,,"Merged stop: named after both stops it combines (882 'BOULANGERIE L'HIRONDELLE' / 892 'CAFE ABDOU'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C318,rename,900,,,FACE DERB BERAHMOUN,Derb Berahmoun,,,,,,Name of the merged stop. Title case (French small words lower case).,
+C319,rename,903,,,SOUK EL HAD  LAZARET,Souk El Had Lazaret,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C320,rename,904,,,MAHLABAT NIAMA,Mahlabat Niama / Café Oyonnax,,,,,,"Merged stop: named after both stops it combines (904 'MAHLABAT NIAMA' / 918 'CAFE OYONNAX'), the one serving more lines first. Title case (French small words lower case) and French spelling (cafe→café).",
+C321,rename,905,,,SALLE COUVERT OUED EDDAHAB,Salle Couvert Oued Eddahab / Fassi Décor,,,,,,"Merged stop: named after both stops it combines (905 'SALLE COUVERT OUED EDDAHAB' / 917 'FASSI DECOR'), the one serving more lines first. Title case (French small words lower case) and French spelling (decor→décor).",
+C322,rename,906,,,TERMUNIS MOSQUEE ARIDA,Terminus Mosquée Arida,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C323,rename,922,,,TERMUNIS SAHAT NAKHEEL,Terminus Enakhil,,,,,,Terminus name: stops of the same terminus get one name.,
+C324,rename,942,,,CIMETIERE  SIDI YAHYA,Cimetière Sidi Yahya,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (cimetiere→cimetière).,
+C325,rename,952,,,TERMUNIS MAGHREB ARABI,Terminus Maghreb Arabi,,,,,,Terminus name: stops of the same terminus get one name.,
+C326,rename,957,,,MOUSQUEE MOUSSA IBN NOUSSAIR,Mosquée Moussa Ibn Noussair,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C327,rename,961,,,MHARACH I,Hay Lmharach 1 / Boulangerie Amira,,,,,,"Merged stop: named after both stops it combines (325 'Hay Lmharach 1' / 972 'BOULANGERIE AMIRA'), the one serving more lines first. Title case (French small words lower case).",
+C328,rename,967,,,TERMUNIS JARF LAKHDAR,Terminus Jarf Lakhdar,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C329,rename,997,,,TERMUNIS MARJANE,Terminus Marjane,,,,,,Terminus name: stops of the same terminus get one name.,
+C330,rename,998,,,TERMUNIS MARJANE,Terminus Marjane,,,,,,Terminus name: stops of the same terminus get one name.,
+C331,rename,1003,,,LYCEE DERFOUFI/R,Lycée Derfoufi,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (lycee→lycée).,
+C332,rename,1004,,,CIMETIERE /R,Cimetière,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (cimetiere→cimetière).,
+C333,rename,1008,,,RIWA9 ALFOUNOUN/R,Riwa9 Alfounoun,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case).,
+C334,rename,1011,,,CAFE RIHAB/R,Café Rihab,,,,,,Spelling: Terminus/Mosquee typos and '/R' or 'retour' suffixes removed. Title case (French small words lower case) and French spelling (cafe→café).,
+C335,rename,618,,,banque populaire,Banque Populaire (Lotissement Talhaoui),,,,,,3 different stops were all called 'banque populaire' (3.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C336,rename,824,,,BANQUE POPULAIRE,Banque Populaire (Hay Hakkou),,,,,,3 different stops were all called 'BANQUE POPULAIRE' (3.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C337,rename,896,,,BANQUE POPULAIRE,Banque Populaire (Lotissement Msirdi),,,,,,3 different stops were all called 'BANQUE POPULAIRE' (3.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C338,rename,609,,,LA POSTE,La Poste (Hay Rabat),,,,,,2 different stops were all called 'LA POSTE' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C339,rename,641,,,LA POSTE,La Poste (Hay Bangladech),,,,,,2 different stops were all called 'LA POSTE' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C340,rename,142,,,MAROC TELECOM,Maroc Telecom (Hay Takkadoum),,,,,,2 different stops were all called 'MAROC TELECOM' (4.4 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C341,rename,821,,,OFPPT,OFPPT (Hay Hakkou),,,,,,3 different stops were all called 'OFPPT' (5.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C342,rename,853,,,OFPPT,OFPPT (Hay Ennasr),,,,,,3 different stops were all called 'OFPPT' (5.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C343,rename,913,,,OFPPT,OFPPT (Hay Al Fath),,,,,,3 different stops were all called 'OFPPT' (5.5 km apart); the neighbourhood name (from OpenStreetMap) tells them apart.,OSM reverse geocoding (Nominatim)
+C344,rename,500,,,station shell,Station Shell (Village Toba Extérieur),,,,,,3 different stops were all called 'station shell' (5.2 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C345,rename,687,,,STATION SHELL,Station Shell (Hay Al Maksam),,,,,,3 different stops were all called 'STATION SHELL' (5.2 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C346,rename,812,,,STATION SHELL,Station Shell (Lotissement Elhasaniya),,,,,,3 different stops were all called 'STATION SHELL' (5.2 km apart); the neighbourhood name (from OpenStreetMap) tells them apart. Title case (French small words lower case).,OSM reverse geocoding (Nominatim)
+C347,rename,6,,,Av armie de liberation,Av Armée de Libération,,,,,,"Title case (French small words lower case) and French spelling (armie→armée, liberation→libération).",
+C348,rename,9,,,Av armie de liberation bab aljazaer,Av Armée de Libération Bab Aljazaer,,,,,,"Title case (French small words lower case) and French spelling (armie→armée, liberation→libération).",
+C349,rename,21,,,Av bir anzarane Consulat Algerie,Av Bir Anzarane Consulat Algérie,,,,,,Title case (French small words lower case) and French spelling (algerie→algérie).,
+C350,rename,30,,,LYCEE ASSALAM,Lycée Assalam,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C351,rename,36,,,Av Boualam Arahmoun ecole imam ali,Av Boualam Arahmoun École Imam Ali,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C352,rename,38,,,Av Brahim Lahssini force auxiliare,Av Brahim Lahssini Force Auxiliaire,,,,,,Title case (French small words lower case) and French spelling (auxiliare→auxiliaire).,
+C353,rename,40,,,Lycée derfoufi,Lycée Derfoufi,,,,,,Title case (French small words lower case).,
+C354,rename,44,,,Ancien tribunal 1 instance,Ancien Tribunal 1 Instance,,,,,,Title case (French small words lower case).,
+C355,rename,48,,,Av Brahim Roudani Arrandissement,Av Brahim Roudani Arrondissement,,,,,,Title case (French small words lower case) and French spelling (arrandissement→arrondissement).,
+C356,rename,49,,,auto hall,Auto Hall,,,,,,Title case (French small words lower case).,
+C357,rename,51,,,Lycee Maghreb Arabi,Lycée Maghreb Arabi,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C358,rename,58,,,Lycee Qods,Lycée Qods,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C359,rename,69,,,Av Elmansour Edahhabi1 (Cafe victoria),Av Elmansour Edahhabi1 (Café Victoria),,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C360,rename,73,,,Av yahya Belkhir,Av Yahya Belkhir,,,,,,Title case (French small words lower case).,
+C361,rename,77,,,Mac donalds,Mac Donalds,,,,,,Title case (French small words lower case).,
+C362,rename,78,,,AV Abdellah ganoun,Av Abdellah Ganoun,,,,,,Title case (French small words lower case).,
+C363,rename,85,,,Av Abderrahim Bouabid banque populaire,Av Abderrahim Bouabid Banque Populaire,,,,,,Title case (French small words lower case).,
+C364,rename,89,,,Av Abderrahim Bouabid pharmacie olad chrif,Av Abderrahim Bouabid Pharmacie Olad Chrif,,,,,,Title case (French small words lower case).,
+C365,rename,101,,,MAJLIS EL JIHA,Majlis El Jiha,,,,,,Title case (French small words lower case).,
+C366,rename,116,,,Av Hassan 2 Wilaya de police,Av Hassan 2 Wilaya de Police,,,,,,Title case (French small words lower case).,
+C367,rename,127,,,Av Al Irfane Mosquee Assalam,Av Al Irfane Mosquée Assalam,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C368,rename,128,,,Av Zayed Ben Soltane Gare Routiere,Av Zayed Ben Soltane Gare Routière,,,,,,Title case (French small words lower case) and French spelling (routiere→routière).,
+C369,rename,131,,,Av Zayed Ben Soltane osbat achark,Av Zayed Ben Soltane Osbat Achark,,,,,,Title case (French small words lower case).,
+C370,rename,139,,,Av Zayed Lecyée Acharif Idrissi,Av Zayed Lycée Acharif Idrissi,,,,,,Title case (French small words lower case) and French spelling (lecyée→lycée).,
+C371,rename,146,,,ben mimoune hay zaytoune,Ben Mimoune Hay Zaytoune,,,,,,Title case (French small words lower case).,
+C372,rename,153,,,AV Allal Al fassi Derb berrahmoune,Av Allal Al Fassi Derb Berrahmoune,,,,,,Title case (French small words lower case).,
+C373,rename,171,,,AV Allal Al fassi mosque riad,Av Allal Al Fassi Mosquée Riad,,,,,,Title case (French small words lower case) and French spelling (mosque→mosquée).,
+C374,rename,174,,,café nojoume,Café Nojoume,,,,,,Title case (French small words lower case).,
+C375,rename,177,,,Cafe Salazar,Café Salazar,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C376,rename,184,,,AV Allal Al fassi Salle Berrisoule,Av Allal Al Fassi Salle Berrisoule,,,,,,Title case (French small words lower case).,
+C377,rename,185,,,Av Hay Jaouhara 3 ( Cafée Karam ),Av Hay Jaouhara 3 ( Café Karam ),,,,,,Title case (French small words lower case) and French spelling (cafée→café).,
+C378,rename,204,,,Av Idriss Al Akbar hopital El Farabi 2,Av Idriss Al Akbar Hôpital El Farabi 2,,,,,,Title case (French small words lower case) and French spelling (hopital→hôpital).,
+C379,rename,211,,,Mosque Hassan 2,Mosquée Hassan 2,,,,,,Title case (French small words lower case) and French spelling (mosque→mosquée).,
+C380,rename,214,,,Av Idriss Al Akbar Mosque Hamza,Av Idriss Al Akbar Mosquée Hamza,,,,,,Title case (French small words lower case) and French spelling (mosque→mosquée).,
+C381,rename,216,,,consulat d'algerie,Consulat d'Algérie,,,,,,Title case (French small words lower case) and French spelling (d'algerie→d'algérie).,
+C382,rename,221,,,Av kaaouachi,Av Kaaouachi,,,,,,Title case (French small words lower case).,
+C383,rename,222,,,Terminus moulin mhaya,Terminus Moulin Mhaya,,,,,,Title case (French small words lower case).,
+C384,rename,224,,,MOSQUEE LALLA KHADIJA,Mosquée Lalla Khadija,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C385,rename,225,,,Ecole Annassiha,École Annassiha,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C386,rename,226,,,Av Kadour El ouartassi Bureau Arab,Av Kadour El Ouartassi Bureau Arab,,,,,,Title case (French small words lower case).,
+C387,rename,230,,,Av Kadour El ouartassi College Riad,Av Kadour El Ouartassi Collège Riad,,,,,,Title case (French small words lower case) and French spelling (college→collège).,
+C388,rename,234,,,ecoles aboubaker asadik,Écoles Aboubaker Asadik,,,,,,Title case (French small words lower case) and French spelling (ecoles→écoles).,
+C389,rename,247,,,Mouad Ibn Jabal café Ouaziz,Mouad Ibn Jabal Café Ouaziz,,,,,,Title case (French small words lower case).,
+C390,rename,248,,,Terminus place sidi yahya,Terminus Place Sidi Yahya,,,,,,Title case (French small words lower case).,
+C391,rename,251,,,Terminus rond point hay jemli,Terminus Rond Point Hay Jemli,,,,,,Title case (French small words lower case).,
+C392,rename,252,,,Mouad Ibn Jabal Mosqué Redouane,Mouad Ibn Jabal Mosquée Redouane,,,,,,Title case (French small words lower case) and French spelling (mosqué→mosquée).,
+C393,rename,258,,,moulay idriss,Moulay Idriss,,,,,,Title case (French small words lower case).,
+C394,rename,271,,,Faculte des science,Faculté des Sciences,,,,,,"Title case (French small words lower case) and French spelling (faculte→faculté, science→sciences).",
+C395,rename,279,,,AV Mansour Eddahabi 1,Av Mansour Eddahabi 1,,,,,,Title case (French small words lower case).,
+C396,rename,281,,,vilage Nylo 1,Village Nylo 1,,,,,,Title case (French small words lower case) and French spelling (vilage→village).,
+C397,rename,282,,,AV Mansour Eddahabi 2,Av Mansour Eddahabi 2,,,,,,Title case (French small words lower case).,
+C398,rename,286,,,vilage Nylo 2,Village Nylo 2,,,,,,Title case (French small words lower case) and French spelling (vilage→village).,
+C399,rename,299,,,Village Qtar ecole bensaid mahdaoui,Village Qtar École Bensaid Mahdaoui,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C400,rename,307,,,Hay essalam 2 Mosquee Essalam,Hay Essalam 2 Mosquée Essalam,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C401,rename,317,,,Hay Kada houssine,Hay Kada Houssine,,,,,,Title case (French small words lower case).,
+C402,rename,320,,,Park lala Meryem,Parc Lala Meryem,,,,,,Title case (French small words lower case) and French spelling (park→parc).,
+C403,rename,322,,,Park Lalla Aicha,Parc Lalla Aicha,,,,,,Title case (French small words lower case) and French spelling (park→parc).,
+C404,rename,334,,,Hay Moulay Miloud Mosquee Mustapha,Hay Moulay Miloud Mosquée Mustapha,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C405,rename,382,,,residence al ghiate,Résidence Al Ghiate,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C406,rename,397,,,Residence Kanzi,Résidence Kanzi,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C407,rename,406,,,route 14,Route 14,,,,,,Title case (French small words lower case).,
+C408,rename,408,,,Av Med 6 Logement Economique Sidi Maafa,Av Med 6 Logement Économique Sidi Maafa,,,,,,Title case (French small words lower case) and French spelling (economique→économique).,
+C409,rename,415,,,route 14 Mosquee Erida,Route 14 Mosquée Erida,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C410,rename,425,,,Route Aounia Ista Aounia,Route Aounia ISTA Aounia,,,,,,Title case (French small words lower case).,
+C411,rename,426,,,Route Aounia Residence Hadouch,Route Aounia Résidence Hadouch,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C412,rename,429,,,Route de frontiere vers agdal ecole abou baker sadik,Route de Frontière Vers Agdal École Abou Baker Sadik,,,,,,"Title case (French small words lower case) and French spelling (ecole→école, frontiere→frontière).",
+C413,rename,437,,,Rue Al Hanaa Mosquee Anour Almohammadi,Rue Al Hanaa Mosquée Anour Almohammadi,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C414,rename,450,,,salle Mohammed 6,Salle Mohammed 6,,,,,,Title case (French small words lower case).,
+C415,rename,464,,,station winxo,Station Winxo,,,,,,Title case (French small words lower case).,
+C416,rename,466,,,technopole,Technopole,,,,,,Title case (French small words lower case).,
+C417,rename,477,,,Terminus Faculte des Lettres,Terminus Faculté des Lettres,,,,,,Title case (French small words lower case) and French spelling (faculte→faculté).,
+C418,rename,487,,,wafacash,Wafacash,,,,,,Title case (French small words lower case).,
+C419,rename,489,,,FLAM D'OR,Flam d'Or,,,,,,Title case (French small words lower case).,
+C420,rename,491,,,el mahkama,El Mahkama,,,,,,Title case (French small words lower case).,
+C421,rename,492,,,masjid badr,Masjid Badr,,,,,,Title case (French small words lower case).,
+C422,rename,494,,,etablissement el khawarizimi,Établissement El Khawarizimi,,,,,,Title case (French small words lower case) and French spelling (etablissement→établissement).,
+C423,rename,495,,,clinique echark,Clinique Echark,,,,,,Title case (French small words lower case).,
+C424,rename,496,,,petromin station,Petromin Station,,,,,,Title case (French small words lower case).,
+C425,rename,497,,,pharmacie el mahata,Pharmacie El Mahata,,,,,,Title case (French small words lower case).,
+C426,rename,498,,,viterainaire,Vétérinaire,,,,,,Title case (French small words lower case) and French spelling (viterainaire→vétérinaire).,
+C427,rename,499,,,rewa9 el founon,Rewa9 El Founon,,,,,,Title case (French small words lower case).,
+C428,rename,502,,,golf isly,Golf Isly,,,,,,Title case (French small words lower case).,
+C429,rename,503,,,clinique kindY,Clinique Kindy,,,,,,Title case (French small words lower case).,
+C430,rename,504,,,maison scoda,Maison Scoda,,,,,,Title case (French small words lower case).,
+C431,rename,505,,,cafe riyaha,Café Riyaha,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C432,rename,506,,,station ifriquia,Station Ifriquia,,,,,,Title case (French small words lower case).,
+C433,rename,507,,,aéroport,Aéroport,,,,,,Title case (French small words lower case).,
+C434,rename,508,,,wlad tayeb,Wlad Tayeb,,,,,,Title case (French small words lower case).,
+C435,rename,509,,,el aalab,El Aalab,,,,,,Title case (French small words lower case).,
+C436,rename,510,,,route de sable,Route de Sable,,,,,,Title case (French small words lower case).,
+C437,rename,511,,,l3ra3ra,L3ra3ra,,,,,,Title case (French small words lower case).,
+C438,rename,512,,,souk beni adrar,Souk Beni Adrar,,,,,,Title case (French small words lower case).,
+C439,rename,513,,,agence atawfique,Agence Atawfique,,,,,,Title case (French small words lower case).,
+C440,rename,514,,,pharmacie chifa,Pharmacie Chifa,,,,,,Title case (French small words lower case).,
+C441,rename,516,,,restaurant ouarzazat,Restaurant Ouarzazat,,,,,,Title case (French small words lower case).,
+C442,rename,517,,,souk benidrar,Souk Benidrar,,,,,,Title case (French small words lower case).,
+C443,rename,518,,,AL krira,Al Krira,,,,,,Title case (French small words lower case).,
+C444,rename,519,,,l3ra3ra,L3ra3ra,,,,,,Title case (French small words lower case).,
+C445,rename,520,,,el 3alab,El 3alab,,,,,,Title case (French small words lower case).,
+C446,rename,521,,,ifmirée,Ifmirée,,,,,,Title case (French small words lower case).,
+C447,rename,522,,,marjane,Marjane,,,,,,Title case (French small words lower case).,
+C448,rename,524,,,autohall,Autohall,,,,,,Title case (French small words lower case).,
+C449,rename,525,,,isly,Isly,,,,,,Title case (French small words lower case).,
+C450,rename,526,,,cimetier sidi mohamed,Cimetière Sidi Mohamed,,,,,,Title case (French small words lower case) and French spelling (cimetier→cimetière).,
+C451,rename,529,,,bim,Bim,,,,,,Title case (French small words lower case).,
+C452,rename,532,,,ancienne gare de train,Ancienne Gare de Train,,,,,,Title case (French small words lower case).,
+C453,rename,533,,,Gar routiére,Gare Routière,,,,,,"Title case (French small words lower case) and French spelling (gar→gare, routiére→routière).",
+C454,rename,535,,,la3lam,La3lam,,,,,,Title case (French small words lower case).,
+C455,rename,536,,,ecole ibn hazm,École Ibn Hazm,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C456,rename,538,,,pressing bleu,Pressing Bleu,,,,,,Title case (French small words lower case).,
+C457,rename,544,,,faculté de science,Faculté de Sciences,,,,,,Title case (French small words lower case) and French spelling (science→sciences).,
+C458,rename,548,,,station petromin,Station Petromin,,,,,,Title case (French small words lower case).,
+C459,rename,549,,,face night cofé,Face Night Café,,,,,,Title case (French small words lower case) and French spelling (cofé→café).,
+C460,rename,550,,,masjid rayhan,Masjid Rayhan,,,,,,Title case (French small words lower case).,
+C461,rename,553,,,wlad salam,Wlad Salam,,,,,,Title case (French small words lower case).,
+C462,rename,554,,,residence force auxiliaire,Résidence Force Auxiliaire,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C463,rename,555,,,terminus bni wkil,Terminus Bni Wkil,,,,,,Title case (French small words lower case).,
+C464,rename,556,,,residence force auxilaire R,Résidence Force Auxiliaire R,,,,,,"Title case (French small words lower case) and French spelling (auxilaire→auxiliaire, residence→résidence).",
+C465,rename,557,,,Dowar al3askar,Dowar Al3askar,,,,,,Title case (French small words lower case).,
+C466,rename,558,,,le 6eme groupe de Génie Militaire,Le 6eme Groupe de Génie Militaire,,,,,,Title case (French small words lower case).,
+C467,rename,559,,,les intérêts sociaux des fournitures militaires,Les Intérêts Sociaux des Fournitures Militaires,,,,,,Title case (French small words lower case).,
+C468,rename,560,,,la première unité ou groupe de la cavalerie,La Première Unité ou Groupe de la Cavalerie,,,,,,Title case (French small words lower case).,
+C469,rename,561,,,le premier service de protection des frontières,Le Premier Service de Protection des Frontières,,,,,,Title case (French small words lower case).,
+C470,rename,565,,,chaabi banque,Chaabi Banque,,,,,,Title case (French small words lower case).,
+C471,rename,566,,,pharmacie de bayan,Pharmacie de Bayan,,,,,,Title case (French small words lower case).,
+C472,rename,567,,,college ibn el kadi,Collège Ibn El Kadi,,,,,,Title case (French small words lower case) and French spelling (college→collège).,
+C473,rename,568,,,dispensaire oued ennachef,Dispensaire Oued Ennachef,,,,,,Title case (French small words lower case).,
+C474,rename,570,,,laboratoire bourchid,Laboratoire Bourchid,,,,,,Title case (French small words lower case).,
+C475,rename,573,,,societe sotramisse,Société Sotramisse,,,,,,Title case (French small words lower case) and French spelling (societe→société).,
+C476,rename,574,,,souk ennaser,Souk Ennaser,,,,,,Title case (French small words lower case).,
+C477,rename,575,,,dispensaire rar el baroud,Dispensaire Rar El Baroud,,,,,,Title case (French small words lower case).,
+C478,rename,580,,,cafe frensh house,Café Frensh House,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C479,rename,581,,,immeuble el bayan,Immeuble El Bayan,,,,,,Title case (French small words lower case).,
+C480,rename,582,,,aswak assalam,Aswak Assalam,,,,,,Title case (French small words lower case).,
+C481,rename,584,,,swi9a tennis,Swi9a Tennis,,,,,,Title case (French small words lower case).,
+C482,rename,586,,,residence king,Résidence King,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C483,rename,587,,,diwana,Diwana,,,,,,Title case (French small words lower case).,
+C484,rename,588,,,pharmacie diwana,Pharmacie Diwana,,,,,,Title case (French small words lower case).,
+C485,rename,589,,,hotel lblida,Hôtel Lblida,,,,,,Title case (French small words lower case) and French spelling (hotel→hôtel).,
+C486,rename,594,,,pharmacie polyclinique,Pharmacie Polyclinique,,,,,,Title case (French small words lower case).,
+C487,rename,596,,,idaa alwataniya,Idaa Alwataniya,,,,,,Title case (French small words lower case).,
+C488,rename,601,,,JARDIN QODS,Jardin Qods,,,,,,Title case (French small words lower case).,
+C489,rename,602,,,KISSARIAT EL QODS,Kissariat El Qods,,,,,,Title case (French small words lower case).,
+C490,rename,604,,,CAFE CUINTA,Café Cuinta,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C491,rename,605,,,CAFE OPHEON,Café Opheon,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C492,rename,612,,,cafe diwana,Café Diwana,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C493,rename,613,,,regional,Régional,,,,,,Title case (French small words lower case) and French spelling (regional→régional).,
+C494,rename,616,,,al jazzira meuble,Al Jazzira Meuble,,,,,,Title case (French small words lower case).,
+C495,rename,617,,,cafe clignancourt,Café Clignancourt,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C496,rename,622,,,m3sart zaytoune,M3sart Zaytoune,,,,,,Title case (French small words lower case).,
+C497,rename,624,,,pharmacie el boustane,Pharmacie El Boustane,,,,,,Title case (French small words lower case).,
+C498,rename,626,,,station Total,Station Total,,,,,,Title case (French small words lower case).,
+C499,rename,629,,,LYCEE EL MASIRA,Lycée El Masira,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C500,rename,630,,,LA BELLE VIE,La Belle Vie,,,,,,Title case (French small words lower case).,
+C501,rename,631,,,Direction du ministère de l'Agriculture,Direction du Ministère de l'Agriculture,,,,,,Title case (French small words lower case).,
+C502,rename,634,,,PHARMACIE AWINAT SARAQ,Pharmacie Awinat Saraq,,,,,,Title case (French small words lower case).,
+C503,rename,635,,,CABINET BANANA,Cabinet Banana,,,,,,Title case (French small words lower case).,
+C504,rename,639,,,PHARMACIE BEN KHIRANE,Pharmacie Ben Khirane,,,,,,Title case (French small words lower case).,
+C505,rename,642,,,PHARMACIE ES-SAMARA,Pharmacie Es-samara,,,,,,Title case (French small words lower case).,
+C506,rename,643,,,ECOLE 11 JANVIER,École 11 Janvier,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C507,rename,648,,,STATION DE POMPAGE,Station de Pompage,,,,,,Title case (French small words lower case).,
+C508,rename,649,,,GRANDE PHARMACIE,Grande Pharmacie,,,,,,Title case (French small words lower case).,
+C509,rename,651,,,FACE PHARMACIE BENKIRANE,Face Pharmacie Benkirane,,,,,,Title case (French small words lower case).,
+C510,rename,655,,,HAY EL mousakaine,Hay El Mousakaine,,,,,,Title case (French small words lower case).,
+C511,rename,656,,,cafe de papillons,Café de Papillons,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C512,rename,659,,,face pharmacie benmchiche,Face Pharmacie Benmchiche,,,,,,Title case (French small words lower case).,
+C513,rename,660,,,gendarmerie royale,Gendarmerie Royale,,,,,,Title case (French small words lower case).,
+C514,rename,664,,,RESIDENCE TAKADOM,Résidence Takadom,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C515,rename,665,,,RESIDENCE TAKADOM 2,Résidence Takadom 2,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C516,rename,667,,,ATTIJARIWAFA BANK,Attijariwafa Bank,,,,,,Title case (French small words lower case).,
+C517,rename,673,,,OUJDA CITY CLUB,Oujda City Club,,,,,,Title case (French small words lower case).,
+C518,rename,674,,,EN FACE DOUHA 1,En Face Douha 1,,,,,,Title case (French small words lower case).,
+C519,rename,678,,,CAFE ZENZY DAR,Café Zenzy Dar,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C520,rename,679,,,CAFE JBAH,Café Jbah,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C521,rename,680,,,CAFE LA MANOIRE,Café la Manoir,,,,,,"Title case (French small words lower case) and French spelling (cafe→café, manoire→manoir).",
+C522,rename,681,,,CAFE PRADO,Café Prado,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C523,rename,682,,,EL MARSEM 1,El Marsem 1,,,,,,Title case (French small words lower case).,
+C524,rename,683,,,CLINYIQUE PASTEUR,Clinique Pasteur,,,,,,Title case (French small words lower case) and French spelling (clinyique→clinique).,
+C525,rename,688,,,LYCEE EL MAGHREB EL ARABI,Lycée El Maghreb El Arabi,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C526,rename,689,,,ASSURANCE EL WAFA,Assurance El Wafa,,,,,,Title case (French small words lower case).,
+C527,rename,690,,,CAFEE PARROS,Café Parros,,,,,,Title case (French small words lower case) and French spelling (cafee→café).,
+C528,rename,692,,,CENTRE D'APPEL,Centre d'Appel,,,,,,Title case (French small words lower case).,
+C529,rename,694,,,CAFE LA BOETIE,Café la Boetie,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C530,rename,697,,,FACE ECOLE ROMAISSA,Face École Romaissa,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C531,rename,698,,,CLYNIQUE EL MAGHREB EL ARABI,Clinique El Maghreb El Arabi,,,,,,Title case (French small words lower case) and French spelling (clynique→clinique).,
+C532,rename,699,,,MINISTERE AGRICULTURE,Ministère Agriculture,,,,,,Title case (French small words lower case) and French spelling (ministere→ministère).,
+C533,rename,700,,,PLACE 9 JUILLET,Place 9 Juillet,,,,,,Title case (French small words lower case).,
+C534,rename,710,,,auto ecolele sérieux,Auto École Sérieux,,,,,,Title case (French small words lower case) and French spelling (ecolele→école).,
+C535,rename,711,,,al jami'al saghir,Al Jami'al Saghir,,,,,,Title case (French small words lower case).,
+C536,rename,712,,,face travaux public,Face Travaux Public,,,,,,Title case (French small words lower case).,
+C537,rename,713,,,mousquée des califes,Mosquée des Califes,,,,,,Title case (French small words lower case) and French spelling (mousquée→mosquée).,
+C538,rename,715,,,l'entourage,L'Entourage,,,,,,Title case (French small words lower case).,
+C539,rename,716,,,aldrafif,Aldrafif,,,,,,Title case (French small words lower case).,
+C540,rename,719,,,cafe l'entourage,Café l'Entourage,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C541,rename,721,,,travaux public,Travaux Public,,,,,,Title case (French small words lower case).,
+C542,rename,722,,,la maison renault,La Maison Renault,,,,,,Title case (French small words lower case).,
+C543,rename,723,,,lycée salam,Lycée Salam,,,,,,Title case (French small words lower case).,
+C544,rename,724,,,Rond-point oued ennachef,Rond-point Oued Ennachef,,,,,,Title case (French small words lower case).,
+C545,rename,728,,,cafe de verre,Café de Verre,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C546,rename,730,,,DIOUNA,Diouna,,,,,,Title case (French small words lower case).,
+C547,rename,731,,,REGIONALE,Régionale,,,,,,Title case (French small words lower case) and French spelling (regionale→régionale).,
+C548,rename,732,,,PLATINO,Platino,,,,,,Title case (French small words lower case).,
+C549,rename,733,,,RJA FLLAH,Rja Fllah,,,,,,Title case (French small words lower case).,
+C550,rename,734,,,CHAMBRE COMMERCIALE,Chambre Commerciale,,,,,,Title case (French small words lower case).,
+C551,rename,737,,,VILLAGE OKACHA,Village Okacha,,,,,,Title case (French small words lower case).,
+C552,rename,738,,,DOWAR,Dowar,,,,,,Title case (French small words lower case).,
+C553,rename,739,,,CAFE CRISTALE,Café Cristal,,,,,,"Title case (French small words lower case) and French spelling (cafe→café, cristale→cristal).",
+C554,rename,740,,,CAFE SHIWAYA,Café Shiwaya,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C555,rename,742,,,RESEAU,Réseau,,,,,,Title case (French small words lower case) and French spelling (reseau→réseau).,
+C556,rename,743,,,ZAYTOUNE,Zaytoune,,,,,,Title case (French small words lower case).,
+C557,rename,744,,,SAWRI,Sawri,,,,,,Title case (French small words lower case).,
+C558,rename,745,,,EL KARMA,El Karma,,,,,,Title case (French small words lower case).,
+C559,rename,746,,,EL KANTOUNI,El Kantouni,,,,,,Title case (French small words lower case).,
+C560,rename,747,,,CAFE TROCADERO,Café Trocadero,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C561,rename,748,,,TAKWIN,Takwin,,,,,,Title case (French small words lower case).,
+C562,rename,749,,,QIADAT,Qiadat,,,,,,Title case (French small words lower case).,
+C563,rename,750,,,ZKARA,Zkara,,,,,,Title case (French small words lower case).,
+C564,rename,751,,,SANDIQA,Sandiqa,,,,,,Title case (French small words lower case).,
+C565,rename,752,,,madrasa,Madrasa,,,,,,Title case (French small words lower case).,
+C566,rename,753,,,LBUYUT,Lbuyut,,,,,,Title case (French small words lower case).,
+C567,rename,754,,,JAMIE,Jamie,,,,,,Title case (French small words lower case).,
+C568,rename,759,,,ouled nasser,Ouled Nasser,,,,,,Title case (French small words lower case).,
+C569,rename,761,,,lbyout 1,Lbyout 1,,,,,,Title case (French small words lower case).,
+C570,rename,763,,,chouk,Chouk,,,,,,Title case (French small words lower case).,
+C571,rename,764,,,sekaya,Sekaya,,,,,,Title case (French small words lower case).,
+C572,rename,765,,,gendarmerie,Gendarmerie,,,,,,Title case (French small words lower case).,
+C573,rename,766,,,el hanout,El Hanout,,,,,,Title case (French small words lower case).,
+C574,rename,767,,,fermer dahou,Ferme Dahou,,,,,,Title case (French small words lower case) and French spelling (fermer→ferme).,
+C575,rename,768,,,hanout brahim,Hanout Brahim,,,,,,Title case (French small words lower case).,
+C576,rename,769,,,despensaire ahl angad,Dispensaire Ahl Angad,,,,,,Title case (French small words lower case) and French spelling (despensaire→dispensaire).,
+C577,rename,772,,,cafe oued eddahab,Café Oued Eddahab,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C578,rename,774,,,village abdelkader,Village Abdelkader,,,,,,Title case (French small words lower case).,
+C579,rename,775,,,cafe nakhil,Café Nakhil,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C580,rename,776,,,al khima,Al Khima,,,,,,Title case (French small words lower case).,
+C581,rename,777,,,salle des féte al jawhara,Salle des Fêtes Al Jawhara,,,,,,Title case (French small words lower case) and French spelling (féte→fêtes).,
+C582,rename,778,,,takwine,Takwine,,,,,,Title case (French small words lower case).,
+C583,rename,784,,,cafe prince,Café Prince,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C584,rename,786,,,maison de l'élégance,Maison de l'Élégance,,,,,,Title case (French small words lower case).,
+C585,rename,788,,,AL QIADA,Al Qiada,,,,,,Title case (French small words lower case).,
+C586,rename,792,,,PHARMACIE NAKHLA,Pharmacie Nakhla,,,,,,Title case (French small words lower case).,
+C587,rename,796,,,FACE MAISON DES JEUNE IBN -SINA,Face Maison des Jeune Ibn -sina,,,,,,Title case (French small words lower case).,
+C588,rename,807,,,CAFE AL MANAR,Café Al Manar,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C589,rename,809,,,HAMAM EL JAOUHARA,Hamam El Jaouhara,,,,,,Title case (French small words lower case).,
+C590,rename,811,,,CENTRE D'APPEL RAYAN,Centre d'Appel Rayan,,,,,,Title case (French small words lower case).,
+C591,rename,813,,,GROUPE SCOLAIRE ESPACE SCIENCES,Groupe Scolaire Espace Sciences,,,,,,Title case (French small words lower case).,
+C592,rename,814,,,OASIS SIDI YAHYA,Oasis Sidi Yahya,,,,,,Title case (French small words lower case).,
+C593,rename,815,,,RESIDENCE KENZI,Résidence Kenzi,,,,,,Title case (French small words lower case) and French spelling (residence→résidence).,
+C594,rename,817,,,VISITE TECHNIQUE AGDAL,Visite Technique Agdal,,,,,,Title case (French small words lower case).,
+C595,rename,819,,,QIADAT SIDI YAHYA,Qiadat Sidi Yahya,,,,,,Title case (French small words lower case).,
+C596,rename,820,,,EL HASSANIA,El Hassania,,,,,,Title case (French small words lower case).,
+C597,rename,828,,,MOSQUEE KHALED IBN WALID,Mosquée Khaled Ibn Walid,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C598,rename,835,,,MAISON DES JEUNNE IBN SINA,Maison des Jeune Ibn Sina,,,,,,Title case (French small words lower case) and French spelling (jeunne→jeune).,
+C599,rename,838,,,STATION DE JUIF,Station de Juif,,,,,,Title case (French small words lower case).,
+C600,rename,840,,,MOSQUEE LALA KHADIJA,Mosquée Lala Khadija,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C601,rename,843,,,LE PARC D'ATTRACTIONS,Le Parc d'Attractions,,,,,,Title case (French small words lower case).,
+C602,rename,849,,,STATION TOUTAL ENERGIE,Station Toutal Énergie,,,,,,Title case (French small words lower case) and French spelling (energie→énergie).,
+C603,rename,850,,,WAFA CASH,Wafa Cash,,,,,,Title case (French small words lower case).,
+C604,rename,852,,,LAITERIE D'INEZGANE,Laiterie d'Inezgane,,,,,,Title case (French small words lower case).,
+C605,rename,862,,,FACE OFPPT,Face OFPPT,,,,,,Title case (French small words lower case).,
+C606,rename,863,,,BOULANGERIE ANOUAL,Boulangerie Anoual,,,,,,Title case (French small words lower case).,
+C607,rename,865,,,LAVAGE EL MILOUD,Lavage El Miloud,,,,,,Title case (French small words lower case).,
+C608,rename,869,,,BOUTIQUE CAPRICE OCEAN,Boutique Caprice Ocean,,,,,,Title case (French small words lower case).,
+C609,rename,872,,,DAR BERESOUL,Dar Beresoul,,,,,,Title case (French small words lower case).,
+C610,rename,878,,,AUTO ECOLE ILHAM,Auto École Ilham,,,,,,Title case (French small words lower case) and French spelling (ecole→école).,
+C611,rename,880,,,ANCIENNE CAFE MEXICO,Ancienne Café Mexico,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C612,rename,881,,,HAMMAM CHTIOUI,Hammam Chtioui,,,,,,Title case (French small words lower case).,
+C613,rename,883,,,FACE SOCIO-SPORTIF,Face Socio-sportif,,,,,,Title case (French small words lower case).,
+C614,rename,884,,,PHARMACIE ISTA,Pharmacie ISTA,,,,,,Title case (French small words lower case).,
+C615,rename,885,,,ISTA LAZARET,ISTA Lazaret,,,,,,Title case (French small words lower case).,
+C616,rename,886,,,PHARMACIE LASALA,Pharmacie Lasala,,,,,,Title case (French small words lower case).,
+C617,rename,888,,,MINI MARKET,Mini Market,,,,,,Title case (French small words lower case).,
+C618,rename,889,,,FACE ISTA LAZARET,Face ISTA Lazaret,,,,,,Title case (French small words lower case).,
+C619,rename,890,,,MOSQUEE AL ARAF,Mosquée Al Araf,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C620,rename,891,,,HAY AL FARAH,Hay Al Farah,,,,,,Title case (French small words lower case).,
+C621,rename,894,,,BOUCHERIE DOUIDOU,Boucherie Douidou,,,,,,Title case (French small words lower case).,
+C622,rename,898,,,DAMAN CASH,Daman Cash,,,,,,Title case (French small words lower case).,
+C623,rename,899,,,BUREAU ARABE,Bureau Arabe,,,,,,Title case (French small words lower case).,
+C624,rename,901,,,NOUVEAU SOUK AL FALLAH,Nouveau Souk Al Fallah,,,,,,Title case (French small words lower case).,
+C625,rename,902,,,SALLE DES FETE RIAD,Salle des Fêtes Riad,,,,,,Title case (French small words lower case) and French spelling (fete→fêtes).,
+C626,rename,907,,,STATION AFRIQUIA,Station Afriquia,,,,,,Title case (French small words lower case).,
+C627,rename,908,,,PHARMACIE AL FATH,Pharmacie Al Fath,,,,,,Title case (French small words lower case).,
+C628,rename,909,,,FATH 2,Fath 2,,,,,,Title case (French small words lower case).,
+C629,rename,910,,,AFRAH DAMNATI,Afrah Damnati,,,,,,Title case (French small words lower case).,
+C630,rename,911,,,OFPPT AGRICULTURE,OFPPT Agriculture,,,,,,Title case (French small words lower case).,
+C631,rename,912,,,CLUB SPORTIF AL FATH,Club Sportif Al Fath,,,,,,Title case (French small words lower case).,
+C632,rename,914,,,MOSQUEE EL FATH,Mosquée El Fath,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C633,rename,915,,,BOULANGERIE PETIT DOUNIA,Boulangerie Petit Dounia,,,,,,Title case (French small words lower case).,
+C634,rename,919,,,DRIF FOOD,Drif Food,,,,,,Title case (French small words lower case).,
+C635,rename,920,,,CAFE AL YAMANI,Café Al Yamani,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C636,rename,928,,,PHARMACIE SEFRAOUI,Pharmacie Sefraoui,,,,,,Title case (French small words lower case).,
+C637,rename,929,,,PHARMACIE AL MANAR,Pharmacie Al Manar,,,,,,Title case (French small words lower case).,
+C638,rename,932,,,CAFE GOOD LIFE,Café Good Life,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C639,rename,933,,,COMPLEXE SOCIAL NAJD,Complexe Social Najd,,,,,,Title case (French small words lower case).,
+C640,rename,934,,,MOSQUEE KA'B IBN MALIK,Mosquée Ka'b Ibn Malik,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C641,rename,935,,,NAJD II,Najd II,,,,,,Title case (French small words lower case).,
+C642,rename,937,,,LYCEE ABDELLAH AL -LAROUI,Lycée Abdellah Al -laroui,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C643,rename,938,,,MOSQUEE ALJRAA IBN MALIK,Mosquée Aljraa Ibn Malik,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C644,rename,939,,,VILLAGE ALZAKARA,Village Alzakara,,,,,,Title case (French small words lower case).,
+C645,rename,940,,,VILLAGE ALZAKARA II,Village Alzakara II,,,,,,Title case (French small words lower case).,
+C646,rename,941,,,SOUKA LHAD SIDI YAHYA,Souka Lhad Sidi Yahya,,,,,,Title case (French small words lower case).,
+C647,rename,943,,,MOSQUEE AMINA BENT WAHB,Mosquée Amina Bent Wahb,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C648,rename,944,,,HAY PAM,Hay Pam,,,,,,Title case (French small words lower case).,
+C649,rename,947,,,MOSQUEE AL FIRDAOUS,Mosquée Al Firdaous,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C650,rename,953,,,MUSEE LALLA MERYEM,Musée Lalla Meryem,,,,,,Title case (French small words lower case) and French spelling (musee→musée).,
+C651,rename,955,,,STATION WINXO,Station Winxo,,,,,,Title case (French small words lower case).,
+C652,rename,958,,,CAFE ALWOROUD,Café Alworoud,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C653,rename,959,,,LYCEE AL MOUTANABI,Lycée Al Moutanabi,,,,,,Title case (French small words lower case) and French spelling (lycee→lycée).,
+C654,rename,960,,,RESTAURANT BEL ADEL,Restaurant Bel Adel,,,,,,Title case (French small words lower case).,
+C655,rename,962,,,MHARACH II,Mharach II,,,,,,Title case (French small words lower case).,
+C656,rename,963,,,AVANT STATION SHELL,Avant Station Shell,,,,,,Title case (French small words lower case).,
+C657,rename,964,,,FACE AU CENTRE AL MOULOUDIA,Face au Centre Al Mouloudia,,,,,,Title case (French small words lower case).,
+C658,rename,965,,,RESEAU INWI,Réseau Inwi,,,,,,Title case (French small words lower case) and French spelling (reseau→réseau).,
+C659,rename,966,,,CAFE MINYA,Café Minya,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C660,rename,968,,,PONT JARF LAKHDAR,Pont Jarf Lakhdar,,,,,,Title case (French small words lower case).,
+C661,rename,969,,,DISPENSAIRE JARF,Dispensaire Jarf,,,,,,Title case (French small words lower case).,
+C662,rename,970,,,VILLAGE TAFFAH,Village Taffah,,,,,,Title case (French small words lower case).,
+C663,rename,973,,,COLLEGE MEKKI NASSIRE,Collège Mekki Nassire,,,,,,Title case (French small words lower case) and French spelling (college→collège).,
+C664,rename,974,,,PHARMACIE ALMOULOUDIA,Pharmacie Almouloudia,,,,,,Title case (French small words lower case).,
+C665,rename,975,,,TRAVEAUX PUBLIC,Travaux Public,,,,,,Title case (French small words lower case) and French spelling (traveaux→travaux).,
+C666,rename,979,,,CLINIQUE CHARK,Clinique Chark,,,,,,Title case (French small words lower case).,
+C667,rename,980,,,LA3LAM,La3lam,,,,,,Title case (French small words lower case).,
+C668,rename,985,,,CAFE RIHAB,Café Rihab,,,,,,Title case (French small words lower case) and French spelling (cafe→café).,
+C669,rename,986,,,MARCHE COUVERT,Marché Couvert,,,,,,Title case (French small words lower case) and French spelling (marche→marché).,
+C670,rename,987,,,CINEMA COULISE,Cinéma Colisée,,,,,,"Title case (French small words lower case) and French spelling (cinema→cinéma, coulise→colisée).",
+C671,rename,988,,,STATION SHELL (LIHOUDI),Station Shell (Lihoudi),,,,,,Title case (French small words lower case).,
+C672,rename,989,,,MAJLIS ALJIHA,Majlis Aljiha,,,,,,Title case (French small words lower case).,
+C673,rename,990,,,MARCHE DE GROS,Marché de Gros,,,,,,Title case (French small words lower case) and French spelling (marche→marché).,
+C674,rename,992,,,GOLF,Golf,,,,,,Title case (French small words lower case).,
+C675,rename,993,,,ROND POINT CGI,Rond Point CGI,,,,,,Title case (French small words lower case).,
+C676,rename,994,,,MOSQUEE AL HAJAR AL ASWAD,Mosquée Al Hajar Al Aswad,,,,,,Title case (French small words lower case) and French spelling (mosquee→mosquée).,
+C677,rename,995,,,HAY ANNAHAR,Hay Annahar,,,,,,Title case (French small words lower case).,
+C678,rename,996,,,STE SOLIFER,Ste Solifer,,,,,,Title case (French small words lower case).,
+C679,rename,1002,,,AUTO HOLL,Auto Holl,,,,,,Title case (French small words lower case).,
+C680,rename,1009,,,FACE AU CINEMA COLISEE,Face au Cinéma Colisée,,,,,,"Title case (French small words lower case) and French spelling (cinema→cinéma, colisee→colisée).",
+C681,rename,1012,,,HOPITAL ALFARABI,Hôpital Alfarabi,,,,,,Title case (French small words lower case) and French spelling (hopital→hôpital).,

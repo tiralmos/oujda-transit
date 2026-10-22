@@ -1,699 +1,530 @@
-﻿station_id,station_name,station_label,lat,lng,lines,line_count
-6,av-armie-de-liberation,Av armie de liberation,34.669720374398,-1.924420651097,L08,1
-8,aboubeker-kadiri-1,Aboubeker Kadiri 1,34.816204,-1.9648314,L08,1
-9,av-armie-de-liberation-bab-aljazaer,Av armie de liberation bab aljazaer,34.6710767,-1.9215348,L08,1
-11,aboubeker-kadiri-2,Aboubeker Kadiri 2,34.6605868,-1.9311773,L08,1
-12,av-armie-de-libiration-1,Av Armie de Libiration 1,34.6710767,-1.9215348,L08,1
-21,av-bir-anzarane-consulat-algerie,Av bir anzarane Consulat Algerie,34.677727755793,-1.9139598588339,L23,1
-30,lycee-assalam,LYCEE ASSALAM,34.678980791373,-1.9312389615719,L05;L15,2
-31,av-boualam-arahmoun-1,Av Boualam Arahmoun 1,34.6759946,-1.9239066,L23,1
-32,agdal,Agdal,34.6756258,-1.8595172,L13,1
-34,av-boualam-arahmoun-2,Av Boualam Arahmoun 2,34.6759946,-1.9239066,L23,1
-35,al-irfane-2,Al Irfane 2,34.6756258,-1.8595172,L07,1
-36,av-boualam-arahmoun-ecole-imam-ali,Av Boualam Arahmoun ecole imam ali,34.6757249,-1.9407775,L23,1
-38,av-brahim-lahssini-force-auxiliare,Av Brahim Lahssini force auxiliare,34.6757249,-1.9407775,L16,1
-40,lycee-derfoufi,Lycée derfoufi,34.707222,-1.919854,L31,1
-42,av-brahim-lahssini-pharmacie-compelexe-sportive,Av Brahim Lahssini pharmacie compelexe sportive,34.670699741788,-1.9338029545354,L16,1
-44,ancien-tribunal-1-instance,Ancien tribunal 1 instance,34.6919546,-1.9119441,L04,1
-45,av-brahim-lahssini-sale-coverte,Av Brahim Lahssini sale coverte,34.670673256726,-1.9337439335086,L16,1
-48,av-brahim-roudani-arrandissement,Av Brahim Roudani Arrandissement,34.670704156422,-1.9338136864786,L13,1
-49,auto-hall,auto hall,34.767254890394,-1.9408249746293,L31,1
-51,lycee-maghreb-arabi,Lycee Maghreb Arabi,34.664425830618,-1.8955278396606,L02,1
-54,av-des-far,Av des FAR,34.692103451991,-1.907839179039,L04,1
-58,lycee-qods,Lycee Qods,34.65896335849,-1.8940633069319,L02,1
-62,av-tohami-jilali-ofppt,Av Tohami Jilali OFPPT,34.6576466,-1.9125306,L07,1
-65,av-tohami-jilali-palais-de-justice,Av Tohami Jilali Palais de justice,34.66077243228,-1.9119697809219,L07,1
-69,av-elmansour-edahhabi1-cafe-victoria,Av Elmansour Edahhabi1 (Cafe victoria),34.7001411,-1.9114141,L04,1
-70,av-yaakoub-elmanssour,Av Yaakoub Elmanssour,34.671943930867,-1.9096630811691,L02,1
-72,av-elmansour-edahhabi2,Av Elmansour Edahhabi2,34.7029811,-1.9139024,L04,1
-73,av-yahya-belkhir,Av yahya Belkhir,34.660754752381,-1.9119482813039,L11,1
-77,mac-donalds,Mac donalds,34.676955611317,-1.9287443161011,L05,1
-78,av-abdellah-ganoun,AV Abdellah ganoun,34.691018560964,-1.9187181815181,L13,1
-85,av-abderrahim-bouabid-banque-populaire,Av Abderrahim Bouabid banque populaire,34.69035653389,-1.9188469741574,L13,1
-89,av-abderrahim-bouabid-pharmacie-olad-chrif,Av Abderrahim Bouabid pharmacie olad chrif,34.6778501,-1.8886966,L13,1
-101,majlis-el-jiha,MAJLIS EL JIHA,34.697400606645,-1.9189810411087,L31,1
-111,av-zayed-ben-soltane-1,Av Zayed Ben Soltane 1,34.6732899,-1.9151275,L16,1
-114,av-zayed-ben-soltane-2,Av Zayed Ben Soltane 2,34.665250889576,-1.9436520260381,L16,1
-116,av-hassan-2-wilaya-de-police,Av Hassan 2 Wilaya de police,34.6649276,-1.9109194,L07,1
-127,av-al-irfane-mosquee-assalam,Av Al Irfane Mosquee Assalam,34.6539278,-1.9133842,L07,1
-128,av-zayed-ben-soltane-gare-routiere,Av Zayed Ben Soltane Gare Routiere,34.673721880409,-1.9321507370855,L23,1
-131,av-zayed-ben-soltane-osbat-achark,Av Zayed Ben Soltane osbat achark,34.67458653541,-1.9310992847413,L16,1
-139,av-zayed-lecyee-acharif-idrissi,Av Zayed Lecyée Acharif Idrissi,34.671930698158,-1.9344627997028,L23,1
-141,bab-sidi-abdlouhab,Bab sidi abdlouhab,34.679178979053,-1.9109183549881,L05;L16,2
-142,maroc-telecom,MAROC TELECOM,34.70316,-1.9149,L02;L20,2
-144,mathaf-lalla-meryem,Mathaf Lalla Meryem,34.677387917569,-1.9123506546021,L08;L16;L23,3
-146,ben-mimoune-hay-zaytoune,ben mimoune hay zaytoune,34.6718948,-1.9344124,L13,1
-153,av-allal-al-fassi-derb-berrahmoune,AV Allal Al fassi Derb berrahmoune,34.679787779414,-1.8923306604969,L11;L13,2
-168,cafe-le-prince,Café le Prince,34.6916736,-1.9072719,L04,1
-171,av-allal-al-fassi-mosque-riad,AV Allal Al fassi mosque riad,34.679152554423,-1.8959838183003,L11;L13,2
-173,av-hay-jaouhara-2,Av Hay Jaouhara 2,34.6694864,-1.9379912,L16,1
-174,cafe-nojoume,café nojoume,34.7046556,-1.8573486,L13,1
-177,cafe-salazar,Cafe Salazar,34.6762004,-1.8760372,L13,1
-180,mohamed-eddarfoufi,Mohamed Eddarfoufi,34.6837073,-1.9179389,L04,1
-181,av-hay-jaouhara-3,Av Hay Jaouhara 3,34.6654215,-1.935624,L16,1
-184,av-allal-al-fassi-salle-berrisoule,AV Allal Al fassi Salle Berrisoule,34.67940841452,-1.9018042087555,L11;L13,2
-185,av-hay-jaouhara-3-cafee-karam,Av Hay Jaouhara 3 ( Cafée Karam ),34.668861,-1.9326744,L16,1
-189,av-allal-ben-abdellah,Av Allal Ben Abdellah,34.6750157,-1.9190539,L08,1
-194,centre-technique,Centre Technique,34.66222463174,-1.8953322537404,L02,1
-197,mosque-elbourak,Mosque Elbourak,34.6568454,-1.8692252,L02,1
-201,av-idriss-al-akbar-hopital-el-farabi-1,Av Idriss Al Akbar hopital El Farabi 1,34.675914478449,-1.9160467339639,L05;L16;L23,3
-204,av-idriss-al-akbar-hopital-el-farabi-2,Av Idriss Al Akbar hopital El Farabi 2,34.6745525,-1.913931,L05;L16;L23,3
-205,chu,CHU,34.6574895724,-1.9129675580148,L07;L20;L31,3
-208,clinique-ibn-sina,CLINIQUE IBN SINA,34.663847800349,-1.9050550507422,L01,1
-209,clinique-al-maghrib,Clinique Al Maghrib,34.6721875,-1.9188321,L08,1
-210,mosque-hamza,Mosque Hamza,34.6736492,-1.9127779,L02,1
-211,mosque-hassan-2,Mosque Hassan 2,34.6736492,-1.9127779,L04,1
-213,cnss,CNSS,34.67104,-1.91195,L25,1
-214,av-idriss-al-akbar-mosque-hamza,Av Idriss Al Akbar Mosque Hamza,34.673443941301,-1.9125169406861,L07;L17,2
-216,consulat-d-algerie,consulat d'algerie,34.67674,-1.92111,L05;L14;L16;L23,4
-218,av-idriss-al-akbar-moulay-idriss,Av Idriss Al Akbar Moulay Idriss,34.6735756,-1.9128211,L07;L17,2
-221,av-kaaouachi,Av kaaouachi,34.6735756,-1.9128211,L13,1
-222,terminus-moulin-mhaya,Terminus moulin mhaya,34.6797451,-1.93936,L23,1
-223,eaux-et-forets,EAUX ET FORETS,34.66808,-1.90039,L02;L20,2
-224,mosquee-lalla-khadija,MOSQUEE LALLA KHADIJA,34.703371355536,-1.9193833631396,L09,1
-225,ecole-annassiha,Ecole Annassiha,34.668176058145,-1.9016380469557,L02,1
-226,av-kadour-el-ouartassi-bureau-arab,Av Kadour El ouartassi Bureau Arab,34.6808193,-1.8897943,L11,1
-229,mosquee-othmane-ibn-aafane,Mosquee Othmane Ibn Aafane,34.681411494512,-1.9382561594377,L14,1
-230,av-kadour-el-ouartassi-college-riad,Av Kadour El ouartassi College Riad,34.68526653939,-1.8906569589645,L11,1
-231,ecole-lalla-aicha,Ecole Lalla Aicha,34.6882545,-1.9072488,L04,1
-234,ecoles-aboubaker-asadik,ecoles aboubaker asadik,34.6882545,-1.9072488,L13,1
-238,mouad-ibn-jabal-1,Mouad Ibn Jabal 1,34.6662715,-1.9274403,L08,1
-240,terminus-place-maghreb-arabi,Terminus Place Maghreb Arabi,34.678331979435,-1.9116693735123,L08;L23,2
-245,en-face-ecole-lala-aicha,en face ecole lala Aicha,34.68803666429,-1.9074529409409,L04,1
-247,mouad-ibn-jabal-cafe-ouaziz,Mouad Ibn Jabal café Ouaziz,34.664999367694,-1.9324511274061,L08,1
-248,terminus-place-sidi-yahya,Terminus place sidi yahya,34.677904053881,-1.9119322206744,L13,1
-251,terminus-rond-point-hay-jemli,Terminus rond point hay jemli,34.677970218135,-1.9120234375307,L11,1
-252,mouad-ibn-jabal-mosque-redouane,Mouad Ibn Jabal Mosqué Redouane,34.6638733,-1.9368691,L08,1
-258,moulay-idriss,moulay idriss,34.673558654689,-1.9126617737587,L02;L24;L25;L31,4
-263,terminus-souk-qods,Terminus Souk Qods,34.68163837292,-1.9083823140081,L02;L04,2
-266,est-sidi-maafa,EST  Sidi Maafa,34.653734332936,-1.8997067213058,L02,1
-269,terminus-village-bekay,Terminus Village Bekay,34.68228015893,-1.9091910123825,L17,1
-270,faculte-de-medecine,FACULTE DE MEDECINE,34.657260100964,-1.9091320037842,L20,1
-271,faculte-des-science,Faculte des science,34.654550694849,-1.8985909223557,L02,1
-273,terrain-didi,terrain  Didi,34.6683459,-1.9255325,L08,1
-276,ofppt-lazaret,OFPPT Lazaret,34.6635545,-1.8742651,L13,1
-278,univ-med-1,Univ Med 1,34.655689175335,-1.9000554084778,L02,1
-279,av-mansour-eddahabi-1,AV Mansour Eddahabi 1,34.7013291,-1.9125096,L04,1
-281,vilage-nylo-1,vilage Nylo 1,34.6724788,-1.9406011,L23,1
-282,av-mansour-eddahabi-2,AV Mansour Eddahabi 2,34.7032639,-1.9139514,L04,1
-283,hama-benkachour,Hama Benkachour,34.667404025296,-1.9127637147903,L07,1
-285,hamam-benkachour,HAMAM BENKACHOUR,34.666821631202,-1.9130211897667,L24,1
-286,vilage-nylo-2,vilage Nylo 2,34.6713825,-1.9429711,L23,1
-294,oued-amam,Oued Amam,34.6556741,-1.8916567,L02,1
-299,village-qtar-ecole-bensaid-mahdaoui,Village Qtar ecole bensaid mahdaoui,34.6713825,-1.9429711,L16,1
-306,hay-essalam-1,Hay Essalam 1,34.687132406673,-1.8837315030558,L11,1
-307,hay-essalam-2-mosquee-essalam,Hay essalam 2 Mosquee Essalam,34.689752779997,-1.8812047798254,L11,1
-317,hay-kada-houssine,Hay Kada houssine,34.688171,-1.8789099,L16,1
-319,hay-lmharach,Hay Lmharach,34.688171,-1.8789099,L05,1
-320,park-lala-meryem,Park lala Meryem,34.67704385056,-1.9156658649445,L05,1
-322,park-lalla-aicha,Park Lalla Aicha,34.6708058,-1.9056962,L02,1
-325,hay-lmharach-1,Hay Lmharach 1,34.688171,-1.8789099,L05,1
-328,pharmacie-el-azaoui,Pharmacie El Azaoui,34.670227696189,-1.9063156843185,L02,1
-329,hay-moulay-miloud-1,Hay Moulay Miloud 1,34.6861512,-1.886759,L11,1
-331,hay-moulay-miloud-2,Hay Moulay Miloud 2,34.6869069,-1.8842642,L11,1
-334,hay-moulay-miloud-mosquee-mustapha,Hay Moulay Miloud Mosquee Mustapha,34.689606984799,-1.8861186411151,L11,1
-342,pharmacie-elmichkat,Pharmacie Elmichkat,34.658147,-1.8833846,L02,1
-351,pharmacie-hay-rabie,Pharmacie Hay Rabie,34.6497173,-1.9117916,L07,1
-352,hay-si-lakhdar,Hay Si Lakhdar,34.7124208,-1.8956544,L05,1
-355,hay-si-lakhdar-hay-ngadi,Hay Si Lakhdar Hay Ngadi,34.7124208,-1.8956544,L05,1
-358,yotno-belhoussine,Yotno Belhoussine,34.676444424905,-1.9111542169371,L02;L05;L07;L16;L17;L23,6
-361,hay-zrarka,Hay Zrarka,34.71302981074,-1.8974965810776,L04,1
-363,yotno-belhoussine-1,Yotno belhoussine 1,34.673954,-1.9136693,L08,1
-368,polyclinique,POLYCLINIQUE,34.67109,-1.91194,L07;L24,2
-372,polyclinique-ibn-sina,POLYCLINIQUE IBN SINA,34.663825739094,-1.9049423933029,L24,1
-375,pont-med-5,Pont Med 5,34.675768969481,-1.9265504757494,L05;L16;L23,3
-380,jardin-elqods,Jardin Elqods,34.6535048,-1.8950815,L02,1
-382,residence-al-ghiate,residence al ghiate,34.6752713,-1.867514,L13,1
-385,jemli,Jemli,34.696152,-1.8566209,L13,1
-387,kada-houssine-1,Kada Houssine 1,34.661840213118,-1.9391351938248,L08,1
-390,av-med-6-carfour,Av Med 6 Carfour,34.662113872286,-1.9054949454491,L17,1
-391,kada-houssine-2,Kada Houssine 2,34.660759162046,-1.9413828803186,L08,1
-393,kada-houssine-3,Kada Houssine 3,34.660273827986,-1.9426435107878,L08,1
-394,av-med-6-faculte-des-science,Av Med 6 Faculte Des Science,34.655336159803,-1.8992829493706,L17,1
-397,residence-kanzi,Residence Kanzi,34.6518286,-1.8795051,L17,1
-399,av-med-6-hay-sidi-maafa-1,Av Med 6 Hay Sidi Maafa 1,34.649047807723,-1.886767745018,L17,1
-400,av-med-6-hay-sidi-maafa-2,Av Med 6 Hay Sidi Maafa 2,34.650711500975,-1.8856519460678,L17,1
-402,av-med-6-hay-sidi-maafa-3,Av Med 6 Hay Sidi Maafa 3,34.6499802,-1.884525,L17,1
-405,av-med-6-la-poste,Av Med 6 la Poste,34.658058711936,-1.9019544450849,L17,1
-406,route-14,route 14,34.655923066542,-1.9002860660246,L11,1
-407,av-med-6-lista,Av Med 6 LISTA,34.652992981097,-1.8971800804138,L17,1
-408,av-med-6-logement-economique-sidi-maafa,Av Med 6 Logement Economique Sidi Maafa,34.64805049081,-1.8891978263855,L17,1
-409,av-med-6-rond-point-universite-med-1,Av Med 6 Rond point Universite Med 1,34.655901016924,-1.9001895065001,L17,1
-410,av-med-6-village-belamrah,Av Med 6 Village Belamrah,34.656214483857,-1.8998246297538,L17,1
-412,route-14-1,route 14 (1),34.6913774,-1.8824431,L11,1
-413,av-mohamed-darfoufi-lycee-aljahid,Av Mohamed Darfoufi Lycée Aljahid,34.6943411,-1.9115062,L04,1
-415,route-14-mosquee-erida,route 14 Mosquee Erida,34.6913774,-1.8824431,L11,1
-419,route-aounia-1,Route Aounia 1,34.6719555,-1.8593184,L11,1
-422,route-aounia-2,Route Aounia 2,34.6719555,-1.8593184,L11,1
-423,route-aounia-5,Route Aounia 5,34.6719555,-1.8593184,L11,1
-424,route-aounia-gendarmerie-rayal,Route Aounia Gendarmerie Rayal,34.7086032,-1.8638099,L11,1
-425,route-aounia-ista-aounia,Route Aounia Ista Aounia,34.6953132,-1.8808408,L11,1
-426,route-aounia-residence-hadouch,Route Aounia Residence Hadouch,34.6993137,-1.8767434,L11,1
-427,route-de-frontiere-vers-agdal-cafe-noujoum,Route de Frontiere (vers Agdal) Café Noujoum,34.7055323,-1.8581261,L11,1
-428,route-de-frontiere-vers-agdal-risidence-al-ghite,Route de Frontiere (vers Agdal) Risidence Al GHITE,34.7055323,-1.8581261,L11,1
-429,route-de-frontiere-vers-agdal-ecole-abou-baker-sadik,Route de frontiere vers agdal ecole abou baker sadik,34.709821,-1.8608317,L11,1
-435,rue-10,Rue 10,34.668789414599,-1.9370484227828,L16,1
-436,rue-20,Rue 20,34.70941383533,-1.910365819931,L04,1
-437,rue-al-hanaa-mosquee-anour-almohammadi,Rue Al Hanaa Mosquee Anour Almohammadi,34.6483072,-1.9076569,L07,1
-438,rue-de-rif-1,Rue de Rif 1,34.657608657229,-1.9418495846872,L08,1
-439,rue-de-rif-2,Rue de Rif 2,34.657405730419,-1.9394248723984,L08,1
-441,rue-elistiklal-pharmacie-elmajd,Rue Elistiklal (Pharmacie Elmajd),34.7061291,-1.9150387,L04,1
-443,rue-nibrass,Rue Nibrass,34.6860289,-1.9533733,L04,1
-450,salle-mohammed-6,salle Mohammed 6,34.693281,-1.9059463,L13,1
-451,sidi-maafa,Sidi Maafa,34.693347292017,-1.9059669971466,L07,1
-464,station-winxo,station winxo,34.676007078179,-1.9238412302541,L14;L16;L23,3
-466,technopole,technopole,34.771887,-1.943118,L31,1
-472,terminus-bab-sidi-abdelouhab,Terminus Bab sidi Abdelouhab,34.6795356,-1.9102106,L05;L16,2
-473,terminus-bouchtat,Terminus Bouchtat,34.6795356,-1.9102106,L13,1
-476,terminus-enakhil,Terminus Enakhil,34.679644968859,-1.9094709299391,L02;L07;L08;L17,4
-477,terminus-faculte-des-lettres,Terminus Faculte des Lettres,34.6795854,-1.9090941,L07,1
-478,terminus-ibn-khaldoune,Terminus Ibn Khaldoune,34.680365607758,-1.9065034389496,L11;L13,2
-481,terminus-lmharach,Terminus Lmharach,34.648760866251,-1.8935000399317,L05,1
-486,pharmacie-sidi-maafa,pharmacie sidi maafa,34.647993,-1.893354,L31,1
-487,wafacash,wafacash,34.652764,-1.89686,L31,1
-488,inwi,inwi,34.655446,-1.899433,L31,1
-489,flam-d-or,FLAM D'OR,34.656801219419,-1.9047278103675,L31,1
-490,institut-el-gadi-lafkhih,institut el gadi lafkhih,34.657812,-1.91253,L31,1
-491,el-mahkama,el mahkama,34.660101761866,-1.9120181026301,L31,1
-492,masjid-badr,masjid badr,34.665274,-1.912554,L31,1
-493,hamam-benkachor,hamam benkachor,34.667479030298,-1.9127261405608,L25;L31,2
-494,etablissement-el-khawarizimi,etablissement el khawarizimi,34.673990995164,-1.9187235832214,L31,1
-495,clinique-echark,clinique echark,34.675221836654,-1.9239699840546,L31,1
-496,petromin-station,petromin station,34.676192365288,-1.9250428536785,L31,1
-497,pharmacie-el-mahata,pharmacie el mahata,34.68048030881,-1.9226503061482,L31,1
-498,viterainaire,viterainaire,34.686738,-1.919622,L31,1
-499,rewa9-el-founon,rewa9 el founon,34.6905,-1.918833,L31,1
-500,station-shell,station shell,34.693263401137,-1.9185626087346,L31,1
-501,marche-gros,MARCHE GROS,34.700845106448,-1.9190829774797,L24;L31,2
-502,golf-isly,golf isly,34.710873476446,-1.9202738720681,L31,1
-503,clinique-kindy,clinique kindY,34.717408,-1.921146,L31,1
-504,maison-scoda,maison scoda,34.73845,-1.929428,L31,1
-505,cafe-riyaha,cafe riyaha,34.757835,-1.936657,L31,1
-506,station-ifriquia,station ifriquia,34.771771,-1.942838,L31,1
-507,aeroport,aéroport,34.788016790947,-1.950314675177,L31,1
-508,wlad-tayeb,wlad tayeb,34.797885,-1.954585,L31,1
-509,el-aalab,el aalab,34.815348637298,-1.9642458668385,L31,1
-510,route-de-sable,route de sable,34.820748493579,-1.9680548195835,L31,1
-511,l3ra3ra,l3ra3ra,34.824738557947,-1.9705063663909,L31,1
-512,souk-beni-adrar,souk beni adrar,34.852665962832,-1.9893419069378,L31,1
-513,agence-atawfique,agence atawfique,34.855914816526,-1.9915240940894,L31,1
-514,pharmacie-chifa,pharmacie chifa,34.859181006603,-1.9937396235926,L31,1
-515,terminis-dar-naaim,terminis dar naaim,34.863264,-1.996601,L31,1
-516,restaurant-ouarzazat,restaurant ouarzazat,34.856641,-1.992156,L31,1
-517,souk-benidrar,souk benidrar,34.852352,-1.989327,L31,1
-518,al-krira,AL krira,34.825666,-1.971367,L31,1
-519,l3ra3ra-2,l3ra3ra,34.814736,-1.964047,L31,1
-520,el-3alab,el 3alab,34.797999,-1.954801,L31,1
-521,ifmiree,ifmirée,34.76602,-1.940535,L31,1
-522,marjane,marjane,34.736901,-1.929291,L31,1
-523,cgi,CGI,34.717935,-1.92135,L31,1
-524,autohall,autohall,34.710364,-1.920456,L31,1
-525,isly,isly,34.707347,-1.92004,L31,1
-526,cimetier-sidi-mohamed,cimetier sidi mohamed,34.702865003438,-1.9195175031079,L31,1
-527,station-banana,station banana,34.700792062175,-1.9192653894424,L31,1
-528,association-zalija,association zalija,34.696195,-1.919185,L31,1
-529,bim,bim,34.693313,-1.918787,L24;L31,2
-530,arrondissement-3,arrondissement 3,34.690572,-1.918877,L31,1
-531,cimetier-nassara,cimetier nassara,34.686267855183,-1.9197911396946,L31,1
-532,ancienne-gare-de-train,ancienne gare de train,34.681353834072,-1.9223069709658,L24;L31,2
-533,gar-routiere,Gar routiére,34.675724655411,-1.9293397525204,L31,1
-534,clinique-chark,clinique chark,34.675102653448,-1.9235998485318,L31,1
-535,la3lam,la3lam,34.673887,-1.918423,L31,1
-536,ecole-ibn-hazm,ecole ibn hazm,34.673104178956,-1.9142442289173,L24;L31,2
-537,residence-mehdi,residence mehdi,34.672843,-1.912593,L31,1
-538,pressing-bleu,pressing bleu,34.667135,-1.912925,L31,1
-539,comissariat-de-police,comissariat de police,34.665206756812,-1.9123023624114,L25;L31,2
-540,nassij-al-jam3aoui,nassij al jam3aoui,34.660860677766,-1.9119483139285,L31,1
-541,radeeo,RADEEO,34.657216,-1.909143,L31,1
-542,madariss-al-hakim,madariss al hakim,34.656755,-1.904642,L31,1
-543,rond-point-faculte,Rond point faculte,34.656025,-1.900257,L20;L31,2
-544,faculte-de-science,faculté de science,34.654408,-1.898407,L31,1
-545,encg,ENCG,34.652928,-1.897052,L25;L31,2
-546,ofppt,OFPPT,34.648926,-1.89353,L31,1
-547,station-maghreb-el-arabi,station maghreb el arabi,34.678433,-1.911706,L32,1
-548,station-petromin,station petromin,34.674596,-1.931162,L32,1
-549,face-night-cofe,face night cofé,34.669759,-1.937636,L32,1
-550,masjid-rayhan,masjid rayhan,34.665891,-1.942821,L32,1
-551,cafe-jardin-d-oujda,cafe jardin d'oujda,34.657293,-1.954319,L32,1
-552,rond-point-bni-wkil,rond-point bni wkil,34.644165,-1.969096,L32,1
-553,wlad-salam,wlad salam,34.649264,-1.987102,L32,1
-554,residence-force-auxiliaire,residence force auxiliaire,34.651765,-1.994682,L32,1
-555,terminus-bni-wkil,terminus bni wkil,34.653129819903,-1.9988894369372,L32,1
-556,residence-force-auxilaire-r,residence force auxilaire R,34.651801,-1.994899,L32,1
-557,dowar-al3askar,Dowar al3askar,34.648782,-1.993207,L32,1
-558,le-6eme-groupe-de-genie-militaire,le 6eme groupe de Génie Militaire,34.647143,-1.997629,L32,1
-559,les-interets-sociaux-des-fournitures-militaires,les intérêts sociaux des fournitures militaires,34.646505,-1.999337,L32,1
-560,la-premiere-unite-ou-groupe-de-la-cavalerie,la première unité ou groupe de la cavalerie,34.645771,-2.001305,L32,1
-561,le-premier-service-de-protection-des-frontieres,le premier service de protection des frontières,34.64303,-2.005472,L32,1
-562,dowar-wlad-salam-retour,dowar wlad salam RETOUR,34.649168,-1.986893,L32,1
-563,etablissement-bni-wkil,etablissement bni wkil,34.644114,-1.969108,L32,1
-564,usine-de-brique,usine de brique,34.657255,-1.954153,L32,1
-565,chaabi-banque,chaabi banque,34.664024,-1.945048,L32,1
-566,pharmacie-de-bayan,pharmacie de bayan,34.665616,-1.942884,L32,1
-567,college-ibn-el-kadi,college ibn el kadi,34.669869,-1.937179,L32,1
-568,dispensaire-oued-ennachef,dispensaire oued ennachef,34.674802,-1.930554,L32,1
-569,le-drapeau,le drapeau,34.673823,-1.918328,L32,1
-570,laboratoire-bourchid,laboratoire bourchid,34.673642,-1.914118,L32,1
-571,moin-1,moin 1,34.676576219706,-1.9110578267498,L01;L03;L14;L32,4
-572,termunis-rjafllah,termunis rjafllah,34.706675306711,-1.8931084980041,L25,1
-573,societe-sotramisse,societe sotramisse,34.708942002209,-1.8907481602852,L25,1
-574,souk-ennaser,souk ennaser,34.711995,-1.88749,L25,1
-575,dispensaire-rar-el-baroud,dispensaire rar el baroud,34.710683,-1.884411,L25,1
-576,central,central,34.708203,-1.885618,L25,1
-577,visite-dekra,visite dekra,34.704179218644,-1.8876421358355,L25,1
-578,cafe-dadi,cafe dadi,34.701449345476,-1.8859469704168,L25,1
-579,face-cafe-euro-sport,face cafe euro sport,34.698617970626,-1.8842250093183,L25,1
-580,cafe-frensh-house,cafe frensh house,34.696792001752,-1.8830447969594,L25,1
-581,immeuble-el-bayan,immeuble el bayan,34.696698,-1.887394,L25,1
-582,aswak-assalam,aswak assalam,34.697286,-1.891529,L25,1
-583,tennis-1,tennis 1,34.69995,-1.893716,L25,1
-584,swi9a-tennis,swi9a tennis,34.698809,-1.895893,L25,1
-585,tennis2,tennis2,34.697771059964,-1.898274424799,L25,1
-586,residence-king,residence king,34.695762,-1.903138,L21;L25;L99,3
-587,diwana,diwana,34.691653186511,-1.9077803988129,L20;L21;L25,3
-588,pharmacie-diwana,pharmacie diwana,34.689501,-1.909738,L20;L25,2
-589,hotel-lblida,hotel lblida,34.687238,-1.912047,L20;L25,2
-590,sahat-jada,sahat jada,34.684478,-1.915174,L25,1
-591,bank-bmci,bank bmci,34.679783321287,-1.9182890249687,L25,1
-592,laboratoire-el-hakim,laboratoire el hakim,34.675894,-1.916112,L25,1
-593,association-nibras,association nibras,34.673542,-1.912899,L25,1
-594,pharmacie-polyclinique,pharmacie polyclinique,34.669208522083,-1.9122057951191,L24;L25,2
-595,benkachour-aller,benkachour aller,34.666919,-1.912963,L25,1
-596,idaa-alwataniya,idaa alwataniya,34.663727,-1.906822,L25,1
-597,etablissement-el-ouazzani,etablissement el ouazzani,34.662212,-1.905666,L25,1
-598,mafrochat-donia,mafrochat donia,34.660205,-1.903966,L25,1
-599,termunis-mr-smith,termunis Mr SMITH,34.656518780661,-1.9005703801802,L25,1
-600,faculte-sience,faculte sience,34.65435655857,-1.898413877918,L25,1
-601,jardin-qods,JARDIN QODS,34.653774,-1.895501,L25,1
-602,kissariat-el-qods,KISSARIAT EL QODS,34.656828,-1.900556,L25,1
-603,michwat-al-bahja,MICHWAT AL BAHJA,34.660242,-1.903763,L25,1
-604,cafe-cuinta,CAFE CUINTA,34.661657,-1.904948,L25,1
-605,cafe-opheon,CAFE OPHEON,34.664387,-1.907706,L25,1
-606,mousqe-badr,MOUSQE BADR,34.665284,-1.912423,L25,1
-607,hopital-el-farabi,HOPITAL EL FARABI,34.676077674788,-1.9160574783355,L25,1
-608,2026-07-09-00-00-00,2026-07-09 00:00:00,34.679134963651,-1.9188254792001,L25,1
-609,la-poste,LA POSTE,34.684316,-1.915071,L20;L25,2
-610,etablissement-des-uvres-sociales,etablissement des œuvres sociales,34.687097102095,-1.9119054016914,L25,1
-611,zalij-wlad-rkik,zalij wlad rkik,34.689335,-1.909655,L25,1
-612,cafe-diwana,cafe diwana,34.693242,-1.906122,L25,1
-613,regional,regional,34.696056,-1.902024,L25,1
-614,taba-loto,taba loto,34.697694,-1.898237,L25,1
-615,boulangerie-ziani,boulangerie ziani,34.699852,-1.893823,L25,1
-616,al-jazzira-meuble,al jazzira meuble,34.697108,-1.891445,L25,1
-617,cafe-clignancourt,cafe clignancourt,34.696459,-1.886936,L25,1
-618,banque-populaire,banque populaire,34.695971505413,-1.8833393474748,L25,1
-619,cafe-euro-sport,cafe euro sport,34.698662085586,-1.8841338468364,L25,1
-620,rafaie-metal,rafaie metal,34.701572,-1.885882,L25,1
-621,now-chark,now chark,34.704325,-1.887549,L25,1
-622,m3sart-zaytoune,m3sart zaytoune,34.7055,-1.886917,L25,1
-623,depeau-de-marbre,depeau de marbre,34.708292,-1.885485,L25,1
-624,pharmacie-el-boustane,pharmacie el boustane,34.710715,-1.884112,L25,1
-625,taxiat-nasser,taxiat nasser,34.712149,-1.887541,L25,1
-626,station-total,station Total,34.709123,-1.890732,L25,1
-627,al-maghreb-el-arabi,AL MAGHREB EL ARABI,34.678283,-1.911646,L03,1
-628,mathaf-lala-maryem,MATHAF LALA MARYEM,34.677118852331,-1.9154834747314,L03,1
-629,lycee-el-masira,LYCEE EL MASIRA,34.673364,-1.917464,L03,1
-630,la-belle-vie,LA BELLE VIE,34.67037770926,-1.9175434345582,L03,1
-631,direction-du-ministere-de-l-agriculture,Direction du ministère de l'Agriculture,34.666876,-1.918236,L03,1
-632,croissant-rouge,Croissant-Rouge,34.663230118737,-1.9192224880802,L03,1
-633,hamam-a-salam,HAMAM A SALAM,34.660203,-1.920525,L03,1
-634,pharmacie-awinat-saraq,PHARMACIE AWINAT SARAQ,34.658049,-1.921617,L03,1
-635,cabinet-banana,CABINET BANANA,34.656814877938,-1.9236911228695,L03,1
-636,auto-ecole-el-ikhlasse,AUTO ECOLE EL  IKHLASSE,34.657780767015,-1.9260996533517,L03,1
-637,boulangerie-de-la-magie,BOULANGERIE DE LA MAGIE,34.658478,-1.927755,L03,1
-638,centre-esafa,CENTRE ESAFA,34.658987,-1.930486,L03,1
-639,pharmacie-ben-khirane,PHARMACIE BEN KHIRANE,34.656571,-1.933554,L03,1
-640,banqladech,BANQLADECH,34.655845,-1.934595,L03,1
-641,la-poste-2,LA POSTE,34.650895,-1.939837,L03,1
-642,pharmacie-es-samara,PHARMACIE ES-SAMARA,34.650151,-1.940643,L03,1
-643,ecole-11-janvier,ECOLE 11 JANVIER,34.64794,-1.942183,L03,1
-644,termunis-samara,TERMUNIS SAMARA,34.646960384077,-1.9464361419065,L03,1
-645,terminus-samara,TERMINUS SAMARA,34.646964799976,-1.946441507878,L03,1
-646,face-ecole-11-janvier,FACE ECOLE 11 JANVIER,34.647817,-1.942182,L03,1
-647,face-pharmacie-es-samara,FACE PHARMACIE ES-SAMARA,34.649691,-1.940923,L03,1
-648,station-de-pompage,STATION DE POMPAGE,34.65077,-1.94,L03,1
-649,grande-pharmacie,GRANDE PHARMACIE,34.654255034883,-1.935219154681,L03,1
-650,ecole-el-jouhara,ECOLE EL JOUHARA,34.655872,-1.934573,L03,1
-651,face-pharmacie-benkirane,FACE PHARMACIE BENKIRANE,34.656382,-1.933448,L03,1
-652,pont,PONT,34.658959506822,-1.9304018777728,L03,1
-653,ecole-khair-eddine,ECOLE KHAIR EDDINE,34.658455,-1.927864,L03,1
-654,la-pharmacie-central,la PHARMACIE CENTRAL,34.657784,-1.926264,L03,1
-655,hay-el-mousakaine,HAY EL mousakaine,34.656762704475,-1.9223768575413,L03,1
-656,cafe-de-papillons,cafe de papillons,34.659843,-1.920643,L03,1
-657,residence-el-ikhlas,residence el ikhlas,34.663187,-1.919135,L03;L20,2
-658,cabinet-de-reeducation,cabinet de  rééducation,34.666764279484,-1.9177687385619,L03,1
-659,face-pharmacie-benmchiche,face pharmacie benmchiche,34.670139460679,-1.9182139868119,L03,1
-660,gendarmerie-royale,gendarmerie royale,34.673408809555,-1.9148353076209,L03,1
-661,moulay-driss,moulay driss,34.673942551549,-1.9136058336543,L03,1
-662,termunis-maghreb-al-arabi,TERMUNIS MAGHREB AL ARABI,34.678283,-1.911646,L03;L09,2
-663,piece-hamiri,PIECE HAMIRI,34.702988490899,-1.9165187918757,L20,1
-664,residence-takadom,RESIDENCE TAKADOM,34.697682933493,-1.9152045249939,L20,1
-665,residence-takadom-2,RESIDENCE TAKADOM 2,34.699275092584,-1.9141906670754,L20,1
-666,boulangerie-el-mansour-eddahbi,BOULANGERIE EL MANSOUR EDDAHBI,34.70132,-1.91244,L20,1
-667,attijariwafa-bank,ATTIJARIWAFA BANK,34.69967,-1.91117,L20,1
-668,le-parc-de-loisirs,LE PARC DE LOISIRS,34.6978,-1.90998,L20,1
-669,place-jada,PLACE JADA,34.68456,-1.9151,L20,1
-670,agence-inwi,AGENCE INWI,34.67973,-1.91837,L20,1
-671,ministere-des-douanes,MINISTERE DES DOUANES,34.67491,-1.91905,L20,1
-672,unite-administrative,UNITE ADMINISTRATIVE,34.67208,-1.91886,L20,1
-673,oujda-city-club,OUJDA CITY CLUB,34.66846,-1.91846,L20,1
-674,en-face-douha-1,EN FACE DOUHA 1,34.66349,-1.91909,L20,1
-675,douche-es-salam,DOUCHE ES-SALAM,34.66022,-1.92056,L20,1
-676,masjid-tayba,MASJID TAYBA,34.65796,-1.91706,L20,1
-677,radeeo-2,RADEEO,34.657193763459,-1.909109795746,L20,1
-678,cafe-zenzy-dar,CAFE ZENZY DAR,34.6568,-1.90513,L20,1
-679,cafe-jbah,CAFE JBAH,34.65676,-1.89818,L20,1
-680,cafe-la-manoire,CAFE LA MANOIRE,34.659929662399,-1.8985533527868,L20,1
-681,cafe-prado,CAFE PRADO,34.663049575057,-1.895330091024,L20,1
-682,el-marsem-1,EL MARSEM 1,34.66477,-1.89577,L20,1
-683,clinyique-pasteur,CLINYIQUE PASTEUR,34.66691,-1.89717,L20,1
-684,el-majlis-al-ilmi,EL MAJLIS AL ILMI,34.66824,-1.90031,L20,1
-685,termunis-parc-lala-aicha,TERMUNIS PARC LALA AICHA,34.67122,-1.90584,L20,1
-686,termunis-parc-aicha,TERMUNIS PARC AICHA,34.67122,-1.90584,L20,1
-687,station-shell-2,STATION SHELL,34.66638,-1.89709,L20,1
-688,lycee-el-maghreb-el-arabi,LYCEE EL MAGHREB EL ARABI,34.664147728365,-1.8971589054883,L20,1
-689,assurance-el-wafa,ASSURANCE EL WAFA,34.66231,-1.89899,L20,1
-690,cafee-parros,CAFEE PARROS,34.65961,-1.89869,L20,1
-691,mousquee-el-qouds,MOUSQUEE EL QOUDS,34.65677,-1.89841,L20,1
-692,centre-d-appel,CENTRE D'APPEL,34.65627167242,-1.9008225187025,L20,1
-693,restaurant-le-coin,RESTAURANT LE COIN,34.65679,-1.90454,L20,1
-694,cafe-la-boetie,CAFE LA BOETIE,34.65757,-1.91343,L20,1
-695,terrain-de-foot,TERRAIN DE FOOT,34.65804,-1.91713,L20,1
-696,cafe-papillion,CAFE PAPILLION,34.6598,-1.92064,L20,1
-697,face-ecole-romaissa,FACE ECOLE ROMAISSA,34.66849381093,-1.9180155111126,L20,1
-698,clynique-el-maghreb-el-arabi,CLYNIQUE EL MAGHREB EL ARABI,34.67319,-1.91876,L20,1
-699,ministere-agriculture,MINISTERE AGRICULTURE,34.67582,-1.91905,L20,1
-700,place-9-juillet,PLACE 9 JUILLET,34.67947898624,-1.9184875659172,L20,1
-701,dar-el-madrase,DAR EL MADRASE,34.68701,-1.91197,L20,1
-702,marbre-ouled-rgige,MARBRE OULED RGIGE,34.68924,-1.90974,L20,1
-703,cafe-de-cavalier,CAFE DE CAVALIER,34.69794,-1.90994,L20,1
-704,cafe-victoria,CAFE VICTORIA,34.700068893655,-1.911401158825,L20,1
-705,mousquee-el-mansor-eddahbi,MOUSQUEE EL MANSOR EDDAHBI,34.701780105101,-1.9126671335161,L20,1
-706,termunis-veterinaire-dkhissi,TERMUNIS VETERINAIRE DKHISSI,34.703425079598,-1.9156926217854,L20,1
-707,termunis-al-maghreb-el-arabi,termunis al maghreb el arabi,34.678252212712,-1.9116800883664,L14,1
-708,musee-lala-maryem,musée lala maryem,34.6771,-1.91547,L14,1
-709,mcdonald,Mcdonald,34.67697,-1.92869,L14,1
-710,auto-ecolele-serieux,auto ecolele sérieux,34.679734801352,-1.9321721947576,L14,1
-711,al-jami-al-saghir,al jami'al saghir,34.680850870841,-1.9357931707135,L14,1
-712,face-travaux-public,face travaux public,34.681768480427,-1.9407981509856,L14,1
-713,mousquee-des-califes,mousquée des califes,34.682266916877,-1.9439578569008,L14,1
-714,station-shell-3,station shell,34.683815238677,-1.9498747711488,L14,1
-715,l-entourage,l'entourage,34.68498,-1.95377,L14,1
-716,aldrafif,aldrafif,34.689271743636,-1.9540214631787,L14,1
-717,termunis-sabra,termunis sabra,34.6929,-1.96102,L14,1
-718,drafif-r,drafif /R,34.68929,-1.95416,L14,1
-719,cafe-l-entourage,cafe l'entourage,34.68439,-1.9537,L14,1
-720,omar-de-la-police,omar de la police,34.68367,-1.94988,L14,1
-721,travaux-public,travaux public,34.681547915342,-1.93922637961,L14,1
-722,la-maison-renault,la maison renault,34.680630319803,-1.9351708655975,L14,1
-723,lycee-salam,lycée salam,34.679214278761,-1.9316947102857,L14,1
-724,rond-point-oued-ennachef,Rond-point oued ennachef,34.675848296061,-1.9271081717091,L14,1
-725,clynique-echark,clynique echark,34.67508,-1.9235,L14,1
-726,alealam,alealam,34.673836571422,-1.9184553576593,L14,1
-727,gendarmerie,gendarmerie,34.673823339015,-1.9138097794133,L14,1
-728,cafe-de-verre,cafe de verre,34.67932,-1.91002,L14,1
-729,termunis-el-qods,TERMUNIS EL QODS,34.68241,-1.90932,L99,1
-730,diouna,DIOUNA,34.6925,-1.90679,L99,1
-731,regionale,REGIONALE,34.69621,-1.9023,L99,1
-732,platino,PLATINO,34.70025,-1.89795,L99,1
-733,rja-fllah,RJA FLLAH,34.7049,-1.89496,L99,1
-734,chambre-commerciale,CHAMBRE COMMERCIALE,34.70946,-1.89018,L99,1
-735,swika-nssar,SWIKA NSSAR,34.71199,-1.88756,L99,1
-736,face-gala,FACE GALA,34.71962,-1.8814,L99,1
-737,village-okacha,VILLAGE OKACHA,34.72421,-1.87837,L99,1
-738,dowar,DOWAR,34.72856,-1.87551,L99,1
-739,cafe-cristale,CAFE CRISTALE,34.73261,-1.87269,L99,1
-740,cafe-shiwaya,CAFE SHIWAYA,34.738041933356,-1.8693285113723,L99,1
-741,cafe-dar-nassim,CAFE DAR NASSIM,34.74056,-1.86764,L99,1
-742,reseau,RESEAU,34.74452,-1.8651,L99,1
-743,zaytoune,ZAYTOUNE,34.74752,-1.86314,L99,1
-744,sawri,SAWRI,34.7502,-1.86138,L99,1
-745,el-karma,EL KARMA,34.75177,-1.86023,L99,1
-746,el-kantouni,EL KANTOUNI,34.75454,-1.85768,L99,1
-747,cafe-trocadero,CAFE TROCADERO,34.75599061845,-1.8563624286942,L99,1
-748,takwin,TAKWIN,34.76041,-1.85287,L99,1
-749,qiadat,QIADAT,34.76128,-1.85225,L99,1
-750,zkara,ZKARA,34.76456,-1.84992,L99,1
-751,sandiqa,SANDIQA,34.767959948766,-1.8483477675532,L99,1
-752,madrasa,madrasa,34.7742,-1.84561,L99,1
-753,lbuyut,LBUYUT,34.77759,-1.84408,L99,1
-754,jamie,JAMIE,34.78035,-1.84291,L99,1
-755,lamrira,LAMRIRA,34.78308,-1.842,L99,1
-756,termunis-karting,TERMUNIS KARTING,34.78496,-1.84137,L99,1
-757,al-houdoda,al houdoda,34.78468,-1.84156,L99,1
-758,ouled-aiyad,ouled aiyad,34.78297,-1.84212,L99,1
-759,ouled-nasser,ouled nasser,34.78142,-1.84264,L99,1
-760,ajamie-retour,ajamie retour,34.77995,-1.84311,L99,1
-761,lbyout-1,lbyout 1,34.77881,-1.84361,L99,1
-762,lbyout-2,lbyout 2,34.7776,-1.84417,L99,1
-763,chouk,chouk,34.77442,-1.84559,L99,1
-764,sekaya,sekaya,34.768444610098,-1.8482780596363,L99,1
-765,gendarmerie-2,gendarmerie,34.74395758027,-1.8655836799681,L99,1
-766,el-hanout,el hanout,34.75942,-1.85373,L99,1
-767,fermer-dahou,fermer dahou,34.75546,-1.85697,L99,1
-768,hanout-brahim,hanout brahim,34.75339,-1.85887,L99,1
-769,despensaire-ahl-angad,despensaire ahl angad,34.751613867623,-1.8604498961819,L99,1
-770,sawri-r,sawri /R,34.750176904422,-1.8614852754682,L99,1
-771,reseau-r,reseau/R,34.7447069225,-1.8650311091793,L99,1
-772,cafe-oued-eddahab,cafe oued eddahab,34.741514951937,-1.8671609695635,L99,1
-773,piscine-tropicale,piscine tropicale,34.740545714003,-1.8677455093631,L99,1
-774,village-abdelkader,village abdelkader,34.737896349605,-1.8694943174085,L99,1
-775,cafe-nakhil,cafe nakhil,34.73276,-1.87288,L99,1
-776,al-khima,al khima,34.73028,-1.87451,L99,1
-777,salle-des-fete-al-jawhara,salle des féte al jawhara,34.72446,-1.87834,L99,1
-778,takwine,takwine,34.719119246715,-1.8818163405699,L99,1
-779,station-ola,station ola,34.718144770828,-1.8824278842253,L21;L99,2
-780,taxi-de-nasser,taxi de nasser,34.71204,-1.8876,L99,1
-781,station-energie-total,station energie total,34.70874,-1.89107,L99,1
-782,maroc-telecom-2,maroc telecom,34.7055,-1.89446,L99,1
-783,cafe-samir,cafe samir,34.70116,-1.89735,L99,1
-784,cafe-prince,cafe prince,34.691265211049,-1.9071417596421,L21;L99,2
-785,pharmacie-ibn-sina,pharmacie ibn sina,34.6881,-1.90744,L21;L99,2
-786,maison-de-l-elegance,maison de l'élégance,34.68544,-1.90921,L99,1
-787,termunis-diouna,TERMUNIS DIOUNA,34.69239,-1.90748,L24,1
-788,al-qiada,AL QIADA,34.69832,-1.91007,L24,1
-789,jardin-village-koulouch,JARDIN VILLAGE KOULOUCH,34.70008,-1.91135,L24,1
-790,veterinaire-dkhissi,VETERINAIRE DKHISSI,34.70349,-1.91511,L24,1
-791,cimetiere-sidi-mohammed,CIMETIERE SIDI MOHAMMED,34.702776764238,-1.9194638542669,L24,1
-792,pharmacie-nakhla,PHARMACIE NAKHLA,34.701131875773,-1.9192922208539,L24,1
-793,pont-village-toba,PONT VILLAGE TOBA,34.69628,-1.91921,L24,1
-794,troisieme-districtsidi-idris-al-qadi,TROISIEME DISTRICTSIDI IDRIS AL -QADI,34.69058,-1.91888,L24,1
-795,cimetiere-chretien,CIMETIERE CHRETIEN,34.68617,-1.9198,L24,1
-796,face-maison-des-jeune-ibn-sina,FACE MAISON DES JEUNE IBN -SINA,34.6833,-1.92121,L24,1
-797,club-de-chemins-de-fer,CLUB DE CHEMINS DE FER,34.67631,-1.9251,L24,1
-798,gare-routiere,GARE ROUTIERE,34.675857138524,-1.9270598919468,L24,1
-799,face-clinique-chark,FACE CLINIQUE CHARK,34.675093986821,-1.9235837677062,L24,1
-800,drapeau,DRAPEAU,34.67384532614,-1.9184017414429,L24,1
-801,cafe-vinizia,CAFE VINIZIA,34.672791001314,-1.912538406126,L24,1
-802,commissariat-de-police,COMMISSARIAT DE POLICE,34.665202410611,-1.9122755543032,L24,1
-803,pharmacie-hassan-ii,PHARMACIE HASSAN II,34.66378606181,-1.905081863511,L01;L24,2
-804,siege-du-parti-l-authenticite-et-de-la-modernite,SIEGE DU PARTI L'AUTHENTICITE ET DE LA MODERNITE,34.66370660272,-1.900313071434,L24,1
-805,face-lycee-el-maghreb-el-arabi,FACE LYCEE EL MAGHREB EL ARABI,34.664183191176,-1.8965846346732,L24,1
-806,pharmacie-al-safrioui,PHARMACIE  AL-SAFRIOUI,34.66515828057,-1.8914401531219,L24,1
-807,cafe-al-manar,CAFE AL MANAR,34.665427420398,-1.8890637112741,L01;L24,2
-808,village-jdid,VILLAGE  JDID,34.665643627257,-1.8850618569774,L24,1
-809,hamam-el-jaouhara,HAMAM EL JAOUHARA,34.666115720968,-1.881558892004,L24,1
-810,mosquee-rayan,MOSQUEE  RAYAN,34.667192279086,-1.876983055853,L24,1
-811,centre-d-appel-rayan,CENTRE D'APPEL RAYAN,34.667717322266,-1.8747031719761,L24,1
-812,station-shell-4,STATION SHELL,34.667518763542,-1.8714308707637,L24,1
-813,groupe-scolaire-espace-sciences,GROUPE SCOLAIRE ESPACE SCIENCES,34.666649578679,-1.8674826622009,L24,1
-814,oasis-sidi-yahya,OASIS SIDI YAHYA,34.667029018508,-1.8636846666643,L24,1
-815,residence-kenzi,RESIDENCE KENZI,34.6716924403,-1.8594628789961,L24,1
-816,termunis-agdal,TERMUNIS AGDAL,34.674564411045,-1.8596452412452,L18;L24,2
-817,visite-technique-agdal,VISITE TECHNIQUE AGDAL,34.6719,-1.85961,L24,1
-818,face-oasis-sidi-yahya,FACE OASIS SIDI YAHYA,34.66711,-1.86375,L24,1
-819,qiadat-sidi-yahya,QIADAT SIDI YAHYA,34.66659,-1.867,L24,1
-820,el-hassania,EL HASSANIA,34.66751429101,-1.8710339084902,L24,1
-821,ofppt-2,OFPPT,34.66781431846,-1.8744993209839,L01;L24,2
-822,qasr-la-laj,QASR LA'LAJ,34.667218699285,-1.8771922510671,L24,1
-823,station-apollo,STATION APOLLO,34.66630977747,-1.8811511993408,L24,1
-824,banque-populaire-2,BANQUE POPULAIRE,34.66575,-1.88473,L24,1
-825,face-assurance-salam,FACE ASSURANCE SALAM,34.665506784371,-1.8892782864417,L24,1
-826,face-cafe-achraf,FACE CAFE ACHRAF,34.665224416518,-1.8916171695956,L01;L24,2
-827,lycee-al-maghreb-el-arabi-r,LYCEE AL MAGHREB EL ARABI/R,34.664266976817,-1.8966275391425,L24,1
-828,mosquee-khaled-ibn-walid,MOSQUEE KHALED IBN WALID,34.663856611104,-1.8993957388619,L01;L24,2
-829,mosquee-badr,MOSQUEE BADR,34.665281785796,-1.9123131129972,L01;L24,2
-830,hamam-benkhachour-r,HAMAM BENKHACHOUR/R,34.66756,-1.91268,L24,1
-831,ecole-el-khawarizmi,ECOLE EL KHAWARIZMI,34.67396,-1.91853,L24,1
-832,cabinet-mouhoub,CABINET MOUHOUB,34.6752,-1.92368,L24,1
-833,cafe-petrom,CAFE PETROM,34.67617,-1.92501,L24,1
-834,pharmacie-al-mahata,PHARMACIE AL MAHATA,34.68061,-1.92254,L24,1
-835,maison-des-jeunne-ibn-sina,MAISON DES JEUNNE IBN SINA,34.68342,-1.92099,L24,1
-836,veterinaire,VETERINAIRE,34.68673,-1.9196,L24,1
-837,galerie-d-art,GALERIE D'ART,34.69055,-1.91877,L24,1
-838,station-de-juif,STATION DE JUIF,34.69349,-1.91857,L24,1
-839,majlis-al-jiha,MAJLIS AL JIHA,34.69754,-1.919,L24,1
-840,mosquee-lala-khadija,MOSQUEE LALA KHADIJA,34.703112011148,-1.9182620148986,L24,1
-841,marche-aux-poissons,MARCHE AUX POISSONS,34.70341,-1.91504,L24,1
-842,ecole-taha-hussein,ECOLE TAHA HUSSEIN,34.70012,-1.91154,L24,1
-843,le-parc-d-attractions,LE PARC D'ATTRACTIONS,34.69803,-1.91008,L24,1
-844,station-souk-el-qouds,STATION SOUK EL QOUDS,34.68223,-1.9092,L21,1
-845,ecole-aicha-oum-al-mouamnin,ECOLE AICHA OUM AL MOUAMNIN,34.6882,-1.90728,L21,1
-846,regeionale,REGEIONALE,34.6962,-1.90227,L21,1
-847,cafe-palatino,CAFE PALATINO,34.70034,-1.89788,L21,1
-848,rjafallah,RJAFALLAH,34.70487,-1.89497,L21,1
-849,station-toutal-energie,STATION TOUTAL ENERGIE,34.70918,-1.89121,L21,1
-850,wafa-cash,WAFA CASH,34.711041085039,-1.8936664068005,L21,1
-851,el-yajour,EL YAJOUR,34.71237,-1.89569,L21,1
-852,laiterie-d-inezgane,LAITERIE D'INEZGANE,34.713924949738,-1.8942189076794,L21,1
-853,ofppt-3,OFPPT,34.715265454546,-1.8930172827014,L21,1
-854,hay-el-berkani,HAY EL BERKANI,34.71975,-1.88896,L21,1
-855,face-ecole-aziz-amine,FACE ECOLE AZIZ AMINE,34.71905,-1.88707,L21,1
-856,brigo-gala,BRIGO GALA,34.71776,-1.88479,L21,1
-857,lotissement,LOTISSEMENT,34.71815,-1.88234,L21,1
-858,termunis-gala,TERMUNIS GALA,34.72013,-1.88131,L21,1
-859,pharmacie-gala,PHARMACIE GALA,34.71777,-1.8847,L21,1
-860,ecole-aziz-amine,ECOLE AZIZ AMINE,34.71903,-1.88693,L21,1
-861,hay-sedra,HAY SEDRA,34.71982,-1.88905,L21,1
-862,face-ofppt,FACE OFPPT,34.71652,-1.89198,L21,1
-863,boulangerie-anoual,BOULANGERIE ANOUAL,34.714833269187,-1.893489379452,L21,1
-864,les-taxis-blancs,LES TAXIS BLANCS,34.71248,-1.89566,L21,1
-865,lavage-el-miloud,LAVAGE EL MILOUD,34.71112,-1.89391,L21,1
-866,sekaya-2,SEKAYA,34.70876,-1.89106,L21,1
-867,wafa-cash-2,WAFA CASH,34.70547,-1.89454,L21,1
-868,pont-rjafallah,PONT RJAFALLAH,34.70116,-1.89736,L21,1
-869,boutique-caprice-ocean,BOUTIQUE CAPRICE OCEAN,34.69879,-1.89962,L21,1
-870,maison-d-elegance,MAISON D'ELEGANCE,34.68546,-1.90918,L21,1
-871,termunis-ibn-khaldoun,TERMUNIS IBN KHALDOUN,34.6802,-1.9069,L18;L19,2
-872,dar-beresoul,DAR BERESOUL,34.67938,-1.90157,L18;L19,2
-873,mosquee-riad,MOSQUEE RIAD,34.67906,-1.89608,L18;L19,2
-874,berb-berahmoun,BERB  BERAHMOUN,34.67972,-1.89212,L18;L19,2
-875,jardin-lazaret,JARDIN  LAZARET,34.68065,-1.88937,L18;L19,2
-876,boulangerie-allal-fassi,BOULANGERIE ALLAL  FASSI,34.68164,-1.8864,L18;L19,2
-877,souk-el-had-lazaret,SOUK EL HAD  LAZARET,34.68035,-1.88386,L18,1
-878,auto-ecole-ilham,AUTO ECOLE ILHAM,34.679015747596,-1.8828785652497,L18,1
-879,rond-point-mexico,ROND-POINT MEXICO,34.677754153392,-1.8819075636404,L18,1
-880,ancienne-cafe-mexico,ANCIENNE CAFE MEXICO,34.67924,-1.87878,L18,1
-881,hammam-chtioui,HAMMAM CHTIOUI,34.68127,-1.87618,L18,1
-882,boulangerie-l-hirondelle,BOULANGERIE L'HIRONDELLE,34.683409386511,-1.8743276440714,L18,1
-883,face-socio-sportif,FACE SOCIO-SPORTIF,34.682496360279,-1.8719726598957,L18,1
-884,pharmacie-ista,PHARMACIE ISTA,34.679959807396,-1.8704223539599,L18,1
-885,ista-lazaret,ISTA LAZARET,34.6764,-1.8677,L18,1
-886,pharmacie-lasala,PHARMACIE LASALA,34.67527,-1.86325,L18,1
-887,agdal-termunis,AGDAL TERMUNIS,34.6755,-1.85936,L18,1
-888,mini-market,MINI MARKET,34.67544,-1.86336,L18,1
-889,face-ista-lazaret,FACE ISTA LAZARET,34.675945038103,-1.867101985822,L18,1
-890,mosquee-al-araf,MOSQUEE AL ARAF,34.677837922558,-1.8685877090118,L18,1
-891,hay-al-farah,HAY AL FARAH,34.6808,-1.87078,L18,1
-892,cafe-abdou,CAFE ABDOU,34.68339,-1.87452,L18,1
-893,face-hammam-chtioui,FACE HAMMAM CHTIOUI,34.68121,-1.87629,L18,1
-894,boucherie-douidou,BOUCHERIE DOUIDOU,34.679152480212,-1.8789893326606,L18,1
-895,cafe-al-muhajirin,CAFE AL MUHAJIRIN,34.677771703227,-1.8818754113104,L18,1
-896,banque-populaire-3,BANQUE POPULAIRE,34.679236319426,-1.8829429304983,L18,1
-897,face-souka-lazaret,FACE SOUKA LAZARET,34.68024,-1.8837,L18,1
-898,daman-cash,DAMAN CASH,34.68177,-1.88662,L18,1
-899,bureau-arabe,BUREAU ARABE,34.68094,-1.88901,L18;L19,2
-900,face-derb-berahmoun,FACE DERB BERAHMOUN,34.67946,-1.89333,L18,1
-901,nouveau-souk-al-fallah,NOUVEAU SOUK AL FALLAH,34.67918,-1.89684,L18;L19,2
-902,salle-des-fete-riad,SALLE DES FETE RIAD,34.67962,-1.90216,L18;L19,2
-903,souk-el-had-lazaret-2,SOUK EL HAD  LAZARET,34.682580110907,-1.8837207493629,L19,1
-904,mahlabat-niama,MAHLABAT NIAMA,34.68495,-1.88138,L19,1
-905,salle-couvert-oued-eddahab,SALLE COUVERT OUED EDDAHAB,34.68628,-1.88078,L19,1
-906,termunis-mosquee-arida,TERMUNIS MOSQUEE ARIDA,34.68809,-1.87898,L19,1
-907,station-afriquia,STATION AFRIQUIA,34.68969,-1.87705,L19,1
-908,pharmacie-al-fath,PHARMACIE AL FATH,34.69129,-1.87327,L19,1
-909,fath-2,FATH 2,34.69183,-1.86963,L19,1
-910,afrah-damnati,AFRAH DAMNATI,34.69465,-1.87086,L19,1
-911,ofppt-agriculture,OFPPT AGRICULTURE,34.69587,-1.87348,L19,1
-912,club-sportif-al-fath,CLUB SPORTIF AL FATH,34.69449,-1.87666,L19,1
-913,ofppt-4,OFPPT,34.693395820463,-1.8787211350624,L19,1
-914,mosquee-el-fath,MOSQUEE EL FATH,34.69228,-1.88103,L19,1
-915,boulangerie-petit-dounia,BOULANGERIE PETIT DOUNIA,34.6901,-1.87926,L19,1
-916,mosquee-arida,MOSQUEE ARIDA,34.68815,-1.87898,L19,1
-917,fassi-decor,FASSI DECOR,34.68631,-1.88093,L19,1
-918,cafe-oyonnax,CAFE OYONNAX,34.68506,-1.88151,L19,1
-919,drif-food,DRIF FOOD,34.682813953687,-1.8834739970084,L19,1
-920,cafe-al-yamani,CAFE AL YAMANI,34.681684575065,-1.8868321133737,L19,1
-921,derb-berahmoun,DERB BERAHMOUN,34.67951,-1.89315,L19,1
-922,termunis-sahat-nakheel,TERMUNIS SAHAT NAKHEEL,34.678331943703,-1.9104194314867,L01,1
-923,molay-driss,MOLAY DRISS,34.673695418304,-1.9127529579903,L01,1
-924,polyclinique-2,POLYCLINIQUE,34.669177643821,-1.9121575262317,L01,1
-925,hammam-benkachour,HAMMAM BENKACHOUR,34.66691428783,-1.9129997662727,L01,1
-926,commisariat-de-police,COMMISARIAT DE POLICE,34.66517,-1.91222,L01,1
-927,lycee-maghreb-l-arabie,LYCEE  MAGHREB L'ARABIE,34.6642,-1.89641,L01,1
-928,pharmacie-sefraoui,PHARMACIE SEFRAOUI,34.66521,-1.89103,L01,1
-929,pharmacie-al-manar,PHARMACIE AL MANAR,34.66562,-1.88584,L01,1
-930,hammam-al-jaouhara,HAMMAM AL JAOUHARA,34.66612,-1.8815,L01,1
-931,termunis-mosquee-bab-rayan,TERMUNIS MOSQUEE BAB RAYAN,34.667152556682,-1.8770474304229,L01,1
-932,cafe-good-life,CAFE GOOD LIFE,34.6654,-1.87492,L01,1
-933,complexe-social-najd,COMPLEXE SOCIAL NAJD,34.66344,-1.8743,L01,1
-934,mosquee-ka-b-ibn-malik,MOSQUEE KA'B IBN MALIK,34.65988,-1.87306,L01,1
-935,najd-ii,NAJD II,34.65635,-1.87251,L01,1
-936,parc-najd,PARC NAJD,34.65692,-1.86928,L01,1
-937,lycee-abdellah-al-laroui,LYCEE ABDELLAH AL -LAROUI,34.6558,-1.86768,L01,1
-938,mosquee-aljraa-ibn-malik,MOSQUEE ALJRAA IBN MALIK,34.653482811839,-1.8673646294687,L01,1
-939,village-alzakara,VILLAGE ALZAKARA,34.657048941923,-1.8665707359927,L01,1
-940,village-alzakara-ii,VILLAGE ALZAKARA II,34.655883333237,-1.8664741516113,L01,1
-941,souka-lhad-sidi-yahya,SOUKA LHAD SIDI YAHYA,34.66063,-1.8666,L01,1
-942,cimetiere-sidi-yahya,CIMETIERE  SIDI YAHYA,34.66264,-1.86666,L01,1
-943,mosquee-amina-bent-wahb,MOSQUEE AMINA BENT WAHB,34.66516,-1.86856,L01,1
-944,hay-pam,HAY PAM,34.66713,-1.87127,L01,1
-945,qsar-laalaj,QSAR LAALAJ,34.66724,-1.87719,L01,1
-946,cafe-4-etoiles,CAFE 4 ETOILES,34.66634,-1.88102,L01,1
-947,mosquee-al-firdaous,MOSQUEE AL FIRDAOUS,34.66575,-1.8855,L01,1
-948,station-appollo,STATION APPOLLO,34.66552,-1.88918,L01,1
-949,lycce-maghreb-l-arabie,LYCCE MAGHREB L'ARABIE,34.66428,-1.89666,L01,1
-950,boulangerie-ibn-sina,BOULANGERIE IBN SINA,34.6638,-1.90021,L01,1
-951,hammam-benkachor,HAMMAM BENKACHOR,34.66754,-1.91272,L01,1
-952,termunis-maghreb-arabi,TERMUNIS MAGHREB ARABI,34.678173199025,-1.9116693859407,L09;L15,2
-953,musee-lalla-meryem,MUSEE LALLA MERYEM,34.677144543728,-1.9125118667825,L15,1
-954,consulat-d-algerie-2,CONSULAT D'ALGERIE,34.67682734087,-1.9206101199423,L15,1
-955,station-winxo-2,STATION WINXO,34.675733561106,-1.9249999973693,L15,1
-956,mc-donalds,MC DONALDS,34.677013167623,-1.9288196183618,L15,1
-957,mousquee-moussa-ibn-noussair,MOUSQUEE MOUSSA IBN NOUSSAIR,34.680987506977,-1.9362381268956,L15,1
-958,cafe-alworoud,CAFE ALWOROUD,34.681782211787,-1.9382221941115,L15,1
-959,lycee-al-moutanabi,LYCEE AL MOUTANABI,34.685757902546,-1.9369838478045,L15,1
-960,restaurant-bel-adel,RESTAURANT BEL ADEL,34.687066203019,-1.9393604636503,L15,1
-961,mharach-i,MHARACH I,34.687851815925,-1.9423921661311,L15,1
-962,mharach-ii,MHARACH II,34.689713832414,-1.9439097122976,L15,1
-963,avant-station-shell,AVANT STATION SHELL,34.696577371109,-1.9415383226037,L15,1
-964,face-au-centre-al-mouloudia,FACE AU CENTRE AL MOULOUDIA,34.700746868449,-1.9391899052959,L15,1
-965,reseau-inwi,RESEAU INWI,34.702737446339,-1.93458560961,L15,1
-966,cafe-minya,CAFE MINYA,34.704743984488,-1.930922294678,L15,1
-967,termunis-jarf-lakhdar,TERMUNIS JARF LAKHDAR,34.705418882033,-1.9333259050583,L15,1
-968,pont-jarf-lakhdar,PONT JARF LAKHDAR,34.703367170707,-1.9330793670941,L15,1
-969,dispensaire-jarf,DISPENSAIRE JARF,34.702075076108,-1.9371027940258,L15,1
-970,village-taffah,VILLAGE TAFFAH,34.6982880555556,-1.9410267,L15,1
-971,mharach-ii-2,MHARACH II,34.689641939283,-1.9440221879712,L15,1
-972,boulangerie-amira,BOULANGERIE AMIRA,34.687776362166,-1.9424075028049,L15,1
-973,college-mekki-nassire,COLLEGE MEKKI NASSIRE,34.686955526355,-1.9406098852357,L15,1
-974,pharmacie-almouloudia,PHARMACIE ALMOULOUDIA,34.684357843106,-1.9426703623955,L15,1
-975,traveaux-public,TRAVEAUX PUBLIC,34.681741902709,-1.9417204875515,L15,1
-976,la-maison-reanault,LA MAISON REANAULT,34.681375860425,-1.9382285978564,L15,1
-977,lycee-assalam-2,LYCEE ASSALAM,34.679072263515,-1.9315544151411,L15,1
-978,pond-med-5,POND MED 5,34.675873581049,-1.9272093204288,L15,1
-979,clinique-chark-2,CLINIQUE CHARK,34.675265958586,-1.9242221070413,L15,1
-980,la3lam-2,LA3LAM,34.674727739234,-1.9220602434682,L15,1
-981,moulay-idriss-2,MOULAY IDRISS,34.673805675642,-1.9138473395331,L15,1
-982,areet-moin-1,AREET MOIN 1,34.676533033011,-1.9111164671561,L15,1
-983,termunis-maghreb-arabi-2,TERMUNIS MAGHREB ARABI,34.678187513682,-1.9117017262506,L15,1
-984,musee-lalla-meryem-2,MUSEE LALLA MERYEM,34.676958107074,-1.9128400765741,L09,1
-985,cafe-rihab,CAFE RIHAB,34.678469730154,-1.9189879730616,L09,1
-986,marche-couvert,MARCHE COUVERT,34.683697645424,-1.917897041832,L09,1
-987,cinema-coulise,CINEMA COULISE,34.686373649005,-1.9163042710824,L09,1
-988,station-shell-lihoudi,STATION SHELL (LIHOUDI),34.692765978988,-1.9183642977119,L09,1
-989,majlis-aljiha,MAJLIS ALJIHA,34.697856474128,-1.9190061294339,L09,1
-990,marche-de-gros,MARCHE DE GROS,34.701842639658,-1.9191259440912,L09,1
-991,lycee-derfoufi-2,LYCEE DERFOUFI,34.707549349606,-1.9198125833848,L09,1
-992,golf,GOLF,34.71223166391,-1.9204616686451,L09,1
-993,rond-point-cgi,ROND POINT CGI,34.717034740037,-1.9215561994566,L09,1
-994,mosquee-al-hajar-al-aswad,MOSQUEE AL HAJAR AL ASWAD,34.715851862418,-1.9251985010326,L09,1
-995,hay-annahar,HAY ANNAHAR,34.719111271504,-1.9302679164631,L09,1
-996,ste-solifer,STE SOLIFER,34.728806002019,-1.9328320445857,L09,1
-997,termunis-marjane,TERMUNIS MARJANE,34.736472378405,-1.9268453059043,L09,1
-998,termunis-marjane-2,TERMUNIS MARJANE,34.73650770586,-1.9267272949219,L09,1
-999,face-hay-annahar,FACE HAY ANNAHAR,34.719000717368,-1.9302784806226,L09,1
-1000,mousquee-al-hajar-al-aswad,MOUSQUEE AL HAJAR AL ASWAD,34.71582889466,-1.9253479683534,L09,1
-1001,rond-point-cgi-r,ROND POINT CGI /R,34.716575,-1.92157805555556,L09,1
-1002,auto-holl,AUTO HOLL,34.711349320873,-1.9205260074833,L09,1
-1003,lycee-derfoufi-r,LYCEE DERFOUFI/R,34.708482472826,-1.9202094990517,L09,1
-1004,cimetiere-r,CIMETIERE /R,34.705267630043,-1.9197320332225,L09,1
-1005,marche-de-gros-r,MARCHE DE GROS /R,34.701704251868,-1.9193833973178,L09,1
-1006,pont-village-toba-2,PONT VILLAGE TOBA,34.696280643775,-1.9191795618611,L09,1
-1007,bim-r,BIM/R,34.693484888595,-1.9188148948444,L09,1
-1008,riwa9-alfounoun-r,RIWA9 ALFOUNOUN/R,34.690934601767,-1.9179082010022,L09,1
-1009,face-au-cinema-colisee,FACE AU CINEMA COLISEE,34.686470760767,-1.9165885355243,L09,1
-1010,marche-couvert-2,MARCHE COUVERT,34.683637183198,-1.9180212825614,L09,1
-1011,cafe-rihab-r,CAFE RIHAB/R,34.680317104656,-1.9196891318602,L09,1
-1012,hopital-alfarabi,HOPITAL ALFARABI,34.675226121859,-1.9150166926852,L09,1
-1013,moin-1-2,MOIN 1,34.676537370373,-1.911095040555,L09,1
+﻿station_id,station_name,station_label,lat,lng,lines,line_count,alt_names,merged_ids,corrections,review_note
+6,av-armee-de-liberation,Av Armée de Libération,34.669720374398,-1.924420651097,L08,1,Av armie de liberation,,C347,
+8,aboubeker-kadiri-1,Aboubeker Kadiri 1,34.6595308,-1.9320535,L08,1,,,C004,
+9,av-armee-de-liberation-bab-aljazaer,Av Armée de Libération Bab Aljazaer,34.6710767,-1.9215348,L08,1,Av Armie de Libiration 1 | Av armie de liberation bab aljazaer,12,C042 C348,
+11,aboubeker-kadiri-2,Aboubeker Kadiri 2,34.6605868,-1.9311773,L08,1,,,,
+21,av-bir-anzarane-consulat-algerie,Av Bir Anzarane Consulat Algérie,34.677727755793,-1.9139598588339,L23,1,Av bir anzarane Consulat Algerie,,C349,
+30,lycee-assalam,Lycée Assalam,34.678980791373,-1.9312389615719,L05 L15,2,LYCEE ASSALAM,977,C043 C350,
+31,av-boualam-arahmoun-1,Av Boualam Arahmoun 1,34.6725724,-1.9401506,L23,1,,,C027,
+32,terminus-agdal,Terminus Agdal,34.6756258,-1.8595172,L13 L18,2,AGDAL TERMUNIS | Agdal,887,C044 C212,
+34,av-boualam-arahmoun-2,Av Boualam Arahmoun 2,34.6731768,-1.9367811,L23,1,,,C028,
+35,al-irfane-2,Al Irfane 2,34.6514821,-1.9135433,L07,1,,,C005,
+36,av-boualam-arahmoun-ecole-imam-ali,Av Boualam Arahmoun École Imam Ali,34.6757249,-1.9407775,L23,1,Av Boualam Arahmoun ecole imam ali,,C351,
+38,av-brahim-lahssini-force-auxiliaire,Av Brahim Lahssini Force Auxiliaire,34.6746992,-1.9281863,L16,1,Av Brahim Lahssini force auxiliare,,C026 C352,
+40,lycee-derfoufi,Lycée Derfoufi,34.707222,-1.919854,L09 L31,2,LYCEE DERFOUFI,991,C045 C353,
+42,av-brahim-lahssini-pharmacie-complexe-sportive-av-brahim-lahssini-salle-couverte,Av Brahim Lahssini Pharmacie Complexe Sportive / Av Brahim Lahssini Salle Couverte,34.670699741788,-1.9338029545354,L16,1,Av Brahim Lahssini sale coverte | Av Brahim Lahssini pharmacie compelexe sportive,45,C046 C213,
+44,ancien-tribunal-1-instance,Ancien Tribunal 1 Instance,34.6919546,-1.9119441,L04,1,,,C354,
+48,av-brahim-roudani-arrondissement,Av Brahim Roudani Arrondissement,34.6791569,-1.8891327,L13,1,Av Brahim Roudani Arrandissement,,C015 C355,
+49,auto-hall,Auto Hall,34.767254890394,-1.9408249746293,L31,1,,,C356,
+51,lycee-maghreb-arabi,Lycée Maghreb Arabi,34.664425830618,-1.8955278396606,L02,1,Lycee Maghreb Arabi,,C357,
+54,av-des-far,Av des FAR,34.692103451991,-1.907839179039,L04,1,,,,
+58,lycee-qods,Lycée Qods,34.65896335849,-1.8940633069319,L02,1,Lycee Qods,,C358,
+62,av-tohami-jilali-ofppt-institut-el-gadi-lafkhih,Av Tohami Jilali OFPPT / Institut El Gadi Lafkhih,34.6576466,-1.9125306,L07 L31,2,institut el gadi lafkhih | Av Tohami Jilali OFPPT,490,C047 C214,
+65,av-tohami-jilali-palais-de-justice-nassij-al-jam3aoui,Av Tohami Jilali Palais de Justice / Nassij Al Jam3aoui,34.66077243228,-1.9119697809219,L07 L31,2,nassij al jam3aoui | Av Tohami Jilali Palais de justice,540,C048 C215,
+69,av-elmansour-edahhabi1-cafe-victoria,Av Elmansour Edahhabi1 (Café Victoria),34.7001411,-1.9114141,L04 L20 L24,3,CAFE VICTORIA | JARDIN VILLAGE KOULOUCH | ECOLE TAHA HUSSEIN | Av Elmansour Edahhabi1 (Cafe victoria),704 789 842,C049 C050 C051 C359,
+70,av-yaakoub-elmanssour,Av Yaakoub Elmanssour,34.671943930867,-1.9096630811691,L02,1,,,,
+72,av-elmansour-edahhabi2,Av Elmansour Edahhabi2,34.7029811,-1.9139024,L04,1,,,,
+73,av-yahya-belkhir,Av Yahya Belkhir,34.6873312,-1.8869214,L11,1,,,C010 C360,
+77,mac-donalds,Mac Donalds,34.676955611317,-1.9287443161011,L05 L14 L15,3,Mcdonald | MC DONALDS,709 956,C052 C053 C361,
+78,av-abdellah-ganoun,Av Abdellah Ganoun,34.6711700,-1.8856900,L13,1,,,C019 C362,
+85,av-abderrahim-bouabid-banque-populaire,Av Abderrahim Bouabid Banque Populaire,34.6754000,-1.8920000,L13,1,,,C016 C363,
+89,av-abderrahim-bouabid-pharmacie-olad-chrif,Av Abderrahim Bouabid Pharmacie Olad Chrif,34.6778501,-1.8886966,L13,1,,,C364,
+101,majlis-el-jiha,Majlis El Jiha,34.697400606645,-1.9189810411087,L24 L31,2,MAJLIS AL JIHA,839,C054 C365,
+111,av-zayed-ben-soltane-1,Av Zayed Ben Soltane 1,34.6680236,-1.9398281,L16,1,,,C024,
+114,av-zayed-ben-soltane-2,Av Zayed Ben Soltane 2,34.665250889576,-1.9436520260381,L16,1,,,,
+116,av-hassan-2-wilaya-de-police,Av Hassan 2 Wilaya de Police,34.6649276,-1.9109194,L07,1,,,C366,
+127,av-al-irfane-mosquee-assalam,Av Al Irfane Mosquée Assalam,34.6539278,-1.9133842,L07,1,Av Al Irfane Mosquee Assalam,,C367,
+128,av-zayed-ben-soltane-gare-routiere,Av Zayed Ben Soltane Gare Routière,34.673721880409,-1.9321507370855,L23,1,Av Zayed Ben Soltane Gare Routiere,,C368,
+131,av-zayed-ben-soltane-osbat-achark,Av Zayed Ben Soltane Osbat Achark,34.6662129,-1.9423388,L16,1,,,C025 C369,
+139,av-zayed-lycee-acharif-idrissi,Av Zayed Lycée Acharif Idrissi,34.671930698158,-1.9344627997028,L23,1,Av Zayed Lecyée Acharif Idrissi,,C370,
+141,terminus-bab-sidi-abdelouahab,Terminus Bab Sidi Abdelouahab,34.679178979053,-1.9109183549881,L05 L16,2,Bab sidi abdlouhab,,C216,
+142,maroc-telecom-hay-takkadoum,Maroc Telecom (Hay Takkadoum),34.70316,-1.9149,L20,1,MAROC TELECOM,,C001 C340,
+144,mathaf-lalla-meryem,Mathaf Lalla Meryem,34.677387917569,-1.9123506546021,L08 L16 L23,3,,,,
+146,ben-mimoune-hay-zaytoune,Ben Mimoune Hay Zaytoune,34.6720000,-1.8882000,L13,1,,,C018 C371,
+153,av-allal-al-fassi-derb-berrahmoune,Av Allal Al Fassi Derb Berrahmoune,34.679787779414,-1.8923306604969,L11 L13,2,,,C372,
+171,av-allal-al-fassi-mosquee-riad,Av Allal Al Fassi Mosquée Riad,34.679152554423,-1.8959838183003,L11 L13 L18 L19,4,MOSQUEE RIAD | AV Allal Al fassi mosque riad,873,C055 C373,
+173,av-hay-jaouhara-2,Av Hay Jaouhara 2,34.6694864,-1.9379912,L16,1,,,,
+174,cafe-nojoume,Café Nojoume,34.7046556,-1.8573486,L13,1,,,C374,
+177,cafe-salazar,Café Salazar,34.6762004,-1.8760372,L13,1,Cafe Salazar,,C375,
+180,mohamed-eddarfoufi,Mohamed Eddarfoufi,34.6949110,-1.9112212,L04,1,,,C008,
+181,av-hay-jaouhara-3,Av Hay Jaouhara 3,34.6654215,-1.935624,L16,1,,,,
+184,av-allal-al-fassi-salle-berrisoule,Av Allal Al Fassi Salle Berrisoule,34.67940841452,-1.9018042087555,L11 L13,2,,,C376,
+185,av-hay-jaouhara-3-cafe-karam,Av Hay Jaouhara 3 ( Café Karam ),34.668861,-1.9326744,L16,1,Av Hay Jaouhara 3 ( Cafée Karam ),,C377,
+189,av-allal-ben-abdellah-ministere-des-douanes,Av Allal Ben Abdellah / Ministère des Douanes,34.6750157,-1.9190539,L08 L20,2,MINISTERE DES DOUANES | Av Allal Ben Abdellah,671,C056 C217,
+194,centre-technique,Centre Technique,34.66222463174,-1.8953322537404,L02,1,,,,
+197,mosquee-elbourak-parc-najd,Mosquée Elbourak / Parc Najd,34.6568454,-1.8692252,L01 L02,2,PARC NAJD | Mosque Elbourak,936,C057 C218,
+201,av-idriss-al-akbar-hopital-el-farabi-1-laboratoire-el-hakim,Av Idriss Al Akbar Hôpital El Farabi 1 / Laboratoire El Hakim,34.675914478449,-1.9160467339639,L05 L16 L23 L25,4,laboratoire el hakim | HOPITAL EL FARABI | Av Idriss Al Akbar hopital El Farabi 1,592 607,C058 C059 C219,
+204,av-idriss-al-akbar-hopital-el-farabi-2,Av Idriss Al Akbar Hôpital El Farabi 2,34.6745525,-1.913931,L05 L16 L23,3,Av Idriss Al Akbar hopital El Farabi 2,,C378,
+205,chu,CHU,34.6574895724,-1.9129675580148,L07 L20 L31,3,,,,
+209,clinique-al-maghrib-unite-administrative,Clinique Al Maghrib / Unité Administrative,34.6721875,-1.9188321,L08 L20,2,UNITE ADMINISTRATIVE | Clinique Al Maghrib,672,C060 C220,
+211,mosquee-hassan-2,Mosquée Hassan 2,34.6904522,-1.9071515,L04,1,Mosque Hassan 2,,C007 C379,
+214,av-idriss-al-akbar-mosquee-hamza,Av Idriss Al Akbar Mosquée Hamza,34.673443941301,-1.9125169406861,L07 L17,2,Av Idriss Al Akbar Mosque Hamza,,C380,
+216,consulat-d-algerie,Consulat d'Algérie,34.67674,-1.92111,L05 L14 L15 L16 L23,5,CONSULAT D'ALGERIE | consulat d'algerie,954,C061 C381,
+221,av-kaaouachi,Av Kaaouachi,34.6727400,-1.8899900,L13,1,,,C017 C382,
+222,terminus-moulin-mhaya,Terminus Moulin Mhaya,34.6797451,-1.93936,L23,1,,,C383,
+223,eaux-et-forets-el-majlis-al-ilmi,Eaux et Forêts / El Majlis Al Ilmi,34.66808,-1.90039,L02 L20,2,EL MAJLIS AL ILMI | EAUX ET FORETS,684,C062 C221,
+224,mosquee-lalla-khadija,Mosquée Lalla Khadija,34.703371355536,-1.9193833631396,L09,1,MOSQUEE LALLA KHADIJA,,C384,
+225,ecole-annassiha,École Annassiha,34.6546451,-1.8934184,L02,1,Ecole Annassiha,,C003 C385,
+226,av-kadour-el-ouartassi-bureau-arab,Av Kadour El Ouartassi Bureau Arab,34.6808193,-1.8897943,L11,1,,,C386,
+229,mosquee-othmane-ibn-aafane-la-maison-renault,Mosquée Othmane Ibn Aafane / La Maison Renault,34.681411494512,-1.9382561594377,L14 L15,2,LA MAISON REANAULT | Mosquee Othmane Ibn Aafane,976,C063 C222,
+230,av-kadour-el-ouartassi-college-riad,Av Kadour El Ouartassi Collège Riad,34.68526653939,-1.8906569589645,L11,1,Av Kadour El ouartassi College Riad,,C387,
+231,ecole-lalla-aicha-ecole-aicha-oum-al-mouamnin,École Lalla Aicha / École Aicha Oum Al Mouamnin,34.6882545,-1.9072488,L04 L21,2,ECOLE AICHA OUM AL MOUAMNIN | Ecole Lalla Aicha,845,C064 C223,
+234,ecoles-aboubaker-asadik,Écoles Aboubaker Asadik,34.6882545,-1.9072488,L13,1,ecoles aboubaker asadik,,C040 C388,"L13's 'ecoles aboubaker asadik' has the coordinates of Ecole Lalla Aicha (L04) in the centre, 4 km from its neighbours. Position kept."
+238,mouad-ibn-jabal-1,Mouad Ibn Jabal 1,34.6662715,-1.9274403,L08,1,,,,
+240,terminus-maghreb-arabi,Terminus Maghreb Arabi,34.678331979435,-1.9116693735123,L03 L08 L14 L15 L23 L32,6,station maghreb el arabi | AL MAGHREB EL ARABI | termunis al maghreb el arabi | TERMUNIS MAGHREB ARABI | Terminus Place Maghreb Arabi,547 627 707 983,C065 C066 C067 C068 C224,
+247,mouad-ibn-jabal-cafe-ouaziz,Mouad Ibn Jabal Café Ouaziz,34.664999367694,-1.9324511274061,L08,1,,,C389,
+248,terminus-place-sidi-yahya,Terminus Place Sidi Yahya,34.677904053881,-1.9119322206744,L13,1,,,C390,
+251,terminus-rond-point-hay-jemli,Terminus Rond Point Hay Jemli,34.6961500,-1.8566200,L11,1,,,C014 C391,
+252,mouad-ibn-jabal-mosquee-redouane,Mouad Ibn Jabal Mosquée Redouane,34.6638733,-1.9368691,L08,1,Mouad Ibn Jabal Mosqué Redouane,,C392,
+258,moulay-idriss,Moulay Idriss,34.673558654689,-1.9126617737587,L01 L02 L07 L17 L24 L25 L31,7,Mosque Hamza | Av Idriss Al Akbar Moulay Idriss | association nibras | MOLAY DRISS,210 218 593 923,C069 C070 C071 C072 C393,
+263,terminus-souk-el-qods,Terminus Souk El Qods,34.68163837292,-1.9083823140081,L02 L04,2,Terminus Souk Qods,,C035 C225,"On L02 this terminus is listed right after Mosque Elbourak, 4.5 km away in the south-east, while L04 uses it correctly at Souk El Qods. L02's real end stop may be elsewhere; position kept."
+266,est-sidi-maafa,EST Sidi Maafa,34.653734332936,-1.8997067213058,L02,1,,,C226,
+269,terminus-village-bekay,Terminus Village Bekay,34.68228015893,-1.9091910123825,L17,1,,,C036,"L17's terminus 'Village Bekay' has city-centre coordinates (next to Souk El Qods) but the line's other stops end 4 km south-east, past Residence Kanzi. No OSM match found; position kept."
+270,faculte-de-medecine-radeeo,Faculté de Médecine / RADEEO,34.657260100964,-1.9091320037842,L20 L31,2,RADEEO | FACULTE DE MEDECINE,541 677,C073 C074 C227,
+271,faculte-des-sciences,Faculté des Sciences,34.654550694849,-1.8985909223557,L02,1,Faculte des science,,C394,
+273,terrain-didi,Terrain Didi,34.6683459,-1.9255325,L08,1,,,C228,
+276,ofppt-lazaret,OFPPT Lazaret,34.6756174,-1.8688938,L13,1,,,C021,
+278,univ-med-1,Univ Med 1,34.655689175335,-1.9000554084778,L02,1,,,,
+279,av-mansour-eddahabi-1,Av Mansour Eddahabi 1,34.7013291,-1.9125096,L04 L20,2,BOULANGERIE EL MANSOUR EDDAHBI,666,C075 C395,
+281,village-nylo-1,Village Nylo 1,34.6724788,-1.9406011,L23,1,vilage Nylo 1,,C396,
+282,av-mansour-eddahabi-2,Av Mansour Eddahabi 2,34.7032639,-1.9139514,L04,1,,,C397,
+283,hama-benkachour,Hama Benkachour,34.667404025296,-1.9127637147903,L01 L07 L24 L25 L31,5,hamam benkachor | HAMAM BENKHACHOUR/R | HAMMAM BENKACHOR,493 830 951,C076 C077 C078,
+285,hamam-benkachour-benkachour-aller,Hamam Benkachour / Benkachour Aller,34.666821631202,-1.9130211897667,L01 L24 L25,3,benkachour aller | HAMMAM BENKACHOUR | HAMAM BENKACHOUR,595 925,C079 C080 C229,
+286,village-nylo-2,Village Nylo 2,34.6713825,-1.9429711,L23,1,vilage Nylo 2,,C398,
+294,oued-amam,Oued Amam,34.6556741,-1.8916567,L02,1,,,,
+299,village-qtar-ecole-bensaid-mahdaoui,Village Qtar École Bensaid Mahdaoui,34.6571300,-1.9499000,L16,1,Village Qtar ecole bensaid mahdaoui,,C023 C399,
+306,hay-essalam-1,Hay Essalam 1,34.687132406673,-1.8837315030558,L11,1,,,,
+307,hay-essalam-2-mosquee-essalam,Hay Essalam 2 Mosquée Essalam,34.689752779997,-1.8812047798254,L11,1,Hay essalam 2 Mosquee Essalam,,C400,
+317,hay-kada-houssine,Hay Kada Houssine,34.6654200,-1.9436000,L16,1,,,C022 C401,
+320,parc-lala-meryem,Parc Lala Meryem,34.67704385056,-1.9156658649445,L03 L05 L14,3,MATHAF LALA MARYEM | musée lala maryem | Park lala Meryem,628 708,C081 C082 C402,
+322,parc-lalla-aicha,Parc Lalla Aicha,34.6708058,-1.9056962,L02,1,Park Lalla Aicha,,C403,
+328,pharmacie-el-azaoui,Pharmacie El Azaoui,34.6570471,-1.8971767,L02,1,,,C002,
+329,hay-moulay-miloud-1,Hay Moulay Miloud 1,34.6861512,-1.886759,L11,1,,,,
+331,hay-moulay-miloud-2,Hay Moulay Miloud 2,34.6869069,-1.8842642,L11,1,,,,
+334,hay-moulay-miloud-mosquee-mustapha,Hay Moulay Miloud Mosquée Mustapha,34.689606984799,-1.8861186411151,L11,1,Hay Moulay Miloud Mosquee Mustapha,,C404,
+342,pharmacie-elmichkat,Pharmacie Elmichkat,34.658147,-1.8833846,L02,1,,,,
+351,pharmacie-hay-rabie,Pharmacie Hay Rabie,34.6497173,-1.9117916,L07,1,,,,
+352,hay-si-lakhdar,Hay Si Lakhdar,34.6816496,-1.9400248,L05,1,,,C032,
+355,hay-si-lakhdar-hay-ngadi,Hay Si Lakhdar Hay Ngadi,34.6836346,-1.9459669,L05,1,,,C033,
+358,yotno-belhoussine-moin-1,Yotno Belhoussine / Moin 1,34.676444424905,-1.9111542169371,L01 L02 L03 L05 L07 L09 L14 L15 L16 L17 L23 L32,12,moin 1 | AREET MOIN 1 | MOIN 1 | Yotno Belhoussine,571 982 1013,C083 C084 C085 C230,
+361,hay-zrarka,Hay Zrarka,34.71302981074,-1.8974965810776,L04,1,,,,
+363,yotno-belhoussine-1-moulay-driss,Yotno Belhoussine 1 / Moulay Driss,34.673954,-1.9136693,L03 L08,2,moulay driss | Yotno belhoussine 1,661,C086 C231,
+368,polyclinique-cnss,Polyclinique / CNSS,34.67109,-1.91194,L07 L24 L25,3,CNSS | POLYCLINIQUE,213,C087 C232,
+375,pont-med-5,Pont Med 5,34.675768969481,-1.9265504757494,L05 L16 L23,3,,,,
+380,jardin-elqods,Jardin Elqods,34.6535048,-1.8950815,L02,1,,,,
+382,residence-al-ghiate,Résidence Al Ghiate,34.6752713,-1.867514,L13,1,residence al ghiate,,C039 C405,"L13's 'residence al ghiate' is listed between Cafe Noujoum (north-east) and the terminus, but placed 3.4 km south. The terminus is also misplaced; position kept."
+385,jemli,Jemli,34.696152,-1.8566209,L13,1,,,,
+387,kada-houssine-1,Kada Houssine 1,34.661840213118,-1.9391351938248,L08,1,,,,
+390,av-med-6-carrefour-etablissement-el-ouazzani,Av Med 6 Carrefour / Établissement El Ouazzani,34.662113872286,-1.9054949454491,L17 L25,2,etablissement el ouazzani | Av Med 6 Carfour,597,C088 C233,
+391,kada-houssine-2,Kada Houssine 2,34.660759162046,-1.9413828803186,L08,1,,,,
+393,kada-houssine-3,Kada Houssine 3,34.660273827986,-1.9426435107878,L08,1,,,,
+394,av-med-6-faculte-des-sciences-inwi,Av Med 6 Faculté des Sciences / Inwi,34.655336159803,-1.8992829493706,L17 L31,2,inwi | Av Med 6 Faculte Des Science,488,C089 C234,
+397,residence-kanzi,Résidence Kanzi,34.6518286,-1.8795051,L17,1,Residence Kanzi,,C406,
+399,av-med-6-hay-sidi-maafa-1,Av Med 6 Hay Sidi Maafa 1,34.649047807723,-1.886767745018,L17,1,,,,
+400,av-med-6-hay-sidi-maafa-2,Av Med 6 Hay Sidi Maafa 2,34.650711500975,-1.8856519460678,L17,1,,,,
+402,av-med-6-hay-sidi-maafa-3,Av Med 6 Hay Sidi Maafa 3,34.6499802,-1.884525,L17,1,,,,
+405,av-med-6-la-poste,Av Med 6 la Poste,34.658058711936,-1.9019544450849,L17,1,,,,
+406,route-14,Route 14,34.6906095,-1.8816985,L11,1,,,C013 C407,
+407,av-med-6-lista-encg,Av Med 6 Lista / ENCG,34.652992981097,-1.8971800804138,L17 L25 L31,3,ENCG | Av Med 6 LISTA,545,C090 C235,
+408,av-med-6-logement-economique-sidi-maafa,Av Med 6 Logement Économique Sidi Maafa,34.64805049081,-1.8891978263855,L17,1,Av Med 6 Logement Economique Sidi Maafa,,C408,
+409,av-med-6-rond-point-universite-med-1-rond-point-faculte,Av Med 6 Rond Point Université Med 1 / Rond Point Faculté,34.655901016924,-1.9001895065001,L17 L20 L31,3,Rond point faculte | Av Med 6 Rond point Universite Med 1,543,C091 C236,
+410,av-med-6-village-belamrah,Av Med 6 Village Belamrah,34.656214483857,-1.8998246297538,L17,1,,,,
+413,av-mohamed-darfoufi-lycee-aljahid,Av Mohamed Darfoufi Lycée Aljahid,34.6943411,-1.9115062,L04,1,,,,
+415,route-14-mosquee-erida,Route 14 Mosquée Erida,34.6913774,-1.8824431,L11,1,route 14 (1) | route 14 Mosquee Erida,412,C092 C409,
+419,route-aounia-1,Route Aounia 1,34.6851128,-1.8882058,L11,1,,,C009,
+422,route-aounia-2,Route Aounia 2,34.6940408,-1.8823038,L11,1,,,C011,
+423,route-aounia-5,Route Aounia 5,34.7039584,-1.8702924,L11,1,,,C012,
+424,route-aounia-gendarmerie-rayal,Route Aounia Gendarmerie Rayal,34.7086032,-1.8638099,L11,1,,,,
+425,route-aounia-ista-aounia,Route Aounia ISTA Aounia,34.6953132,-1.8808408,L11,1,,,C410,
+426,route-aounia-residence-hadouch,Route Aounia Résidence Hadouch,34.6993137,-1.8767434,L11,1,Route Aounia Residence Hadouch,,C411,
+427,route-de-frontiere-vers-agdal-cafe-noujoum-route-de-frontiere-vers-agdal-residence-al-ghite,Route de Frontière (Vers Agdal) Café Noujoum / Route de Frontière (Vers Agdal) Résidence Al Ghite,34.7055323,-1.8581261,L11,1,Route de Frontiere (vers Agdal) Risidence Al GHITE | Route de Frontiere (vers Agdal) Café Noujoum,428,C093 C237,
+429,route-de-frontiere-vers-agdal-ecole-abou-baker-sadik,Route de Frontière Vers Agdal École Abou Baker Sadik,34.709821,-1.8608317,L11,1,Route de frontiere vers agdal ecole abou baker sadik,,C412,
+435,rue-10,Rue 10,34.668789414599,-1.9370484227828,L16,1,,,,
+436,rue-20,Rue 20,34.70941383533,-1.910365819931,L04,1,,,,
+437,rue-al-hanaa-mosquee-anour-almohammadi,Rue Al Hanaa Mosquée Anour Almohammadi,34.6483072,-1.9076569,L07,1,Rue Al Hanaa Mosquee Anour Almohammadi,,C413,
+438,rue-de-rif-1,Rue de Rif 1,34.657608657229,-1.9418495846872,L08,1,,,,
+439,rue-de-rif-2,Rue de Rif 2,34.657405730419,-1.9394248723984,L08,1,,,,
+441,rue-elistiklal-pharmacie-elmajd,Rue Elistiklal (Pharmacie Elmajd),34.7061291,-1.9150387,L04,1,,,,
+443,rue-nibrass,Rue Nibrass,34.7067638,-1.9109256,L04,1,,,C006,
+450,salle-mohammed-6,Salle Mohammed 6,34.6750608,-1.8824883,L13,1,,,C020 C414,
+451,sidi-maafa,Sidi Maafa,34.693347292017,-1.9059669971466,L07,1,,,C037,"L07's 'Sidi Maafa' sits 5 km north of its neighbours (Rue Al Hanaa ... Terminus Faculte des Lettres), and the terminus itself is also misplaced, so there is nothing to place it between. Position kept."
+464,station-winxo,Station Winxo,34.676007078179,-1.9238412302541,L14 L16 L23,3,,,C415,
+466,technopole,Technopole,34.771887,-1.943118,L31,1,,,C416,
+472,terminus-bab-sidi-abdelouahab-472,Terminus Bab Sidi Abdelouahab,34.6795356,-1.9102106,L05 L16,2,Terminus Bab sidi Abdelouhab,,C238,
+473,terminus-bouchtat,Terminus Bouchtat,34.6795356,-1.9102106,L13,1,,,C041,"L13's terminus 'Bouchtat' has the coordinates of Terminus Bab Sidi Abdelouahab in the centre. Route Bouchtat starts on Route El Aounia (north-east), so the real terminus is probably out there. Position kept."
+476,terminus-enakhil,Terminus Enakhil,34.679644968859,-1.9094709299391,L02 L07 L08 L17,4,,,,
+477,terminus-faculte-des-lettres,Terminus Faculté des Lettres,34.6795854,-1.9090941,L07,1,Terminus Faculte des Lettres,,C038 C417,"L07's terminus 'Faculte des Lettres' has the city-centre coordinates of Terminus Enakhil, but the line ends in the south (Hay Rabie, Sidi Maafa). No OSM match for the faculty; position kept."
+478,terminus-ibn-khaldoun,Terminus Ibn Khaldoun,34.680365607758,-1.9065034389496,L11 L13 L18 L19,4,TERMUNIS IBN KHALDOUN | Terminus Ibn Khaldoune,871,C094 C239,
+481,terminus-lmharach,Terminus Lmharach,34.6897138,-1.9439097,L05,1,,,C031,
+486,terminus-pharmacie-sidi-maafa,Terminus Pharmacie Sidi Maafa,34.647993,-1.893354,L31,1,pharmacie sidi maafa,,C240,
+487,wafacash,Wafacash,34.652764,-1.89686,L31,1,,,C418,
+489,flam-d-or,Flam d'Or,34.656801219419,-1.9047278103675,L20 L31,2,madariss al hakim | RESTAURANT LE COIN,542 693,C095 C096 C419,
+491,el-mahkama,El Mahkama,34.660101761866,-1.9120181026301,L31,1,,,C420,
+492,masjid-badr,Masjid Badr,34.665274,-1.912554,L31,1,,,C421,
+494,etablissement-el-khawarizimi,Établissement El Khawarizimi,34.673990995164,-1.9187235832214,L31,1,etablissement el khawarizimi,,C422,
+495,clinique-echark,Clinique Echark,34.675221836654,-1.9239699840546,L31,1,,,C423,
+496,petromin-station,Petromin Station,34.676192365288,-1.9250428536785,L24 L31,2,CLUB DE CHEMINS DE FER | CAFE PETROM,797 833,C097 C098 C424,
+497,pharmacie-el-mahata,Pharmacie El Mahata,34.68048030881,-1.9226503061482,L24 L31,2,PHARMACIE AL MAHATA,834,C099 C425,
+498,veterinaire,Vétérinaire,34.686738,-1.919622,L24 L31,2,VETERINAIRE | viterainaire,836,C100 C426,
+499,rewa9-el-founon,Rewa9 El Founon,34.6905,-1.918833,L24 L31,2,arrondissement 3 | TROISIEME DISTRICTSIDI IDRIS AL -QADI | GALERIE D'ART,530 794 837,C101 C102 C103 C427,
+500,station-shell-village-toba-exterieur,Station Shell (Village Toba Extérieur),34.693263401137,-1.9185626087346,L31,1,station shell,,C344,
+501,marche-gros-station-banana,Marché Gros / Station Banana,34.700845106448,-1.9190829774797,L24 L31,2,station banana | MARCHE GROS,527,C104 C241,
+502,golf-isly,Golf Isly,34.710873476446,-1.9202738720681,L31,1,,,C428,
+503,clinique-kindy,Clinique Kindy,34.717408,-1.921146,L31,1,,,C429,
+504,maison-scoda,Maison Scoda,34.73845,-1.929428,L31,1,,,C430,
+505,cafe-riyaha,Café Riyaha,34.757835,-1.936657,L31,1,cafe riyaha,,C431,
+506,station-ifriquia,Station Ifriquia,34.771771,-1.942838,L31,1,,,C432,
+507,aeroport,Aéroport,34.788016790947,-1.950314675177,L31,1,,,C433,
+508,wlad-tayeb,Wlad Tayeb,34.797885,-1.954585,L31,1,,,C434,
+509,el-aalab,El Aalab,34.815348637298,-1.9642458668385,L31,1,,,C435,
+510,route-de-sable,Route de Sable,34.820748493579,-1.9680548195835,L31,1,,,C436,
+511,l3ra3ra,L3ra3ra,34.824738557947,-1.9705063663909,L31,1,,,C437,
+512,souk-beni-adrar,Souk Beni Adrar,34.852665962832,-1.9893419069378,L31,1,,,C438,
+513,agence-atawfique,Agence Atawfique,34.855914816526,-1.9915240940894,L31,1,,,C439,
+514,pharmacie-chifa,Pharmacie Chifa,34.859181006603,-1.9937396235926,L31,1,,,C440,
+515,terminus-dar-naaim,Terminus Dar Naaim,34.863264,-1.996601,L31,1,terminis dar naaim,,C242,
+516,restaurant-ouarzazat,Restaurant Ouarzazat,34.856641,-1.992156,L31,1,,,C441,
+517,souk-benidrar,Souk Benidrar,34.852352,-1.989327,L31,1,,,C442,
+518,al-krira,Al Krira,34.825666,-1.971367,L31,1,,,C443,
+519,l3ra3ra-519,L3ra3ra,34.814736,-1.964047,L31,1,,,C444,
+520,el-3alab,El 3alab,34.797999,-1.954801,L31,1,,,C445,
+521,ifmiree,Ifmirée,34.76602,-1.940535,L31,1,,,C446,
+522,marjane,Marjane,34.736901,-1.929291,L31,1,,,C447,
+523,cgi,CGI,34.717935,-1.92135,L31,1,,,,
+524,autohall,Autohall,34.710364,-1.920456,L31,1,,,C448,
+525,isly,Isly,34.707347,-1.92004,L31,1,,,C449,
+526,cimetiere-sidi-mohamed,Cimetière Sidi Mohamed,34.702865003438,-1.9195175031079,L24 L31,2,CIMETIERE SIDI MOHAMMED | cimetier sidi mohamed,791,C105 C450,
+528,association-zalija-pont-village-toba,Association Zalija / Pont Village Toba,34.696195,-1.919185,L09 L24 L31,3,PONT VILLAGE TOBA | association zalija,793 1006,C106 C107 C243,
+529,bim,Bim,34.693313,-1.918787,L09 L24 L31,3,BIM/R,1007,C108 C451,
+531,cimetiere-nassara-cimetiere-chretien,Cimetière Nassara / Cimetière Chrétien,34.686267855183,-1.9197911396946,L24 L31,2,CIMETIERE CHRETIEN | cimetier nassara,795,C109 C244,
+532,ancienne-gare-de-train,Ancienne Gare de Train,34.681353834072,-1.9223069709658,L24 L31,2,,,C452,
+533,gare-routiere,Gare Routière,34.675724655411,-1.9293397525204,L31,1,Gar routiére,,C453,
+534,clinique-chark-cabinet-mouhoub,Clinique Chark / Cabinet Mouhoub,34.675102653448,-1.9235998485318,L14 L24 L31,3,clynique echark | FACE CLINIQUE CHARK | CABINET MOUHOUB | clinique chark,725 799 832,C110 C111 C112 C245,
+535,la3lam,La3lam,34.673887,-1.918423,L14 L24 L31 L32,4,le drapeau | alealam | DRAPEAU | ECOLE EL KHAWARIZMI,569 726 800 831,C113 C114 C115 C116 C454,
+536,ecole-ibn-hazm,École Ibn Hazm,34.673104178956,-1.9142442289173,L24 L31,2,ecole ibn hazm,,C455,
+537,residence-mehdi-cafe-vinizia,Résidence Mehdi / Café Vinizia,34.672843,-1.912593,L24 L31,2,CAFE VINIZIA | residence mehdi,801,C117 C246,
+538,pressing-bleu,Pressing Bleu,34.667135,-1.912925,L31,1,,,C456,
+539,commissariat-de-police-mosquee-badr,Commissariat de Police / Mosquée Badr,34.665206756812,-1.9123023624114,L01 L24 L25 L31,4,MOUSQE BADR | COMMISSARIAT DE POLICE | MOSQUEE BADR | COMMISARIAT DE POLICE | comissariat de police,606 802 829 926,C118 C119 C120 C121 C247,
+544,faculte-de-sciences,Faculté de Sciences,34.654408,-1.898407,L25 L31,2,faculte sience | faculté de science,600,C122 C457,
+546,terminus-pharmacie-sidi-maafa-546,Terminus Pharmacie Sidi Maafa,34.648926,-1.89353,L31,1,OFPPT,,C248,
+548,station-petromin,Station Petromin,34.674596,-1.931162,L32,1,,,C458,
+549,face-night-cafe,Face Night Café,34.669759,-1.937636,L32,1,face night cofé,,C459,
+550,masjid-rayhan,Masjid Rayhan,34.665891,-1.942821,L32,1,,,C460,
+551,cafe-jardin-d-oujda-usine-de-brique,Café Jardin d'Oujda / Usine de Brique,34.657293,-1.954319,L32,1,usine de brique | cafe jardin d'oujda,564,C123 C249,
+552,rond-point-bni-wkil-etablissement-bni-wkil,Rond-point Bni Wkil / Établissement Bni Wkil,34.644165,-1.969096,L32,1,etablissement bni wkil | rond-point bni wkil,563,C124 C250,
+553,wlad-salam,Wlad Salam,34.649264,-1.987102,L32,1,,,C461,
+554,residence-force-auxiliaire,Résidence Force Auxiliaire,34.651765,-1.994682,L32,1,residence force auxiliaire,,C462,
+555,terminus-bni-wkil,Terminus Bni Wkil,34.653129819903,-1.9988894369372,L32,1,,,C463,
+556,residence-force-auxiliaire-r,Résidence Force Auxiliaire R,34.651801,-1.994899,L32,1,residence force auxilaire R,,C464,
+557,dowar-al3askar,Dowar Al3askar,34.648782,-1.993207,L32,1,,,C465,
+558,le-6eme-groupe-de-genie-militaire,Le 6eme Groupe de Génie Militaire,34.647143,-1.997629,L32,1,,,C466,
+559,les-interets-sociaux-des-fournitures-militaires,Les Intérêts Sociaux des Fournitures Militaires,34.646505,-1.999337,L32,1,,,C467,
+560,la-premiere-unite-ou-groupe-de-la-cavalerie,La Première Unité ou Groupe de la Cavalerie,34.645771,-2.001305,L32,1,,,C468,
+561,le-premier-service-de-protection-des-frontieres,Le Premier Service de Protection des Frontières,34.64303,-2.005472,L32,1,,,C469,
+562,dowar-wlad-salam,Dowar Wlad Salam,34.649168,-1.986893,L32,1,dowar wlad salam RETOUR,,C251,
+565,chaabi-banque,Chaabi Banque,34.664024,-1.945048,L32,1,,,C470,
+566,pharmacie-de-bayan,Pharmacie de Bayan,34.665616,-1.942884,L32,1,,,C471,
+567,college-ibn-el-kadi,Collège Ibn El Kadi,34.669869,-1.937179,L32,1,college ibn el kadi,,C472,
+568,dispensaire-oued-ennachef,Dispensaire Oued Ennachef,34.674802,-1.930554,L32,1,,,C473,
+570,laboratoire-bourchid,Laboratoire Bourchid,34.673642,-1.914118,L32,1,,,C474,
+572,terminus-rjafllah,Terminus Rjafllah,34.706675306711,-1.8931084980041,L25,1,termunis rjafllah,,C252,
+573,societe-sotramisse,Société Sotramisse,34.708942002209,-1.8907481602852,L25,1,societe sotramisse,,C475,
+574,souk-ennaser,Souk Ennaser,34.711995,-1.88749,L25 L99,2,taxiat nasser | SWIKA NSSAR | taxi de nasser,625 735 780,C125 C126 C127 C476,
+575,dispensaire-rar-el-baroud,Dispensaire Rar El Baroud,34.710683,-1.884411,L25,1,,,C477,
+576,central-depot-de-marbre,Central / Dépôt de Marbre,34.708203,-1.885618,L25,1,depeau de marbre | central,623,C128 C253,
+577,visite-dekra-now-chark,Visite Dekra / Now Chark,34.704179218644,-1.8876421358355,L25,1,now chark | visite dekra,621,C129 C254,
+578,cafe-dadi-rafaie-metal,Café Dadi / Rafaie Métal,34.701449345476,-1.8859469704168,L25,1,rafaie metal | cafe dadi,620,C130 C255,
+579,cafe-euro-sport,Café Euro Sport,34.698617970626,-1.8842250093183,L25,1,cafe euro sport | face cafe euro sport,619,C131 C256,
+580,cafe-frensh-house,Café Frensh House,34.696792001752,-1.8830447969594,L25,1,cafe frensh house,,C478,
+581,immeuble-el-bayan,Immeuble El Bayan,34.696698,-1.887394,L25,1,,,C479,
+582,aswak-assalam,Aswak Assalam,34.697286,-1.891529,L25,1,,,C480,
+583,tennis-1-boulangerie-ziani,Tennis 1 / Boulangerie Ziani,34.69995,-1.893716,L25,1,boulangerie ziani | tennis 1,615,C132 C257,
+584,swi9a-tennis,Swi9a Tennis,34.698809,-1.895893,L25,1,,,C481,
+585,tennis2-taba-loto,Tennis2 / Taba Loto,34.697771059964,-1.898274424799,L25,1,taba loto | tennis2,614,C133 C258,
+586,residence-king,Résidence King,34.695762,-1.903138,L21 L25 L99,3,residence king,,C482,
+587,diwana,Diwana,34.691653186511,-1.9077803988129,L20 L21 L25,3,,,C483,
+588,pharmacie-diwana,Pharmacie Diwana,34.689501,-1.909738,L20 L25,2,,,C484,
+589,hotel-lblida,Hôtel Lblida,34.687238,-1.912047,L20 L25,2,hotel lblida,,C485,
+590,sahat-jada-place-jada,Sahat Jada / Place Jada,34.684478,-1.915174,L20 L25,2,PLACE JADA | sahat jada,669,C134 C259,
+591,bank-bmci-agence-inwi,Bank BMCI / Agence Inwi,34.679783321287,-1.9182890249687,L20 L25,2,AGENCE INWI | bank bmci,670,C135 C260,
+594,pharmacie-polyclinique,Pharmacie Polyclinique,34.669208522083,-1.9122057951191,L01 L24 L25,3,POLYCLINIQUE,924,C136 C486,
+596,idaa-alwataniya,Idaa Alwataniya,34.663727,-1.906822,L25,1,,,C487,
+598,mafrochat-donia-michwat-al-bahja,Mafrochat Donia / Michwat Al Bahja,34.660205,-1.903966,L25,1,MICHWAT AL BAHJA | mafrochat donia,603,C137 C261,
+599,terminus-mr-smith,Terminus Mr Smith,34.656518780661,-1.9005703801802,L25,1,termunis Mr SMITH,,C262,
+601,jardin-qods,Jardin Qods,34.653774,-1.895501,L25,1,,,C488,
+602,kissariat-el-qods,Kissariat El Qods,34.656828,-1.900556,L25,1,,,C489,
+604,cafe-cuinta,Café Cuinta,34.661657,-1.904948,L25,1,CAFE CUINTA,,C490,
+605,cafe-opheon,Café Opheon,34.664387,-1.907706,L25,1,CAFE OPHEON,,C491,
+609,la-poste-hay-rabat,La Poste (Hay Rabat),34.684316,-1.915071,L20 L25,2,LA POSTE,,C338,
+610,etablissement-des-uvres-sociales-dar-el-madrase,Établissement des Œuvres Sociales / Dar El Madrase,34.687097102095,-1.9119054016914,L20 L25,2,DAR EL MADRASE | etablissement des œuvres sociales,701,C138 C263,
+611,zalij-wlad-rkik-marbre-ouled-rgige,Zalij Wlad Rkik / Marbre Ouled Rgige,34.689335,-1.909655,L20 L25,2,MARBRE OULED RGIGE | zalij wlad rkik,702,C139 C264,
+612,cafe-diwana,Café Diwana,34.693242,-1.906122,L25,1,cafe diwana,,C492,
+613,regional,Régional,34.696056,-1.902024,L25,1,regional,,C493,
+616,al-jazzira-meuble,Al Jazzira Meuble,34.697108,-1.891445,L25,1,,,C494,
+617,cafe-clignancourt,Café Clignancourt,34.696459,-1.886936,L25,1,cafe clignancourt,,C495,
+618,banque-populaire-lotissement-talhaoui,Banque Populaire (Lotissement Talhaoui),34.695971505413,-1.8833393474748,L25,1,banque populaire,,C335,
+622,m3sart-zaytoune,M3sart Zaytoune,34.7055,-1.886917,L25,1,,,C496,
+624,pharmacie-el-boustane,Pharmacie El Boustane,34.710715,-1.884112,L25,1,,,C497,
+626,station-total,Station Total,34.709123,-1.890732,L25,1,,,C498,
+629,lycee-el-masira,Lycée El Masira,34.673364,-1.917464,L03,1,LYCEE EL MASIRA,,C499,
+630,la-belle-vie,La Belle Vie,34.67037770926,-1.9175434345582,L03,1,,,C500,
+631,direction-du-ministere-de-l-agriculture,Direction du Ministère de l'Agriculture,34.666876,-1.918236,L03,1,,,C501,
+633,hamam-a-salam-douche-es-salam,Hamam A Salam / Douche Es-salam,34.660203,-1.920525,L03 L20,2,DOUCHE ES-SALAM | HAMAM A SALAM,675,C140 C265,
+634,pharmacie-awinat-saraq,Pharmacie Awinat Saraq,34.658049,-1.921617,L03,1,,,C502,
+635,cabinet-banana,Cabinet Banana,34.656814877938,-1.9236911228695,L03,1,,,C503,
+636,auto-ecole-el-ikhlasse-la-pharmacie-central,Auto École El Ikhlasse / La Pharmacie Central,34.657780767015,-1.9260996533517,L03,1,la PHARMACIE CENTRAL | AUTO ECOLE EL  IKHLASSE,654,C141 C266,
+637,boulangerie-de-la-magie-ecole-khair-eddine,Boulangerie de la Magie / École Khair Eddine,34.658478,-1.927755,L03,1,ECOLE KHAIR EDDINE | BOULANGERIE DE LA MAGIE,653,C142 C267,
+638,centre-esafa-pont,Centre Esafa / Pont,34.658987,-1.930486,L03,1,PONT | CENTRE ESAFA,652,C143 C268,
+639,pharmacie-ben-khirane,Pharmacie Ben Khirane,34.656571,-1.933554,L03,1,,,C504,
+640,banqladech-ecole-el-jouhara,Banqladech / École El Jouhara,34.655845,-1.934595,L03,1,ECOLE EL JOUHARA | BANQLADECH,650,C144 C269,
+641,la-poste-hay-bangladech,La Poste (Hay Bangladech),34.650895,-1.939837,L03,1,LA POSTE,,C339,
+642,pharmacie-es-samara,Pharmacie Es-samara,34.650151,-1.940643,L03,1,FACE PHARMACIE ES-SAMARA,647,C145 C505,
+643,ecole-11-janvier,École 11 Janvier,34.64794,-1.942183,L03,1,FACE ECOLE 11 JANVIER | ECOLE 11 JANVIER,646,C146 C506,
+644,terminus-samara-644,Terminus Samara,34.646960384077,-1.9464361419065,L03,1,TERMUNIS SAMARA,,C270,
+645,terminus-samara,Terminus Samara,34.646964799976,-1.946441507878,L03,1,,,C271,
+648,station-de-pompage,Station de Pompage,34.65077,-1.94,L03,1,,,C507,
+649,grande-pharmacie,Grande Pharmacie,34.654255034883,-1.935219154681,L03,1,,,C508,
+651,face-pharmacie-benkirane,Face Pharmacie Benkirane,34.656382,-1.933448,L03,1,,,C509,
+655,hay-el-mousakaine,Hay El Mousakaine,34.656762704475,-1.9223768575413,L03,1,,,C510,
+656,cafe-de-papillons,Café de Papillons,34.659843,-1.920643,L03 L20,2,CAFE PAPILLION | cafe de papillons,696,C147 C511,
+657,residence-el-ikhlas-croissant-rouge,Résidence El Ikhlas / Croissant-rouge,34.663187,-1.919135,L03 L20,2,Croissant-Rouge | residence el ikhlas,632,C148 C272,
+658,cabinet-de-reeducation,Cabinet de Rééducation,34.666764279484,-1.9177687385619,L03,1,,,C273,
+659,face-pharmacie-benmchiche,Face Pharmacie Benmchiche,34.670139460679,-1.9182139868119,L03,1,,,C512,
+660,gendarmerie-royale,Gendarmerie Royale,34.673408809555,-1.9148353076209,L03,1,,,C513,
+662,terminus-maghreb-arabi-662,Terminus Maghreb Arabi,34.678283,-1.911646,L03 L09,2,TERMUNIS MAGHREB AL ARABI,,C274,
+663,terminus-veterinaire-dkhissi,Terminus Vétérinaire Dkhissi,34.702988490899,-1.9165187918757,L20,1,PIECE HAMIRI,,C275,
+664,residence-takadom,Résidence Takadom,34.697682933493,-1.9152045249939,L20,1,RESIDENCE TAKADOM,,C514,
+665,residence-takadom-2,Résidence Takadom 2,34.699275092584,-1.9141906670754,L20,1,RESIDENCE TAKADOM 2,,C515,
+667,attijariwafa-bank,Attijariwafa Bank,34.69967,-1.91117,L20,1,,,C516,
+668,le-parc-de-loisirs-cafe-de-cavalier,Le Parc de Loisirs / Café de Cavalier,34.6978,-1.90998,L20,1,CAFE DE CAVALIER | LE PARC DE LOISIRS,703,C149 C276,
+673,oujda-city-club,Oujda City Club,34.66846,-1.91846,L20,1,,,C517,
+674,en-face-douha-1,En Face Douha 1,34.66349,-1.91909,L20,1,,,C518,
+676,masjid-tayba-terrain-de-foot,Masjid Tayba / Terrain de Foot,34.65796,-1.91706,L20,1,TERRAIN DE FOOT | MASJID TAYBA,695,C150 C277,
+678,cafe-zenzy-dar,Café Zenzy Dar,34.6568,-1.90513,L20,1,CAFE ZENZY DAR,,C519,
+679,cafe-jbah,Café Jbah,34.65676,-1.89818,L20,1,CAFE JBAH,,C520,
+680,cafe-la-manoir,Café la Manoir,34.659929662399,-1.8985533527868,L20,1,CAFE LA MANOIRE,,C521,
+681,cafe-prado,Café Prado,34.663049575057,-1.895330091024,L20,1,CAFE PRADO,,C522,
+682,el-marsem-1,El Marsem 1,34.66477,-1.89577,L20,1,,,C523,
+683,clinique-pasteur,Clinique Pasteur,34.66691,-1.89717,L20,1,CLINYIQUE PASTEUR,,C524,
+685,terminus-parc-lalla-aicha,Terminus Parc Lalla Aicha,34.67122,-1.90584,L20,1,TERMUNIS PARC LALA AICHA,,C278,
+686,terminus-parc-lalla-aicha-686,Terminus Parc Lalla Aicha,34.67122,-1.90584,L20,1,TERMUNIS PARC AICHA,,C279,
+687,station-shell-hay-al-maksam,Station Shell (Hay Al Maksam),34.66638,-1.89709,L20,1,STATION SHELL,,C345,
+688,lycee-el-maghreb-el-arabi,Lycée El Maghreb El Arabi,34.664147728365,-1.8971589054883,L20,1,LYCEE EL MAGHREB EL ARABI,,C525,
+689,assurance-el-wafa,Assurance El Wafa,34.66231,-1.89899,L20,1,,,C526,
+690,cafe-parros,Café Parros,34.65961,-1.89869,L20,1,CAFEE PARROS,,C527,
+691,mosquee-el-qouds,Mosquée El Qouds,34.65677,-1.89841,L20,1,MOUSQUEE EL QOUDS,,C280,
+692,centre-d-appel,Centre d'Appel,34.65627167242,-1.9008225187025,L20,1,,,C528,
+694,cafe-la-boetie,Café la Boetie,34.65757,-1.91343,L20,1,CAFE LA BOETIE,,C529,
+697,face-ecole-romaissa,Face École Romaissa,34.66849381093,-1.9180155111126,L20,1,FACE ECOLE ROMAISSA,,C530,
+698,clinique-el-maghreb-el-arabi,Clinique El Maghreb El Arabi,34.67319,-1.91876,L20,1,CLYNIQUE EL MAGHREB EL ARABI,,C531,
+699,ministere-agriculture,Ministère Agriculture,34.67582,-1.91905,L20,1,MINISTERE AGRICULTURE,,C532,
+700,place-9-juillet,Place 9 Juillet,34.67947898624,-1.9184875659172,L20 L25,2,2026-07-09 00:00:00,608,C151 C533,
+705,mosquee-el-mansor-eddahbi,Mosquée El Mansor Eddahbi,34.701780105101,-1.9126671335161,L20,1,MOUSQUEE EL MANSOR EDDAHBI,,C281,
+706,terminus-veterinaire-dkhissi-706,Terminus Vétérinaire Dkhissi,34.703425079598,-1.9156926217854,L20,1,TERMUNIS VETERINAIRE DKHISSI,,C282,
+710,auto-ecole-serieux,Auto École Sérieux,34.679734801352,-1.9321721947576,L14,1,auto ecolele sérieux,,C534,
+711,al-jami-al-saghir,Al Jami'al Saghir,34.680850870841,-1.9357931707135,L14,1,,,C535,
+712,face-travaux-public,Face Travaux Public,34.681768480427,-1.9407981509856,L14,1,,,C536,
+713,mosquee-des-califes,Mosquée des Califes,34.682266916877,-1.9439578569008,L14,1,mousquée des califes,,C537,
+714,station-shell-omar-de-la-police,Station Shell / Omar de la Police,34.683815238677,-1.9498747711488,L14,1,omar de la police | station shell,720,C152 C283,
+715,l-entourage,L'Entourage,34.68498,-1.95377,L14,1,,,C538,
+716,aldrafif,Aldrafif,34.689271743636,-1.9540214631787,L14,1,drafif /R,718,C153 C539,
+717,terminus-sabra,Terminus Sabra,34.6929,-1.96102,L14,1,termunis sabra,,C284,
+719,cafe-l-entourage,Café l'Entourage,34.68439,-1.9537,L14,1,cafe l'entourage,,C540,
+721,travaux-public,Travaux Public,34.681547915342,-1.93922637961,L14,1,,,C541,
+722,la-maison-renault,La Maison Renault,34.680630319803,-1.9351708655975,L14,1,,,C542,
+723,lycee-salam,Lycée Salam,34.679214278761,-1.9316947102857,L14,1,,,C543,
+724,rond-point-oued-ennachef,Rond-point Oued Ennachef,34.675848296061,-1.9271081717091,L14 L15 L24,3,GARE ROUTIERE | POND MED 5,798 978,C154 C155 C544,
+727,gendarmerie-moulay-idriss,Gendarmerie / Moulay Idriss,34.673823339015,-1.9138097794133,L14 L15,2,MOULAY IDRISS | gendarmerie,981,C156 C285,
+728,cafe-de-verre,Café de Verre,34.67932,-1.91002,L14,1,cafe de verre,,C545,
+729,terminus-souk-el-qods-729,Terminus Souk El Qods,34.68241,-1.90932,L21 L99,2,STATION SOUK EL QOUDS | TERMUNIS EL QODS,844,C157 C286,
+730,diouna,Diouna,34.6925,-1.90679,L99,1,,,C546,
+731,regionale,Régionale,34.69621,-1.9023,L21 L99,2,REGEIONALE | REGIONALE,846,C158 C547,
+732,platino,Platino,34.70025,-1.89795,L21 L99,2,CAFE PALATINO,847,C159 C548,
+733,rja-fllah,Rja Fllah,34.7049,-1.89496,L21 L99,2,RJAFALLAH,848,C160 C549,
+734,chambre-commerciale,Chambre Commerciale,34.70946,-1.89018,L99,1,,,C550,
+737,village-okacha,Village Okacha,34.72421,-1.87837,L99,1,,,C551,
+738,dowar,Dowar,34.72856,-1.87551,L99,1,,,C552,
+739,cafe-cristal,Café Cristal,34.73261,-1.87269,L99,1,CAFE CRISTALE,,C553,
+740,cafe-shiwaya,Café Shiwaya,34.738041933356,-1.8693285113723,L99,1,CAFE SHIWAYA,,C554,
+741,cafe-dar-nassim-piscine-tropicale,Café Dar Nassim / Piscine Tropicale,34.74056,-1.86764,L99,1,piscine tropicale | CAFE DAR NASSIM,773,C161 C287,
+742,reseau,Réseau,34.74452,-1.8651,L99,1,reseau/R | RESEAU,771,C162 C555,
+743,zaytoune,Zaytoune,34.74752,-1.86314,L99,1,,,C556,
+744,sawri,Sawri,34.7502,-1.86138,L99,1,sawri /R,770,C163 C557,
+745,el-karma,El Karma,34.75177,-1.86023,L99,1,,,C558,
+746,el-kantouni,El Kantouni,34.75454,-1.85768,L99,1,,,C559,
+747,cafe-trocadero,Café Trocadero,34.75599061845,-1.8563624286942,L99,1,CAFE TROCADERO,,C560,
+748,takwin,Takwin,34.76041,-1.85287,L99,1,,,C561,
+749,qiadat,Qiadat,34.76128,-1.85225,L99,1,,,C562,
+750,zkara,Zkara,34.76456,-1.84992,L99,1,,,C563,
+751,sandiqa,Sandiqa,34.767959948766,-1.8483477675532,L99,1,,,C564,
+752,madrasa,Madrasa,34.7742,-1.84561,L99,1,,,C565,
+753,lbuyut,Lbuyut,34.77759,-1.84408,L99,1,lbyout 2,762,C164 C566,
+754,jamie,Jamie,34.78035,-1.84291,L99,1,,,C567,
+755,lamrira-ouled-aiyad,Lamrira / Ouled Aiyad,34.78308,-1.842,L99,1,ouled aiyad | LAMRIRA,758,C165 C288,
+756,terminus-karting,Terminus Karting,34.78496,-1.84137,L99,1,TERMUNIS KARTING,,C289,
+757,terminus-karting-757,Terminus Karting,34.78468,-1.84156,L99,1,al houdoda,,C290,
+759,ouled-nasser,Ouled Nasser,34.78142,-1.84264,L99,1,,,C568,
+760,ajamie,Ajamie,34.77995,-1.84311,L99,1,ajamie retour,,C291,
+761,lbyout-1,Lbyout 1,34.77881,-1.84361,L99,1,,,C569,
+763,chouk,Chouk,34.77442,-1.84559,L99,1,,,C570,
+764,sekaya,Sekaya,34.768444610098,-1.8482780596363,L99,1,,,C571,
+765,gendarmerie,Gendarmerie,34.7635261,-1.8506472,L99,1,,,C034 C572,
+766,el-hanout,El Hanout,34.75942,-1.85373,L99,1,,,C573,
+767,ferme-dahou,Ferme Dahou,34.75546,-1.85697,L99,1,fermer dahou,,C574,
+768,hanout-brahim,Hanout Brahim,34.75339,-1.85887,L99,1,,,C575,
+769,dispensaire-ahl-angad,Dispensaire Ahl Angad,34.751613867623,-1.8604498961819,L99,1,despensaire ahl angad,,C576,
+772,cafe-oued-eddahab,Café Oued Eddahab,34.741514951937,-1.8671609695635,L99,1,cafe oued eddahab,,C577,
+774,village-abdelkader,Village Abdelkader,34.737896349605,-1.8694943174085,L99,1,,,C578,
+775,cafe-nakhil,Café Nakhil,34.73276,-1.87288,L99,1,cafe nakhil,,C579,
+776,al-khima,Al Khima,34.73028,-1.87451,L99,1,,,C580,
+777,salle-des-fetes-al-jawhara,Salle des Fêtes Al Jawhara,34.72446,-1.87834,L99,1,salle des féte al jawhara,,C581,
+778,takwine,Takwine,34.719119246715,-1.8818163405699,L99,1,,,C582,
+779,station-ola-lotissement,Station Ola / Lotissement,34.718144770828,-1.8824278842253,L21 L99,2,LOTISSEMENT | station ola,857,C166 C292,
+781,station-energie-total-sekaya,Station Énergie Total / Sekaya,34.70874,-1.89107,L21 L99,2,SEKAYA | station energie total,866,C167 C293,
+782,maroc-telecom-wafa-cash,Maroc Telecom / Wafa Cash,34.7055,-1.89446,L21 L99,2,WAFA CASH | maroc telecom,867,C168 C294,
+783,cafe-samir-pont-rjafallah,Café Samir / Pont Rjafallah,34.70116,-1.89735,L21 L99,2,PONT RJAFALLAH | cafe samir,868,C169 C295,
+784,cafe-prince,Café Prince,34.691265211049,-1.9071417596421,L04 L21 L99,3,Café le Prince | cafe prince,168,C170 C583,
+785,pharmacie-ibn-sina-en-face-ecole-lala-aicha,Pharmacie Ibn Sina / En Face École Lala Aicha,34.6881,-1.90744,L04 L21 L99,3,en face ecole lala Aicha | pharmacie ibn sina,245,C171 C296,
+786,maison-de-l-elegance,Maison de l'Élégance,34.68544,-1.90921,L21 L99,2,MAISON D'ELEGANCE,870,C172 C584,
+787,terminus-diouna,Terminus Diouna,34.69239,-1.90748,L24,1,TERMUNIS DIOUNA,,C297,
+788,al-qiada,Al Qiada,34.69832,-1.91007,L24,1,,,C585,
+790,veterinaire-dkhissi-marche-aux-poissons,Vétérinaire Dkhissi / Marché aux Poissons,34.70349,-1.91511,L24,1,MARCHE AUX POISSONS | VETERINAIRE DKHISSI,841,C173 C298,
+792,pharmacie-nakhla,Pharmacie Nakhla,34.701131875773,-1.9192922208539,L24,1,,,C586,
+796,face-maison-des-jeune-ibn-sina,Face Maison des Jeune Ibn -sina,34.6833,-1.92121,L24,1,,,C587,
+803,pharmacie-hassan-ii-clinique-ibn-sina,Pharmacie Hassan II / Clinique Ibn Sina,34.66378606181,-1.905081863511,L01 L24,2,CLINIQUE IBN SINA | POLYCLINIQUE IBN SINA | PHARMACIE HASSAN II,208 372,C174 C175 C299,
+804,siege-du-parti-l-authenticite-et-de-la-modernite-boulangerie-ibn-sina,Siège du Parti l'Authenticité et de la Modernité / Boulangerie Ibn Sina,34.66370660272,-1.900313071434,L01 L24,2,BOULANGERIE IBN SINA | SIEGE DU PARTI L'AUTHENTICITE ET DE LA MODERNITE,950,C176 C300,
+805,lycee-al-maghreb-el-arabi,Lycée Al Maghreb El Arabi,34.664183191176,-1.8965846346732,L01 L24,2,LYCEE AL MAGHREB EL ARABI/R | LYCEE  MAGHREB L'ARABIE | LYCCE MAGHREB L'ARABIE | FACE LYCEE EL MAGHREB EL ARABI,827 927 949,C177 C178 C179 C301,
+807,cafe-al-manar,Café Al Manar,34.665427420398,-1.8890637112741,L01 L24,2,FACE ASSURANCE SALAM | STATION APPOLLO | CAFE AL MANAR,825 948,C180 C181 C588,
+808,village-jdid,Village Jdid,34.665643627257,-1.8850618569774,L24,1,,,C302,
+809,hamam-el-jaouhara,Hamam El Jaouhara,34.666115720968,-1.881558892004,L01 L24,2,HAMMAM AL JAOUHARA,930,C182 C589,
+810,mosquee-rayan-qsar-laalaj,Mosquée Rayan / Qsar Laalaj,34.667192279086,-1.876983055853,L01 L24,2,QASR LA'LAJ | TERMUNIS MOSQUEE BAB RAYAN | QSAR LAALAJ | MOSQUEE  RAYAN,822 931 945,C183 C184 C185 C303,
+811,centre-d-appel-rayan,Centre d'Appel Rayan,34.667717322266,-1.8747031719761,L24,1,,,C590,
+812,station-shell-lotissement-elhasaniya,Station Shell (Lotissement Elhasaniya),34.667518763542,-1.8714308707637,L24,1,STATION SHELL,,C346,
+813,groupe-scolaire-espace-sciences,Groupe Scolaire Espace Sciences,34.666649578679,-1.8674826622009,L24,1,,,C591,
+814,oasis-sidi-yahya,Oasis Sidi Yahya,34.667029018508,-1.8636846666643,L24,1,FACE OASIS SIDI YAHYA,818,C186 C592,
+815,residence-kenzi,Résidence Kenzi,34.6716924403,-1.8594628789961,L24,1,RESIDENCE KENZI,,C593,
+816,terminus-agdal-816,Terminus Agdal,34.674564411045,-1.8596452412452,L18 L24,2,TERMUNIS AGDAL,,C304,
+817,visite-technique-agdal,Visite Technique Agdal,34.6719,-1.85961,L24,1,,,C594,
+819,qiadat-sidi-yahya,Qiadat Sidi Yahya,34.66659,-1.867,L24,1,,,C595,
+820,el-hassania,El Hassania,34.66751429101,-1.8710339084902,L24,1,,,C596,
+821,ofppt-hay-hakkou,OFPPT (Hay Hakkou),34.66781431846,-1.8744993209839,L01 L24,2,OFPPT,,C341,
+823,station-apollo-cafe-4-etoiles,Station Apollo / Café 4 Étoiles,34.66630977747,-1.8811511993408,L01 L24,2,CAFE 4 ETOILES | STATION APOLLO,946,C187 C305,
+824,banque-populaire-hay-hakkou,Banque Populaire (Hay Hakkou),34.66575,-1.88473,L24,1,BANQUE POPULAIRE,,C336,
+826,face-cafe-achraf-pharmacie-al-safrioui,Face Café Achraf / Pharmacie Al-safrioui,34.665224416518,-1.8916171695956,L01 L24,2,PHARMACIE  AL-SAFRIOUI | FACE CAFE ACHRAF,806,C188 C306,
+828,mosquee-khaled-ibn-walid,Mosquée Khaled Ibn Walid,34.663856611104,-1.8993957388619,L01 L24,2,MOSQUEE KHALED IBN WALID,,C597,
+835,maison-des-jeune-ibn-sina,Maison des Jeune Ibn Sina,34.68342,-1.92099,L24,1,MAISON DES JEUNNE IBN SINA,,C598,
+838,station-de-juif,Station de Juif,34.69349,-1.91857,L24,1,,,C599,
+840,mosquee-lala-khadija,Mosquée Lala Khadija,34.703112011148,-1.9182620148986,L24,1,MOSQUEE LALA KHADIJA,,C600,
+843,le-parc-d-attractions,Le Parc d'Attractions,34.69803,-1.91008,L24,1,,,C601,
+849,station-toutal-energie,Station Toutal Énergie,34.70918,-1.89121,L21,1,STATION TOUTAL ENERGIE,,C602,
+850,wafa-cash,Wafa Cash,34.711041085039,-1.8936664068005,L21,1,,,C603,
+851,el-yajour-les-taxis-blancs,El Yajour / Les Taxis Blancs,34.71237,-1.89569,L21,1,LES TAXIS BLANCS | EL YAJOUR,864,C189 C307,
+852,laiterie-d-inezgane,Laiterie d'Inezgane,34.713924949738,-1.8942189076794,L21,1,,,C604,
+853,ofppt-hay-ennasr,OFPPT (Hay Ennasr),34.715265454546,-1.8930172827014,L21,1,OFPPT,,C342,
+854,hay-el-berkani-hay-sedra,Hay El Berkani / Hay Sedra,34.71975,-1.88896,L21,1,HAY SEDRA | HAY EL BERKANI,861,C190 C308,
+855,ecole-aziz-amine,École Aziz Amine,34.71905,-1.88707,L21,1,ECOLE AZIZ AMINE | FACE ECOLE AZIZ AMINE,860,C191 C309,
+856,brigo-gala-pharmacie-gala,Brigo Gala / Pharmacie Gala,34.71776,-1.88479,L21,1,PHARMACIE GALA | BRIGO GALA,859,C192 C310,
+858,terminus-gala,Terminus Gala,34.72013,-1.88131,L21 L99,2,FACE GALA | TERMUNIS GALA,736,C193 C311,
+862,face-ofppt,Face OFPPT,34.71652,-1.89198,L21,1,,,C605,
+863,boulangerie-anoual,Boulangerie Anoual,34.714833269187,-1.893489379452,L21,1,,,C606,
+865,lavage-el-miloud,Lavage El Miloud,34.71112,-1.89391,L21,1,,,C607,
+869,boutique-caprice-ocean,Boutique Caprice Ocean,34.69879,-1.89962,L21,1,,,C608,
+872,dar-beresoul,Dar Beresoul,34.67938,-1.90157,L18 L19,2,,,C609,
+874,berb-berahmoun,Berb Berahmoun,34.67972,-1.89212,L18 L19,2,,,C312,
+875,jardin-lazaret,Jardin Lazaret,34.68065,-1.88937,L18 L19,2,,,C313,
+876,boulangerie-allal-fassi,Boulangerie Allal Fassi,34.68164,-1.8864,L18 L19,2,,,C314,
+877,souk-el-had-lazaret,Souk El Had Lazaret,34.68035,-1.88386,L18,1,FACE SOUKA LAZARET,897,C194 C315,
+878,auto-ecole-ilham,Auto École Ilham,34.679015747596,-1.8828785652497,L18,1,AUTO ECOLE ILHAM,,C610,
+879,rond-point-mexico-cafe-al-muhajirin,Rond-point Mexico / Café Al Muhajirin,34.677754153392,-1.8819075636404,L18,1,CAFE AL MUHAJIRIN | ROND-POINT MEXICO,895,C195 C316,
+880,ancienne-cafe-mexico,Ancienne Café Mexico,34.67924,-1.87878,L18,1,ANCIENNE CAFE MEXICO,,C611,
+881,hammam-chtioui,Hammam Chtioui,34.68127,-1.87618,L18,1,FACE HAMMAM CHTIOUI,893,C196 C612,
+882,boulangerie-l-hirondelle-cafe-abdou,Boulangerie l'Hirondelle / Café Abdou,34.683409386511,-1.8743276440714,L18,1,CAFE ABDOU | BOULANGERIE L'HIRONDELLE,892,C197 C317,
+883,face-socio-sportif,Face Socio-sportif,34.682496360279,-1.8719726598957,L18,1,,,C613,
+884,pharmacie-ista,Pharmacie ISTA,34.679959807396,-1.8704223539599,L18,1,,,C614,
+885,ista-lazaret,ISTA Lazaret,34.6764,-1.8677,L18,1,,,C615,
+886,pharmacie-lasala,Pharmacie Lasala,34.67527,-1.86325,L18,1,,,C616,
+888,mini-market,Mini Market,34.67544,-1.86336,L18,1,,,C617,
+889,face-ista-lazaret,Face ISTA Lazaret,34.675945038103,-1.867101985822,L18,1,,,C618,
+890,mosquee-al-araf,Mosquée Al Araf,34.677837922558,-1.8685877090118,L18,1,MOSQUEE AL ARAF,,C619,
+891,hay-al-farah,Hay Al Farah,34.6808,-1.87078,L18,1,,,C620,
+894,boucherie-douidou,Boucherie Douidou,34.679152480212,-1.8789893326606,L18,1,,,C621,
+896,banque-populaire-lotissement-msirdi,Banque Populaire (Lotissement Msirdi),34.679236319426,-1.8829429304983,L18,1,BANQUE POPULAIRE,,C337,
+898,daman-cash,Daman Cash,34.68177,-1.88662,L18,1,,,C622,
+899,bureau-arabe,Bureau Arabe,34.68094,-1.88901,L18 L19,2,,,C623,
+900,derb-berahmoun,Derb Berahmoun,34.67946,-1.89333,L18 L19,2,DERB BERAHMOUN | FACE DERB BERAHMOUN,921,C198 C318,
+901,nouveau-souk-al-fallah,Nouveau Souk Al Fallah,34.67918,-1.89684,L18 L19,2,,,C624,
+902,salle-des-fetes-riad,Salle des Fêtes Riad,34.67962,-1.90216,L18 L19,2,SALLE DES FETE RIAD,,C625,
+903,souk-el-had-lazaret-903,Souk El Had Lazaret,34.682580110907,-1.8837207493629,L19,1,,,C319,
+904,mahlabat-niama-cafe-oyonnax,Mahlabat Niama / Café Oyonnax,34.68495,-1.88138,L19,1,CAFE OYONNAX | MAHLABAT NIAMA,918,C199 C320,
+905,salle-couvert-oued-eddahab-fassi-decor,Salle Couvert Oued Eddahab / Fassi Décor,34.68628,-1.88078,L19,1,FASSI DECOR | SALLE COUVERT OUED EDDAHAB,917,C200 C321,
+906,terminus-mosquee-arida,Terminus Mosquée Arida,34.68809,-1.87898,L19,1,MOSQUEE ARIDA | TERMUNIS MOSQUEE ARIDA,916,C201 C322,
+907,station-afriquia,Station Afriquia,34.68969,-1.87705,L19,1,,,C626,
+908,pharmacie-al-fath,Pharmacie Al Fath,34.69129,-1.87327,L19,1,,,C627,
+909,fath-2,Fath 2,34.69183,-1.86963,L19,1,,,C628,
+910,afrah-damnati,Afrah Damnati,34.69465,-1.87086,L19,1,,,C629,
+911,ofppt-agriculture,OFPPT Agriculture,34.69587,-1.87348,L19,1,,,C630,
+912,club-sportif-al-fath,Club Sportif Al Fath,34.69449,-1.87666,L19,1,,,C631,
+913,ofppt-hay-al-fath,OFPPT (Hay Al Fath),34.693395820463,-1.8787211350624,L19,1,OFPPT,,C343,
+914,mosquee-el-fath,Mosquée El Fath,34.69228,-1.88103,L19,1,MOSQUEE EL FATH,,C632,
+915,boulangerie-petit-dounia,Boulangerie Petit Dounia,34.6901,-1.87926,L19,1,,,C633,
+919,drif-food,Drif Food,34.682813953687,-1.8834739970084,L19,1,,,C634,
+920,cafe-al-yamani,Café Al Yamani,34.681684575065,-1.8868321133737,L19,1,CAFE AL YAMANI,,C635,
+922,terminus-enakhil-922,Terminus Enakhil,34.678331943703,-1.9104194314867,L01,1,TERMUNIS SAHAT NAKHEEL,,C323,
+928,pharmacie-sefraoui,Pharmacie Sefraoui,34.66521,-1.89103,L01,1,,,C636,
+929,pharmacie-al-manar,Pharmacie Al Manar,34.66562,-1.88584,L01,1,,,C637,
+932,cafe-good-life,Café Good Life,34.6654,-1.87492,L01,1,CAFE GOOD LIFE,,C638,
+933,complexe-social-najd,Complexe Social Najd,34.66344,-1.8743,L01,1,,,C639,
+934,mosquee-ka-b-ibn-malik,Mosquée Ka'b Ibn Malik,34.65988,-1.87306,L01,1,MOSQUEE KA'B IBN MALIK,,C640,
+935,najd-ii,Najd II,34.65635,-1.87251,L01,1,,,C641,
+937,lycee-abdellah-al-laroui,Lycée Abdellah Al -laroui,34.6558,-1.86768,L01,1,LYCEE ABDELLAH AL -LAROUI,,C642,
+938,mosquee-aljraa-ibn-malik,Mosquée Aljraa Ibn Malik,34.653482811839,-1.8673646294687,L01,1,MOSQUEE ALJRAA IBN MALIK,,C643,
+939,village-alzakara,Village Alzakara,34.657048941923,-1.8665707359927,L01,1,,,C644,
+940,village-alzakara-ii,Village Alzakara II,34.655883333237,-1.8664741516113,L01,1,,,C645,
+941,souka-lhad-sidi-yahya,Souka Lhad Sidi Yahya,34.66063,-1.8666,L01,1,,,C646,
+942,cimetiere-sidi-yahya,Cimetière Sidi Yahya,34.66264,-1.86666,L01,1,CIMETIERE  SIDI YAHYA,,C324,
+943,mosquee-amina-bent-wahb,Mosquée Amina Bent Wahb,34.66516,-1.86856,L01,1,MOSQUEE AMINA BENT WAHB,,C647,
+944,hay-pam,Hay Pam,34.66713,-1.87127,L01,1,,,C648,
+947,mosquee-al-firdaous,Mosquée Al Firdaous,34.66575,-1.8855,L01,1,MOSQUEE AL FIRDAOUS,,C649,
+952,terminus-maghreb-arabi-952,Terminus Maghreb Arabi,34.678173199025,-1.9116693859407,L09 L15,2,TERMUNIS MAGHREB ARABI,,C325,
+953,musee-lalla-meryem,Musée Lalla Meryem,34.677144543728,-1.9125118667825,L09 L15,2,MUSEE LALLA MERYEM,984,C202 C650,
+955,station-winxo-955,Station Winxo,34.675733561106,-1.9249999973693,L15,1,,,C651,
+957,mosquee-moussa-ibn-noussair,Mosquée Moussa Ibn Noussair,34.680987506977,-1.9362381268956,L15,1,MOUSQUEE MOUSSA IBN NOUSSAIR,,C326,
+958,cafe-alworoud,Café Alworoud,34.681782211787,-1.9382221941115,L15,1,CAFE ALWOROUD,,C652,
+959,lycee-al-moutanabi,Lycée Al Moutanabi,34.685757902546,-1.9369838478045,L15,1,LYCEE AL MOUTANABI,,C653,
+960,restaurant-bel-adel,Restaurant Bel Adel,34.687066203019,-1.9393604636503,L15,1,,,C654,
+961,hay-lmharach-1-boulangerie-amira,Hay Lmharach 1 / Boulangerie Amira,34.687851815925,-1.9423921661311,L05 L15,2,Hay Lmharach 1 | BOULANGERIE AMIRA | MHARACH I,325 972,C029 C203 C204 C327,
+962,mharach-ii,Mharach II,34.689713832414,-1.9439097122976,L05 L15,2,Hay Lmharach,319 971,C030 C205 C206 C655,
+963,avant-station-shell,Avant Station Shell,34.696577371109,-1.9415383226037,L15,1,,,C656,
+964,face-au-centre-al-mouloudia,Face au Centre Al Mouloudia,34.700746868449,-1.9391899052959,L15,1,,,C657,
+965,reseau-inwi,Réseau Inwi,34.702737446339,-1.93458560961,L15,1,RESEAU INWI,,C658,
+966,cafe-minya,Café Minya,34.704743984488,-1.930922294678,L15,1,CAFE MINYA,,C659,
+967,terminus-jarf-lakhdar,Terminus Jarf Lakhdar,34.705418882033,-1.9333259050583,L15,1,TERMUNIS JARF LAKHDAR,,C328,
+968,pont-jarf-lakhdar,Pont Jarf Lakhdar,34.703367170707,-1.9330793670941,L15,1,,,C660,
+969,dispensaire-jarf,Dispensaire Jarf,34.702075076108,-1.9371027940258,L15,1,,,C661,
+970,village-taffah,Village Taffah,34.6982880555556,-1.9410267,L15,1,,,C662,
+973,college-mekki-nassire,Collège Mekki Nassire,34.686955526355,-1.9406098852357,L15,1,COLLEGE MEKKI NASSIRE,,C663,
+974,pharmacie-almouloudia,Pharmacie Almouloudia,34.684357843106,-1.9426703623955,L15,1,,,C664,
+975,travaux-public-975,Travaux Public,34.681741902709,-1.9417204875515,L15,1,TRAVEAUX PUBLIC,,C665,
+979,clinique-chark,Clinique Chark,34.675265958586,-1.9242221070413,L15,1,,,C666,
+980,la3lam-980,La3lam,34.674727739234,-1.9220602434682,L15,1,,,C667,
+985,cafe-rihab,Café Rihab,34.678469730154,-1.9189879730616,L09,1,CAFE RIHAB,,C668,
+986,marche-couvert,Marché Couvert,34.683697645424,-1.917897041832,L09,1,MARCHE COUVERT,1010,C207 C669,
+987,cinema-colisee,Cinéma Colisée,34.686373649005,-1.9163042710824,L09,1,CINEMA COULISE,,C670,
+988,station-shell-lihoudi,Station Shell (Lihoudi),34.692765978988,-1.9183642977119,L09,1,,,C671,
+989,majlis-aljiha,Majlis Aljiha,34.697856474128,-1.9190061294339,L09,1,,,C672,
+990,marche-de-gros,Marché de Gros,34.701842639658,-1.9191259440912,L09,1,MARCHE DE GROS /R | MARCHE DE GROS,1005,C208 C673,
+992,golf,Golf,34.71223166391,-1.9204616686451,L09,1,,,C674,
+993,rond-point-cgi,Rond Point CGI,34.717034740037,-1.9215561994566,L09,1,ROND POINT CGI /R,1001,C209 C675,
+994,mosquee-al-hajar-al-aswad,Mosquée Al Hajar Al Aswad,34.715851862418,-1.9251985010326,L09,1,MOUSQUEE AL HAJAR AL ASWAD | MOSQUEE AL HAJAR AL ASWAD,1000,C210 C676,
+995,hay-annahar,Hay Annahar,34.719111271504,-1.9302679164631,L09,1,FACE HAY ANNAHAR,999,C211 C677,
+996,ste-solifer,Ste Solifer,34.728806002019,-1.9328320445857,L09,1,,,C678,
+997,terminus-marjane,Terminus Marjane,34.736472378405,-1.9268453059043,L09,1,TERMUNIS MARJANE,,C329,
+998,terminus-marjane-998,Terminus Marjane,34.73650770586,-1.9267272949219,L09,1,TERMUNIS MARJANE,,C330,
+1002,auto-holl,Auto Holl,34.711349320873,-1.9205260074833,L09,1,,,C679,
+1003,lycee-derfoufi-1003,Lycée Derfoufi,34.708482472826,-1.9202094990517,L09,1,LYCEE DERFOUFI/R,,C331,
+1004,cimetiere,Cimetière,34.705267630043,-1.9197320332225,L09,1,CIMETIERE /R,,C332,
+1008,riwa9-alfounoun,Riwa9 Alfounoun,34.690934601767,-1.9179082010022,L09,1,RIWA9 ALFOUNOUN/R,,C333,
+1009,face-au-cinema-colisee,Face au Cinéma Colisée,34.686470760767,-1.9165885355243,L09,1,FACE AU CINEMA COLISEE,,C680,
+1011,cafe-rihab-1011,Café Rihab,34.680317104656,-1.9196891318602,L09,1,CAFE RIHAB/R,,C334,
+1012,hopital-alfarabi,Hôpital Alfarabi,34.675226121859,-1.9150166926852,L09,1,HOPITAL ALFARABI,,C681,
+10142,maroc-telecom-hay-al-maksam,Maroc Telecom (Hay Al Maksam),34.6663195,-1.8969031,L02,1,MAROC TELECOM,,C001,
