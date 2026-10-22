@@ -120,6 +120,7 @@ def build(csv_dir):
     lines_csv = read_csv(os.path.join(csv_dir, "lines.csv"))
     stops_csv = read_csv(os.path.join(csv_dir, "stops.csv"))
     line_stops_csv = read_csv(os.path.join(csv_dir, "line_stops.csv"))
+    shapes = read_shapes(os.path.join(csv_dir, "shapes.csv"))
     issues = []
 
     stops = {}
@@ -209,6 +210,16 @@ def build(csv_dir):
                 "stops": ids,
                 "minutes": [round(segment_minutes(k), 2) for k in seg_km],
             }
+            shape = shapes.get((l["line_name"], direction))
+            if shape and [sid for sid, _ in shape["stops"]] == ids and all(
+                    haversine_km(shape["points"][i], (stops[sid]["lat"], stops[sid]["lng"])) < 0.005
+                    for sid, i in shape["stops"]):
+                line["directions"][direction]["shape"] = [[round(a, 5), round(b, 5)] for a, b in shape["points"]]
+                line["directions"][direction]["shapeStops"] = [i for _, i in shape["stops"]]
+            elif shapes:
+                issues.append({"type": "stale_shape", "line": lid, "direction": direction,
+                               "detail": f"The road shape of {l['line_name']} ({direction}) no longer matches its stops; "
+                                         f"drawn with straight lines. Run tools/build_shapes.py."})
             for s in ids:
                 if lid not in stops[s]["lines"]:
                     stops[s]["lines"].append(lid)
@@ -247,6 +258,19 @@ def build(csv_dir):
     }
 
 
+def read_shapes(path):
+    """{(line_name, direction): {"points": [(lat, lng)], "stops": [(station_id, point index)]}} from shapes.csv."""
+    out = {}
+    if not os.path.exists(path):
+        return out
+    for r in read_csv(path):
+        sh = out.setdefault((r["line_name"], r["direction"]), {"points": [], "stops": []})
+        if r["station_id"]:
+            sh["stops"].append((int(r["station_id"]), len(sh["points"])))
+        sh["points"].append((float(r["lat"]), float(r["lng"])))
+    return out
+
+
 def geojson(network):
     stops = {s["id"]: s for s in network["stops"]}
     features = []
@@ -257,7 +281,8 @@ def geojson(network):
                 "properties": {"line": l["name"], "direction": direction, "color": l["color"],
                                "from": stops[d["stops"][0]]["name"], "to": stops[d["stops"][-1]]["name"]},
                 "geometry": {"type": "LineString",
-                             "coordinates": [[stops[s]["lng"], stops[s]["lat"]] for s in d["stops"]]},
+                             "coordinates": [[lng, lat] for lat, lng in d["shape"]] if "shape" in d
+                             else [[stops[s]["lng"], stops[s]["lat"]] for s in d["stops"]]},
             })
     names = {l["id"]: l["name"] for l in network["lines"]}
     for s in network["stops"]:

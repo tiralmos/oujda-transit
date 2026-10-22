@@ -120,14 +120,27 @@ test('options are sorted by estimated time', () => {
 });
 
 test('stops with doubtful coordinates are not used for walking', () => {
-  const suspect = net.stops.find((s) => s.flags.includes('suspect_location'));
+  // No stop is flagged in the current data, so flag one in a copy of the network.
+  const flagged = structuredClone(net);
+  const suspect = flagged.stops.find((s) => s.id === 269);
+  suspect.flags.push('suspect_location');
   const nearby = { type: 'point', lat: suspect.lat + 0.0005, lng: suspect.lng };
-  const far = net.stops.find((s) => !s.flags.includes('suspect_location') && distanceM(s, suspect) > 3000);
-  for (const o of planner.plan(nearby, { type: 'stop', id: far.id })) {
+  const far = flagged.stops.find((s) => !s.flags.includes('suspect_location') && distanceM(s, suspect) > 3000);
+  for (const o of createPlanner(flagged).plan(nearby, { type: 'stop', id: far.id })) {
     for (const leg of o.legs) {
       if (leg.type === 'walk') {
         for (const p of [leg.from, leg.to]) if (p.type === 'stop') assert.notEqual(p.id, suspect.id);
       }
+    }
+  }
+});
+
+test('ride legs know where they start on their line direction', () => {
+  const [a, b] = [line('L02').directions.aller.stops[2], line('L02').directions.aller.stops[8]];
+  for (const o of planner.plan({ type: 'stop', id: a }, { type: 'stop', id: b })) {
+    for (const leg of o.legs.filter((l) => l.type === 'ride')) {
+      const d = leg.line.directions[leg.direction];
+      assert.deepEqual(d.stops.slice(leg.first, leg.first + leg.stops.length), leg.stops);
     }
   }
 });

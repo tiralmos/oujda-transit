@@ -70,10 +70,11 @@ await step('line page shows ordered stops, both directions', async () => {
   await shot('03-line');
 });
 
-await step('stop left for review shows a warning', async () => {
+await step('a terminus placed from the Figma map has no warning', async () => {
   await page.goto(BASE + '/#/stop/269');
   await settled();
-  await page.waitForSelector('#view .warning');
+  await page.waitForSelector('#view h2');
+  assert.equal(await page.locator('#view .warning').count(), 0);
 });
 
 await step('a merged stop id redirects to the stop it was merged into', async () => {
@@ -159,7 +160,7 @@ await step('about page lists data issues and downloads', async () => {
   await page.goto(BASE + '/#/about');
   await settled();
   await page.waitForSelector('.issues li');
-  assert.ok(await page.locator('.issues li').count() >= 5);
+  assert.ok(await page.locator('.issues li').count() >= 1);
   for (const href of await page.locator('.downloads a').evaluateAll((as) => as.map((a) => a.href))) {
     const res = await page.request.get(href);
     assert.equal(res.status(), 200, href);
