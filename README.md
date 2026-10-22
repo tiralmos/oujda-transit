@@ -133,7 +133,10 @@ What the current corrections do (exported 2026-10-22, 698 stops before, 529 afte
   the same name up to 60 m apart. Not merged: a line's aller and retour termini (each direction keeps
   its own stop), two stops of the same line and direction, and stops whose new position is only an
   estimate.
-- **Names (73 renamed)**: stops of the same terminus share one name (*Terminus Maghreb Arabi*,
+- **Names (135 renamed)**: a merged stop that combined two differently named stops is called
+  "A / B", the one serving more lines first (*Pharmacie Hassan II / Clinique Ibn Sina*); when it
+  combined three or more names it takes the most prominent one and the others stay searchable.
+  Stops of the same terminus share one name (*Terminus Maghreb Arabi*,
   *Terminus Enakhil* for Sahat Nakheel, ...); "Termunis/Terminis", "Mousquee" and "/R" or "retour"
   suffixes are fixed; stops with the same name in different places get their neighbourhood added
   (*OFPPT (Hay Hakkou)*); stop 608, named `2026-07-09 00:00:00` in the export, is "9 juillet" read
