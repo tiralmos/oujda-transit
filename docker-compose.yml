@@ -1,0 +1,14 @@
+services:
+  oujda-transit:
+    build: .
+    image: oujda-transit:latest
+    container_name: oujda-transit
+    ports:
+      - "${PORT:-8080}:80"
+    environment:
+      # Map tiles. The default is the public OpenStreetMap server; for heavy use,
+      # point this at your own tile server or a provider (see README).
+      TILE_URL: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+      TILE_MAX_ZOOM: "19"
+      DEFAULT_LANGUAGE: "fr"   # fr, en or ar
+    restart: unless-stopped

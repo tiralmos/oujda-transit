@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Oujda Transit</title>
+  <meta name="description" content="Lignes et arrêts de bus d’Oujda sur OpenStreetMap : recherche, lignes, arrêts proches, favoris et itinéraires.">
+  <meta name="theme-color" content="#0b5d4b">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/theme-init.js"></script>
+</head>
+<body>
+  <div id="map" aria-label="Carte"></div>
+  <aside id="panel">
+    <button id="panel-handle" type="button" aria-label="Agrandir ou réduire le panneau"><span></span></button>
+    <header class="top">
+      <a class="brand" href="#/"><img src="icons/icon.svg" alt="" width="28" height="28"><span id="app-name">Oujda Transit</span></a>
+      <div class="top-actions">
+        <select id="lang" aria-label="Langue"></select>
+        <button id="theme-btn" class="icon-btn" type="button"></button>
+      </div>
+    </header>
+    <div class="search">
+      <div class="ac">
+        <input id="search" type="search" autocomplete="off" spellcheck="false" placeholder="Rechercher un arrêt ou une ligne…"
+          role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="search-list">
+        <ul class="ac-list" id="search-list" role="listbox" hidden></ul>
+      </div>
+    </div>
+    <nav class="tabs">
+      <a href="#/" data-tab="lines">Lignes</a>
+      <a href="#/nearby" data-tab="nearby">À proximité</a>
+      <a href="#/plan" data-tab="plan">Itinéraire</a>
+      <a href="#/favorites" data-tab="favorites">Favoris</a>
+      <a href="#/about" data-tab="about">Infos</a>
+    </nav>
+    <main id="view" tabindex="-1"></main>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <noscript>Cette application nécessite JavaScript.</noscript>
+  <script src="config.js"></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
