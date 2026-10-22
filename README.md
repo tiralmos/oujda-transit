@@ -43,13 +43,13 @@ cd oujda-transit
 docker compose up -d --build
 ```
 
-Then open <http://localhost:8080>. To use another port: `PORT=9000 docker compose up -d --build`.
+Then open <http://localhost:3002>. To use another port: `PORT=9000 docker compose up -d --build`.
 
 Without Compose:
 
 ```sh
 docker build -t oujda-transit .
-docker run -d --name oujda-transit -p 8080:80 --restart unless-stopped oujda-transit
+docker run -d --name oujda-transit -p 3002:80 --restart unless-stopped oujda-transit
 ```
 
 The container has a health check (`/healthz`) and needs no volumes, database or outbound access;
@@ -120,7 +120,7 @@ End-to-end test against a running container (needs Playwright with Chromium):
 ```sh
 docker compose up -d --build
 npm install --no-save playwright && npx playwright install chromium
-BASE_URL=http://localhost:8080 node tests/e2e/smoke.mjs
+BASE_URL=http://localhost:3002 node tests/e2e/smoke.mjs
 ```
 
 Layout:

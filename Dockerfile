@@ -11,7 +11,9 @@ COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY docker/40-oujda-config.sh /docker-entrypoint.d/40-oujda-config.sh
 COPY web/ /usr/share/nginx/html/
 COPY --from=data /build/out/ /usr/share/nginx/html/data/
-RUN chmod +x /docker-entrypoint.d/40-oujda-config.sh \
+# Strip Windows line endings (a CRLF checkout breaks the script's shebang).
+RUN sed -i 's/\r$//' /docker-entrypoint.d/40-oujda-config.sh \
+    && chmod +x /docker-entrypoint.d/40-oujda-config.sh \
     && chmod -R a+rX /usr/share/nginx/html
 EXPOSE 80
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \

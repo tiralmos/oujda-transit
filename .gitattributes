@@ -1,0 +1,7 @@
+# Keep LF line endings in the working tree on every OS. The container's
+# start-up script fails with "not found" if it is checked out with CRLF.
+* text=auto eol=lf
+*.png binary
+# Data and vendored files are kept byte-for-byte as they came.
+*.csv -text
+web/vendor/** -text
