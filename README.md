@@ -4,7 +4,7 @@ A self-hostable web app for the Oujda bus network: every line and stop on an
 OpenStreetMap map, with search, line pages, nearby stops, favorites and a trip
 planner. Runs as a single small Docker container (nginx serving static files).
 
-The network data (24 lines, 698 stops, 529 after corrections) was exported on 2026-10-22 from the
+The network data (24 lines, 698 stops, 531 after corrections) was exported on 2026-10-22 from the
 server behind the 7afilati app (SOMAYAR SA). It lives in [`data/`](data/) as CSV.
 
 ## Features
@@ -116,9 +116,9 @@ python3 tools/apply_corrections.py          # data/source + data/corrections.csv
 npm test                                    # includes a check that data/*.csv is up to date
 ```
 
-What the current corrections do (exported 2026-10-22, 698 stops before, 529 after):
+What the current corrections do (exported 2026-10-22, 698 stops before, 531 after):
 
-- **Misplaced stops (33 moved, 1 split)**: stops kilometres away from their neighbours on the line
+- **Misplaced stops (41 moved, 2 split)**: stops kilometres away from their neighbours on the line
   were placed where the route says they must be, using, in order of preference, a matching
   OpenStreetMap feature on the route (for example L02's *Maroc Telecom*, the agency on Boulevard
   Abderrahim Bouabid, while L20 keeps its own *Maroc Telecom* in the north), the named street on the
@@ -126,14 +126,17 @@ What the current corrections do (exported 2026-10-22, 698 stops before, 529 afte
   another line (*Hay Lmharach 1* = L15's *Mharach I*), or a point part-way along the road route
   between the neighbours (`low` confidence). Road routes come from the OSRM demo server and
   OpenStreetMap features from Nominatim.
-- **Stops left for review (7 flagged)**: line ends with no evidence to place them (for example L17's
-  *Terminus Village Bekay* and L07's *Terminus Faculte des Lettres*, both with city-centre
-  coordinates). They keep their coordinates and show an orange "!" in the app.
-- **Merged stops (170)**: stops less than about 20 m apart became one stop, and so did stops with
+- **Line ends placed from ISA's hand-drawn Figma map** (8 moved, 1 split): the termini and last
+  stops that had no other evidence (city-centre coordinates for L07's *Terminus Faculté des Lettres*,
+  L13's *Terminus Bouchtat*, L17's *Terminus Village Bekay*, L02's far terminus, ...) were put where
+  the Figma "Oujda Bus Map" ends each line. The map was lined up with real coordinates by matching
+  its stop dots to the stops of the same lines (scale, offset, north up; median error about 23 m).
+  The `flag` action is still available for stops that need a check; none are flagged today.
+- **Merged stops (169)**: stops less than about 20 m apart became one stop, and so did stops with
   the same name up to 60 m apart. Not merged: a line's aller and retour termini (each direction keeps
   its own stop), two stops of the same line and direction, and stops whose new position is only an
   estimate.
-- **Names (470 renamed)**: every name is in title case (the first letter of every word capitalised,
+- **Names (471 renamed)**: every name is in title case (the first letter of every word capitalised,
   except French small words such as *de*, *des*, *la*: *Faculté des Sciences*, *Consulat d'Algérie*;
   Roman numerals and acronyms such as OFPPT stay upper case), with French words spell-checked (*cafe* → *café*, *ecole* → *école*, *carfour* →
   *carrefour*, ...). A merged stop that combined two differently named stops is called

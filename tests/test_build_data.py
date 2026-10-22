@@ -1,6 +1,8 @@
+import csv
 import json
 import re
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -72,11 +74,31 @@ class BuildDataTest(unittest.TestCase):
         # The L31 airport line is genuinely long-distance and not flagged.
         self.assertNotIn("suspect_location", self.stops[507]["flags"])
 
+    def test_line_ends_placed_from_the_figma_map(self):
+        # L17's terminus had city-centre coordinates; it now ends the line in Sidi Maafa, unflagged.
+        s269, s402 = self.stops[269], self.stops[402]
+        self.assertLess(build_data.haversine_km((s269["lat"], s269["lng"]), (s402["lat"], s402["lng"])), 0.5)
+        self.assertNotIn("suspect_location", s269["flags"])
+        # L02 has its own far terminus; L04 keeps stop 263 north of the centre.
+        self.assertEqual(self.lines["L02"]["directions"]["aller"]["stops"][-1], 10263)
+        self.assertEqual(self.lines["L04"]["directions"]["aller"]["stops"][0], 263)
+
     def test_stops_left_for_review_are_flagged(self):
-        # L17's terminus could not be placed: flagged with the corrections' note.
-        self.assertIn("suspect_location", self.stops[269]["flags"])
+        with tempfile.TemporaryDirectory() as tmp:
+            for name in ("lines.csv", "stops.csv", "line_stops.csv"):
+                shutil.copy(os.path.join(ROOT, "data", name), tmp)
+            path = os.path.join(tmp, "stops.csv")
+            rows = build_data.read_csv(path)
+            next(r for r in rows if r["station_id"] == "269")["review_note"] = "Village Bekay needs a check"
+            with open(path, "w", encoding="utf-8", newline="") as f:
+                w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+                w.writeheader()
+                w.writerows(rows)
+            net = build_data.build(tmp)
+        stop = next(s for s in net["stops"] if s["id"] == 269)
+        self.assertIn("suspect_location", stop["flags"])
         self.assertTrue(any(i["type"] == "suspect_location" and i["stop"] == 269 and "Village Bekay" in i["detail"]
-                            for i in self.net["issues"]))
+                            for i in net["issues"]))
 
     def test_display_label(self):
         self.assertEqual(build_data.display_label("TERMUNIS SAHAT NAKHEEL"), "Terminus Sahat Nakheel")

@@ -1,6 +1,6 @@
 ﻿line_id,line_name,line_color,aller_from,aller_to,aller_stop_count,retour_from,retour_to,retour_stop_count
 1,L01,#000000,terminus-enakhil-922,mosquee-rayan-qsar-laalaj,13,cafe-good-life,yotno-belhoussine-moin-1,27
-2,L02,#000001,terminus-enakhil,terminus-souk-el-qods,19,terminus-souk-el-qods,terminus-enakhil,17
+2,L02,#000001,terminus-enakhil,terminus-souk-el-qods-hay-al-andalous,19,terminus-souk-el-qods-hay-al-andalous,terminus-enakhil,17
 3,L03,#000002,terminus-maghreb-arabi,terminus-samara-644,18,terminus-samara,terminus-maghreb-arabi-662,19
 4,L04,#000003,terminus-souk-el-qods,hay-zrarka,12,hay-zrarka,terminus-souk-el-qods,11
 5,L05,#000004,terminus-bab-sidi-abdelouahab-472,terminus-lmharach,7,mharach-ii,terminus-bab-sidi-abdelouahab,11

@@ -16,7 +16,7 @@
 1,L01,retour,0,moin-1,2,2,933,complexe-social-najd,Complexe Social Najd,34.66344,-1.8743,941
 1,L01,retour,0,moin-1,3,3,934,mosquee-ka-b-ibn-malik,Mosquée Ka'b Ibn Malik,34.65988,-1.87306,942
 1,L01,retour,0,moin-1,4,4,935,najd-ii,Najd II,34.65635,-1.87251,943
-1,L01,retour,0,moin-1,5,5,197,mosquee-elbourak-parc-najd,Mosquée Elbourak / Parc Najd,34.6568454,-1.8692252,944
+1,L01,retour,0,moin-1,5,5,936,parc-najd,Parc Najd,34.65692,-1.86928,944
 1,L01,retour,0,moin-1,6,6,937,lycee-abdellah-al-laroui,Lycée Abdellah Al -laroui,34.6558,-1.86768,945
 1,L01,retour,0,moin-1,7,7,938,mosquee-aljraa-ibn-malik,Mosquée Aljraa Ibn Malik,34.653482811839,-1.8673646294687,946
 1,L01,retour,0,moin-1,8,8,939,village-alzakara,Village Alzakara,34.657048941923,-1.8665707359927,947
@@ -56,10 +56,10 @@
 2,L02,aller,1,terminus-souk-qods,15,14,225,ecole-annassiha,École Annassiha,34.6546451,-1.8934184,981
 2,L02,aller,1,terminus-souk-qods,16,15,294,oued-amam,Oued Amam,34.6556741,-1.8916567,982
 2,L02,aller,1,terminus-souk-qods,17,16,342,pharmacie-elmichkat,Pharmacie Elmichkat,34.658147,-1.8833846,983
-2,L02,aller,1,terminus-souk-qods,18,17,197,mosquee-elbourak-parc-najd,Mosquée Elbourak / Parc Najd,34.6568454,-1.8692252,984
-2,L02,aller,1,terminus-souk-qods,19,18,263,terminus-souk-el-qods,Terminus Souk El Qods,34.68163837292,-1.9083823140081,985
-2,L02,retour,0,terminus-enakhil,1,0,263,terminus-souk-el-qods,Terminus Souk El Qods,34.68163837292,-1.9083823140081,986
-2,L02,retour,0,terminus-enakhil,2,1,197,mosquee-elbourak-parc-najd,Mosquée Elbourak / Parc Najd,34.6568454,-1.8692252,987
+2,L02,aller,1,terminus-souk-qods,18,17,197,mosquee-elbourak,Mosquée Elbourak,34.6588837,-1.8834440,984
+2,L02,aller,1,terminus-souk-qods,19,18,10263,terminus-souk-el-qods-hay-al-andalous,Terminus Souk El Qods (Hay Al Andalous),34.6597241,-1.8846484,985
+2,L02,retour,0,terminus-enakhil,1,0,10263,terminus-souk-el-qods-hay-al-andalous,Terminus Souk El Qods (Hay Al Andalous),34.6597241,-1.8846484,986
+2,L02,retour,0,terminus-enakhil,2,1,197,mosquee-elbourak,Mosquée Elbourak,34.6588837,-1.8834440,987
 2,L02,retour,0,terminus-enakhil,3,2,225,ecole-annassiha,École Annassiha,34.6546451,-1.8934184,988
 2,L02,retour,0,terminus-enakhil,4,3,294,oued-amam,Oued Amam,34.6556741,-1.8916567,989
 2,L02,retour,0,terminus-enakhil,5,4,380,jardin-elqods,Jardin Elqods,34.6535048,-1.8950815,990
@@ -123,8 +123,8 @@
 4,L04,aller,1,hay-zrarka,9,8,441,rue-elistiklal-pharmacie-elmajd,Rue Elistiklal (Pharmacie Elmajd),34.7061291,-1.9150387,1048
 4,L04,aller,1,hay-zrarka,10,9,443,rue-nibrass,Rue Nibrass,34.7067638,-1.9109256,1049
 4,L04,aller,1,hay-zrarka,11,10,436,rue-20,Rue 20,34.70941383533,-1.910365819931,1050
-4,L04,aller,1,hay-zrarka,12,11,361,hay-zrarka,Hay Zrarka,34.71302981074,-1.8974965810776,1051
-4,L04,retour,0,terminus-souk-qods,1,0,361,hay-zrarka,Hay Zrarka,34.71302981074,-1.8974965810776,1052
+4,L04,aller,1,hay-zrarka,12,11,361,hay-zrarka,Hay Zrarka,34.7141087,-1.9084951,1051
+4,L04,retour,0,terminus-souk-qods,1,0,361,hay-zrarka,Hay Zrarka,34.7141087,-1.9084951,1052
 4,L04,retour,0,terminus-souk-qods,2,1,436,rue-20,Rue 20,34.70941383533,-1.910365819931,1053
 4,L04,retour,0,terminus-souk-qods,3,2,443,rue-nibrass,Rue Nibrass,34.7067638,-1.9109256,1054
 4,L04,retour,0,terminus-souk-qods,4,3,441,rue-elistiklal-pharmacie-elmajd,Rue Elistiklal (Pharmacie Elmajd),34.7061291,-1.9150387,1055
@@ -165,10 +165,10 @@
 6,L07,aller,1,terminus-faculte-des-lettres,10,9,35,al-irfane-2,Al Irfane 2,34.6514821,-1.9135433,1090
 6,L07,aller,1,terminus-faculte-des-lettres,11,10,351,pharmacie-hay-rabie,Pharmacie Hay Rabie,34.6497173,-1.9117916,1091
 6,L07,aller,1,terminus-faculte-des-lettres,12,11,437,rue-al-hanaa-mosquee-anour-almohammadi,Rue Al Hanaa Mosquée Anour Almohammadi,34.6483072,-1.9076569,1092
-6,L07,aller,1,terminus-faculte-des-lettres,13,12,451,sidi-maafa,Sidi Maafa,34.693347292017,-1.9059669971466,1093
-6,L07,aller,1,terminus-faculte-des-lettres,14,13,477,terminus-faculte-des-lettres,Terminus Faculté des Lettres,34.6795854,-1.9090941,1094
-6,L07,retour,0,terminus-enakhil,1,0,477,terminus-faculte-des-lettres,Terminus Faculté des Lettres,34.6795854,-1.9090941,1095
-6,L07,retour,0,terminus-enakhil,2,1,451,sidi-maafa,Sidi Maafa,34.693347292017,-1.9059669971466,1096
+6,L07,aller,1,terminus-faculte-des-lettres,13,12,451,sidi-maafa,Sidi Maafa,34.6482290,-1.9050368,1093
+6,L07,aller,1,terminus-faculte-des-lettres,14,13,477,terminus-faculte-des-lettres,Terminus Faculté des Lettres,34.6481293,-1.9021291,1094
+6,L07,retour,0,terminus-enakhil,1,0,477,terminus-faculte-des-lettres,Terminus Faculté des Lettres,34.6481293,-1.9021291,1095
+6,L07,retour,0,terminus-enakhil,2,1,451,sidi-maafa,Sidi Maafa,34.6482290,-1.9050368,1096
 6,L07,retour,0,terminus-enakhil,3,2,437,rue-al-hanaa-mosquee-anour-almohammadi,Rue Al Hanaa Mosquée Anour Almohammadi,34.6483072,-1.9076569,1097
 6,L07,retour,0,terminus-enakhil,4,3,351,pharmacie-hay-rabie,Pharmacie Hay Rabie,34.6497173,-1.9117916,1098
 6,L07,retour,0,terminus-enakhil,5,4,35,al-irfane-2,Al Irfane 2,34.6514821,-1.9135433,1099
@@ -297,12 +297,12 @@
 10,L13,aller,1,terminus-bouchtat,14,13,32,terminus-agdal,Terminus Agdal,34.6756258,-1.8595172,1224
 10,L13,aller,1,terminus-bouchtat,15,14,385,jemli,Jemli,34.696152,-1.8566209,1225
 10,L13,aller,1,terminus-bouchtat,16,15,174,cafe-nojoume,Café Nojoume,34.7046556,-1.8573486,1226
-10,L13,aller,1,terminus-bouchtat,17,16,382,residence-al-ghiate,Résidence Al Ghiate,34.6752713,-1.867514,1227
-10,L13,aller,1,terminus-bouchtat,18,17,234,ecoles-aboubaker-asadik,Écoles Aboubaker Asadik,34.6882545,-1.9072488,1228
-10,L13,aller,1,terminus-bouchtat,19,18,473,terminus-bouchtat,Terminus Bouchtat,34.6795356,-1.9102106,1229
-10,L13,retour,0,terminus-ibn-khaldoune,1,0,473,terminus-bouchtat,Terminus Bouchtat,34.6795356,-1.9102106,1230
-10,L13,retour,0,terminus-ibn-khaldoune,2,1,234,ecoles-aboubaker-asadik,Écoles Aboubaker Asadik,34.6882545,-1.9072488,1231
-10,L13,retour,0,terminus-ibn-khaldoune,3,2,382,residence-al-ghiate,Résidence Al Ghiate,34.6752713,-1.867514,1232
+10,L13,aller,1,terminus-bouchtat,17,16,382,residence-al-ghiate,Résidence Al Ghiate,34.7081261,-1.8597350,1227
+10,L13,aller,1,terminus-bouchtat,18,17,234,ecoles-aboubaker-asadik,Écoles Aboubaker Asadik,34.7095790,-1.8606469,1228
+10,L13,aller,1,terminus-bouchtat,19,18,473,terminus-bouchtat,Terminus Bouchtat,34.7110319,-1.8615587,1229
+10,L13,retour,0,terminus-ibn-khaldoune,1,0,473,terminus-bouchtat,Terminus Bouchtat,34.7110319,-1.8615587,1230
+10,L13,retour,0,terminus-ibn-khaldoune,2,1,234,ecoles-aboubaker-asadik,Écoles Aboubaker Asadik,34.7095790,-1.8606469,1231
+10,L13,retour,0,terminus-ibn-khaldoune,3,2,382,residence-al-ghiate,Résidence Al Ghiate,34.7081261,-1.8597350,1232
 10,L13,retour,0,terminus-ibn-khaldoune,4,3,174,cafe-nojoume,Café Nojoume,34.7046556,-1.8573486,1233
 10,L13,retour,0,terminus-ibn-khaldoune,5,4,385,jemli,Jemli,34.696152,-1.8566209,1234
 10,L13,retour,0,terminus-ibn-khaldoune,6,5,32,terminus-agdal,Terminus Agdal,34.6756258,-1.8595172,1235
@@ -423,8 +423,8 @@
 14,L17,aller,1,terminus-village-bekay,10,11,400,av-med-6-hay-sidi-maafa-2,Av Med 6 Hay Sidi Maafa 2,34.650711500975,-1.8856519460678,1350
 14,L17,aller,1,terminus-village-bekay,11,12,402,av-med-6-hay-sidi-maafa-3,Av Med 6 Hay Sidi Maafa 3,34.6499802,-1.884525,1351
 14,L17,aller,1,terminus-village-bekay,12,13,397,residence-kanzi,Résidence Kanzi,34.6518286,-1.8795051,1352
-14,L17,aller,1,terminus-village-bekay,13,14,269,terminus-village-bekay,Terminus Village Bekay,34.68228015893,-1.9091910123825,1353
-14,L17,retour,0,terminus-enakhil,1,0,269,terminus-village-bekay,Terminus Village Bekay,34.68228015893,-1.9091910123825,1354
+14,L17,aller,1,terminus-village-bekay,13,14,269,terminus-village-bekay,Terminus Village Bekay,34.6494967,-1.8857151,1353
+14,L17,retour,0,terminus-enakhil,1,0,269,terminus-village-bekay,Terminus Village Bekay,34.6494967,-1.8857151,1354
 14,L17,retour,0,terminus-enakhil,2,1,397,residence-kanzi,Résidence Kanzi,34.6518286,-1.8795051,1355
 14,L17,retour,0,terminus-enakhil,3,2,402,av-med-6-hay-sidi-maafa-3,Av Med 6 Hay Sidi Maafa 3,34.6499802,-1.884525,1356
 14,L17,retour,0,terminus-enakhil,4,3,400,av-med-6-hay-sidi-maafa-2,Av Med 6 Hay Sidi Maafa 2,34.650711500975,-1.8856519460678,1357
