@@ -78,12 +78,21 @@ class BuildDataTest(unittest.TestCase):
                             for i in self.net["issues"]))
 
     def test_display_label(self):
-        self.assertEqual(build_data.display_label("TERMUNIS SAHAT NAKHEEL"), "Terminus Sahat Nakheel")
-        self.assertEqual(build_data.display_label("auto hall"), "Auto Hall")
+        self.assertEqual(build_data.display_label("TERMUNIS SAHAT NAKHEEL"), "Terminus sahat nakheel")
+        self.assertEqual(build_data.display_label("auto hall"), "Auto hall")
         self.assertEqual(build_data.display_label("Av yahya Belkhir"), "Av yahya Belkhir")
-        self.assertEqual(build_data.display_label("CAFE DE LA PAIX"), "Cafe de la Paix")
-        self.assertEqual(build_data.display_label("PHARMACIE HASSAN II"), "Pharmacie Hassan II")
+        self.assertEqual(build_data.display_label("CAFE DE LA PAIX"), "Cafe de la paix")
+        self.assertEqual(build_data.display_label("PHARMACIE HASSAN II"), "Pharmacie hassan II")
         self.assertEqual(build_data.display_label("mharach i"), "Mharach I")
+        self.assertEqual(build_data.display_label("CHU"), "CHU")
+        self.assertEqual(build_data.display_label("bim"), "Bim")
+
+    def test_names_are_in_sentence_case(self):
+        stops = build_data.read_csv(os.path.join(ROOT, "data", "stops.csv"))
+        self.assertEqual(next(s["station_label"] for s in stops if s["station_id"] == "810"), "Mosquée rayan / Qsar laalaj")
+        for s in stops:
+            for part in s["station_label"].split(" / "):
+                self.assertFalse(part[:1].islower(), s["station_label"])
 
     def test_text_color_contrast(self):
         self.assertEqual(build_data.text_color("#000000"), "#ffffff")

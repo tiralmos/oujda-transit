@@ -40,8 +40,7 @@ SPIKE_SLACK_KM = 2.0
 
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(:\d{2})?$")
 TERMINUS_TYPO_RE = re.compile(r"\b(termunis|terminis|termenus)\b", re.IGNORECASE)
-LOWER_WORDS = {"de", "des", "du", "la", "le", "les", "et", "au", "aux", "d", "l"}
-# Roman numerals stay upper case in title case: "Hassan II", not "Hassan Ii".
+# Roman numerals stay upper case: "Hassan II", not "Hassan ii".
 ROMAN_RE = re.compile(r"^(i{1,3}|iv|vi{0,3}|ix|x)$", re.IGNORECASE)
 DIRECTIONS = (("aller", "1"), ("retour", "0"))
 
@@ -68,18 +67,16 @@ def is_missing_name(label):
 
 
 def display_label(label):
-    """Readable stop name: fix ALL CAPS / all lower case and 'Termunis' typos."""
+    """Readable stop name: ALL CAPS / all lower case names in sentence case, 'Termunis' typos fixed.
+
+    The corrected CSVs are already in sentence case; single words such as "CHU" are kept as they are.
+    """
     text = re.sub(r"\s+", " ", label).strip()
     letters = [c for c in text if c.isalpha()]
-    if letters and (all(c.isupper() for c in letters) or all(c.islower() for c in letters)):
-        words = []
-        for i, w in enumerate(text.lower().split(" ")):
-            if ROMAN_RE.match(w) and (i > 0 or len(w) > 1):
-                words.append(w.upper())
-            else:
-                words.append(w if i > 0 and w in LOWER_WORDS else w[:1].upper() + w[1:])
+    if " " in text and letters and (all(c.isupper() for c in letters) or all(c.islower() for c in letters)):
+        words = [w.upper() if ROMAN_RE.match(w) and (i > 0 or len(w) > 1) else w for i, w in enumerate(text.lower().split(" "))]
         text = " ".join(words)
-    elif text:
+    if text:
         text = text[0].upper() + text[1:]
     return TERMINUS_TYPO_RE.sub(lambda m: "Terminus" if m.group(0)[0].isupper() else "terminus", text)
 
