@@ -1,10 +1,10 @@
 // End-to-end smoke test against a running instance (e.g. the Docker container).
 //   npm install --no-save playwright && npx playwright install chromium
-//   BASE_URL=http://localhost:8080 node tests/e2e/smoke.mjs [screenshot_dir]
+//   BASE_URL=http://localhost:3002 node tests/e2e/smoke.mjs [screenshot_dir]
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 
-const BASE = process.env.BASE_URL || 'http://localhost:8080';
+const BASE = process.env.BASE_URL || 'http://localhost:3002';
 const SHOTS = process.argv[2];
 const errors = [];
 

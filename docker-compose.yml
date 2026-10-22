@@ -4,7 +4,7 @@ services:
     image: oujda-transit:latest
     container_name: oujda-transit
     ports:
-      - "${PORT:-8080}:80"
+      - "${PORT:-3002}:80"
     environment:
       # Map tiles. The default is the public OpenStreetMap server; for heavy use,
       # point this at your own tile server or a provider (see README).
