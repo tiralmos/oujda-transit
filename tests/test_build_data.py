@@ -1,4 +1,5 @@
 import json
+import re
 import os
 import subprocess
 import sys
@@ -81,7 +82,7 @@ class BuildDataTest(unittest.TestCase):
         self.assertEqual(build_data.display_label("TERMUNIS SAHAT NAKHEEL"), "Terminus Sahat Nakheel")
         self.assertEqual(build_data.display_label("auto hall"), "Auto Hall")
         self.assertEqual(build_data.display_label("Av yahya Belkhir"), "Av yahya Belkhir")
-        self.assertEqual(build_data.display_label("CAFE DE LA PAIX"), "Cafe De La Paix")
+        self.assertEqual(build_data.display_label("CAFE DE LA PAIX"), "Cafe de la Paix")
         self.assertEqual(build_data.display_label("PHARMACIE HASSAN II"), "Pharmacie Hassan II")
         self.assertEqual(build_data.display_label("mharach i"), "Mharach I")
         self.assertEqual(build_data.display_label("CHU"), "CHU")
@@ -91,8 +92,9 @@ class BuildDataTest(unittest.TestCase):
         stops = build_data.read_csv(os.path.join(ROOT, "data", "stops.csv"))
         self.assertEqual(next(s["station_label"] for s in stops if s["station_id"] == "810"), "Mosquée Rayan / Qsar Laalaj")
         for s in stops:
-            for word in s["station_label"].replace("(", " ").split():
-                self.assertFalse(word[:1].islower(), s["station_label"])
+            for word in s["station_label"].replace("(", " ").split()[1:]:
+                if word not in {"de", "des", "du", "la", "le", "les", "et", "au", "aux", "en", "ou"}:
+                    self.assertFalse(re.sub(r"^[dl]'", "", word)[:1].islower(), s["station_label"])
 
     def test_text_color_contrast(self):
         self.assertEqual(build_data.text_color("#000000"), "#ffffff")

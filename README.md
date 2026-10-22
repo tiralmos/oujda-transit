@@ -133,7 +133,8 @@ What the current corrections do (exported 2026-10-22, 698 stops before, 529 afte
   the same name up to 60 m apart. Not merged: a line's aller and retour termini (each direction keeps
   its own stop), two stops of the same line and direction, and stops whose new position is only an
   estimate.
-- **Names (474 renamed)**: every name is in title case (the first letter of every word capitalised;
+- **Names (470 renamed)**: every name is in title case (the first letter of every word capitalised,
+  except French small words such as *de*, *des*, *la*: *Faculté des Sciences*, *Consulat d'Algérie*;
   Roman numerals and acronyms such as OFPPT stay upper case), with French words spell-checked (*cafe* → *café*, *ecole* → *école*, *carfour* →
   *carrefour*, ...). A merged stop that combined two differently named stops is called
   "A / B", the one serving more lines first (*Pharmacie Hassan II / Clinique Ibn Sina*); when it
