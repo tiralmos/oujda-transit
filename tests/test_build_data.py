@@ -100,6 +100,18 @@ class BuildDataTest(unittest.TestCase):
         self.assertTrue(any(i["type"] == "suspect_location" and i["stop"] == 269 and "Village Bekay" in i["detail"]
                             for i in net["issues"]))
 
+    def test_lines_follow_their_road_shapes(self):
+        self.assertFalse([i for i in self.net["issues"] if i["type"] == "stale_shape"])
+        for l in self.net["lines"]:
+            for d in l["directions"].values():
+                self.assertEqual(len(d["shapeStops"]), len(d["stops"]))
+                first, last = self.stops[d["stops"][0]], self.stops[d["stops"][-1]]
+                self.assertLess(build_data.haversine_km(d["shape"][0], (first["lat"], first["lng"])), 0.002)
+                self.assertLess(build_data.haversine_km(d["shape"][-1], (last["lat"], last["lng"])), 0.002)
+                self.assertGreaterEqual(len(d["shape"]), len(d["stops"]))
+        line = build_data.geojson(self.net)["features"][0]
+        self.assertEqual(len(line["geometry"]["coordinates"]), len(self.net["lines"][0]["directions"]["aller"]["shape"]))
+
     def test_display_label(self):
         self.assertEqual(build_data.display_label("TERMUNIS SAHAT NAKHEEL"), "Terminus Sahat Nakheel")
         self.assertEqual(build_data.display_label("auto hall"), "Auto Hall")

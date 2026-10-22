@@ -165,7 +165,7 @@ export function createPlanner(network, options = {}) {
         const s = b - p.base, e = end - p.base;
         let minutes = 0;
         for (let i = s; i < e; i++) minutes += p.minutes[i];
-        legs.push({ type: 'ride', line: p.line, direction: p.direction, stops: p.stops.slice(s, e + 1), minutes });
+        legs.push({ type: 'ride', line: p.line, direction: p.direction, stops: p.stops.slice(s, e + 1), first: s, minutes });
         continue;
       }
       if (a < N && b < N && a === b) continue;

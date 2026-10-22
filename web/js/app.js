@@ -207,7 +207,7 @@ function drawNetwork() {
   });
   for (const line of net.lines) {
     for (const d of Object.values(line.directions)) {
-      L.polyline(d.stops.map((id) => [stopsById.get(id).lat, stopsById.get(id).lng]), {
+      L.polyline(routeShape(d), {
         color: line.color, weight: 3, opacity: 0.55, interactive: false,
       }).addTo(layers.allLines);
     }
@@ -241,9 +241,15 @@ function latlngs(ids) {
   return ids.map((id) => [stopsById.get(id).lat, stopsById.get(id).lng]);
 }
 
+// The road shape of a direction between two of its stop positions, or straight lines without one.
+function routeShape(d, from = 0, to = d.stops.length - 1) {
+  if (!d.shape) return latlngs(d.stops.slice(from, to + 1));
+  return d.shape.slice(d.shapeStops[from], d.shapeStops[to] + 1);
+}
+
 function drawDirection(line, dir, { weight = 6, opacity = 0.9, stopsToo = true } = {}) {
   const d = line.directions[dir];
-  const pts = latlngs(d.stops);
+  const pts = routeShape(d);
   L.polyline(pts, { color: '#ffffff', weight: weight + 4, opacity: opacity * 0.8, interactive: false }).addTo(layers.focus);
   L.polyline(pts, { color: line.color, weight, opacity, interactive: false }).addTo(layers.focus);
   if (!stopsToo) return pts;
@@ -684,7 +690,7 @@ function drawOption(o, from, to) {
       L.polyline(line, { color: '#546e7a', weight: 4, dashArray: '2 8', lineCap: 'round', interactive: false }).addTo(layers.focus);
       all.push(...line);
     } else {
-      const pts = latlngs(leg.stops);
+      const pts = routeShape(leg.line.directions[leg.direction], leg.first, leg.first + leg.stops.length - 1);
       L.polyline(pts, { color: '#ffffff', weight: 10, opacity: 0.8, interactive: false }).addTo(layers.focus);
       L.polyline(pts, { color: leg.line.color, weight: 6, interactive: false }).addTo(layers.focus);
       leg.stops.forEach((id, i) => {
@@ -725,7 +731,7 @@ function renderAbout() {
     return `<li><strong>${th(issueLabel[i.type] || i.type)}</strong> ${what.join(' ')}<br><span class="muted small" dir="ltr">${esc(i.detail)}</span></li>`;
   }).join('');
   const files = [
-    ['data/lines.csv', 'lines.csv'], ['data/stops.csv', 'stops.csv'], ['data/line_stops.csv', 'line_stops.csv'],
+    ['data/lines.csv', 'lines.csv'], ['data/stops.csv', 'stops.csv'], ['data/line_stops.csv', 'line_stops.csv'], ['data/shapes.csv', 'shapes.csv'],
     ['data/network.geojson', 'network.geojson'], ['data/network.json', 'network.json'],
   ];
   setView(`

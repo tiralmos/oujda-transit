@@ -134,3 +134,13 @@ test('stops with doubtful coordinates are not used for walking', () => {
     }
   }
 });
+
+test('ride legs know where they start on their line direction', () => {
+  const [a, b] = [line('L02').directions.aller.stops[2], line('L02').directions.aller.stops[8]];
+  for (const o of planner.plan({ type: 'stop', id: a }, { type: 'stop', id: b })) {
+    for (const leg of o.legs.filter((l) => l.type === 'ride')) {
+      const d = leg.line.directions[leg.direction];
+      assert.deepEqual(d.stops.slice(leg.first, leg.first + leg.stops.length), leg.stops);
+    }
+  }
+});

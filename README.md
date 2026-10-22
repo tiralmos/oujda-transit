@@ -84,13 +84,29 @@ traffic, and keep the attribution.
 | `data/lines.csv` | One row per line: id, name, colour, termini and stop count per direction |
 | `data/stops.csv` | One row per stop: id, name, label, coordinates, lines serving it, plus other names, merged stop ids, the corrections applied and any review note |
 | `data/line_stops.csv` | Each line's stops in order, per direction (`aller` / `retour`) |
+| `data/shapes.csv` | The path each line direction takes along the roads, point by point; the rows of a stop carry its id and how the leg from it is drawn (`road`, `map` or `straight`) |
 | `data/corrections.csv` | Every change made to the export, one row each, with the reason and evidence |
-| `data/source/` | The export exactly as it came from the operator's server |
+| `data/source/` | The export exactly as it came from the operator's server, plus `figma_routes.geojson`, the routes ISA drew by hand on a Figma map about two years ago |
 | `data/export-info.json` | When and where the CSVs were exported |
 
 The CSVs in `data/` are generated: `tools/apply_corrections.py` applies `data/corrections.csv` to
 `data/source/` and writes them. At build time, `tools/build_data.py` turns them into `network.json`
 (what the app loads) and `network.geojson`.
+
+### Line shapes
+
+The export only lists each line's stops, so the app draws lines along the roads using
+`data/shapes.csv`, made by `tools/build_shapes.py`. It routes each line direction through its stops
+on OpenStreetMap roads (the public OSRM demo server, one request a second), once with and once
+without letting the bus turn back at a stop, and keeps the shorter way for each leg between two
+stops. Where that is still a long way round (often a one-way street or a stop snapped to the wrong
+road), the leg follows ISA's hand-drawn map if the map is clearly shorter; a leg that stays absurd
+is drawn straight. The stops always win over the map: shapes only join the stops in the data.
+Re-run it after the stops change (a test fails when a shape no longer matches its stops):
+
+```sh
+python3 tools/build_shapes.py               # data/line_stops.csv -> data/shapes.csv (needs internet)
+```
 
 ### Corrections
 
