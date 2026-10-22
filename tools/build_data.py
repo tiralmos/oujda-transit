@@ -67,15 +67,15 @@ def is_missing_name(label):
 
 
 def display_label(label):
-    """Readable stop name: ALL CAPS / all lower case names in sentence case, 'Termunis' typos fixed.
+    """Readable stop name: ALL CAPS / all lower case names in title case, 'Termunis' typos fixed.
 
-    The corrected CSVs are already in sentence case; single words such as "CHU" are kept as they are.
+    The corrected CSVs are already in title case; single words such as "CHU" are kept as they are.
     """
     text = re.sub(r"\s+", " ", label).strip()
     letters = [c for c in text if c.isalpha()]
     if " " in text and letters and (all(c.isupper() for c in letters) or all(c.islower() for c in letters)):
-        words = [w.upper() if ROMAN_RE.match(w) and (i > 0 or len(w) > 1) else w for i, w in enumerate(text.lower().split(" "))]
-        text = " ".join(words)
+        text = " ".join(w.upper() if ROMAN_RE.match(w) and (i > 0 or len(w) > 1) else w[:1].upper() + w[1:]
+                        for i, w in enumerate(text.lower().split(" ")))
     if text:
         text = text[0].upper() + text[1:]
     return TERMINUS_TYPO_RE.sub(lambda m: "Terminus" if m.group(0)[0].isupper() else "terminus", text)

@@ -61,7 +61,7 @@ await step('line page shows ordered stops, both directions', async () => {
   await page.waitForSelector('.timeline li');
   const names = await page.locator('.timeline .stop-name').allTextContents();
   assert.equal(names.length, 31);
-  assert.equal(names[12].trim(), 'Place 9 juillet');
+  assert.equal(names[12].trim(), 'Place 9 Juillet');
   assert.equal(await page.locator('.segmented .seg').count(), 2);
   await page.click('.segmented .seg:not(.active)');
   await page.waitForURL(/#\/line\/21\/aller$/);
