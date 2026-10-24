@@ -12,12 +12,15 @@ server behind the 7afilati app (SOMAYAR SA). It lives in [`data/`](data/) as CSV
 - **Map** of all stops on OpenStreetMap tiles, with a toggle to draw every line in its colour.
 - **Search** stops and lines from one box: accent- and case-insensitive, tolerant of small typos
   and of the data's "Termunis/Terminis" spellings; lines by name or number (`L03`, `3`, `ligne 3`).
+- **Address and place search** in the same box and in the trip planner: choose "Search addresses
+  and places" under the suggestions to look up a street, school, pharmacy, café… in Oujda on
+  OpenStreetMap (Nominatim). A place opens with its nearby stops and "start here / go here" buttons.
 - **Line pages**: both directions, stops in order on a timeline with estimated minutes from the
   first stop, transfers to other lines at each stop, total length and duration, drawn on the map.
 - **Stop pages**: every line and direction that serves the stop with the next stops, nearby stops
   within 400 m, coordinates and a link to OpenStreetMap.
 - **Nearby**: stops within 800 m of your location (or of the map centre) with walking time.
-- **Trip planner** between stops, your location or any point picked on the map. It finds the
+- **Trip planner** between stops, addresses, your location or any point picked on the map. It finds the
   fastest option, a fewest-transfers option and a walk-only option for short trips, using walks of
   up to 400 m between stops for transfers and up to 1 km at each end.
 - **Favorites** (lines and stops) and **recent stops**, saved in the browser.
@@ -52,8 +55,31 @@ docker build -t oujda-transit .
 docker run -d --name oujda-transit -p 3002:80 --restart unless-stopped oujda-transit
 ```
 
-The container has a health check (`/healthz`) and needs no volumes, database or outbound access;
-visitors' browsers load the map tiles directly from the tile server.
+The container has a health check (`/healthz`) and needs no volumes or database. Visitors' browsers
+load the map tiles directly from the tile server. The container itself only goes out to the
+internet for the address search (see below); everything else works without outbound access.
+
+### Address search
+
+The browser never calls the geocoder directly: it asks the app's own server (`/api/geocode`), and
+nginx forwards the request to [Nominatim](https://nominatim.org/), limited to the Oujda area.
+This follows the [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/)
+for the public server:
+
+- a search is sent only when someone chooses "Search addresses and places", never while typing;
+- at most one request per second goes out for the whole site (extra ones wait, then get HTTP 429);
+- results are cached by the server for 7 days and by the browser for the session;
+- requests carry an identifying User-Agent, and nothing about the visitor (no cookies, no referrer).
+
+For heavy use, point `GEOCODER_URL` at your own Nominatim instance or a provider with a
+Nominatim-compatible API. Set `GEOCODER_URL=off` to remove address search entirely.
+
+### Behind Cloudflare or another cache
+
+Every file URL carries a content version (`app.js?v=…`), set when the image is built, and the
+service worker always revalidates with the server, so a new version shows up on the next page
+load even if a proxy told browsers to keep files for hours. In Cloudflare, the
+"Browser Cache TTL: Respect Existing Headers" setting avoids the extra delay entirely.
 
 ### HTTPS and location
 
@@ -71,6 +97,10 @@ Set these environment variables on the container (see `docker-compose.yml`):
 | `TILE_ATTRIBUTION` | © OpenStreetMap contributors | Attribution shown on the map (HTML allowed) |
 | `TILE_MAX_ZOOM` | `19` | Highest zoom level of the tile server |
 | `DEFAULT_LANGUAGE` | `fr` | `fr`, `en` or `ar`; used when the browser's language isn't one of these |
+| `GEOCODER_URL` | `https://nominatim.openstreetmap.org/search` | Nominatim search endpoint for address search; `off` disables it |
+| `GEOCODER_USER_AGENT` | `oujda-transit (self-hosted; …)` | User-Agent sent to the geocoder; put your site or contact in it |
+| `GEOCODER_EMAIL` | (none) | Contact email passed to Nominatim, as its policy suggests for regular use |
+| `GEOCODER_VIEWBOX` | `-2.10,34.92,-1.75,34.55` | Search area as west,north,east,south |
 
 The public OpenStreetMap tile server is fine for personal and light use, but its
 [tile usage policy](https://operations.osmfoundation.org/policies/tiles/) asks heavier users to
@@ -175,6 +205,7 @@ No build step for the front end: plain ES modules, with Leaflet 1.9.4 vendored i
 
 ```sh
 npm run serve        # builds web/data/ from the CSVs and serves web/ on http://localhost:8000
+                     # (no address search there: it needs the container's /api/geocode)
 npm test             # Python tests for the data build, Node tests for search, planner and strings
 ```
 
@@ -192,7 +223,7 @@ Layout:
 data/              corrected CSVs, corrections.csv, and the raw export in source/
 tools/             apply_corrections.py (export + corrections -> CSVs), build_data.py (CSV -> JSON/GeoJSON)
 web/               the static app (index.html, css/, js/, vendor/leaflet/, sw.js)
-docker/            nginx config and the start-up script that writes config.js
+docker/            nginx config and the start-up script that writes config.js and the geocoder proxy
 tests/             unit tests and the end-to-end smoke test
 ```
 

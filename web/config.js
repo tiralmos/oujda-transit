@@ -5,4 +5,6 @@ window.OUJDA_CONFIG = {
   tileAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   tileMaxZoom: 19,
   defaultLanguage: 'fr',
+  // Address search needs the /api/geocode proxy that the Docker image provides.
+  geocoder: false,
 };
