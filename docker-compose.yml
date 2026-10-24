@@ -11,4 +11,8 @@ services:
       TILE_URL: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       TILE_MAX_ZOOM: "19"
       DEFAULT_LANGUAGE: "fr"   # fr, en or ar
+      # Address search through OpenStreetMap's Nominatim ("off" disables it).
+      # Put a way to reach you in the User-Agent, as Nominatim's policy asks.
+      GEOCODER_URL: "https://nominatim.openstreetmap.org/search"
+      GEOCODER_USER_AGENT: "oujda-transit (self-hosted; https://github.com/tiralmos/oujda-transit)"
     restart: unless-stopped

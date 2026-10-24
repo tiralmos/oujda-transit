@@ -151,6 +151,10 @@ input[type="search"]:focus { outline: 2px solid var(--accent); }
 }
 .ac-list li.active, .ac-list li[role="option"]:hover { background: var(--accent-soft); }
 .ac-list li .badges { margin-inline-start: auto; }
+.ac-list li.geo-row { color: var(--accent); font-weight: 600; flex-wrap: nowrap; border-top: 1px solid var(--border); border-radius: 0 0 8px 8px; }
+.ac-list li.place-row { flex-wrap: nowrap; align-items: flex-start; }
+.ac-list li.place-row svg { color: #d32f2f; margin-top: 2px; }
+.place-text { display: flex; flex-direction: column; min-width: 0; }
 
 .tabs {
   display: flex;

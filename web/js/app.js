@@ -3,6 +3,7 @@
 
 import { distanceM, stopsNear, walkMinutes } from './geo.js';
 import { buildIndex, searchLines, searchStops } from './text.js';
+import { geocode } from './geocode.js';
 import { createPlanner, DEFAULTS as PLAN_DEFAULTS } from './planner.js';
 import { createFavorites, createRecents, load, save } from './store.js';
 import { LANGUAGES, escapeHtml as esc, getLanguage, initLanguage, raw, setLanguage, t, th } from './i18n.js';
@@ -13,6 +14,7 @@ const CONFIG = {
   tileAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   tileMaxZoom: 19,
   defaultLanguage: 'fr',
+  geocoder: false,
   ...(window.OUJDA_CONFIG || {}),
 };
 
@@ -100,6 +102,7 @@ const ICONS = {
   theme_auto: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18V4a8 8 0 0 1 0 16z"/></svg>',
   theme_light: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zM11 1h2v3h-2zm0 19h2v3h-2zM1 11h3v2H1zm19 0h3v2h-3zM4.2 5.6l1.4-1.4 2.1 2.1-1.4 1.4zm12.1 12.1 1.4-1.4 2.1 2.1-1.4 1.4zM4.2 18.4l2.1-2.1 1.4 1.4-2.1 2.1zM16.3 6.3l2.1-2.1 1.4 1.4-2.1 2.1z"/></svg>',
   theme_dark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 14.5A9 9 0 0 1 9.5 3a9 9 0 1 0 11.5 11.5z"/></svg>',
+  search: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3a7 7 0 0 1 5.6 11.2l5.1 5.1-1.4 1.4-5.1-5.1A7 7 0 1 1 10 3zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg>',
   pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>',
 };
 
@@ -324,10 +327,11 @@ function route() {
   }
   closeSearch();
   clearFocus();
-  const tab = { line: 'lines', stop: null, nearby: 'nearby', plan: 'plan', favorites: 'favorites', about: 'about' }[name] ?? 'lines';
+  const tab = { line: 'lines', stop: null, place: null, nearby: 'nearby', plan: 'plan', favorites: 'favorites', about: 'about' }[name] ?? 'lines';
   setActiveTab(tab);
   if (name === 'line') renderLine(Number(a), b, params);
   else if (name === 'stop') renderStop(Number(a));
+  else if (name === 'place') renderPlace(params);
   else if (name === 'nearby') renderNearby(params);
   else if (name === 'plan') renderPlan(params);
   else if (name === 'favorites') renderFavorites();
@@ -527,15 +531,58 @@ function renderNearby(params) {
   });
 }
 
-// Plan endpoints in the URL: "stop:123" or "pt:34.68,-1.91".
-function parseEnd(v) {
+// An address or place found by the address search: #/place?at=lat,lng&name=...
+function placeHash(place) {
+  return `#/place?at=${encodeEnd({ type: 'pt', ...place }).slice(3)}&name=${encodeURIComponent(place.name)}`;
+}
+
+function renderPlace(params) {
+  const end = parseEnd(`pt:${params.get('at') || ''}`, params.get('name'));
+  if (!end) return notFound();
+  const name = end.name || endLabel(end);
+  const near = stopsNear(net.stops, end, NEARBY_M, 30);
+  const osm = `https://www.openstreetmap.org/?mlat=${end.lat}&mlon=${end.lng}#map=18/${end.lat}/${end.lng}`;
+  setView(`
+    <div class="view-head">
+      <span class="stop-icon place-icon" aria-hidden="true">${ICONS.pin}</span>
+      <h1>${esc(name)}</h1>
+      <div class="head-actions">${shareButton()}</div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="${esc(planHash(end, null))}">${th('planFrom')}</a>
+      <a class="btn" href="${esc(planHash(null, end))}">${th('planTo')}</a>
+    </div>
+    <section><h2>${th('nearbyStops')}</h2>
+      ${near.length ? `<ul class="list">${near.map((n) => stopItem(n.stop,
+        `${esc(fmtDistance(n.meters))} · ${th('walk', { min: fmtMinutes(walkMinutes(n.meters)) })}`)).join('')}</ul>`
+        : `<p class="empty">${th('noStopsNearby', { m: fmtDistance(NEARBY_M) })}</p>`}
+    </section>
+    <details class="meta"><summary>${th('details')}</summary>
+      <dl><dt>${th('coordinates')}</dt><dd dir="ltr">${end.lat.toFixed(6)}, ${end.lng.toFixed(6)}</dd></dl>
+      <a href="${esc(osm)}" target="_blank" rel="noopener">${th('openOsm')}</a>
+    </details>
+  `, name);
+  L.circle([end.lat, end.lng], { radius: NEARBY_M, color: '#1e88e5', weight: 1, fillOpacity: 0.05, interactive: false }).addTo(layers.focus);
+  for (const n of near) {
+    L.circleMarker([n.stop.lat, n.stop.lng], { radius: 6, color: '#37474f', weight: 2, fillColor: '#ffd54f', fillOpacity: 1 })
+      .bindTooltip(n.stop.name).on('click', (e) => { L.DomEvent.stop(e); onStopClick(n.stop.id); }).addTo(layers.highlight);
+  }
+  L.circleMarker([end.lat, end.lng], { radius: 10, color: '#ffffff', weight: 3, fillColor: '#d32f2f', fillOpacity: 1, interactive: false })
+    .bindTooltip(name, { permanent: true, direction: 'top', offset: [0, -10] }).addTo(layers.highlight);
+  map.fitBounds(L.latLng(end.lat, end.lng).toBounds(NEARBY_M * 2), { padding: [10, 10] });
+  expandPanel();
+}
+
+// Plan endpoints in the URL: "stop:123" or "pt:34.68,-1.91", plus an
+// optional name for points (an address picked from the search).
+function parseEnd(v, name) {
   if (!v) return null;
   let m = /^stop:(\d+)$/.exec(v);
   if (m && stopsById.has(currentStopId(Number(m[1])))) return { type: 'stop', id: currentStopId(Number(m[1])) };
   m = /^pt:(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/.exec(v);
   if (m) {
     const lat = Number(m[1]), lng = Number(m[2]);
-    if (Math.abs(lat) <= 90 && Math.abs(lng) <= 180) return { type: 'pt', lat, lng };
+    if (Math.abs(lat) <= 90 && Math.abs(lng) <= 180) return name ? { type: 'pt', lat, lng, name } : { type: 'pt', lat, lng };
   }
   return null;
 }
@@ -548,22 +595,25 @@ function encodeEnd(e) {
 function endLabel(e) {
   if (!e) return '';
   if (e.type === 'stop') return stopsById.get(e.id).name;
+  if (e.name) return e.name;
   return `${t('mapPoint')} (${e.lat.toFixed(5)}, ${e.lng.toFixed(5)})`;
 }
 
 // Endpoint values only use URL-safe characters, so they are not encoded,
-// which keeps shared links readable.
+// which keeps shared links readable. Place names are encoded.
 function planHash(from, to, opt) {
   const q = [];
   if (from) q.push(`from=${encodeEnd(from)}`);
+  if (from?.name) q.push(`fromName=${encodeURIComponent(from.name)}`);
   if (to) q.push(`to=${encodeEnd(to)}`);
+  if (to?.name) q.push(`toName=${encodeURIComponent(to.name)}`);
   if (opt) q.push(`opt=${opt}`);
   return `#/plan${q.length ? '?' + q.join('&') : ''}`;
 }
 
 function currentPlanEnds() {
   const { params } = parseHash();
-  return { from: parseEnd(params.get('from')), to: parseEnd(params.get('to')) };
+  return { from: parseEnd(params.get('from'), params.get('fromName')), to: parseEnd(params.get('to'), params.get('toName')) };
 }
 
 function setPlanEnd(which, end) {
@@ -573,15 +623,15 @@ function setPlanEnd(which, end) {
 }
 
 function renderPlan(params) {
-  const from = parseEnd(params.get('from'));
-  const to = parseEnd(params.get('to'));
+  const from = parseEnd(params.get('from'), params.get('fromName'));
+  const to = parseEnd(params.get('to'), params.get('toName'));
   const field = (which, end) => `
     <div class="plan-field">
       <label for="plan-${which}">${th(which)}</label>
       <div class="field-row">
         <div class="ac">
           <input id="plan-${which}" type="search" autocomplete="off" spellcheck="false"
-            placeholder="${esc(t(which === 'from' ? 'fromPlaceholder' : 'toPlaceholder'))}" value="${esc(endLabel(end))}"
+            placeholder="${esc(t((which === 'from' ? 'fromPlaceholder' : 'toPlaceholder') + (CONFIG.geocoder ? 'Places' : '')))}" value="${esc(endLabel(end))}"
             role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="plan-${which}-list">
           <ul class="ac-list" id="plan-${which}-list" role="listbox" hidden></ul>
         </div>
@@ -618,12 +668,15 @@ function renderPlan(params) {
   `, t('planTitle'));
 
   for (const which of ['from', 'to']) {
-    attachAutocomplete($(`#plan-${which}`), (stop) => setPlanEnd(which, { type: 'stop', id: stop.id }));
+    attachAutocomplete($(`#plan-${which}`), (item, kind) => setPlanEnd(which, kind === 'place'
+      ? { type: 'pt', lat: item.lat, lng: item.lng, name: item.name }
+      : { type: 'stop', id: item.id }), { withPlaces: true });
   }
   const markEnd = (e, color) => {
     if (!e) return;
     const p = e.type === 'stop' ? stopsById.get(e.id) : e;
-    L.circleMarker([p.lat, p.lng], { radius: 9, color: '#ffffff', weight: 3, fillColor: color, fillOpacity: 1, interactive: false }).addTo(layers.highlight);
+    L.circleMarker([p.lat, p.lng], { radius: 9, color: '#ffffff', weight: 3, fillColor: color, fillOpacity: 1, interactive: false })
+      .bindTooltip(endLabel(e)).addTo(layers.highlight);
   };
   if (options.length) drawOption(options[selected], from, to);
   markEnd(from, '#2e7d32');
@@ -636,12 +689,12 @@ function renderPlan(params) {
 }
 
 function toPlannerPlace(e) {
-  return e.type === 'stop' ? e : { type: 'point', lat: e.lat, lng: e.lng };
+  return e.type === 'stop' ? e : { type: 'point', lat: e.lat, lng: e.lng, name: e.name };
 }
 
 // Walks only end at a map point when that point is the destination.
 function placeName(place) {
-  return place.type === 'stop' ? stopsById.get(place.id).name : t('destination');
+  return place.type === 'stop' ? stopsById.get(place.id).name : place.name || t('destination');
 }
 
 function optionCard(o, i, selected, from, to) {
@@ -747,14 +800,20 @@ function renderAbout() {
 
 // ---------- search ----------
 
-function attachAutocomplete(input, onPick, { withLines = false } = {}) {
+// Search box with a suggestion list. Stops (and lines) are suggested while
+// typing; with withPlaces, a last row searches addresses and places too, but
+// only when chosen, so the geocoder gets one request per search.
+function attachAutocomplete(input, onPick, { withLines = false, withPlaces = false } = {}) {
   const list = document.getElementById(input.getAttribute('aria-controls'));
+  const places = withPlaces && CONFIG.geocoder;
   let results = [];
   let active = -1;
+  let searchId = 0;
   const close = () => {
     list.hidden = true;
     input.setAttribute('aria-expanded', 'false');
     active = -1;
+    searchId++;
   };
   const paint = () => {
     list.querySelectorAll('[role="option"]').forEach((el, i) => {
@@ -763,35 +822,58 @@ function attachAutocomplete(input, onPick, { withLines = false } = {}) {
       if (i === active) el.scrollIntoView({ block: 'nearest' });
     });
   };
+  const row = (r, i) => {
+    const attrs = `role="option" id="${list.id}-${i}" data-i="${i}"`;
+    if (r.kind === 'line') return `<li ${attrs}>${badge(r.item)}<span>${th('towards', { name: lastStop(r.item, Object.keys(r.item.directions)[0]).name })}</span></li>`;
+    if (r.kind === 'geo') return `<li ${attrs} class="geo-row">${ICONS.search}<span>${th('searchPlaces', { q: r.item })}</span></li>`;
+    if (r.kind === 'place') return `<li ${attrs} class="place-row">${ICONS.pin}<span class="place-text"><span class="stop-name">${esc(r.item.name)}</span>${r.item.detail ? `<span class="muted small">${esc(r.item.detail)}</span>` : ''}</span></li>`;
+    return `<li ${attrs}><span class="stop-name">${esc(r.item.name)}${stopFlagsHtml(r.item)}</span><span class="badges small">${badges(r.item.lines)}</span></li>`;
+  };
+  const show = (items, message) => {
+    results = items;
+    list.innerHTML = items.map(row).join('') + (message ? `<li class="muted" aria-disabled="true">${message}</li>` : '');
+    list.hidden = false;
+    input.setAttribute('aria-expanded', 'true');
+    active = items.length ? 0 : -1;
+    paint();
+  };
+  const searchPlaces = async (q) => {
+    const id = ++searchId;
+    show([], th('searchingPlaces'));
+    try {
+      const found = await geocode(q, getLanguage());
+      if (id !== searchId) return;
+      show(found.map((p) => ({ kind: 'place', item: p })), found.length ? '' : th('noPlaces'));
+    } catch {
+      if (id === searchId) show([], th('placesError'));
+    }
+  };
+  const choose = (r) => {
+    if (r.kind === 'geo') { searchPlaces(r.item); return; }
+    close();
+    onPick(r.item, r.kind);
+  };
   input.addEventListener('input', () => {
+    searchId++;
     const q = input.value.trim();
     if (!q) { close(); return; }
     const lines = withLines ? searchLines(net, stopsById, q).slice(0, 5).map((l) => ({ kind: 'line', item: l })) : [];
     const stops = searchStops(index, q, 12).map((s) => ({ kind: 'stop', item: s }));
-    results = [...lines, ...stops];
-    list.innerHTML = results.length ? results.map((r, i) => (r.kind === 'line'
-      ? `<li role="option" id="${list.id}-${i}" data-i="${i}">${badge(r.item)}<span>${th('towards', { name: lastStop(r.item, Object.keys(r.item.directions)[0]).name })}</span></li>`
-      : `<li role="option" id="${list.id}-${i}" data-i="${i}"><span class="stop-name">${esc(r.item.name)}${stopFlagsHtml(r.item)}</span><span class="badges small">${badges(r.item.lines)}</span></li>`)).join('')
-      : `<li class="muted" aria-disabled="true">${th('noResults')}</li>`;
-    list.hidden = false;
-    input.setAttribute('aria-expanded', 'true');
-    active = results.length ? 0 : -1;
-    paint();
+    const geo = places && q.length >= 3 ? [{ kind: 'geo', item: q }] : [];
+    const items = [...lines, ...stops, ...geo];
+    show(items, items.length ? '' : th('noResults'));
   });
   input.addEventListener('keydown', (e) => {
     if (list.hidden) return;
     if (e.key === 'ArrowDown') { active = Math.min(results.length - 1, active + 1); paint(); e.preventDefault(); }
     else if (e.key === 'ArrowUp') { active = Math.max(0, active - 1); paint(); e.preventDefault(); }
-    else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); const r = results[active]; close(); onPick(r.item, r.kind); }
+    else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); choose(results[active]); }
     else if (e.key === 'Escape') close();
   });
   list.addEventListener('mousedown', (e) => e.preventDefault());
   list.addEventListener('click', (e) => {
     const li = e.target.closest('[data-i]');
-    if (!li) return;
-    const r = results[Number(li.dataset.i)];
-    close();
-    onPick(r.item, r.kind);
+    if (li) choose(results[Number(li.dataset.i)]);
   });
   input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input) close(); }, 100));
   return close;
@@ -805,8 +887,8 @@ function setupSearch() {
   closeMainSearch = attachAutocomplete(input, (item, kind) => {
     input.value = '';
     input.blur();
-    go(kind === 'line' ? `#/line/${item.id}` : `#/stop/${item.id}`);
-  }, { withLines: true });
+    go(kind === 'line' ? `#/line/${item.id}` : kind === 'place' ? placeHash(item) : `#/stop/${item.id}`);
+  }, { withLines: true, withPlaces: true });
 }
 
 // ---------- chrome ----------
@@ -817,7 +899,7 @@ function expandPanel() {
 
 function renderChrome() {
   $('#app-name').textContent = t('appName');
-  $('#search').placeholder = t('searchPlaceholder');
+  $('#search').placeholder = t(CONFIG.geocoder ? 'searchPlaceholderPlaces' : 'searchPlaceholder');
   $('#search').setAttribute('aria-label', t('searchLabel'));
   $('#lang').setAttribute('aria-label', t('language'));
   $('#panel-handle').setAttribute('aria-label', t('panelToggle'));
@@ -913,9 +995,18 @@ function setupChrome() {
 }
 
 function registerServiceWorker() {
-  if ('serviceWorker' in navigator && window.isSecureContext) {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
-  }
+  if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
+  // When an update installs a new service worker, reload once so the page
+  // runs the new version instead of what it was first loaded with.
+  const hadController = Boolean(navigator.serviceWorker.controller);
+  let reloading = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (hadController && !reloading) {
+      reloading = true;
+      location.reload();
+    }
+  });
+  navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(() => {});
 }
 
 async function loadNetwork() {

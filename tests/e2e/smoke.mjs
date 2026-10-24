@@ -148,6 +148,64 @@ await step('pick a point on the map and use my location', async () => {
   await page.waitForSelector('#plan-results .option, #plan-results .warning');
 });
 
+await step('address search finds a place, opens it and plans a trip to it', async () => {
+  // The geocoder is answered here so the test doesn't depend on Nominatim.
+  const geocodeCalls = [];
+  await page.route('**/api/geocode?**', (route) => {
+    geocodeCalls.push(new URL(route.request().url()).searchParams.get('q'));
+    return route.fulfill({
+      json: [{
+        lat: '34.6775498', lon: '-1.9205325', name: 'Lycée Omar Ibn Abdelaziz',
+        display_name: 'Lycée Omar Ibn Abdelaziz, Boulevard Bir Anzarene, Hay Al Mahatta, Oujda, Oriental, 60000, Maroc',
+      }],
+    });
+  });
+  await page.goto(BASE + '/#/');
+  await settled();
+  await page.fill('#search', 'lycee omar');
+  await page.waitForSelector('#search-list .geo-row');
+  assert.deepEqual(geocodeCalls, [], 'no geocoder request while typing');
+  await page.click('#search-list .geo-row');
+  await page.waitForSelector('#search-list .place-row');
+  assert.deepEqual(geocodeCalls, ['lycee omar']);
+  await page.click('#search-list .place-row');
+  await page.waitForURL(/#\/place\?at=34\.67755\d,-1\.92053\d&name=/);
+  await settled();
+  assert.equal((await page.textContent('#view h1')).trim(), 'Lycée Omar Ibn Abdelaziz');
+  assert.ok(await page.locator('#view .stop-item').count() > 0, 'nearby stops listed');
+  await page.click('#view .actions a:nth-child(2)'); // "Go here"
+  await page.waitForURL(/to=pt:34\.67755\d,-1\.92053\d&toName=/);
+  await settled();
+  assert.equal(await page.inputValue('#plan-to'), 'Lycée Omar Ibn Abdelaziz');
+  // The planner's own fields search addresses too.
+  await page.fill('#plan-from', 'lycee omar');
+  await page.waitForSelector('#plan-from-list .geo-row');
+  await page.click('#plan-from-list .geo-row');
+  await page.waitForSelector('#plan-from-list .place-row');
+  assert.equal(geocodeCalls.length, 1, 'repeated searches come from the browser cache');
+  await page.click('#plan-from-list .place-row');
+  await page.waitForURL(/from=pt:34\.67755\d,-1\.92053\d&fromName=.*to=pt:/);
+  await settled();
+  await page.goto(BASE + '/#/plan?from=stop:922&to=pt:34.677550,-1.920533&toName=Lyc%C3%A9e%20Omar');
+  await settled();
+  await page.waitForSelector('.option');
+  assert.ok((await page.textContent('.option.selected .legs')).includes('Lycée Omar'), 'last walk names the place');
+  await page.unroute('**/api/geocode?**');
+});
+
+await step('address search failure is reported', async () => {
+  const before = errors.length;
+  await page.route('**/api/geocode?**', (route) => route.fulfill({ status: 502, body: 'bad gateway' }));
+  await page.goto(BASE + '/#/');
+  await settled();
+  await page.fill('#search', 'rue inconnue');
+  await page.click('#search-list .geo-row');
+  await page.waitForFunction(() => /indisponible|unavailable|غير متاح/.test(document.querySelector('#search-list').textContent));
+  await page.unroute('**/api/geocode?**');
+  // The browser logs the 502 this step provoked on purpose.
+  errors.splice(before, errors.length - before, ...errors.slice(before).filter((e) => !e.includes('502')));
+});
+
 await step('nearby uses geolocation', async () => {
   await page.goto(BASE + '/#/nearby');
   await settled();
