@@ -57,19 +57,31 @@ docker run -d --name oujda-transit -p 3002:80 --restart unless-stopped oujda-tra
 
 The container has a health check (`/healthz`) and needs no volumes or database. Visitors' browsers
 load the map tiles directly from the tile server. The container itself only goes out to the
-internet for the address search (see below); everything else works without outbound access.
+internet for the address search (see below), and even that falls back to the browser when the
+container can't get out; everything else works without outbound access.
 
 ### Address search
 
-The browser never calls the geocoder directly: it asks the app's own server (`/api/geocode`), and
-nginx forwards the request to [Nominatim](https://nominatim.org/), limited to the Oujda area.
+The browser asks the app's own server (`/api/geocode`), and nginx forwards the request to
+[Nominatim](https://nominatim.org/), limited to the Oujda area. If the server can't reach
+Nominatim (no outbound internet, DNS, a firewall, or Nominatim refusing the server's address),
+the browser asks Nominatim directly instead, the same way it already loads map tiles; set
+`GEOCODER_BROWSER_FALLBACK=off` to forbid that. When both fail, the message shows the error code.
 This follows the [Nominatim usage policy](https://operations.osmfoundation.org/policies/nominatim/)
 for the public server:
 
 - a search is sent only when someone chooses "Search addresses and places", never while typing;
 - at most one request per second goes out for the whole site (extra ones wait, then get HTTP 429);
 - results are cached by the server for 7 days and by the browser for the session;
-- requests carry an identifying User-Agent, and nothing about the visitor (no cookies, no referrer).
+- server requests carry an identifying User-Agent, and nothing about the visitor (no cookies, no referrer).
+
+If searches fail, `docker logs oujda-transit` shows why the server couldn't reach the geocoder
+(for example `could not be resolved`, `connect() failed` or an upstream `403`), and this checks it
+from inside the container:
+
+```sh
+docker exec oujda-transit wget -S -qO- "http://127.0.0.1/api/geocode?q=pharmacie&lang=fr"
+```
 
 For heavy use, point `GEOCODER_URL` at your own Nominatim instance or a provider with a
 Nominatim-compatible API. Set `GEOCODER_URL=off` to remove address search entirely.
@@ -101,6 +113,7 @@ Set these environment variables on the container (see `docker-compose.yml`):
 | `GEOCODER_USER_AGENT` | `oujda-transit (self-hosted; …)` | User-Agent sent to the geocoder; put your site or contact in it |
 | `GEOCODER_EMAIL` | (none) | Contact email passed to Nominatim, as its policy suggests for regular use |
 | `GEOCODER_VIEWBOX` | `-2.10,34.92,-1.75,34.55` | Search area as west,north,east,south |
+| `GEOCODER_BROWSER_FALLBACK` | `on` | `off` stops browsers from asking the geocoder directly when the server can't |
 
 The public OpenStreetMap tile server is fine for personal and light use, but its
 [tile usage policy](https://operations.osmfoundation.org/policies/tiles/) asks heavier users to

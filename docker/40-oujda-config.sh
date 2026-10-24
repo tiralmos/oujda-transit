@@ -25,6 +25,8 @@ geocoder_agent=${GEOCODER_USER_AGENT:-'oujda-transit (self-hosted; https://githu
 geocoder_email=${GEOCODER_EMAIL:-}
 # Oujda and its surroundings: west,north,east,south.
 geocoder_viewbox=${GEOCODER_VIEWBOX:-'-2.10,34.92,-1.75,34.55'}
+# If the server can't reach the geocoder, visitors' browsers ask it directly.
+geocoder_browser=${GEOCODER_BROWSER_FALLBACK:-on}
 
 case "$max_zoom" in
     ''|*[!0-9]*) fail "TILE_MAX_ZOOM must be a whole number, got '$max_zoom'" ;;
@@ -33,10 +35,16 @@ case "$language" in
     fr|en|ar) ;;
     *) fail "DEFAULT_LANGUAGE must be fr, en or ar, got '$language'" ;;
 esac
+case "$geocoder_browser" in
+    on|true|yes|1) geocoder_browser=on ;;
+    off|false|no|0) geocoder_browser=off ;;
+    *) fail "GEOCODER_BROWSER_FALLBACK must be on or off, got '$geocoder_browser'" ;;
+esac
 
 # ---- address search proxy ----
 mkdir -p "$(dirname "$geocoder_conf")"
 geocoder=false
+geocoder_browser_url=""
 case "$geocoder_url" in
     ''|off|false|none)
         : > "$geocoder_conf"
@@ -54,19 +62,29 @@ case "$geocoder_url" in
 
         # nginx needs a DNS resolver to look the geocoder up at request time;
         # use the container's own (IPv6 addresses need brackets).
+        # Only IPv4 answers: many Docker hosts have no IPv6 route out.
         resolvers=$(awk '/^nameserver/ { a = $2; if (a ~ /:/) a = "[" a "]"; printf "%s ", a }' /etc/resolv.conf)
         [ -n "$resolvers" ] || fail "no nameserver in /etc/resolv.conf for the address search"
 
         email_arg=""
         [ -z "$geocoder_email" ] || email_arg="&email=$geocoder_email"
+        csp_origin=""
+        if [ "$geocoder_browser" = on ]; then
+            geocoder_browser_url=$geocoder_url
+            # scheme://host[:port], for the Content-Security-Policy.
+            csp_origin=$(printf '%s' "$geocoder_url" | sed -E 's#^(https?://[^/]+).*#\1#')
+        fi
+
         cat > "$geocoder_conf" <<EOF
 # Generated at container start by 40-oujda-config.sh.
+set \$geocoder_origin "$csp_origin";
+
 location = /api/geocode {
     if (\$arg_q = "") { return 400; }
     limit_req zone=geocode_rate burst=10;
     limit_req_status 429;
 
-    resolver $resolvers valid=300s;
+    resolver $resolvers ipv6=off valid=300s;
     resolver_timeout 5s;
     set \$geocoder "$geocoder_url";
     proxy_pass \$geocoder?format=jsonv2&limit=8&bounded=1&countrycodes=ma&viewbox=$geocoder_viewbox&accept-language=\$geocode_lang&q=\$arg_q$email_arg;
@@ -74,6 +92,7 @@ location = /api/geocode {
     proxy_ssl_server_name on;
     proxy_ssl_verify on;
     proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+    proxy_ssl_verify_depth 4;
     proxy_connect_timeout 5s;
     proxy_read_timeout 15s;
 
@@ -94,7 +113,7 @@ location = /api/geocode {
 }
 EOF
         geocoder=true
-        echo "oujda-transit: address search via $geocoder_url" ;;
+        echo "oujda-transit: address search via $geocoder_url (browser fallback $geocoder_browser)" ;;
 esac
 
 # ---- config.js ----
@@ -111,6 +130,8 @@ window.OUJDA_CONFIG = {
   tileMaxZoom: $max_zoom,
   defaultLanguage: "$language",
   geocoder: $geocoder,
+  geocoderBrowserUrl: "$(js_string "$geocoder_browser_url")",
+  geocoderViewbox: "$(js_string "$geocoder_viewbox")",
 };
 EOF
 echo "oujda-transit: wrote config.js (tiles: $tile_url)"

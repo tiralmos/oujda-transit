@@ -15,4 +15,5 @@ services:
       # Put a way to reach you in the User-Agent, as Nominatim's policy asks.
       GEOCODER_URL: "https://nominatim.openstreetmap.org/search"
       GEOCODER_USER_AGENT: "oujda-transit (self-hosted; https://github.com/tiralmos/oujda-transit)"
+      GEOCODER_BROWSER_FALLBACK: "on"
     restart: unless-stopped

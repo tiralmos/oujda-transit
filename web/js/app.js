@@ -15,6 +15,8 @@ const CONFIG = {
   tileMaxZoom: 19,
   defaultLanguage: 'fr',
   geocoder: false,
+  geocoderBrowserUrl: '',
+  geocoderViewbox: '-2.10,34.92,-1.75,34.55',
   ...(window.OUJDA_CONFIG || {}),
 };
 
@@ -841,11 +843,14 @@ function attachAutocomplete(input, onPick, { withLines = false, withPlaces = fal
     const id = ++searchId;
     show([], th('searchingPlaces'));
     try {
-      const found = await geocode(q, getLanguage());
+      const fallback = CONFIG.geocoderBrowserUrl ? { url: CONFIG.geocoderBrowserUrl, viewbox: CONFIG.geocoderViewbox } : null;
+      const found = await geocode(q, getLanguage(), fallback);
       if (id !== searchId) return;
       show(found.map((p) => ({ kind: 'place', item: p })), found.length ? '' : th('noPlaces'));
-    } catch {
-      if (id === searchId) show([], th('placesError'));
+    } catch (err) {
+      if (id !== searchId) return;
+      const status = err?.status || 0;
+      show([], status === 429 ? th('placesBusy') : `${th('placesError')} <span class="small">(${status ? th('placesErrorCode', { code: status }) : th('placesErrorNetwork')})</span>`);
     }
   };
   const choose = (r) => {

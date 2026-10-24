@@ -193,17 +193,44 @@ await step('address search finds a place, opens it and plans a trip to it', asyn
   await page.unroute('**/api/geocode?**');
 });
 
-await step('address search failure is reported', async () => {
+await step('address search falls back to the browser, and reports failures', async () => {
   const before = errors.length;
+  const direct = [];
+  let directStatus = 200;
   await page.route('**/api/geocode?**', (route) => route.fulfill({ status: 502, body: 'bad gateway' }));
+  await page.route('https://nominatim.openstreetmap.org/**', (route) => {
+    const url = new URL(route.request().url());
+    direct.push(url.searchParams.get('q'));
+    if (directStatus !== 200) return route.fulfill({ status: directStatus, body: 'no' });
+    return route.fulfill({
+      json: [{ lat: '34.681', lon: '-1.909', name: 'Pharmacie Le Paris', display_name: 'Pharmacie Le Paris, Boulevard Allal Ben Abdallah, Oujda, Maroc' }],
+    });
+  });
   await page.goto(BASE + '/#/');
   await settled();
+  // The server can't reach the geocoder: the browser asks it directly.
+  await page.fill('#search', 'pharmacie le paris');
+  await page.click('#search-list .geo-row');
+  await page.waitForSelector('#search-list .place-row');
+  assert.deepEqual(direct, ['pharmacie le paris']);
+  assert.ok((await page.textContent('#search-list')).includes('Pharmacie Le Paris'));
+  // Both fail: the message says why.
+  directStatus = 403;
   await page.fill('#search', 'rue inconnue');
   await page.click('#search-list .geo-row');
-  await page.waitForFunction(() => /indisponible|unavailable|غير متاح/.test(document.querySelector('#search-list').textContent));
+  await page.waitForFunction(() => /(indisponible|unavailable|غير متاح).*502/.test(document.querySelector('#search-list').textContent));
+  // The site-wide rate limit is not worked around.
   await page.unroute('**/api/geocode?**');
-  // The browser logs the 502 this step provoked on purpose.
-  errors.splice(before, errors.length - before, ...errors.slice(before).filter((e) => !e.includes('502')));
+  await page.route('**/api/geocode?**', (route) => route.fulfill({ status: 429, body: 'slow down' }));
+  const directBefore = direct.length;
+  await page.fill('#search', 'rue lente');
+  await page.click('#search-list .geo-row');
+  await page.waitForFunction(() => /Trop de recherches|Too many|كثيرة/.test(document.querySelector('#search-list').textContent));
+  assert.equal(direct.length, directBefore, 'no direct request after a 429');
+  await page.unroute('**/api/geocode?**');
+  await page.unroute('https://nominatim.openstreetmap.org/**');
+  // The browser logs the errors this step provoked on purpose.
+  errors.splice(before, errors.length - before, ...errors.slice(before).filter((e) => !/\b(502|403|429)\b/.test(e)));
 });
 
 await step('nearby uses geolocation', async () => {

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseResults } from '../web/js/geocode.js';
+import { parseResults, directUrl } from '../web/js/geocode.js';
 
 test('parses Nominatim results into name, detail and coordinates', () => {
   const places = parseResults([
@@ -22,4 +22,14 @@ test('skips duplicates and results without coordinates', () => {
   assert.equal(parseResults([r, { ...r }, { ...r, lat: 'x' }]).length, 1);
   assert.deepEqual(parseResults(null), []);
   assert.deepEqual(parseResults({ error: 'x' }), []);
+});
+
+test('builds the URL the browser uses to ask the geocoder directly', () => {
+  const url = new URL(directUrl('https://nominatim.openstreetmap.org/search', '-2.10,34.92,-1.75,34.55', 'pharmacie le paris', 'fr'));
+  assert.equal(url.origin + url.pathname, 'https://nominatim.openstreetmap.org/search');
+  assert.equal(url.searchParams.get('q'), 'pharmacie le paris');
+  assert.equal(url.searchParams.get('viewbox'), '-2.10,34.92,-1.75,34.55');
+  assert.equal(url.searchParams.get('bounded'), '1');
+  assert.equal(url.searchParams.get('accept-language'), 'fr');
+  assert.equal(url.searchParams.get('format'), 'jsonv2');
 });
