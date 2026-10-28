@@ -29,7 +29,7 @@ test('stop search finds by name, accent-insensitive, prefix and typo', () => {
 });
 
 test('stop search by id', () => {
-  assert.equal(searchStops(index, '700')[0].id, 700);
+  assert.equal(searchStops(index, '591')[0].id, 591);
 });
 
 test('line search by name or number', () => {

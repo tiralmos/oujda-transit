@@ -92,10 +92,10 @@ test('short trips offer walking', () => {
 });
 
 test('a transfer between two stops at the same spot keeps its walk leg', () => {
-  // Terminus Maghreb Arabi has a stop per direction (240 and 662), a few metres apart.
-  const options = planner.plan({ type: 'stop', id: 240 }, { type: 'stop', id: 662 });
+  // Av Zayed Ben Soltane 2 (114) and Hay Kada Houssine (317) are 19 m apart, both on L16.
+  const options = planner.plan({ type: 'stop', id: 114 }, { type: 'stop', id: 317 });
   assert.ok(options.length);
-  for (const o of options) checkOption(o, { type: 'stop', id: 240 }, { type: 'stop', id: 662 });
+  for (const o of options) checkOption(o, { type: 'stop', id: 114 }, { type: 'stop', id: 317 });
 });
 
 test('a stop that is only a departure point can still be reached on foot', () => {
@@ -110,7 +110,7 @@ test('a stop that is only a departure point can still be reached on foot', () =>
 });
 
 test('same start and end gives no options', () => {
-  assert.deepEqual(planner.plan({ type: 'stop', id: 700 }, { type: 'stop', id: 700 }), []);
+  assert.deepEqual(planner.plan({ type: 'stop', id: 591 }, { type: 'stop', id: 591 }), []);
 });
 
 test('options are sorted by estimated time', () => {

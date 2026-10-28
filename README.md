@@ -4,7 +4,7 @@ A self-hostable web app for the Oujda bus network: every line and stop on an
 OpenStreetMap map, with search, line pages, nearby stops, favorites and a trip
 planner. Runs as a single small Docker container (nginx serving static files).
 
-The network data (24 lines, 698 stops, 531 after corrections) was exported on 2026-10-22 from the
+The network data (24 lines, 698 stops, 419 after corrections) was exported on 2026-10-22 from the
 server behind the 7afilati app (SOMAYAR SA). It lives in [`data/`](data/) as CSV.
 
 ## Features
@@ -175,7 +175,7 @@ python3 tools/apply_corrections.py          # data/source + data/corrections.csv
 npm test                                    # includes a check that data/*.csv is up to date
 ```
 
-What the current corrections do (exported 2026-10-22, 698 stops before, 531 after):
+What the current corrections do (exported 2026-10-22, 698 stops before, 419 after):
 
 - **Misplaced stops (41 moved, 2 split)**: stops kilometres away from their neighbours on the line
   were placed where the route says they must be, using, in order of preference, a matching
@@ -195,6 +195,12 @@ What the current corrections do (exported 2026-10-22, 698 stops before, 531 afte
   the same name up to 60 m apart. Not merged: a line's aller and retour termini (each direction keeps
   its own stop), two stops of the same line and direction, and stops whose new position is only an
   estimate.
+- **Merges from ISA's review (112 merged, 51 renamed, 2026-10-27)**: every pair of stops under
+  150 m apart was scored (distance, name, street from OpenStreetMap, shared lines, aller/retour
+  pairs) in a spreadsheet, and ISA decided each pair. The pairs ISA marked "Merge" became 94
+  places; where pairs chain (A+B and B+C) all their stops became one. This includes termini whose
+  aller and retour stops the first pass kept apart (*Terminus Maghreb Arabi*, *Terminus Samara*,
+  *Terminus Marjane*, ...). Each place has the name ISA chose; the other names stay searchable.
 - **Names (471 renamed)**: every name is in title case (the first letter of every word capitalised,
   except French small words such as *de*, *des*, *la*: *Faculté des Sciences*, *Consulat d'Algérie*;
   Roman numerals and acronyms such as OFPPT stay upper case), with French words spell-checked (*cafe* → *café*, *ecole* → *école*, *carfour* →
