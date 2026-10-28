@@ -41,10 +41,13 @@ class BuildDataTest(unittest.TestCase):
         self.assertFalse(build_data.is_missing_name("Place 9 Juillet"))
 
     def test_merged_stops_redirect_and_keep_their_names(self):
-        # Stop 608 ("2026-07-09 00:00:00", i.e. "9 juillet") is now part of Place 9 Juillet.
-        self.assertEqual(self.net["mergedStops"]["608"], 700)
+        # Stop 608 ("2026-07-09 00:00:00", i.e. "9 juillet") went into Place 9 Juillet (700),
+        # which ISA's review then merged into Bank BMCI (591).
+        self.assertEqual(self.net["mergedStops"]["608"], 591)
+        self.assertEqual(self.net["mergedStops"]["700"], 591)
         self.assertNotIn(608, self.stops)
-        self.assertIn("2026-07-09 00:00:00", self.stops[700]["altNames"])
+        self.assertIn("2026-07-09 00:00:00", self.stops[591]["altNames"])
+        self.assertIn("Place 9 Juillet", self.stops[591]["altNames"])
         self.assertFalse(any(i["type"] == "missing_name" for i in self.net["issues"]))
 
     def test_directions_are_ordered_and_consistent(self):
