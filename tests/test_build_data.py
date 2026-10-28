@@ -108,9 +108,10 @@ class BuildDataTest(unittest.TestCase):
         for l in self.net["lines"]:
             for d in l["directions"].values():
                 self.assertEqual(len(d["shapeStops"]), len(d["stops"]))
+                # Each shape starts and ends on the bus's road next to its end stops (at most 40 m away).
                 first, last = self.stops[d["stops"][0]], self.stops[d["stops"][-1]]
-                self.assertLess(build_data.haversine_km(d["shape"][0], (first["lat"], first["lng"])), 0.002)
-                self.assertLess(build_data.haversine_km(d["shape"][-1], (last["lat"], last["lng"])), 0.002)
+                self.assertLess(build_data.haversine_km(d["shape"][0], (first["lat"], first["lng"])), 0.041)
+                self.assertLess(build_data.haversine_km(d["shape"][-1], (last["lat"], last["lng"])), 0.041)
                 self.assertGreaterEqual(len(d["shape"]), len(d["stops"]))
         line = build_data.geojson(self.net)["features"][0]
         self.assertEqual(len(line["geometry"]["coordinates"]), len(self.net["lines"][0]["directions"]["aller"]["shape"]))

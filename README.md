@@ -4,7 +4,7 @@ A self-hostable web app for the Oujda bus network: every line and stop on an
 OpenStreetMap map, with search, line pages, nearby stops, favorites and a trip
 planner. Runs as a single small Docker container (nginx serving static files).
 
-The network data (24 lines, 698 stops, 419 after corrections) was exported on 2026-10-22 from the
+The network data (24 lines, 698 stops, 469 after corrections) was exported on 2026-10-22 from the
 server behind the 7afilati app (SOMAYAR SA). It lives in [`data/`](data/) as CSV.
 
 ## Features
@@ -140,9 +140,14 @@ The CSVs in `data/` are generated: `tools/apply_corrections.py` applies `data/co
 
 The export only lists each line's stops, so the app draws lines along the roads using
 `data/shapes.csv`, made by `tools/build_shapes.py`. It routes each line direction through its stops
-on OpenStreetMap roads (the public OSRM demo server, one request a second), once with and once
-without letting the bus turn back at a stop, and keeps the shorter way for each leg between two
-stops. Where that is still a long way round (often a one-way street or a stop snapped to the wrong
+on OpenStreetMap roads (the public OSRM demo server, one request a second) the way a bus drives:
+one forward path, never turning back at a stop, and reaching each stop on its own side of the road
+(the direction of travel is given for every stop, so on a divided road a stop drawn on the other
+carriageway is served from the bus's carriageway, at most 40 m from the marker). A bus that would
+drive up to a stop and come back out the same way is drawn along the road it passes instead.
+`data/source/shape_vias.csv` adds points a leg must pass through, for the few places where the
+router's fastest way is not the bus's (L01 aller stays on Boulevard Hassan II between Clinique Ibn
+Sina and Mosquée Khaled Ibn Walid). Where a leg is still a long way round (often a one-way street or a stop snapped to the wrong
 road), the leg follows ISA's hand-drawn map if the map is clearly shorter; a leg that stays absurd
 is drawn straight. The stops always win over the map: shapes only join the stops in the data.
 Re-run it after the stops change (a test fails when a shape no longer matches its stops):
@@ -175,7 +180,7 @@ python3 tools/apply_corrections.py          # data/source + data/corrections.csv
 npm test                                    # includes a check that data/*.csv is up to date
 ```
 
-What the current corrections do (exported 2026-10-22, 698 stops before, 419 after):
+What the current corrections do (exported 2026-10-22, 698 stops before, 469 after):
 
 - **Misplaced stops (41 moved, 2 split)**: stops kilometres away from their neighbours on the line
   were placed where the route says they must be, using, in order of preference, a matching
@@ -191,7 +196,7 @@ What the current corrections do (exported 2026-10-22, 698 stops before, 419 afte
   the Figma "Oujda Bus Map" ends each line. The map was lined up with real coordinates by matching
   its stop dots to the stops of the same lines (scale, offset, north up; median error about 23 m).
   The `flag` action is still available for stops that need a check; none are flagged today.
-- **Merged stops (169)**: stops less than about 20 m apart became one stop, and so did stops with
+- **Merged stops (152)**: stops less than about 20 m apart became one stop, and so did stops with
   the same name up to 60 m apart. Not merged: a line's aller and retour termini (each direction keeps
   its own stop), two stops of the same line and direction, and stops whose new position is only an
   estimate.
@@ -201,6 +206,13 @@ What the current corrections do (exported 2026-10-22, 698 stops before, 419 afte
   places; where pairs chain (A+B and B+C) all their stops became one. This includes termini whose
   aller and retour stops the first pass kept apart (*Terminus Maghreb Arabi*, *Terminus Samara*,
   *Terminus Marjane*, ...). Each place has the name ISA chose; the other names stay searchable.
+- **Stops split again across divided roads (56, 2026-10-28)**: a merged stop sits on one side of
+  the road, so a line on the other carriageway of a divided road (or on the other road of a
+  one-way pair) would have to turn back to reach it. Every merge was checked with the router: when
+  a line reaches the merged position only with a detour of 100 m or more than the stop's own
+  position, the merge was undone (39 from ISA's review, 17 from the first pass) and the stop keeps
+  the name of the stop opposite. Split stops that are on the same side of the road and were merged
+  together before stay one stop (6).
 - **Names (471 renamed)**: every name is in title case (the first letter of every word capitalised,
   except French small words such as *de*, *des*, *la*: *Faculté des Sciences*, *Consulat d'Algérie*;
   Roman numerals and acronyms such as OFPPT stay upper case), with French words spell-checked (*cafe* → *café*, *ecole* → *école*, *carfour* →

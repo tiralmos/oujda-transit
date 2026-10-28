@@ -8,13 +8,17 @@ line direction, at most one request a second. A leg whose road route is much lon
 straight line between its two stops (a wrong snap, a one-way loop) is drawn straight instead and
 reported. Re-run this after the stops change; a test fails if the shapes no longer match the stops.
 
-Each leg is routed twice (with and without turning back at stops) and the shorter is kept. When
-that is still a long way round, the leg follows ISA's hand-drawn Figma map instead if the map is
-clearly shorter (data/source/figma_routes.geojson); a gross detour is drawn straight.
+A bus drives one forward path: it never turns back at a stop, and each stop is reached on the side
+of the road the bus is driving on (OSRM bearings: the direction of travel from the previous stop to
+the next one). On a divided road a stop drawn on the other carriageway is therefore served from the
+bus's own carriageway, without a detour to the marker. When the route is still a long way round,
+the leg follows ISA's hand-drawn Figma map instead if the map is clearly shorter
+(data/source/figma_routes.geojson); a gross detour is drawn straight.
 
 shapes.csv has one row per point. The rows of a stop carry its stop_sequence, station_id and how
-the leg that starts there is drawn (road, map or straight); the points between two stops have them
-blank.
+the leg that starts there is drawn (road, map or straight), at the point on the road where the bus
+stops (at most SNAP_M from the stop; further away the stop itself is used); the points between two
+stops have them blank.
 """
 import csv
 import hashlib
@@ -29,6 +33,8 @@ OSRM = "https://router.project-osrm.org/route/v1/driving/"
 UA = "oujda-transit/1.0 (github.com/tiralmos/oujda-transit)"
 MAX_WAYPOINTS = 50
 SIMPLIFY_M = 4
+SNAP_M = 40
+BEARING_TOLERANCE = 90
 FIELDS = ["line_name", "direction", "point", "stop_sequence", "station_id", "leg", "lat", "lng"]
 
 
@@ -36,6 +42,14 @@ def haversine_m(a, b):
     lat1, lng1, lat2, lng2 = map(math.radians, (a[0], a[1], b[0], b[1]))
     h = math.sin((lat2 - lat1) / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin((lng2 - lng1) / 2) ** 2
     return 2 * 6371008.8 * math.asin(math.sqrt(h))
+
+
+def bearing(a, b):
+    """Compass heading from a to b in degrees (0 = north)."""
+    la1, la2, dl = math.radians(a[0]), math.radians(b[0]), math.radians(b[1] - a[1])
+    x = math.sin(dl) * math.cos(la2)
+    y = math.cos(la1) * math.sin(la2) - math.sin(la1) * math.cos(la2) * math.cos(dl)
+    return math.degrees(math.atan2(x, y)) % 360
 
 
 def path_m(pts):
@@ -101,16 +115,23 @@ class Router:
                 f.write(body)
         return data
 
-    def legs(self, pts, u_turns):
-        """Road geometry of each leg between consecutive points: [[(lat, lng), ...], ...].
+    def legs(self, pts):
+        """Road route through the points without turning back at any of them.
 
-        With u_turns the bus may turn back at a stop; without, it must carry on and loop round."""
-        out = []
-        extra = "&continue_straight=false" if u_turns else "&continue_straight=true"
+        Returns (legs, snapped): the road geometry of each leg between consecutive points
+        ([[(lat, lng), ...], ...]) and where each point was put on the road ([(lat, lng), ...])."""
+        legs, snapped = [], []
         for start in range(0, len(pts) - 1, MAX_WAYPOINTS - 1):
             chunk = pts[start:start + MAX_WAYPOINTS]
+            heads = [bearing(chunk[max(i - 1, 0)], chunk[min(i + 1, len(chunk) - 1)]) for i in range(len(chunk))]
+            if start:  # the chunk's first point continues the previous chunk's travel
+                heads[0] = bearing(pts[start - 1], pts[start + 1])
             coords = ";".join(f"{lng:.6f},{lat:.6f}" for lat, lng in chunk)
-            data = self.fetch(f"{OSRM}{coords}?overview=false&steps=true&geometries=geojson{extra}")
+            base = f"{OSRM}{coords}?overview=false&steps=true&geometries=geojson&continue_straight=true"
+            data = self.fetch(base + "&bearings=" + ";".join(f"{h:.0f},{BEARING_TOLERANCE}" for h in heads))
+            if data.get("code") != "Ok":
+                # No road heading that way near some stop: let OSRM pick the nearest road.
+                data = self.fetch(base)
             if data.get("code") != "Ok":
                 raise RuntimeError(f"OSRM: {data.get('code')} {data.get('message', '')}")
             for leg in data["routes"][0]["legs"]:
@@ -119,8 +140,10 @@ class Router:
                     for lng, lat in step["geometry"]["coordinates"]:
                         if not geo or geo[-1] != (lat, lng):
                             geo.append((lat, lng))
-                out.append(geo)
-        return out
+                legs.append(geo)
+            wps = [(lat, lng) for lng, lat in (w["location"] for w in data["waypoints"])]
+            snapped += wps if not start else wps[1:]
+        return legs, snapped
 
 
 def read_csv(path):
@@ -198,21 +221,81 @@ def figma_leg(paths, p, q, near_m=60):
     return best
 
 
+def load_vias(data_dir):
+    """Points a leg must pass through, from data/source/shape_vias.csv:
+    {(line_name, direction, from_station, to_station): [(lat, lng), ...]}."""
+    path = os.path.join(data_dir, "source", "shape_vias.csv")
+    out = {}
+    if os.path.exists(path):
+        for r in read_csv(path):
+            key = (r["line_name"], r["direction"], r["from_station"], r["to_station"])
+            out.setdefault(key, []).append((float(r["lat"]), float(r["lng"])))
+    return out
+
+
+def route_stops(router, stops, vias):
+    """Road legs between consecutive stops (through their via points) and each stop's road position."""
+    pts, is_stop = [], []
+    for i, (_, sid, p) in enumerate(stops):
+        pts.append(p)
+        is_stop.append(True)
+        if i + 1 < len(stops):
+            for v in vias.get((sid, stops[i + 1][1]), []):
+                pts.append(v)
+                is_stop.append(False)
+    legs, snapped = router.legs(pts)
+    out_legs, out_snapped = [], []
+    for k, (geo, stop) in enumerate(zip(legs + [None], is_stop)):
+        if stop:
+            out_snapped.append(snapped[k])
+            if geo is not None:
+                out_legs.append(list(geo))
+        elif geo is not None:
+            out_legs[-1] += geo[1:] if out_legs[-1] and geo and out_legs[-1][-1] == geo[0] else geo
+    return out_legs, out_snapped
+
+
+def drop_spurs(router, legs, at, stops):
+    """A bus does not drive up to a stop and come back out the way it came: when going straight from
+    the previous stop to the next one passes within SNAP_M of a stop and is clearly shorter, use that
+    and stop the bus where it passes. Returns the stop indices it changed."""
+    changed = []
+    for i in range(1, len(stops) - 1):
+        via = path_m([at[i - 1]] + legs[i - 1] + [at[i]]) + path_m([at[i]] + legs[i] + [at[i + 1]])
+        if via < 1.2 * (haversine_m(at[i - 1], at[i]) + haversine_m(at[i], at[i + 1])) + 60:
+            continue  # no real spur at this stop
+        (direct,), _ = router.legs([at[i - 1], at[i + 1]])
+        direct = [at[i - 1]] + direct + [at[i + 1]]
+        dist, along, foot = project(direct, stops[i][2])
+        if dist > SNAP_M or path_m(direct) > via - 60:
+            continue
+        legs[i - 1], legs[i] = cut(direct, 0, along)[1:-1], cut(direct, along, float("inf"))[1:-1]
+        at[i] = foot
+        changed.append(i)
+    return changed
+
+
 def build(data_dir, router):
     figma = load_figma(data_dir)
+    vias = load_vias(data_dir)
     rows, report = [], []
     for (line, direction), stops in sorted(directions(data_dir).items()):
-        pts = [p for _, _, p in stops]
-        variants = [router.legs(pts, u_turns=True), router.legs(pts, u_turns=False)]
+        legs, snapped = route_stops(router, stops, {(a, b): v for (l, d, a, b), v in vias.items()
+                                                    if (l, d) == (line, direction)})
+        # Where the bus stops: on its road next to the stop, not across a divided road at the marker.
+        at = [w if haversine_m(w, p) <= SNAP_M else p for w, (_, _, p) in zip(snapped, stops)]
+        for i in drop_spurs(router, legs, at, stops):
+            report.append(f"{line} {direction} stop {stops[i][0]} ({stops[i][1]}): served from the passing road, "
+                          f"no detour to the stop")
         n = 0
-        for i, (seq, sid, p) in enumerate(stops):
+        for i, (seq, sid, _) in enumerate(stops):
+            p = at[i]
             if i == len(stops) - 1:
                 rows.append([line, direction, n, seq, sid, "", f"{p[0]:.6f}", f"{p[1]:.6f}"])
                 break
-            q = stops[i + 1][2]
+            q = at[i + 1]
             straight_m = haversine_m(p, q)
-            # The leg starts and ends on the stops themselves so the line meets their markers.
-            road = min(([p] + v[i] + [q] for v in variants), key=path_m)
+            road = [p] + legs[i] + [q]
             kind = "road"
             if path_m(road) > 1.6 * straight_m + 150:
                 # A long way round is often a one-way street or a stop snapped to the wrong road:
