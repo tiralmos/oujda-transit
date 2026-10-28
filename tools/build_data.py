@@ -212,7 +212,8 @@ def build(csv_dir):
             }
             shape = shapes.get((l["line_name"], direction))
             if shape and [sid for sid, _ in shape["stops"]] == ids and all(
-                    haversine_km(shape["points"][i], (stops[sid]["lat"], stops[sid]["lng"])) < 0.005
+                    # The shape stops on the bus's road, at most 40 m from the marker (tools/build_shapes.py).
+                    haversine_km(shape["points"][i], (stops[sid]["lat"], stops[sid]["lng"])) < 0.041
                     for sid, i in shape["stops"]):
                 line["directions"][direction]["shape"] = [[round(a, 5), round(b, 5)] for a, b in shape["points"]]
                 line["directions"][direction]["shapeStops"] = [i for _, i in shape["stops"]]

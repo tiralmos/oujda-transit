@@ -13,17 +13,19 @@ LS_HEAD = "line_id,line_name,direction,sens,headsign,stop_sequence,api_step,stat
 
 
 class FakeRouter:
-    """Stands in for OSRM: each leg goes through the given detour point, if any, else a midpoint."""
+    """Stands in for OSRM: each leg goes through the given detour point, if any, else a midpoint.
 
-    def __init__(self, detours=None):
-        self.detours = detours or {}
+    snap moves the road position of the given stops (index -> (lat, lng))."""
 
-    def legs(self, pts, u_turns):
+    def __init__(self, detours=None, snap=None):
+        self.detours, self.snap = detours or {}, snap or {}
+
+    def legs(self, pts):
+        snapped = [self.snap.get(i, p) for i, p in enumerate(pts)]
         out = []
-        for i, (a, b) in enumerate(zip(pts, pts[1:])):
-            via = self.detours.get(i) if not u_turns or i not in self.detours.get("only_without", ()) else None
-            out.append([a, via or ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2), b])
-        return out
+        for i, (a, b) in enumerate(zip(snapped, snapped[1:])):
+            out.append([a, self.detours.get(i) or ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2), b])
+        return out, snapped
 
 
 class BuildShapesTest(unittest.TestCase):
@@ -54,10 +56,21 @@ class BuildShapesTest(unittest.TestCase):
         self.assertEqual(rows[1][4], "2")  # nothing between stop 1 and stop 2
         self.assertEqual(len(report), 1)
 
-    def test_the_shorter_of_the_two_routings_is_kept(self):
-        # Without u-turns the first leg loops far away; with them it is direct.
-        rows, _ = build_shapes.build(self.dir, FakeRouter({0: (34.70, -1.95), "only_without": (0,)}))
-        self.assertEqual(rows[0][5], "road")
+    def test_the_line_stops_on_its_own_road_next_to_the_stop(self):
+        # Stop 2 is drawn 20 m west of the road the bus drives on (say, the other carriageway):
+        # the line stops on its road instead of reaching across to the marker.
+        rows, _ = build_shapes.build(self.dir, FakeRouter(snap={1: (34.682, -1.90978)}))
+        stop2 = next(r for r in rows if r[4] == "2")
+        self.assertEqual((stop2[6], stop2[7]), ("34.682000", "-1.909780"))
+
+    def test_a_stop_far_from_any_road_keeps_its_own_position(self):
+        rows, _ = build_shapes.build(self.dir, FakeRouter(snap={1: (34.682, -1.905)}))
+        stop2 = next(r for r in rows if r[4] == "2")
+        self.assertEqual((stop2[6], stop2[7]), ("34.682000", "-1.910000"))
+
+    def test_bearing(self):
+        self.assertAlmostEqual(build_shapes.bearing((34.68, -1.91), (34.69, -1.91)), 0, places=3)
+        self.assertAlmostEqual(build_shapes.bearing((34.68, -1.91), (34.68, -1.90)), 90, delta=0.1)
 
     def test_long_way_round_follows_the_map_when_it_is_shorter(self):
         os.makedirs(os.path.join(self.dir, "source"))
@@ -76,16 +89,20 @@ class BuildShapesTest(unittest.TestCase):
         self.assertIn((34.6805, -1.909), build_shapes.simplify(bent))
 
     def test_repository_shapes_match_the_stops(self):
-        # Every line direction has a shape whose stop rows are its stops, in order and in place.
+        # Every line direction has a shape whose stop rows are its stops, in order and next to them.
         shapes = {}
         with open(os.path.join(ROOT, "data", "shapes.csv"), encoding="utf-8") as f:
             for r in csv.DictReader(f):
                 if r["station_id"]:
-                    shapes.setdefault((r["line_name"], r["direction"]), []).append((r["station_id"], r["lat"], r["lng"]))
-        stops = {}
-        for (line, direction), seq in build_shapes.directions(os.path.join(ROOT, "data")).items():
-            stops[(line, direction)] = [(sid, f"{p[0]:.6f}", f"{p[1]:.6f}") for _, sid, p in seq]
-        self.assertEqual(shapes, stops, "data/shapes.csv is out of date: run python3 tools/build_shapes.py")
+                    shapes.setdefault((r["line_name"], r["direction"]), []).append(
+                        (r["station_id"], (float(r["lat"]), float(r["lng"]))))
+        stale = "data/shapes.csv is out of date: run python3 tools/build_shapes.py"
+        seqs = build_shapes.directions(os.path.join(ROOT, "data"))
+        self.assertEqual(set(shapes), set(seqs), stale)
+        for key, seq in seqs.items():
+            self.assertEqual([sid for sid, _ in shapes[key]], [sid for _, sid, _ in seq], stale)
+            for (_, at), (_, _, p) in zip(shapes[key], seq):
+                self.assertLessEqual(build_shapes.haversine_m(at, p), build_shapes.SNAP_M + 1, stale)
 
 
 if __name__ == "__main__":
