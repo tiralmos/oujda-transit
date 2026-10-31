@@ -1,0 +1,6 @@
+# Keep Unix line endings everywhere, and always for shell scripts, so the
+# Docker entrypoint never gets CRLF even when the repo is cloned on Windows.
+* text=auto eol=lf
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.png binary
