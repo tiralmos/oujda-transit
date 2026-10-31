@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bus Oujda</title>
+  <meta name="description" content="Arrêts, lignes et itinéraires du réseau de bus d’Oujda sur OpenStreetMap.">
+  <meta name="theme-color" content="#0d6efd">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="map" role="application" aria-label="Map"></div>
+
+  <aside id="panel" aria-label="Panel">
+    <div class="panel-handle" id="panelHandle" aria-hidden="true"></div>
+    <header class="panel-header">
+      <div class="brand"><img src="/icon.svg" alt="" width="28" height="28"><span data-i18n="appName">Bus Oujda</span></div>
+      <div class="header-actions">
+        <select id="langSelect" aria-label="Language">
+          <option value="fr">FR</option><option value="en">EN</option><option value="ar">ع</option>
+        </select>
+        <button id="themeBtn" class="icon-btn" type="button" data-i18n-title="theme" aria-label="Theme">☾</button>
+        <button id="installBtn" class="icon-btn" type="button" data-i18n-title="install" hidden>⤓</button>
+      </div>
+    </header>
+
+    <div class="search" role="search">
+      <input id="searchInput" type="search" autocomplete="off" spellcheck="false"
+             data-i18n-placeholder="searchPlaceholder" aria-autocomplete="list" aria-controls="searchResults">
+      <button id="searchClear" class="icon-btn clear-btn" type="button" aria-label="Clear" hidden>✕</button>
+      <div id="searchResults" class="search-results" role="listbox" hidden></div>
+    </div>
+
+    <nav class="tabs" role="tablist">
+      <a href="#/" data-tab="explore" role="tab" data-i18n="tabExplore">Explorer</a>
+      <a href="#/lines" data-tab="lines" role="tab" data-i18n="tabLines">Lignes</a>
+      <a href="#/plan" data-tab="plan" role="tab" data-i18n="tabTrip">Itinéraire</a>
+      <a href="#/favs" data-tab="favs" role="tab" data-i18n="tabFavs">Favoris</a>
+    </nav>
+
+    <div id="offlineBanner" class="banner" hidden data-i18n="offline"></div>
+    <main id="view" class="view" tabindex="-1"></main>
+    <footer class="panel-footer" data-i18n="about"></footer>
+  </aside>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="/vendor/leaflet/leaflet.js"></script>
+  <script src="/i18n.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

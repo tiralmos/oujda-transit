@@ -1,0 +1,17 @@
+services:
+  oujda-transit:
+    build: .
+    image: oujda-transit:latest
+    container_name: oujda-transit
+    ports:
+      - "3002:3002"
+    environment:
+      PORT: "3002"
+      # Set to "true" to skip server-side place search (the browser then queries OpenStreetMap itself).
+      DISABLE_SERVER_GEOCODING: "false"
+      # Contact for OpenStreetMap's Nominatim usage policy. Put your own site or email here.
+      GEOCODER_USER_AGENT: "oujda-transit/1.0 (+https://github.com/tiralmos/oujda-transit)"
+    # Uncomment to use updated CSV files without rebuilding the image:
+    # volumes:
+    #   - ./data:/app/data:ro
+    restart: unless-stopped
