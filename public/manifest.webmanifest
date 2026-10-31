@@ -1,0 +1,14 @@
+{
+  "name": "Bus Oujda",
+  "short_name": "Bus Oujda",
+  "description": "Arrêts, lignes et itinéraires du réseau de bus d’Oujda.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6efd",
+  "lang": "fr",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

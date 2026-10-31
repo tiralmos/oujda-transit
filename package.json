@@ -1,0 +1,12 @@
+{
+  "name": "oujda-transit",
+  "version": "1.0.0",
+  "description": "Bus stops, lines and trip planning for Oujda, Morocco, on OpenStreetMap.",
+  "private": true,
+  "main": "src/server.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
