@@ -33,6 +33,7 @@ window.I18N = {
     nearestStop: 'Arrêt le plus proche : {name} ({d})', viewLine: 'Voir la ligne', install: 'Installer l’application',
     serverError: 'Le serveur ne répond pas.', zoomToStop: 'Centrer',
     about: 'Données : réseau de bus d’Oujda. Carte © contributeurs OpenStreetMap.',
+    gtfsDownload: 'Télécharger les données (GTFS)',
   },
   en: {
     appName: 'Oujda Bus',
@@ -66,6 +67,7 @@ window.I18N = {
     nearestStop: 'Nearest stop: {name} ({d})', viewLine: 'View line', install: 'Install the app',
     serverError: 'The server is not responding.', zoomToStop: 'Centre',
     about: 'Data: Oujda bus network. Map © OpenStreetMap contributors.',
+    gtfsDownload: 'Download the data (GTFS)',
   },
   ar: {
     appName: 'حافلات وجدة',
@@ -99,5 +101,6 @@ window.I18N = {
     nearestStop: 'أقرب محطة: {name} ({d})', viewLine: 'عرض الخط', install: 'تثبيت التطبيق',
     serverError: 'الخادم لا يستجيب.', zoomToStop: 'توسيط',
     about: 'البيانات: شبكة حافلات وجدة. الخريطة © مساهمو OpenStreetMap.',
+    gtfsDownload: 'تحميل البيانات (GTFS)',
   },
 };
