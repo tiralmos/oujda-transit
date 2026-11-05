@@ -1,7 +1,7 @@
 'use strict';
 /* Service worker: app shell and network data work offline; map tiles are cached as you browse. */
-const SHELL = 'ot-shell-v1';
-const DATA = 'ot-data-v1';
+const SHELL = 'ot-shell-v2';
+const DATA = 'ot-data-v2';
 const TILES = 'ot-tiles-v1';
 const MAX_TILES = 1500;
 

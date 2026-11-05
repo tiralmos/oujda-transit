@@ -170,7 +170,7 @@
     map.on('zoomend', resize); resize();
 
     for (const line of state.lines.values()) {
-      const coords = line.directions[0]?.stops.map((id) => [state.stops.get(id).lat, state.stops.get(id).lng]) || [];
+      const coords = line.directions[0] ? lineCoords(line, line.directions[0].id) : [];
       L.polyline(coords, { color: line.color, weight: 3, opacity: 0.55 })
         .bindTooltip(`${line.name}: ${line.from} – ${line.to}`, { sticky: true })
         .on('click', () => go(`/line/${line.id}`))
@@ -199,6 +199,8 @@
 
   function lineCoords(line, dirId) {
     const dir = line.directions.find((d) => d.id === dirId) || line.directions[0];
+    // the street the bus drives on, when the data has a shape for this direction
+    if (dir.path && dir.path.length > 1) return dir.path;
     return dir.stops.map((id) => state.stops.get(id)).map((s) => [s.lat, s.lng]);
   }
 
@@ -856,7 +858,7 @@
       if (l.type === 'walk') {
         L.polyline([[l.from.lat, l.from.lng], [l.to.lat, l.to.lng]], { color: '#4b5563', weight: 4, dashArray: '1 8', lineCap: 'round' }).addTo(focusLayer);
       } else {
-        const coords = l.stops.map((s) => [s.lat, s.lng]);
+        const coords = l.path && l.path.length > 1 ? l.path : l.stops.map((s) => [s.lat, s.lng]);
         const color = (state.lines.get(l.line.id) || l.line).color;
         L.polyline(coords, { color: '#fff', weight: 9, opacity: 0.8 }).addTo(focusLayer);
         L.polyline(coords, { color, weight: 6 }).addTo(focusLayer);

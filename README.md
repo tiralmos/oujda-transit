@@ -41,7 +41,7 @@ The startup script `docker-entrypoint.sh` must keep Unix (LF) line endings. Thre
 | Variable | Default | Purpose |
 |---|---|---|
 | `PORT` | `3002` | HTTP port |
-| `DATA_DIR` | `/app/data` | Folder with `stops.csv`, `lines.csv`, `line_stops.csv` |
+| `DATA_DIR` | `/app/data` | Folder with `stops.csv`, `lines.csv`, `line_stops.csv`, and optionally `shapes.geojson` (the road path of each line direction; without it lines are drawn stop to stop) |
 | `DISABLE_SERVER_GEOCODING` | `false` | `true` makes the browser query OpenStreetMap directly |
 | `GEOCODER_USER_AGENT` | `oujda-transit/1.0 (+repo url)` | Contact string required by the Nominatim usage policy |
 | `NOMINATIM_URL` / `PHOTON_URL` | public OSM instances | Geocoders used by the server |

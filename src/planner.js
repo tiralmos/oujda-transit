@@ -8,6 +8,7 @@
 const { distance } = require('./util');
 const { publicStop } = require('./data');
 const { publicLineSummary } = require('./search');
+const { slice, pathLength } = require('./shapes');
 
 const WALK_SPEED = 1.3; // m/s
 const WALK_DETOUR = 1.25; // streets are not straight lines
@@ -58,7 +59,8 @@ function buildIndex(db) {
       for (let i = 0; i < dir.stops.length - 1; i++) {
         const a = db.stops.get(dir.stops[i]);
         const b = db.stops.get(dir.stops[i + 1]);
-        const d = distance(a.lat, a.lng, b.lat, b.lng) * 1.15;
+        // road distance along the line's shape when there is one, else straight line plus 15 %
+        const d = dir.path ? pathLength(slice(dir, i, i + 1)) : distance(a.lat, a.lng, b.lat, b.lng) * 1.15;
         p.hop.push({ d, t: d / BUS_SPEED + DWELL });
       }
       const pi = patterns.push(p) - 1;
@@ -205,6 +207,7 @@ function toLegs(db, idx, result, from, to) {
         from: placeOf(db, `S:${stopIds[0]}`),
         to: placeOf(db, `S:${stopIds[stopIds.length - 1]}`),
         stops: stopIds.map((id) => publicStop(db.stops.get(id))),
+        path: slice(p.dir, l.start, l.end),
         distance: Math.round(l.distance),
         duration: Math.round(l.duration),
         wait: l.wait,
