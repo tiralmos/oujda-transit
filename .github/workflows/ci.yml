@@ -12,6 +12,17 @@ jobs:
         with:
           node-version: 22
       - run: npm test
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Export the GTFS feed and check it with the MobilityData validator
+        run: npm run gtfs:validate
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gtfs-feed
+          path: gtfs/
       - name: Startup script must use LF line endings
         run: "! grep -q $'\\r' docker-entrypoint.sh"
       - name: Build and smoke-test the Docker image

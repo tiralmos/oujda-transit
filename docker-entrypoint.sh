@@ -13,5 +13,11 @@ for f in stops.csv lines.csv line_stops.csv; do
   fi
 done
 
+# `docker run ... oujda-transit export-gtfs [folder]` writes the GTFS feed instead of serving the app.
+if [ "${1:-}" = "export-gtfs" ]; then
+  shift
+  exec node /app/src/export-gtfs.js "${1:-/out}"
+fi
+
 echo "Starting Oujda Transit on port $PORT (data: $DATA_DIR)"
 exec node /app/src/server.js "$@"

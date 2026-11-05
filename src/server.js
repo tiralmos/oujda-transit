@@ -10,6 +10,7 @@ const { searchPlaces } = require('./geocode');
 const { buildIndex, plan } = require('./planner');
 const { distance } = require('./util');
 const { slice } = require('./shapes');
+const { buildFeed, readConfig, zip } = require('./gtfs');
 
 const PORT = Number(process.env.PORT || 3002);
 const HOST = process.env.HOST || '0.0.0.0';
@@ -26,6 +27,10 @@ function createApp(dataDir = DATA_DIR) {
   // changes whenever the stop list or the line shapes change, so browsers refetch the network
   const mtime = (f) => { try { return fs.statSync(path.join(dataDir, f)).mtimeMs | 0; } catch { return 0; } };
   const version = String(mtime('line_stops.csv') ^ mtime('shapes.geojson'));
+
+  // GTFS feed of the same data, built on first request.
+  let gtfsZip = null;
+  const gtfs = () => (gtfsZip ||= zip(buildFeed(db, readConfig(dataDir)).files));
 
   const lineDetail = (line) => ({
     ...publicLineSummary(line),
@@ -124,6 +129,13 @@ function createApp(dataDir = DATA_DIR) {
     if (p === '/healthz') return json(req, res, 200, { ok: true, stops: db.stops.size, lines: db.lines.size });
     if (p === '/api/meta') return json(req, res, 200, meta);
     if (p === '/api/network') return send(req, res, 200, networkJson, undefined, { 'Cache-Control': 'no-cache', ETag: `"${version}"` });
+    if (p === '/api/gtfs.zip' || p === '/gtfs.zip') {
+      return send(req, res, 200, gtfs(), 'application/zip', {
+        'Cache-Control': 'no-cache',
+        ETag: `"gtfs-${version}-${mtime('gtfs.json')}"`,
+        'Content-Disposition': 'attachment; filename="oujda-gtfs.zip"',
+      });
+    }
     if (p === '/api/stops') return json(req, res, 200, [...db.stops.values()].map(publicStop));
 
     let m;

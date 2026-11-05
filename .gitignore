@@ -2,3 +2,5 @@ node_modules/
 .env
 *.log
 .DS_Store
+gtfs/
+tools/gtfs-validator/.build/
