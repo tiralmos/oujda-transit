@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { parseCsv, distance, normalize, prettyName } = require('./util');
+const { attachShapes } = require('./shapes');
 
 // 24 hand-picked colours that stay distinguishable from each other on an OSM basemap.
 const PALETTE = [
@@ -123,6 +124,7 @@ function load(dataDir) {
   for (const line of lines.values()) {
     line.directions.sort((a, b) => (a.id === 'aller' ? -1 : b.id === 'aller' ? 1 : 0));
   }
+  const shapeCount = attachShapes(dataDir, stops, lines);
   const lineOrder = [...lines.keys()];
   for (const s of stops.values()) s.lines.sort((a, b) => lineOrder.indexOf(a) - lineOrder.indexOf(b));
 
@@ -137,6 +139,7 @@ function load(dataDir) {
     lines,
     bounds: [[minLat, minLng], [maxLat, maxLng]],
     generatedColors: usePalette,
+    shapeCount,
   };
 }
 

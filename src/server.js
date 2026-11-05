@@ -9,6 +9,7 @@ const { searchStops, nearbyStops, publicLineSummary } = require('./search');
 const { searchPlaces } = require('./geocode');
 const { buildIndex, plan } = require('./planner');
 const { distance } = require('./util');
+const { slice } = require('./shapes');
 
 const PORT = Number(process.env.PORT || 3002);
 const HOST = process.env.HOST || '0.0.0.0';
@@ -22,13 +23,16 @@ const TILE_URL = process.env.TILE_URL || 'https://tile.openstreetmap.org/{z}/{x}
 function createApp(dataDir = DATA_DIR) {
   const db = load(dataDir);
   const index = buildIndex(db);
-  const version = String(fs.statSync(path.join(dataDir, 'line_stops.csv')).mtimeMs | 0);
+  // changes whenever the stop list or the line shapes change, so browsers refetch the network
+  const mtime = (f) => { try { return fs.statSync(path.join(dataDir, f)).mtimeMs | 0; } catch { return 0; } };
+  const version = String(mtime('line_stops.csv') ^ mtime('shapes.geojson'));
 
   const lineDetail = (line) => ({
     ...publicLineSummary(line),
     directions: line.directions.map((d) => ({
       id: d.id, from: d.from, to: d.to, length: d.length,
       stops: d.stops.map((id) => publicStop(db.stops.get(id))),
+      path: d.path ? slice(d, 0, d.stops.length - 1) : null,
     })),
   });
 
@@ -38,7 +42,7 @@ function createApp(dataDir = DATA_DIR) {
     stops: [...db.stops.values()].map(publicStop),
     lines: [...db.lines.values()].map((l) => ({
       ...publicLineSummary(l),
-      directions: l.directions.map((d) => ({ id: d.id, from: d.from, to: d.to, length: d.length, stops: d.stops })),
+      directions: l.directions.map((d) => ({ id: d.id, from: d.from, to: d.to, length: d.length, stops: d.stops, path: d.path ? slice(d, 0, d.stops.length - 1) : null })),
     })),
   });
 

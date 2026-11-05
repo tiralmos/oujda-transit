@@ -75,12 +75,21 @@ test('line detail returns ordered stops per direction', async () => {
   assert.strictEqual(body.directions[0].stops[0].name, 'Terminus Place Ennakhil');
 });
 
+test('lines follow the road shapes, and each stop sits on its line', async () => {
+  const { body } = await get('/api/network');
+  const dirs = body.lines.flatMap((l) => l.directions);
+  assert.strictEqual(dirs.filter((d) => d.path).length, dirs.length);
+  const l13 = body.lines.find((l) => l.name === 'L13').directions[0];
+  assert.ok(l13.path.length > l13.stops.length * 3, 'a shape has many more points than stops');
+});
+
 test('trip planner finds a bus itinerary across town', async () => {
   const { body } = await get('/api/plan?from=34.70,-1.95&to=34.65,-1.88');
   assert.ok(body.itineraries.length >= 1);
   const best = body.itineraries[0];
   assert.ok(best.legs.some((l) => l.type === 'bus'));
   for (const l of best.legs) assert.ok(l.duration >= 0 && l.from && l.to);
+  for (const l of best.legs.filter((x) => x.type === 'bus')) assert.ok(l.path.length >= 2);
   // never re-board the same line straight after leaving it
   const buses = best.legs.filter((l) => l.type === 'bus');
   for (let i = 1; i < buses.length; i++) assert.notStrictEqual(buses[i].line.id, buses[i - 1].line.id);
