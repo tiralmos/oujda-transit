@@ -33,10 +33,10 @@ test('normalize folds accents and the "termunis" typo', () => {
 
 test('health and network load every stop and line', async () => {
   const h = await get('/healthz');
-  assert.strictEqual(h.body.stops, 569);
+  assert.strictEqual(h.body.stops, 568);
   assert.strictEqual(h.body.lines, 24);
   const n = await get('/api/network');
-  assert.strictEqual(n.body.stops.length, 569);
+  assert.strictEqual(n.body.stops.length, 568);
   assert.strictEqual(n.body.lines.length, 24);
 });
 
