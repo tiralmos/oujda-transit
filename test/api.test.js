@@ -6,7 +6,7 @@ const path = require('path');
 
 process.env.DISABLE_SERVER_GEOCODING = 'true'; // tests must not call OpenStreetMap
 const { createApp } = require('../src/server');
-const { parseCsv, normalize } = require('../src/util');
+const { parseCsv, normalize, prettyName } = require('../src/util');
 
 let server;
 let base;
@@ -33,10 +33,10 @@ test('normalize folds accents and the "termunis" typo', () => {
 
 test('health and network load every stop and line', async () => {
   const h = await get('/healthz');
-  assert.strictEqual(h.body.stops, 698);
+  assert.strictEqual(h.body.stops, 569);
   assert.strictEqual(h.body.lines, 24);
   const n = await get('/api/network');
-  assert.strictEqual(n.body.stops.length, 698);
+  assert.strictEqual(n.body.stops.length, 569);
   assert.strictEqual(n.body.lines.length, 24);
 });
 
@@ -72,7 +72,7 @@ test('stop detail lists services in both directions', async () => {
 test('line detail returns ordered stops per direction', async () => {
   const { body } = await get('/api/lines/L01');
   assert.strictEqual(body.directions.length, 2);
-  assert.strictEqual(body.directions[0].stops[0].name, 'Terminus Sahat Nakheel');
+  assert.strictEqual(body.directions[0].stops[0].name, 'Terminus Place Ennakhil');
 });
 
 test('trip planner finds a bus itinerary across town', async () => {
@@ -104,7 +104,12 @@ test('startup script has Unix line endings', () => {
   assert.ok(sh.startsWith('#!/bin/sh\n'));
 });
 
-test('labels mangled into dates by a spreadsheet are restored', async () => {
+test('labels mangled into dates by a spreadsheet are restored', () => {
+  // the corrected data no longer has one, so check the clean-up on the raw label it used to carry
+  assert.strictEqual(prettyName('2026-07-09 00:00:00'), '9 Juillet');
+});
+
+test('stop names in the data are already clean', async () => {
   const { body } = await get('/api/stops/608');
-  assert.strictEqual(body.name, '9 Juillet');
+  assert.strictEqual(body.name, 'Bank BMCI / Place 9 Juillet');
 });
